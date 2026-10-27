@@ -1,0 +1,40 @@
+@import './styles/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f131e;
+    color: #dfe2f2;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0e19;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #262a36;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #353945;
+  }
+}
+
+/* Reusable dot grid pattern */
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(202, 190, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}

@@ -1,0 +1,110 @@
+:root {
+  /* Surface Layers */
+  --color-surface: #0f131e;
+  --color-surface-dim: #0f131e;
+  --color-surface-bright: #353945;
+  --color-surface-lowest: #0a0e19;
+  --color-surface-low: #171b27;
+  --color-surface-container: #1b1f2b;
+  --color-surface-high: #262a36;
+  --color-surface-highest: #313441;
+
+  /* Text Layers */
+  --color-on-surface: #dfe2f2;
+  --color-on-surface-variant: #c9c4d8;
+  --color-outline: #938ea1;
+  --color-outline-variant: #484555;
+
+  /* Accent Radiance */
+  --color-primary: #cabeff;
+  --color-primary-container: #947dff;
+  --color-secondary: #5de6ff;
+  --color-secondary-container: #00cbe6;
+  --color-tertiary: #f8acff;
+  --color-tertiary-container: #d164e2;
+  --color-amber-mutation: #fbbf24;
+  --color-error: #ffb4ab;
+  --color-success: #34d399;
+
+  /* Glassmorphism Specs */
+  --glass-fill-level-1: rgba(255, 255, 255, 0.06);
+  --glass-border-level-1: rgba(255, 255, 255, 0.12);
+  --glass-highlight-level-1: inset 0 1px 0 rgba(255, 255, 255, 0.20);
+  --glass-blur-level-1: 24px;
+  --glass-shadow-level-1: 0 8px 32px rgba(0, 0, 0, 0.45);
+
+  --glass-fill-level-2: rgba(11, 15, 26, 0.65);
+  --glass-border-level-2: rgba(255, 255, 255, 0.08);
+  --glass-blur-level-2: 20px;
+
+  --glass-fill-level-3: rgba(15, 19, 30, 0.90);
+  --glass-border-level-3: rgba(255, 255, 255, 0.20);
+  --glass-highlight-level-3: inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  --glass-blur-level-3: 32px;
+  --glass-shadow-level-3: 0 16px 48px rgba(0, 0, 0, 0.65);
+
+  /* Physics */
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 200ms;
+  --duration-normal: 300ms;
+  --duration-slow: 600ms;
+}
+
+/* Glass Utility Classes */
+.glass-panel-1 {
+  background: var(--glass-fill-level-1);
+  backdrop-filter: blur(var(--glass-blur-level-1));
+  -webkit-backdrop-filter: blur(var(--glass-blur-level-1));
+  border: 1px solid var(--glass-border-level-1);
+  box-shadow: var(--glass-shadow-level-1), var(--glass-highlight-level-1);
+}
+
+.glass-panel-2 {
+  background: var(--glass-fill-level-2);
+  backdrop-filter: blur(var(--glass-blur-level-2));
+  -webkit-backdrop-filter: blur(var(--glass-blur-level-2));
+  border: 1px solid var(--glass-border-level-2);
+}
+
+.glass-panel-3 {
+  background: var(--glass-fill-level-3);
+  backdrop-filter: blur(var(--glass-blur-level-3));
+  -webkit-backdrop-filter: blur(var(--glass-blur-level-3));
+  border: 1px solid var(--glass-border-level-3);
+  box-shadow: var(--glass-shadow-level-3), var(--glass-highlight-level-3);
+}
+
+/* Reduced transparency / high contrast fallback */
+@media (prefers-reduced-transparency: reduce) {
+  .glass-panel-1 {
+    background: #171b27;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .glass-panel-2 {
+    background: #0a0e19;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .glass-panel-3 {
+    background: #1b1f2b;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+/* Amber flash animation keyframes */
+@keyframes amberFlashPulse {
+  0% {
+    background-color: rgba(251, 191, 36, 0.35);
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.animate-amber-flash {
+  animation: amberFlashPulse 600ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
