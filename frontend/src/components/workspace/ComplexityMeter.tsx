@@ -27,7 +27,7 @@ export const ComplexityMeter: React.FC<ComplexityMeterProps> = ({
   className = '',
 }) => {
   return (
-    <GlassPanel intensity="low" className={`flex flex-col p-3 overflow-hidden ${className}`}>
+    <GlassPanel level={1} className={`flex flex-col p-3 overflow-hidden ${className}`}>
       {/* Header */}
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-1.5">
@@ -37,12 +37,18 @@ export const ComplexityMeter: React.FC<ComplexityMeterProps> = ({
           </span>
         </div>
         <div className="flex items-center gap-1.5">
-          <Chip variant="cyan" size="sm" className="font-mono text-[9px]">
-            T: {timeComplexity}
-          </Chip>
-          <Chip variant="violet" size="sm" className="font-mono text-[9px]">
-            S: {spaceComplexity}
-          </Chip>
+          <Chip
+            label={`T: ${timeComplexity}`}
+            variant="secondary"
+            active
+            className="font-mono text-[9px] py-0.5 px-2"
+          />
+          <Chip
+            label={`S: ${spaceComplexity}`}
+            variant="primary"
+            active
+            className="font-mono text-[9px] py-0.5 px-2"
+          />
         </div>
       </div>
 
