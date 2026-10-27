@@ -24,9 +24,12 @@ export const MemoryBox: React.FC<MemoryBoxProps> = ({ obj, className = '' }) => 
       {/* Header: Type, ID, Address */}
       <div className="flex items-center justify-between gap-2 mb-3 pb-2 border-b border-border-subtle">
         <div className="flex items-center gap-2">
-          <Chip variant="violet" size="sm" className="font-mono text-[9px] uppercase">
-            {obj.type}
-          </Chip>
+          <Chip
+            label={obj.type}
+            variant="primary"
+            active
+            className="font-mono text-[9px] uppercase py-0.5 px-2"
+          />
           {obj.label && (
             <span className="text-xs font-mono font-medium text-text-primary">
               {obj.label}

@@ -26,7 +26,7 @@ export const PredictQuizCard: React.FC<PredictQuizCardProps> = ({
 }) => {
   if (!question) {
     return (
-      <GlassPanel intensity="low" className={`p-4 text-center text-text-tertiary ${className}`}>
+      <GlassPanel level={1} className={`p-4 text-center text-text-tertiary ${className}`}>
         <span className="material-symbols-outlined text-2xl mb-1 opacity-40">psychology</span>
         <p className="text-xs">No active prediction for this step. Step forward to test your recall!</p>
       </GlassPanel>
@@ -34,7 +34,7 @@ export const PredictQuizCard: React.FC<PredictQuizCardProps> = ({
   }
 
   return (
-    <GlassPanel intensity="medium" className={`p-4 border border-violet/30 overflow-hidden ${className}`}>
+    <GlassPanel level={2} glow="primary" className={`p-4 border border-violet/30 overflow-hidden ${className}`}>
       {/* Header with Streak */}
       <div className="flex items-center justify-between mb-3 pb-2 border-b border-border-subtle">
         <div className="flex items-center gap-2">
@@ -44,9 +44,12 @@ export const PredictQuizCard: React.FC<PredictQuizCardProps> = ({
           </h4>
         </div>
         {streak > 0 && (
-          <Chip variant="amber" size="sm" className="font-mono text-[10px]">
-            🔥 {streak} Streak
-          </Chip>
+          <Chip
+            label={`🔥 ${streak} Streak`}
+            variant="tertiary"
+            active
+            className="font-mono text-[10px] py-0.5 px-2"
+          />
         )}
       </div>
 

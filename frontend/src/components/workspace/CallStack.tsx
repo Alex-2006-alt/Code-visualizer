@@ -18,18 +18,17 @@ export const CallStack: React.FC<CallStackProps> = ({
   className = '',
   onSelectFrame,
 }) => {
-  // Top of stack is the last frame
   const framesReversed = [...stack].reverse()
 
-  const eventVariantMap: Record<string, 'cyan' | 'violet' | 'amber' | 'coral'> = {
-    line: 'cyan',
-    call: 'violet',
-    return: 'amber',
-    exception: 'coral',
+  const eventVariantMap: Record<string, 'secondary' | 'primary' | 'tertiary' | 'error'> = {
+    line: 'secondary',
+    call: 'primary',
+    return: 'tertiary',
+    exception: 'error',
   }
 
   return (
-    <GlassPanel intensity="low" className={`flex flex-col h-full overflow-hidden ${className}`}>
+    <GlassPanel level={1} className={`flex flex-col h-full overflow-hidden ${className}`}>
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-border-subtle bg-container-lowest/40">
         <div className="flex items-center gap-2">
@@ -41,9 +40,12 @@ export const CallStack: React.FC<CallStackProps> = ({
         </div>
 
         {event && (
-          <Chip variant={eventVariantMap[event] || 'cyan'} size="sm" className="font-mono uppercase text-[9px]">
-            {event}
-          </Chip>
+          <Chip
+            label={event}
+            variant={eventVariantMap[event] || 'secondary'}
+            active
+            className="font-mono uppercase text-[9px] py-0.5 px-2"
+          />
         )}
       </div>
 

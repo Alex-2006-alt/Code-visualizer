@@ -11,7 +11,7 @@ interface MemoryHeapProps {
 
 export const MemoryHeap: React.FC<MemoryHeapProps> = ({ objects = [], className = '' }) => {
   return (
-    <GlassPanel intensity="low" className={`flex flex-col h-full overflow-hidden ${className}`}>
+    <GlassPanel level={1} className={`flex flex-col h-full overflow-hidden ${className}`}>
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-border-subtle bg-container-lowest/40">
         <div className="flex items-center gap-2">

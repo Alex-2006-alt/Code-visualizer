@@ -21,7 +21,7 @@ export const OutputTerminal: React.FC<OutputTerminalProps> = ({
   const [isCollapsed, setIsCollapsed] = useState(false)
 
   return (
-    <GlassPanel intensity="low" className={`flex flex-col border border-border-subtle overflow-hidden ${className}`}>
+    <GlassPanel level={1} className={`flex flex-col border border-border-subtle overflow-hidden ${className}`}>
       {/* Header bar */}
       <div className="flex items-center justify-between px-3 py-2 border-b border-border-subtle bg-container-lowest/60">
         <div className="flex items-center gap-1.5">
@@ -108,7 +108,7 @@ export const OutputTerminal: React.FC<OutputTerminalProps> = ({
               </div>
               <div className="p-2 rounded bg-container-lowest/60 border border-border-subtle">
                 <span className="text-[10px] text-text-tertiary uppercase block">Status</span>
-                <Chip variant="emerald" size="sm" className="mt-0.5">Ready</Chip>
+                <Chip label="Ready" variant="secondary" active className="mt-0.5 text-[9px] py-0 px-2" />
               </div>
             </div>
           )}

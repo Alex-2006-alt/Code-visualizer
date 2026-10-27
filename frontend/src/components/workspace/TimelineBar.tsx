@@ -38,7 +38,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
 
   return (
     <GlassPanel
-      intensity="medium"
+      level={2}
       className={`px-4 py-3 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-xl ${className}`}
     >
       <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6">

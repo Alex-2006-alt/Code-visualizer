@@ -9,17 +9,17 @@ interface VariablesTableProps {
   className?: string
 }
 
-function getTypeBadge(val: unknown): { label: string; color: 'violet' | 'cyan' | 'amber' | 'emerald' | 'gray' } {
-  if (val === null || val === undefined) return { label: 'None', color: 'gray' }
-  if (typeof val === 'number') return { label: Number.isInteger(val) ? 'int' : 'float', color: 'cyan' }
+function getTypeBadge(val: unknown): { label: string; variant: 'primary' | 'secondary' | 'tertiary' | 'default' } {
+  if (val === null || val === undefined) return { label: 'None', variant: 'default' }
+  if (typeof val === 'number') return { label: Number.isInteger(val) ? 'int' : 'float', variant: 'secondary' }
   if (typeof val === 'string') {
-    if (val.startsWith('0x')) return { label: 'ref', color: 'violet' }
-    return { label: 'str', color: 'emerald' }
+    if (val.startsWith('0x')) return { label: 'ref', variant: 'primary' }
+    return { label: 'str', variant: 'secondary' }
   }
-  if (typeof val === 'boolean') return { label: 'bool', color: 'amber' }
-  if (Array.isArray(val)) return { label: 'list', color: 'violet' }
-  if (typeof val === 'object') return { label: 'dict', color: 'violet' }
-  return { label: typeof val, color: 'gray' }
+  if (typeof val === 'boolean') return { label: 'bool', variant: 'tertiary' }
+  if (Array.isArray(val)) return { label: 'list', variant: 'primary' }
+  if (typeof val === 'object') return { label: 'dict', variant: 'primary' }
+  return { label: typeof val, variant: 'default' }
 }
 
 function formatValue(val: unknown): string {
@@ -53,7 +53,7 @@ export const VariablesTable: React.FC<VariablesTableProps> = ({
   }, [locals, filter])
 
   return (
-    <GlassPanel intensity="low" className={`flex flex-col h-full overflow-hidden ${className}`}>
+    <GlassPanel level={1} className={`flex flex-col h-full overflow-hidden ${className}`}>
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-border-subtle bg-container-lowest/40">
         <div className="flex items-center gap-2">
@@ -89,7 +89,7 @@ export const VariablesTable: React.FC<VariablesTableProps> = ({
             <AnimatePresence initial={false}>
               {entries.map(([name, value]) => {
                 const isMutated = mutatedVariable === name
-                const { label, color } = getTypeBadge(value)
+                const { label, variant } = getTypeBadge(value)
                 const formatted = formatValue(value)
                 const isRef = typeof value === 'string' && value.startsWith('0x')
 
@@ -112,9 +112,12 @@ export const VariablesTable: React.FC<VariablesTableProps> = ({
                       <span className={`text-xs font-mono font-medium truncate ${isMutated ? 'text-amber-300' : 'text-text-primary'}`}>
                         {name}
                       </span>
-                      <Chip variant={color} size="sm" className="font-mono text-[9px] py-0 px-1.5">
-                        {label}
-                      </Chip>
+                      <Chip
+                        label={label}
+                        variant={variant}
+                        active
+                        className="font-mono text-[9px] py-0 px-1.5"
+                      />
                     </div>
 
                     {/* Var Value */}
