@@ -38,3 +38,42 @@
   background-image: radial-gradient(rgba(202, 190, 255, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
+/* Monaco Editor Custom Current Execution Line & Glyphs */
+.current-execution-line {
+  background: rgba(34, 211, 238, 0.14) !important;
+  border-left: 3px solid #22d3ee !important;
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.25) !important;
+}
+
+.execution-arrow-glyph {
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.execution-arrow-glyph::before {
+  content: '▶';
+  color: #22d3ee;
+  font-size: 11px;
+  filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.9));
+  margin-left: 4px;
+}
+
+.breakpoint-glyph {
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.breakpoint-glyph::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  background: #f87171;
+  box-shadow: 0 0 10px rgba(248, 113, 113, 0.9);
+  margin-left: 5px;
+}
