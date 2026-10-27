@@ -77,3 +77,10 @@
   box-shadow: 0 0 10px rgba(248, 113, 113, 0.9);
   margin-left: 5px;
 }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -16;
+  }
+}
+
