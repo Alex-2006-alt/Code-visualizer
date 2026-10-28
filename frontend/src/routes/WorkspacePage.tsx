@@ -26,6 +26,7 @@ export const WorkspacePage: React.FC = () => {
     steps,
     currentStep,
     isPlaying,
+    isLoading,
     speed,
     currentPreset,
     streak,
@@ -38,6 +39,7 @@ export const WorkspacePage: React.FC = () => {
     setSpeed,
     setCurrentStep,
     resetExecution,
+    runCurrentCode,
     setMode,
     loadPreset,
     submitPredictAnswer,
@@ -51,7 +53,6 @@ export const WorkspacePage: React.FC = () => {
   // Global Keyboard shortcuts: Space (play/pause), ArrowLeft (prev), ArrowRight (next)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Don't intercept if user is typing in an input/textarea
       const tag = (e.target as HTMLElement)?.tagName?.toLowerCase()
       if (tag === 'input' || tag === 'textarea') return
 
@@ -91,6 +92,7 @@ export const WorkspacePage: React.FC = () => {
             value={currentPreset.id}
             onChange={(e) => loadPreset(e.target.value)}
             className="bg-bg-surface/80 border border-border-subtle rounded-lg px-2.5 py-1 text-xs font-semibold text-text-primary focus:outline-none focus:border-cyan/50 cursor-pointer"
+            aria-label="Select Python preset"
           >
             {Object.values(PRESETS).map((p) => (
               <option key={p.id} value={p.id} className="bg-bg-surface text-text-primary">
@@ -127,12 +129,28 @@ export const WorkspacePage: React.FC = () => {
           )}
 
           <GlassButton
-            variant="primary"
+            variant="ghost"
             size="sm"
             onClick={resetExecution}
             leftIcon={<span className="material-symbols-outlined text-[16px]">restart_alt</span>}
+            aria-label="Reset execution"
           >
-            Restart
+            Reset
+          </GlassButton>
+
+          <GlassButton
+            variant="primary"
+            size="sm"
+            onClick={runCurrentCode}
+            disabled={isLoading}
+            leftIcon={
+              <span className={`material-symbols-outlined text-[16px] ${isLoading ? 'animate-spin' : ''}`}>
+                {isLoading ? 'progress_activity' : 'play_arrow'}
+              </span>
+            }
+            aria-label="Run Python code"
+          >
+            {isLoading ? 'Running...' : 'Run'}
           </GlassButton>
         </div>
       </div>
@@ -165,6 +183,16 @@ export const WorkspacePage: React.FC = () => {
             onChange={(newCode) => setCode(newCode || '')}
             height="440px"
           />
+
+          {/* Explanation Banner */}
+          {step?.explanation && (
+            <div className="p-3 rounded-xl bg-cyan/10 border border-cyan/25 flex items-start gap-2 text-xs">
+              <span className="material-symbols-outlined text-sm text-cyan mt-0.5">info</span>
+              <p className="text-text-secondary leading-relaxed font-mono text-[11px]">
+                {step.explanation}
+              </p>
+            </div>
+          )}
 
           {mode === 'predict' && (
             <PredictQuizCard
