@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { TraceStep, TracePreset } from '@/types/trace'
 import { PRESETS, DEFAULT_PRESET } from '@/mocks'
+import { runCode } from '@/lib/api'
 
 export type ExecutionMode = 'visualize' | 'predict' | 'compare'
 
@@ -10,6 +11,7 @@ interface TraceState {
   steps: TraceStep[]
   currentStep: number
   isPlaying: boolean
+  isLoading: boolean
   speed: number
   mode: ExecutionMode
   currentPreset: TracePreset
@@ -34,6 +36,7 @@ interface TraceState {
   setMode: (mode: ExecutionMode) => void
   loadPreset: (presetId: string) => void
   resetExecution: () => void
+  runCurrentCode: () => Promise<void>
 
   // Predict mode actions
   submitPredictAnswer: (optionIndex: number) => boolean
@@ -47,6 +50,7 @@ export const useTraceStore = create<TraceState>((set, get) => ({
   steps: DEFAULT_PRESET.steps,
   currentStep: 0,
   isPlaying: false,
+  isLoading: false,
   speed: 1,
   mode: 'visualize',
   currentPreset: DEFAULT_PRESET,
@@ -143,6 +147,20 @@ export const useTraceStore = create<TraceState>((set, get) => ({
       selectedAnswer: null,
       answerFeedback: 'idle',
     })
+  },
+
+  runCurrentCode: async () => {
+    const { code, pause } = get()
+    pause()
+    set({ isLoading: true })
+    try {
+      const steps = await runCode(code)
+      if (steps && steps.length > 0) {
+        set({ steps, currentStep: 0, selectedAnswer: null, answerFeedback: 'idle' })
+      }
+    } finally {
+      set({ isLoading: false })
+    }
   },
 
   submitPredictAnswer: (optionIndex) => {
