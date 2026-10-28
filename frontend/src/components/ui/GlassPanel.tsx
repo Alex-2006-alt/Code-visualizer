@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils'
 export interface GlassPanelProps extends React.HTMLAttributes<HTMLDivElement> {
   level?: 1 | 2 | 3
   glow?: 'none' | 'primary' | 'secondary' | 'cyan' | 'amber' | 'error'
+  solid?: boolean
   as?: React.ElementType
 }
 
@@ -12,6 +13,7 @@ export const GlassPanel = React.forwardRef<HTMLDivElement, GlassPanelProps>(
     {
       level = 1,
       glow = 'none',
+      solid = false,
       as: Component = 'div',
       className,
       children,
@@ -19,11 +21,17 @@ export const GlassPanel = React.forwardRef<HTMLDivElement, GlassPanelProps>(
     },
     ref
   ) => {
-    const levelClasses = {
-      1: 'glass-panel-1 bg-surface-container/60 backdrop-blur-xl border border-white/10 shadow-glass-1',
-      2: 'glass-panel-2 bg-surface-container-lowest/85 backdrop-blur-md border border-white/[0.08]',
-      3: 'glass-panel-3 bg-surface-container-high/90 backdrop-blur-2xl border border-white/20 shadow-glass-2',
-    }[level]
+    const levelClasses = solid
+      ? {
+          1: 'bg-surface-container border border-white/10 shadow-lg',
+          2: 'bg-surface-lowest border border-white/[0.08] shadow-md',
+          3: 'bg-surface-high border border-white/20 shadow-xl',
+        }[level]
+      : {
+          1: 'glass-panel-1 bg-surface-container/60 backdrop-blur-xl border border-white/10 shadow-glass-1',
+          2: 'glass-panel-2 bg-surface-container-lowest/85 backdrop-blur-md border border-white/[0.08]',
+          3: 'glass-panel-3 bg-surface-container-high/90 backdrop-blur-2xl border border-white/20 shadow-glass-2',
+        }[level]
 
     const glowClasses = {
       none: '',
