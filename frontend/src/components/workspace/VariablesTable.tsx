@@ -71,7 +71,7 @@ export const VariablesTable: React.FC<VariablesTableProps> = ({
               value={filter}
               onChange={(e) => setFilter(e.target.value)}
               placeholder="Filter..."
-              className="w-24 focus:w-32 transition-all text-xs bg-bg-surface/60 border border-border-subtle rounded-md px-2 py-0.5 text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-cyan/50"
+              className="w-24 focus:w-32 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] text-xs bg-bg-surface/60 border border-border-subtle rounded-md px-2 py-0.5 text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-cyan/50"
             />
           </div>
         )}
@@ -95,15 +95,15 @@ export const VariablesTable: React.FC<VariablesTableProps> = ({
 
                 return (
                   <motion.div
-                    key={name}
+                    key={`${name}-${formatted}-${isMutated}`}
                     layout
-                    initial={{ opacity: 0, y: 4 }}
+                    initial={{ opacity: 0, y: 6 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.96 }}
-                    transition={{ duration: 0.2 }}
-                    className={`flex items-center justify-between px-3 py-2 rounded-lg border transition-colors ${
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                    className={`flex items-center justify-between px-3 py-2 rounded-lg border transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                       isMutated
-                        ? 'bg-amber-400/15 border-amber-400/50 shadow-[0_0_12px_rgba(251,191,36,0.25)]'
+                        ? 'animate-amber-flash border-amber-400/60 shadow-[0_0_16px_rgba(251,191,36,0.35)]'
                         : 'bg-container-lowest/50 border-border-subtle hover:border-border-default'
                     }`}
                   >
@@ -129,7 +129,7 @@ export const VariablesTable: React.FC<VariablesTableProps> = ({
                       )}
                       <span
                         title={formatted}
-                        className={`text-xs font-mono truncate ${
+                        className={`text-xs font-mono truncate transition-colors duration-300 ${
                           isRef
                             ? 'text-violet font-semibold'
                             : isMutated
