@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion, useReducedMotion } from 'framer-motion'
 
 interface MemoryArrowProps {
   startX: number
@@ -17,6 +18,7 @@ export const MemoryArrow: React.FC<MemoryArrowProps> = ({
   color = '#CABEFF',
   className = '',
 }) => {
+  const shouldReduceMotion = useReducedMotion()
   const dx = endX - startX
   const controlX1 = startX + dx * 0.5
   const controlY1 = startY
@@ -47,16 +49,21 @@ export const MemoryArrow: React.FC<MemoryArrowProps> = ({
         </filter>
       </defs>
 
-      <path
+      <motion.path
         d={pathData}
         fill="none"
         stroke={color}
         strokeWidth="2"
         strokeDasharray="4 4"
-        className="animate-[dash_1.5s_linear_infinite]"
+        initial={shouldReduceMotion ? false : { pathLength: 0, opacity: 0 }}
+        animate={{ pathLength: 1, opacity: 0.85 }}
+        transition={{
+          duration: 0.35,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className={shouldReduceMotion ? '' : 'animate-[dash_1.5s_linear_infinite]'}
         markerEnd="url(#arrowhead)"
         filter="url(#glow)"
-        opacity="0.85"
       />
     </svg>
   )

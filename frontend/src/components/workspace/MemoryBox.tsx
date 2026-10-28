@@ -15,10 +15,15 @@ export const MemoryBox: React.FC<MemoryBoxProps> = ({ obj, className = '' }) => 
   return (
     <motion.div
       layout
-      initial={{ opacity: 0, scale: 0.92, y: 10 }}
+      initial={{ opacity: 0, scale: 0.88, y: 14 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.92 }}
-      transition={{ duration: 0.25 }}
+      exit={{ opacity: 0, scale: 0.88, y: -10 }}
+      transition={{
+        type: 'spring',
+        stiffness: 380,
+        damping: 26,
+        mass: 0.8,
+      }}
       className={`rounded-xl border border-violet/30 bg-container-lowest/70 backdrop-blur-md p-3.5 shadow-lg shadow-black/20 ${className}`}
     >
       {/* Header: Type, ID, Address */}
@@ -50,7 +55,8 @@ export const MemoryBox: React.FC<MemoryBoxProps> = ({ obj, className = '' }) => 
               <motion.div
                 key={idx}
                 layout
-                className={`flex flex-col items-center min-w-[3rem] px-2 py-1.5 rounded-lg border transition-all ${
+                transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                className={`flex flex-col items-center min-w-[3rem] px-2 py-1.5 rounded-lg border transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                   isTarget
                     ? 'bg-amber-400/20 border-amber-400/60 shadow-[0_0_12px_rgba(251,191,36,0.3)] ring-1 ring-amber-400/40'
                     : 'bg-bg-surface/70 border-border-subtle hover:border-border-default'

@@ -20,12 +20,15 @@ export const StackFrameCard: React.FC<StackFrameCardProps> = ({
   return (
     <motion.div
       layout
-      initial={{ opacity: 0, x: -12, scale: 0.95 }}
+      initial={{ opacity: 0, x: -16, scale: 0.96 }}
       animate={{ opacity: 1, x: 0, scale: 1 }}
-      exit={{ opacity: 0, x: 12, scale: 0.95 }}
-      transition={{ type: 'spring', stiffness: 350, damping: 25 }}
+      exit={{ opacity: 0, x: 16, scale: 0.96 }}
+      transition={{
+        duration: 0.28,
+        ease: [0.22, 1, 0.36, 1],
+      }}
       onClick={onClick}
-      className={`p-3 rounded-lg border cursor-pointer transition-all ${
+      className={`p-3 rounded-lg border cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
         isTop
           ? 'bg-violet/10 border-violet/40 shadow-[0_0_16px_rgba(202,190,255,0.15)] ring-1 ring-violet/30'
           : 'bg-container-lowest/40 border-border-subtle hover:border-border-default opacity-80 hover:opacity-100'
@@ -43,7 +46,7 @@ export const StackFrameCard: React.FC<StackFrameCardProps> = ({
             </span>
           )}
         </div>
-        <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-bg-surface/80 border border-border-subtle text-cyan">
+        <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-bg-surface/80 border border-border-subtle text-cyan font-semibold">
           line {frame.line}
         </span>
       </div>

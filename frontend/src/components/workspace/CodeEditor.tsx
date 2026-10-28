@@ -45,7 +45,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
           },
         },
       })
-      editorRef.current.revealLineInCenterIfOutsideViewport(currentLine)
+      editorRef.current.revealLineInCenter(currentLine, monaco.editor.ScrollType.Smooth)
     }
 
     // 2. Armed breakpoints in gutter
