@@ -1,4 +1,4 @@
-"""Code execution routes (/run and /api/run)."""
+"""Code execution routes (/run and /api/run) with rate limiting and concurrency control."""
 
 from __future__ import annotations
 
@@ -6,14 +6,23 @@ from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, status
 
+from app.deps import check_rate_limit, concurrency_guard
 from app.schemas import RunRequest, RunResponse
 from app.services.sandbox import BaseSandboxRunner, get_sandbox_runner
 
 router = APIRouter(tags=["Execution"])
 
 
-@router.post("/run", response_model=RunResponse)
-@router.post("/api/run", response_model=RunResponse)
+@router.post(
+    "/run",
+    response_model=RunResponse,
+    dependencies=[Depends(check_rate_limit), Depends(concurrency_guard)],
+)
+@router.post(
+    "/api/run",
+    response_model=RunResponse,
+    dependencies=[Depends(check_rate_limit), Depends(concurrency_guard)],
+)
 async def run_code(
     request: RunRequest,
     runner: Annotated[BaseSandboxRunner, Depends(get_sandbox_runner)],
