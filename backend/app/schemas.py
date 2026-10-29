@@ -120,6 +120,10 @@ class SnippetCreateRequest(BaseModel):
     title: str | None = None
 
 
+class SnippetCreateResponse(BaseModel):
+    id: str
+
+
 class SnippetResponse(BaseModel):
     id: str
     code: str
