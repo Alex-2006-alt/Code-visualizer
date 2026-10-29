@@ -13,6 +13,7 @@ from app.core import setup_logging
 from app.core.errors import register_error_handlers
 from app.db import init_db
 from app.routes.health import router as health_router
+from app.routes.run import router as run_router
 
 settings = get_settings()
 setup_logging(debug=settings.app_debug)
@@ -52,9 +53,9 @@ def create_app() -> FastAPI:
 
     # Include routes
     app.include_router(health_router)
+    app.include_router(run_router)
 
     return app
 
 
 app = create_app()
-
