@@ -14,6 +14,7 @@ from app.core.errors import register_error_handlers
 from app.db import init_db
 from app.routes.compare import router as compare_router
 from app.routes.complexity import router as complexity_router
+from app.routes.examples import router as examples_router
 from app.routes.health import router as health_router
 from app.routes.run import router as run_router
 
@@ -58,9 +59,9 @@ def create_app() -> FastAPI:
     app.include_router(run_router)
     app.include_router(compare_router)
     app.include_router(complexity_router)
+    app.include_router(examples_router)
 
     return app
 
 
 app = create_app()
-
