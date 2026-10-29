@@ -1,0 +1,12 @@
+{
+  "name": "Deeply Nested 20-level List",
+  "filename": "j03_deeply_nested_data",
+  "category": "J_abuse_limits",
+  "expected_outcome": "ok",
+  "expected_stdout": "Deep nesting depth: 1\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

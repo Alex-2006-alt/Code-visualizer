@@ -1,0 +1,12 @@
+{
+  "name": "Multiple Unused Variables",
+  "filename": "h02_unused_variables",
+  "category": "H_messy_code",
+  "expected_outcome": "ok",
+  "expected_stdout": "Final sum: 10\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

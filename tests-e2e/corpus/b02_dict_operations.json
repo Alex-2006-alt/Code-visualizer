@@ -1,0 +1,12 @@
+{
+  "name": "Dictionary Operations",
+  "filename": "b02_dict_operations",
+  "category": "B_data_structures",
+  "expected_outcome": "ok",
+  "expected_stdout": "dict: {'a': 10, 'c': 3} keys: ['a', 'c']\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

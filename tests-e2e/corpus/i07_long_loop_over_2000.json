@@ -1,0 +1,12 @@
+{
+  "name": "Loop Over 2000 Steps",
+  "filename": "i07_long_loop_over_2000",
+  "category": "I_expected_failures",
+  "expected_outcome": "truncated",
+  "expected_stdout": null,
+  "assertions": {
+    "check_stdout": false,
+    "forbidden_imports": false,
+    "step_limit_truncated": true
+  }
+}

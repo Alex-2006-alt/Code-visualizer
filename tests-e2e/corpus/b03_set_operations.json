@@ -1,0 +1,12 @@
+{
+  "name": "Set Operations",
+  "filename": "b03_set_operations",
+  "category": "B_data_structures",
+  "expected_outcome": "ok",
+  "expected_stdout": "Intersection: [3, 4]\nUnion: [1, 2, 3, 4, 5, 6, 10]\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

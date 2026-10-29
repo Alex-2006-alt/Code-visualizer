@@ -1,0 +1,12 @@
+{
+  "name": "Recursive Fibonacci",
+  "filename": "d02_fibonacci",
+  "category": "D_recursion",
+  "expected_outcome": "ok",
+  "expected_stdout": "fib(7) = 13\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

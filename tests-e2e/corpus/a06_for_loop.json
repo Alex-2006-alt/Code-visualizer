@@ -1,0 +1,12 @@
+{
+  "name": "For Loop with Accumulator",
+  "filename": "a06_for_loop",
+  "category": "A_basics",
+  "expected_outcome": "ok",
+  "expected_stdout": "Sum of squares: 55\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

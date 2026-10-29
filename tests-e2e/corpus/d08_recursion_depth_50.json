@@ -1,0 +1,12 @@
+{
+  "name": "Recursion Depth ~45",
+  "filename": "d08_recursion_depth_50",
+  "category": "D_recursion",
+  "expected_outcome": "ok",
+  "expected_stdout": "Result: Liftoff!\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

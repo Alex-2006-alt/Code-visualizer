@@ -1,0 +1,12 @@
+{
+  "name": "Shortest Path BFS Unweighted",
+  "filename": "e06_shortest_path_graph",
+  "category": "E_dp_graphs",
+  "expected_outcome": "ok",
+  "expected_stdout": "Shortest path A->F: ['A', 'C', 'F']\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

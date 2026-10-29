@@ -1,0 +1,12 @@
+{
+  "name": "Arithmetic Operations",
+  "filename": "a02_arithmetic",
+  "category": "A_basics",
+  "expected_outcome": "ok",
+  "expected_stdout": "19 11 60 3.75 3 3 64\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

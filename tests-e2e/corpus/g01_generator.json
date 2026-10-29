@@ -1,0 +1,12 @@
+{
+  "name": "Generator Function",
+  "filename": "g01_generator",
+  "category": "G_other_features",
+  "expected_outcome": "ok",
+  "expected_stdout": "Generator yield: [0, 2, 4, 6]\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

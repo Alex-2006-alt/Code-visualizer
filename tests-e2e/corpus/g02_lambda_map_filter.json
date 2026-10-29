@@ -1,0 +1,12 @@
+{
+  "name": "Lambda with Map and Filter",
+  "filename": "g02_lambda_map_filter",
+  "category": "G_other_features",
+  "expected_outcome": "ok",
+  "expected_stdout": "Evens: [2, 4, 6] Squared: [4, 16, 36]\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

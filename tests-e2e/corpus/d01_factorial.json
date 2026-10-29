@@ -1,0 +1,12 @@
+{
+  "name": "Recursive Factorial",
+  "filename": "d01_factorial",
+  "category": "D_recursion",
+  "expected_outcome": "ok",
+  "expected_stdout": "5! = 120\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

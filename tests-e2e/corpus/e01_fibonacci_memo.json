@@ -1,0 +1,12 @@
+{
+  "name": "Fibonacci with Memoization",
+  "filename": "e01_fibonacci_memo",
+  "category": "E_dp_graphs",
+  "expected_outcome": "ok",
+  "expected_stdout": "fib_memo(12) = 144\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

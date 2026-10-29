@@ -1,0 +1,12 @@
+{
+  "name": "Selection Sort",
+  "filename": "c02_selection_sort",
+  "category": "C_algorithms",
+  "expected_outcome": "ok",
+  "expected_stdout": "Sorted: [10, 13, 14, 29, 37]\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

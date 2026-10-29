@@ -1,0 +1,12 @@
+{
+  "name": "CRLF Windows Line Endings",
+  "filename": "h06_crlf_endings",
+  "category": "H_messy_code",
+  "expected_outcome": "ok",
+  "expected_stdout": "CRLF product: 200\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}
