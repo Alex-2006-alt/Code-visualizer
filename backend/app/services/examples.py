@@ -10,8 +10,8 @@ CURATED_EXAMPLES: list[ExampleSchema] = [
         title="Bubble Sort",
         category="Sorting",
         difficulty="Easy",
-        timeComplexity="O(n^2)",
-        spaceComplexity="O(1)",
+        time_complexity="O(n^2)",
+        space_complexity="O(1)",
         code="""def bubble_sort(arr):
     n = len(arr)
     for i in range(n):
@@ -30,8 +30,8 @@ print("Sorted:", sorted_numbers)
         title="Binary Search",
         category="Searching",
         difficulty="Easy",
-        timeComplexity="O(log n)",
-        spaceComplexity="O(1)",
+        time_complexity="O(log n)",
+        space_complexity="O(1)",
         code="""def binary_search(arr, target):
     low = 0
     high = len(arr) - 1
@@ -55,8 +55,8 @@ print("Found at index:", idx)
         title="Recursive Fibonacci",
         category="Recursion",
         difficulty="Medium",
-        timeComplexity="O(2^n)",
-        spaceComplexity="O(n)",
+        time_complexity="O(2^n)",
+        space_complexity="O(n)",
         code="""def fibonacci(n):
     if n <= 0:
         return 0
@@ -73,8 +73,8 @@ print("Fibonacci(5) =", res)
         title="Depth-First Search (DFS)",
         category="Graphs",
         difficulty="Medium",
-        timeComplexity="O(V + E)",
-        spaceComplexity="O(V)",
+        time_complexity="O(V + E)",
+        space_complexity="O(V)",
         code="""def dfs(graph, node, visited=None):
     if visited is None:
         visited = []
@@ -102,8 +102,8 @@ print("DFS Traversal:", order)
         title="Linked List Reversal",
         category="Data Structures",
         difficulty="Medium",
-        timeComplexity="O(n)",
-        spaceComplexity="O(1)",
+        time_complexity="O(n)",
+        space_complexity="O(1)",
         code="""class Node:
     def __init__(self, val, nxt=None):
         self.val = val
