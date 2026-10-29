@@ -24,6 +24,7 @@ from app.core.errors import (
 )
 from app.core.security import validate_code
 from app.schemas import RunResponse
+from app.services.docker_sandbox import DockerSandboxRunner
 
 logger = structlog.stdlib.get_logger(__name__)
 settings = get_settings()
@@ -124,5 +125,11 @@ class SubprocessSandboxRunner(BaseSandboxRunner):
 
 
 def get_sandbox_runner() -> BaseSandboxRunner:
-    """Dependency provider for the active sandbox runner."""
+    """Dependency provider returning the configured sandbox runner with automatic fallback."""
+    if settings.sandbox_backend == "docker":
+        try:
+            return DockerSandboxRunner()  # type: ignore[return-value]
+        except Exception as err:
+            logger.warning("docker_runner_unavailable", error=str(err), fallback="subprocess")
+            return SubprocessSandboxRunner()
     return SubprocessSandboxRunner()
