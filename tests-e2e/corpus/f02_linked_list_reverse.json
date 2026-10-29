@@ -1,0 +1,12 @@
+{
+  "name": "Linked List Build and Reverse",
+  "filename": "f02_linked_list_reverse",
+  "category": "F_classes_references",
+  "expected_outcome": "ok",
+  "expected_stdout": "Reversed list: [3, 2, 1]\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

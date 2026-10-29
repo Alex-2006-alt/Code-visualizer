@@ -1,0 +1,12 @@
+{
+  "name": "0/1 Knapsack Small",
+  "filename": "e03_knapsack_small",
+  "category": "E_dp_graphs",
+  "expected_outcome": "ok",
+  "expected_stdout": "Max knapsack value: 7\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

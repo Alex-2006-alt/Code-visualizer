@@ -1,0 +1,12 @@
+{
+  "name": "Prefix Sum Array",
+  "filename": "c09_prefix_sum",
+  "category": "C_algorithms",
+  "expected_outcome": "ok",
+  "expected_stdout": "Prefix: [0, 1, 3, 6, 10, 15] RangeSum(1, 3): 9\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

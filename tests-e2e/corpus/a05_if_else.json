@@ -1,0 +1,12 @@
+{
+  "name": "Branching Conditionals",
+  "filename": "a05_if_else",
+  "category": "A_basics",
+  "expected_outcome": "ok",
+  "expected_stdout": "Result: positive even\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

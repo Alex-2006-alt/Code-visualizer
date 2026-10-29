@@ -1,0 +1,12 @@
+{
+  "name": "Stack via List (LIFO)",
+  "filename": "b08_stack",
+  "category": "B_data_structures",
+  "expected_outcome": "ok",
+  "expected_stdout": "popped1: third popped2: second remaining: ['first']\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

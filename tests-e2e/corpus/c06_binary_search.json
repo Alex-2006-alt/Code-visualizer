@@ -1,0 +1,12 @@
+{
+  "name": "Binary Search",
+  "filename": "c06_binary_search",
+  "category": "C_algorithms",
+  "expected_outcome": "ok",
+  "expected_stdout": "Index of 23: 5\nIndex of 99: -1\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "List Comprehensions with Filters",
+  "filename": "b06_list_comprehension",
+  "category": "B_data_structures",
+  "expected_outcome": "ok",
+  "expected_stdout": "evens: [0, 2, 4, 6, 8]\nsquares: [0, 4, 16, 36, 64]\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

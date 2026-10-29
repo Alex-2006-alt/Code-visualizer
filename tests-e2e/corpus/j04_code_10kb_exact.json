@@ -1,0 +1,12 @@
+{
+  "name": "Code Exactly 10KB Limit",
+  "filename": "j04_code_10kb_exact",
+  "category": "J_abuse_limits",
+  "expected_outcome": "ok",
+  "expected_stdout": "Exactly 10KB: 42\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Infinite While Loop",
+  "filename": "i06_infinite_loop",
+  "category": "I_expected_failures",
+  "expected_outcome": "timeout",
+  "expected_stdout": null,
+  "assertions": {
+    "check_stdout": false,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

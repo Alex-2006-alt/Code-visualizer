@@ -1,0 +1,12 @@
+{
+  "name": "Bubble Sort",
+  "filename": "c01_bubble_sort",
+  "category": "C_algorithms",
+  "expected_outcome": "ok",
+  "expected_stdout": "Sorted: [1, 2, 4, 5, 8]\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

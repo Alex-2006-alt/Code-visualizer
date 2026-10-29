@@ -1,0 +1,12 @@
+{
+  "name": "Recursive Subsets (Power Set)",
+  "filename": "d06_subsets",
+  "category": "D_recursion",
+  "expected_outcome": "ok",
+  "expected_stdout": "Subsets count: 8\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

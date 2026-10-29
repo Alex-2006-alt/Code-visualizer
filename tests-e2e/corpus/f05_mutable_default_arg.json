@@ -1,0 +1,12 @@
+{
+  "name": "Mutable Default Argument Behavior",
+  "filename": "f05_mutable_default_arg",
+  "category": "F_classes_references",
+  "expected_outcome": "ok",
+  "expected_stdout": "r1: [1, 2] r2: [1, 2] same list: True\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

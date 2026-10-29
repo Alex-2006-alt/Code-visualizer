@@ -1,0 +1,12 @@
+{
+  "name": "Sieve of Eratosthenes",
+  "filename": "c11_prime_sieve",
+  "category": "C_algorithms",
+  "expected_outcome": "ok",
+  "expected_stdout": "Primes up to 30: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

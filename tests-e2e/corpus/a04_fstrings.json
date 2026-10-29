@@ -1,0 +1,12 @@
+{
+  "name": "f-Strings and Formatting",
+  "filename": "a04_fstrings",
+  "category": "A_basics",
+  "expected_outcome": "ok",
+  "expected_stdout": "Player Alice scored 95.7%\n2 + 2 = 4\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

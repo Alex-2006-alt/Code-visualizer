@@ -1,0 +1,12 @@
+{
+  "name": "Object __repr__ and __str__",
+  "filename": "f07_repr_methods",
+  "category": "F_classes_references",
+  "expected_outcome": "ok",
+  "expected_stdout": "User('Grace', 101)\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

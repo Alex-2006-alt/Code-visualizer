@@ -1,0 +1,12 @@
+{
+  "name": "NameError Undefined Variable",
+  "filename": "i02_name_error",
+  "category": "I_expected_failures",
+  "expected_outcome": "exception",
+  "expected_stdout": null,
+  "assertions": {
+    "check_stdout": false,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

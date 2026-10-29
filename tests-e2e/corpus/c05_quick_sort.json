@@ -1,0 +1,12 @@
+{
+  "name": "Quick Sort",
+  "filename": "c05_quick_sort",
+  "category": "C_algorithms",
+  "expected_outcome": "ok",
+  "expected_stdout": "Sorted: [1, 5, 7, 8, 9, 10]\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

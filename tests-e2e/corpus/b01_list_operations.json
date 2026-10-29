@@ -1,0 +1,12 @@
+{
+  "name": "List Append Pop Insert Sort",
+  "filename": "b01_list_operations",
+  "category": "B_data_structures",
+  "expected_outcome": "ok",
+  "expected_stdout": "nums: [2, 5, 8, 9] popped: 1\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

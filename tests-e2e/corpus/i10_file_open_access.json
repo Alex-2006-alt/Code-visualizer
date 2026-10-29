@@ -1,0 +1,12 @@
+{
+  "name": "Forbidden Open File Access",
+  "filename": "i10_file_open_access",
+  "category": "I_expected_failures",
+  "expected_outcome": "exception",
+  "expected_stdout": null,
+  "assertions": {
+    "check_stdout": false,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

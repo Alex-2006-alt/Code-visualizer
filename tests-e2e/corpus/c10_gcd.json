@@ -1,0 +1,12 @@
+{
+  "name": "GCD Euclidean Algorithm",
+  "filename": "c10_gcd",
+  "category": "C_algorithms",
+  "expected_outcome": "ok",
+  "expected_stdout": "GCD(48, 18): 6\nGCD(101, 10): 1\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}

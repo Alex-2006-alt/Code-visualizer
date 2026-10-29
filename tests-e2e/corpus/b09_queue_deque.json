@@ -1,0 +1,12 @@
+{
+  "name": "Queue with collections.deque",
+  "filename": "b09_queue_deque",
+  "category": "B_data_structures",
+  "expected_outcome": "ok",
+  "expected_stdout": "first dequeued: 1 remaining: [2, 3]\n",
+  "assertions": {
+    "check_stdout": true,
+    "forbidden_imports": false,
+    "step_limit_truncated": false
+  }
+}
