@@ -48,7 +48,7 @@ class RateLimiter:
         self._lock = asyncio.Lock()
 
     async def get_redis(self) -> Any:
-        """Lazily initialize and return the async Redis connection."""
+        """Lazily initialize and return Redis client if available."""
         if aioredis is None:
             return None
 
@@ -56,66 +56,97 @@ class RateLimiter:
             try:
                 self._redis = aioredis.from_url(
                     self.redis_url,
-                    encoding="utf-8",
                     decode_responses=True,
                     socket_connect_timeout=1.0,
                 )
-                await self._redis.ping()
+                # Quick ping to test connection
+                await asyncio.wait_for(self._redis.ping(), timeout=1.0)
                 self._redis_available = True
                 logger.info("redis_connected", url=self.redis_url)
             except Exception as e:
                 logger.warning("redis_unavailable_fallback_to_memory", error=str(e))
-                self._redis = None
                 self._redis_available = False
+                self._redis = None
+
         return self._redis
 
     async def check_rate_limit(self, client_ip: str) -> None:
-        """Check if client IP is within rate limits. Raises RateLimitError (429) if exceeded."""
+        """Enforce rate limits per client IP (minute & day windows)."""
         redis_client = await self.get_redis()
-        now = time.time()
 
         if redis_client and self._redis_available:
             try:
-                minute_key = f"ratelimit:{client_ip}:min:{int(now // 60)}"
-                pipe = redis_client.pipeline()
-                pipe.incr(minute_key)
-                pipe.expire(minute_key, 65)
-                results = await pipe.execute()
-                current_count = results[0]
-
-                if current_count > self.per_minute:
-                    raise RateLimitError(
-                        detail=f"Rate limit exceeded: max {self.per_minute} requests per minute."
-                    )
+                await self._check_redis_rate_limit(redis_client, client_ip)
                 return
             except RateLimitError:
                 raise
             except Exception as e:
-                logger.warning("redis_rate_limit_failed", error=str(e))
+                logger.warning("redis_rate_limit_failed_falling_back", error=str(e))
 
-        # In-memory sliding window fallback
+        # In-memory sliding-window fallback
+        await self._check_in_memory_rate_limit(client_ip)
+
+    async def _check_redis_rate_limit(self, redis_client: Any, client_ip: str) -> None:
+        now = time.time()
+        minute_key = f"rl:min:{client_ip}"
+        day_key = f"rl:day:{client_ip}"
+
+        pipe = redis_client.pipeline()
+        pipe.zadd(minute_key, {str(now): now})
+        pipe.zremrangebyscore(minute_key, 0, now - 60)
+        pipe.zcard(minute_key)
+        pipe.expire(minute_key, 65)
+
+        pipe.zadd(day_key, {str(now): now})
+        pipe.zremrangebyscore(day_key, 0, now - 86400)
+        pipe.zcard(day_key)
+        pipe.expire(day_key, 86500)
+
+        results = await pipe.execute()
+        min_count = results[2]
+        day_count = results[6]
+
+        if min_count > self.per_minute:
+            raise RateLimitError(
+                detail=f"Rate limit exceeded: {self.per_minute} requests per minute limit reached."
+            )
+        if day_count > self.per_day:
+            raise RateLimitError(
+                detail=f"Daily limit exceeded: {self.per_day} requests per day limit reached."
+            )
+
+    async def _check_in_memory_rate_limit(self, client_ip: str) -> None:
         async with self._lock:
+            now = time.time()
             timestamps = self._in_memory_requests[client_ip]
-            one_minute_ago = now - 60.0
-            # Evict timestamps older than 60s
-            timestamps = [t for t in timestamps if t > one_minute_ago]
+
+            # Prune older than 1 day
+            timestamps = [ts for ts in timestamps if ts > now - 86400]
             self._in_memory_requests[client_ip] = timestamps
 
-            if len(timestamps) >= self.per_minute:
+            # Check 1 minute window
+            min_count = sum(1 for ts in timestamps if ts > now - 60)
+            if min_count >= self.per_minute:
                 raise RateLimitError(
-                    detail=f"Rate limit exceeded: max {self.per_minute} requests per minute."
+                    detail=f"Rate limit exceeded: {self.per_minute} requests per minute limit reached."
+                )
+
+            # Check 1 day window
+            if len(timestamps) >= self.per_day:
+                raise RateLimitError(
+                    detail=f"Daily limit exceeded: {self.per_day} requests per day limit reached."
                 )
 
             timestamps.append(now)
 
     async def acquire_concurrency(self) -> None:
-        """Acquire a slot under the global concurrency cap. Raises ConcurrencyLimitError (503) if full."""
+        """Acquire a slot under the global concurrency limit."""
         redis_client = await self.get_redis()
 
         if redis_client and self._redis_available:
             try:
-                curr = await redis_client.incr("concurrency:active_runs")
-                if curr > self.max_concurrent:
+                active = await redis_client.incr("concurrency:active_runs")
+                if active > self.max_concurrent:
                     await redis_client.decr("concurrency:active_runs")
                     raise ConcurrencyLimitError()
                 return
@@ -146,7 +177,16 @@ class RateLimiter:
             if self._in_memory_concurrency > 0:
                 self._in_memory_concurrency -= 1
 
+    async def close(self) -> None:
+        """Close Redis connection pool on application shutdown."""
+        if self._redis is not None:
+            try:
+                await self._redis.aclose()
+            except Exception as e:
+                logger.warning("redis_close_failed", error=str(e))
+            self._redis = None
+            self._redis_available = False
+
 
 # Module-level singleton
 rate_limiter = RateLimiter()
-

@@ -31,3 +31,8 @@ async def init_db() -> None:
     """Create all tables (dev-only; use Alembic migrations in production)."""
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
+
+
+async def close_db() -> None:
+    """Dispose of the database engine pool on application shutdown."""
+    await engine.dispose()
