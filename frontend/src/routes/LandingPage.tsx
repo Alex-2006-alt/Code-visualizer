@@ -5,16 +5,6 @@ import { GlassPanel, GlassButton } from '@/components/ui'
 export const LandingPage: React.FC = () => {
   return (
     <div className="flex flex-col w-full relative overflow-hidden select-none pb-20">
-      {/* Localized Ambient Glows behind Hero (Behind, not on top of content) */}
-      <div
-        className="absolute top-10 -left-20 w-[560px] h-[560px] rounded-full blur-[130px] pointer-events-none -z-10"
-        style={{ background: 'rgba(36, 78, 148, 0.34)' }}
-      />
-      <div
-        className="absolute top-28 -right-20 w-[560px] h-[560px] rounded-full blur-[130px] pointer-events-none -z-10"
-        style={{ background: 'rgba(34, 120, 96, 0.30)' }}
-      />
-
       {/* HERO SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Column */}
