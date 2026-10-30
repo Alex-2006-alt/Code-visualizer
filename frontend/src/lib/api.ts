@@ -3,13 +3,25 @@ import { toast } from '@/components/ui/toastStore'
 import { PRESETS, DEFAULT_PRESET } from '@/mocks'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
-const USE_MOCKS = import.meta.env.VITE_USE_MOCKS !== 'false'
+const USE_MOCKS = import.meta.env.VITE_USE_MOCKS === 'true'
 
 export interface RunResponse {
   steps?: TraceStep[]
-  error?: string
+  error?: string | null
+  truncated?: boolean
   step_limit_reached?: boolean
   detail?: string
+}
+
+export interface ExecutionResult {
+  steps: TraceStep[]
+  truncated: boolean
+  error: string | null
+}
+
+export interface ExecuteOptions {
+  useMocks?: boolean
+  apiUrl?: string
 }
 
 /**
@@ -30,26 +42,36 @@ function getMockStepsForCode(code: string): TraceStep[] {
 }
 
 /**
- * Executes Python code against the backend API or mock runner
+ * Executes Python code against the backend API or mock runner with full execution metadata
  */
-export async function runCode(code: string): Promise<TraceStep[]> {
+export async function executeCode(
+  code: string,
+  options?: ExecuteOptions
+): Promise<ExecutionResult> {
   const trimmed = code.trim()
   if (!trimmed) {
     toast.warning('Empty Code', 'Please enter some Python code to visualize.')
-    return []
+    return { steps: [], truncated: false, error: null }
   }
 
-  // 1. Mock execution path when VITE_USE_MOCKS is active
-  if (USE_MOCKS) {
-    // Simulate brief network latency (250ms)
-    await new Promise((resolve) => setTimeout(resolve, 250))
+  const shouldMock = options?.useMocks ?? USE_MOCKS
+
+  // 1. Mock execution path when active
+  if (shouldMock) {
+    await new Promise((resolve) => setTimeout(resolve, 50))
     toast.info('Simulated Run', 'Executed using offline mock trace engine.')
-    return getMockStepsForCode(trimmed)
+    return {
+      steps: getMockStepsForCode(trimmed),
+      truncated: false,
+      error: null,
+    }
   }
+
+  const endpoint = `${options?.apiUrl || API_URL}/run`
 
   // 2. Real API network request to FastAPI backend
   try {
-    const response = await fetch(`${API_URL}/run`, {
+    const response = await fetch(endpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -57,16 +79,50 @@ export async function runCode(code: string): Promise<TraceStep[]> {
       body: JSON.stringify({ code: trimmed }),
     })
 
-    // Handle rate-limit status
+    // Handle rate-limit status (429)
     if (response.status === 429) {
+      const errData = (await response.json().catch(() => ({}))) as RunResponse
       toast.error(
         'Rate Limit Exceeded',
-        'You have exceeded the request quota. Please wait a moment before trying again.'
+        errData.detail || 'You have exceeded the request quota. Please wait a moment before trying again.'
       )
-      throw new Error('Rate limit exceeded')
+      throw new Error(errData.detail || 'Rate limit exceeded')
     }
 
-    // Handle syntax or user script error
+    // Handle concurrency limit / server busy (503)
+    if (response.status === 503) {
+      const errData = (await response.json().catch(() => ({}))) as RunResponse
+      toast.error(
+        'Server Busy',
+        errData.detail || 'Server is busy. Max concurrent sandboxes reached. Please retry.'
+      )
+      throw new Error(errData.detail || 'Server busy')
+    }
+
+    // Handle execution timeout (408 / 504)
+    if (response.status === 408 || response.status === 504) {
+      const errData = (await response.json().catch(() => ({}))) as RunResponse
+      toast.error(
+        'Execution Timeout',
+        errData.detail || 'Execution timed out. Please simplify your code or reduce loop iterations.'
+      )
+      throw new Error(errData.detail || 'Execution timeout')
+    }
+
+    // Handle request validation error (422)
+    if (response.status === 422) {
+      const errData = (await response.json().catch(() => ({}))) as { detail?: any }
+      let msg = 'Invalid request payload.'
+      if (Array.isArray(errData.detail)) {
+        msg = errData.detail.map((d: any) => `${d.loc?.join('.') || 'field'}: ${d.msg}`).join(', ')
+      } else if (typeof errData.detail === 'string') {
+        msg = errData.detail
+      }
+      toast.error('Validation Error', msg)
+      throw new Error(msg)
+    }
+
+    // Handle syntax or user script error (400)
     if (response.status === 400) {
       const errData = (await response.json().catch(() => ({}))) as RunResponse
       toast.error('Syntax / Runtime Error', errData.detail || errData.error || 'Check Python script syntax.')
@@ -79,20 +135,27 @@ export async function runCode(code: string): Promise<TraceStep[]> {
       throw new Error(`Execution error: ${response.status}`)
     }
 
-    const data = (await response.json()) as RunResponse | TraceStep[]
+    let data: RunResponse | TraceStep[]
+    try {
+      data = (await response.json()) as RunResponse | TraceStep[]
+    } catch {
+      toast.error('Malformed Response', 'Received invalid JSON data from server.')
+      throw new Error('Malformed JSON response from server')
+    }
 
-    // Backend might return array directly or wrapped in { steps, step_limit_reached }
     let steps: TraceStep[] = []
-    let stepLimitReached = false
+    let isTruncated = false
+    let executionError: string | null = null
 
     if (Array.isArray(data)) {
       steps = data
     } else if (data && Array.isArray(data.steps)) {
       steps = data.steps
-      stepLimitReached = Boolean(data.step_limit_reached)
+      isTruncated = Boolean(data.step_limit_reached || data.truncated)
+      executionError = data.error || null
     }
 
-    if (stepLimitReached) {
+    if (isTruncated) {
       toast.warning(
         'Step Limit Reached',
         'Execution exceeded maximum step threshold and was truncated.'
@@ -101,14 +164,32 @@ export async function runCode(code: string): Promise<TraceStep[]> {
       toast.success('Execution Finished', `Successfully captured ${steps.length} execution steps.`)
     }
 
-    return steps
+    return {
+      steps,
+      truncated: isTruncated,
+      error: executionError,
+    }
   } catch (error) {
-    // If real backend call failed due to network / CORS / offline, fallback gracefully with notice
-    if (USE_MOCKS || (error instanceof TypeError && error.message.includes('fetch'))) {
-      toast.warning('Backend Offline', 'Could not connect to FastAPI server. Falling back to mock trace.')
-      return getMockStepsForCode(trimmed)
+    if (error instanceof TypeError && error.message.includes('fetch')) {
+      toast.error('Network Error', 'Could not connect to FastAPI server. Please check backend status.')
+      if (shouldMock) {
+        toast.warning('Backend Offline', 'Falling back to mock trace.')
+        return {
+          steps: getMockStepsForCode(trimmed),
+          truncated: false,
+          error: null,
+        }
+      }
+      throw error
     }
     throw error
   }
 }
 
+/**
+ * Executes Python code against the backend API or mock runner
+ */
+export async function runCode(code: string, options?: ExecuteOptions): Promise<TraceStep[]> {
+  const result = await executeCode(code, options)
+  return result.steps
+}

@@ -6,10 +6,21 @@ import { MemoryBox } from './MemoryBox'
 
 interface MemoryHeapProps {
   objects?: HeapObject[]
+  locals?: Record<string, unknown>
   className?: string
 }
 
-export const MemoryHeap: React.FC<MemoryHeapProps> = ({ objects = [], className = '' }) => {
+export const MemoryHeap: React.FC<MemoryHeapProps> = ({
+  objects = [],
+  locals = {},
+  className = '',
+}) => {
+  const getReferrersForAddress = (addr: string): string[] => {
+    return Object.entries(locals)
+      .filter(([_, val]) => typeof val === 'string' && val.toLowerCase() === addr.toLowerCase())
+      .map(([name]) => name)
+  }
+
   return (
     <GlassPanel level={1} className={`flex flex-col h-full overflow-hidden ${className}`}>
       {/* Header */}
@@ -37,7 +48,11 @@ export const MemoryHeap: React.FC<MemoryHeapProps> = ({ objects = [], className 
         ) : (
           <AnimatePresence initial={false}>
             {objects.map((obj) => (
-              <MemoryBox key={obj.id} obj={obj} />
+              <MemoryBox
+                key={obj.id}
+                obj={obj}
+                referrers={getReferrersForAddress(obj.address)}
+              />
             ))}
           </AnimatePresence>
         )}
