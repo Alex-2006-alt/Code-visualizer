@@ -1,17 +1,18 @@
 :root {
   /* Canvas and Background */
   --bg: #0B0D12;
-  --orb-1: rgba(36, 78, 148, 0.26);     /* deep blue, top-left, blur 120px */
-  --orb-2: rgba(36, 78, 148, 0.14);     /* faint deep blue, bottom-right, blur 140px */
+  --orb-1: rgba(36, 78, 148, 0.34);     /* blue glow, top-left, blur 130px */
+  --orb-2: rgba(34, 120, 96, 0.34);     /* deep teal-green glow, bottom-right, blur 140px */
+  --orb-3: rgba(34, 120, 96, 0.16);     /* optional subtle side teal glow */
 
   /* Glass Layers */
-  --glass: rgba(255, 255, 255, 0.045);
-  --glass-raised: rgba(255, 255, 255, 0.075);
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-raised: rgba(20, 26, 34, 0.82);   /* floating elements: timeline dock, modals, toasts */
   --glass-sunken: rgba(8, 9, 11, 0.55);
-  --panel-body: rgba(11, 13, 18, 0.72);  /* solid-ish dark surface for crisp readability */
-  --border: rgba(255, 255, 255, 0.09);
+  --panel-body: rgba(11, 13, 18, 0.80);     /* nearly opaque flat dark surface for crisp readability */
+  --border: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.16);
-  --highlight: rgba(255, 255, 255, 0.14);   /* 1px top edge highlight */
+  --highlight: rgba(255, 255, 255, 0.12);   /* 1px inset top edge highlight */
 
   /* Typography Colors */
   --text: #E8EBF0;
@@ -19,14 +20,14 @@
   --text-3: #8791A0;                      /* do not go darker: contrast */
   --text-disabled: #566070;
 
-  /* Primary Accent: Blue */
+  /* Primary Accent: Blue (The ONLY interactive color) */
   --accent: #7FA8D1;
   --accent-hover: #94B7DB;
   --accent-press: #6B95BF;
   --accent-soft: rgba(127, 168, 209, 0.14);
   --on-accent: #0A121B;
 
-  /* Secondary: Sage (Small accents only: changed values, keywords, success, compare bar B) */
+  /* Secondary: Sage (Small accents only: changed values, syntax keywords, success, compare bar B) */
   --sage: #8FC4A8;
   --sage-soft: rgba(143, 196, 168, 0.14);
   --changed: var(--sage);                 /* value-changed flash */
@@ -48,7 +49,7 @@
   --radius-inner: 10px;
   --radius-control: 10px;
   --radius-full: 9999px;
-  --blur: 16px;                          /* crisp 16px blur without saturation boosts */
+  --blur: 14px;                          /* crisp 14px blur saturate 100% */
   --shadow-panel: 0 10px 30px -12px rgba(0, 0, 0, 0.65);
   --shadow-float: 0 18px 48px -14px rgba(0, 0, 0, 0.75);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -80,7 +81,7 @@
   --color-success: var(--success);
 }
 
-/* Glass Utility Classes (saturate boosts removed to eliminate colour bleed) */
+/* Glass Utility Classes (saturate 100% - no saturation boost) */
 .glass-panel {
   background: var(--glass);
   backdrop-filter: blur(var(--blur));
@@ -92,8 +93,8 @@
 
 .glass-panel-raised {
   background: var(--glass-raised);
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-strong);
   box-shadow: inset 0 1px 0 var(--highlight), var(--shadow-float);
   border-radius: var(--radius-panel);
@@ -107,7 +108,7 @@
   border-radius: var(--radius-inner);
 }
 
-/* Crisp Panel Body Fill */
+/* Crisp Nearly Opaque Panel Body Fill */
 .panel-body {
   background-color: var(--panel-body);
 }
@@ -130,8 +131,8 @@
 
 .glass-panel-3 {
   background: var(--glass-raised);
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-strong);
   box-shadow: inset 0 1px 0 var(--highlight), var(--shadow-float);
 }
@@ -155,7 +156,7 @@
   animation: changedFlashPulse 600ms var(--ease) forwards;
 }
 
-/* Reduced transparency: solid panels at --bg lightened slightly, no blur */
+/* Reduced transparency: panel fills rgba(20,24,32,0.96), no blur */
 @media (prefers-reduced-transparency: reduce) {
   .glass-panel,
   .glass-panel-raised,
@@ -163,7 +164,7 @@
   .glass-panel-1,
   .glass-panel-2,
   .glass-panel-3 {
-    background-color: #12151d !important;
+    background-color: rgba(20, 24, 32, 0.96) !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
   }

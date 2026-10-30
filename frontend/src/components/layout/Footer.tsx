@@ -3,42 +3,39 @@ import { Link } from 'react-router-dom'
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="relative z-10 w-full bg-surface-container-lowest/80 border-t border-white/[0.08] backdrop-blur-xl">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-body-sm text-on-surface-variant">
+    <footer className="relative z-10 w-full bg-glass-sunken border-t border-border backdrop-blur-xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-sans text-text-3">
         {/* Left Telemetry */}
         <div className="flex flex-wrap items-center gap-3">
-          <span className="font-code-sm text-outline">VM ENGINE: CPYTHON 3.12.2</span>
-          <span className="text-outline-variant">•</span>
-          <span className="font-code-sm text-secondary flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
-            BYTECODE DISASSEMBLY ACTIVE
+          <span className="font-mono text-[11px] text-text-3">VM ENGINE: CPYTHON 3.12</span>
+          <span className="text-border-strong">•</span>
+          <span className="font-mono text-[11px] text-accent flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+            EXECUTION TRACER ACTIVE
           </span>
         </div>
 
         {/* Center Links */}
         <div className="flex items-center gap-6">
-          <Link to="/workspace" className="hover:text-white transition-colors">
+          <Link to="/workspace" className="text-text-2 hover:text-text transition-colors">
             Workspace
           </Link>
-          <Link to="/examples" className="hover:text-white transition-colors">
-            Algorithm Gallery
-          </Link>
-          <Link to="/workspace?mode=predict" className="hover:text-white transition-colors">
-            Predict Mode
+          <Link to="/examples" className="text-text-2 hover:text-text transition-colors">
+            Examples
           </Link>
           <a
             href="https://github.com/Alex-2006-alt/Code-visualizer"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-white transition-colors"
+            className="text-text-2 hover:text-text transition-colors"
           >
             GitHub
           </a>
         </div>
 
         {/* Right Copyright */}
-        <div className="font-code-sm text-outline">
-          © {new Date().getFullYear()} CodeTrace Studio • Real-Time Execution Engine
+        <div className="font-mono text-[11px] text-text-3">
+          © {new Date().getFullYear()} CodeTrace • Python Visualizer
         </div>
       </div>
     </footer>

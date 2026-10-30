@@ -1,3 +1,4 @@
+export * from './AmbientBackground'
 export * from './BackgroundCanvas'
 export * from './Navbar'
 export * from './Footer'
