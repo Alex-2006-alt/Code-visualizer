@@ -105,31 +105,31 @@ export const ExamplesPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-8 w-full">
       {/* Header */}
       <section className="flex flex-col gap-3">
-        <div className="flex flex-wrap items-center gap-2 text-outline font-label-caps text-xs">
-          <span className="px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary border border-secondary/20">
+        <div className="flex flex-wrap items-center gap-2 text-text-3 text-xs">
+          <span className="px-2.5 py-0.5 rounded-full bg-glass-sunken text-accent border border-border font-mono text-[11px]">
             CURATED ALGORITHM LIBRARY
           </span>
           <span>•</span>
-          <span className="text-on-surface-variant font-code-sm">100+ Visualized Archetypes</span>
+          <span className="text-text-3 font-mono text-xs">100+ Visualized Archetypes</span>
         </div>
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
           <div className="flex flex-col gap-1.5 max-w-2xl">
-            <h1 className="font-headline-xl text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            <h1 className="font-serif text-3xl sm:text-4xl text-text font-normal tracking-tight">
               Explore Classic Algorithms
             </h1>
-            <p className="font-body-md text-on-surface-variant text-sm sm:text-base leading-relaxed">
+            <p className="font-sans text-text-2 text-sm sm:text-base leading-relaxed">
               Step-by-step traces with call stack visualization, virtual heap mutations, and Big-O complexity comparison.
             </p>
           </div>
-          <div className="flex items-center gap-4 px-4 py-2.5 rounded-xl bg-surface-container-high/60 border border-white/10 shrink-0">
+          <div className="flex items-center gap-4 px-4 py-2.5 rounded-xl bg-glass border border-border shadow-panel shrink-0">
             <div className="flex flex-col">
-              <span className="font-label-caps text-[10px] text-outline uppercase">Total Traces</span>
-              <span className="font-code-md text-secondary font-bold">1,248,930</span>
+              <span className="font-sans text-[10px] text-text-3 uppercase tracking-wider">Total Traces</span>
+              <span className="font-mono text-accent font-semibold text-sm">1,248,930</span>
             </div>
-            <div className="w-px h-8 bg-white/10" />
+            <div className="w-px h-8 bg-border" />
             <div className="flex flex-col">
-              <span className="font-label-caps text-[10px] text-outline uppercase">Accuracy</span>
-              <span className="font-code-md text-tertiary font-bold">94.2%</span>
+              <span className="font-sans text-[10px] text-text-3 uppercase tracking-wider">Accuracy</span>
+              <span className="font-mono text-sage font-semibold text-sm">94.2%</span>
             </div>
           </div>
         </div>
@@ -138,7 +138,7 @@ export const ExamplesPage: React.FC = () => {
       {/* Search & Filter Matrix */}
       <GlassPanel level={2} className="p-4 flex flex-col gap-3.5">
         <div className="relative">
-          <span className="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">
+          <span className="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-text-3 text-[18px]">
             search
           </span>
           <input
@@ -146,7 +146,7 @@ export const ExamplesPage: React.FC = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search algorithms by name, keyword, or number (e.g. Two Sum, DFS, #1)..."
-            className="w-full pl-10 pr-4 py-2 rounded-xl bg-surface-container-lowest/90 border border-white/10 text-on-surface placeholder:text-outline text-sm focus:outline-none focus:border-secondary transition-colors"
+            className="w-full pl-10 pr-4 py-2 rounded-xl bg-glass-sunken border border-border text-text placeholder:text-text-3 text-sm focus:outline-none focus:border-accent transition-colors"
           />
         </div>
 
@@ -163,7 +163,7 @@ export const ExamplesPage: React.FC = () => {
             ))}
           </div>
           <div className="flex items-center gap-1.5 shrink-0">
-            <span className="font-label-caps text-[10px] text-outline uppercase">Tier:</span>
+            <span className="font-sans text-[11px] text-text-3 uppercase tracking-wider">Tier:</span>
             {difficulties.map((diff) => (
               <Chip
                 key={diff}
@@ -182,31 +182,31 @@ export const ExamplesPage: React.FC = () => {
           <GlassPanel
             key={algo.id}
             level={1}
-            className="p-5 flex flex-col justify-between gap-4 hover:-translate-y-1 hover:border-secondary/30 transition-all duration-200"
+            className="p-5 flex flex-col justify-between gap-4 transition-all duration-200"
           >
             <div className="flex flex-col gap-3">
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2">
-                  <span className="px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-code-sm text-xs font-semibold">
+                  <span className="px-2 py-0.5 rounded-full bg-glass-sunken text-accent font-mono text-xs font-medium border border-border">
                     {algo.difficulty}
                   </span>
-                  <span className="font-code-sm text-xs text-outline">{algo.category}</span>
+                  <span className="font-sans text-xs text-text-3">{algo.category}</span>
                 </div>
-                <span className="font-code-sm text-[11px] text-primary">{algo.timeComplexity}</span>
+                <span className="font-mono text-[11px] text-sage">{algo.timeComplexity}</span>
               </div>
 
               <div>
-                <h3 className="font-headline-sm text-lg text-white font-semibold flex items-center gap-1.5">
+                <h3 className="font-serif text-xl text-text font-normal flex items-center gap-1.5">
                   <span>{algo.title}</span>
-                  {algo.number && <span className="text-outline text-sm font-normal">{algo.number}</span>}
+                  {algo.number && <span className="text-text-3 text-sm font-mono font-normal">{algo.number}</span>}
                 </h3>
-                <p className="font-body-sm text-on-surface-variant text-xs mt-1 leading-relaxed line-clamp-2">
+                <p className="font-sans text-text-2 text-xs mt-1 leading-relaxed line-clamp-2">
                   {algo.description}
                 </p>
               </div>
 
               {/* Code snippet snapshot */}
-              <div className="p-3 rounded-lg bg-surface-container-lowest/90 border border-white/5 font-code-sm text-[11px] text-on-surface-variant leading-relaxed overflow-x-auto">
+              <div className="p-3 rounded-lg bg-panel-body border border-border font-mono text-[11px] text-text-2 leading-relaxed overflow-x-auto">
                 <pre>{algo.snippet}</pre>
               </div>
             </div>

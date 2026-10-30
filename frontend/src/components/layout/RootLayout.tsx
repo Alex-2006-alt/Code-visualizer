@@ -2,7 +2,7 @@ import React from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
-import { BackgroundCanvas } from './BackgroundCanvas'
+import { AmbientBackground } from './AmbientBackground'
 import { ToastContainer } from '@/components/ui'
 
 export const RootLayout: React.FC = () => {
@@ -10,8 +10,8 @@ export const RootLayout: React.FC = () => {
   const isWorkspace = location.pathname.startsWith('/workspace')
 
   return (
-    <div className="relative min-h-screen w-full flex flex-col bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
-      <BackgroundCanvas />
+    <div className="relative min-h-screen w-full flex flex-col bg-bg text-text selection:bg-accent/20 selection:text-text">
+      <AmbientBackground />
       <Navbar />
       <ToastContainer />
 

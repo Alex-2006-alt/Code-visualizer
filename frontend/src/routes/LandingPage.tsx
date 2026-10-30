@@ -5,31 +5,34 @@ import { GlassPanel, GlassButton } from '@/components/ui'
 export const LandingPage: React.FC = () => {
   return (
     <div className="flex flex-col w-full relative overflow-hidden select-none pb-20">
-      {/* Ambient localized radial glow behind hero */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[900px] h-[520px] bg-gradient-to-tr from-primary/15 via-secondary/15 to-tertiary/10 blur-[130px] rounded-full pointer-events-none -z-10" />
+      {/* Localized Ambient Glows behind Hero (Behind, not on top of content) */}
+      <div
+        className="absolute top-10 -left-20 w-[560px] h-[560px] rounded-full blur-[130px] pointer-events-none -z-10"
+        style={{ background: 'rgba(36, 78, 148, 0.34)' }}
+      />
+      <div
+        className="absolute top-28 -right-20 w-[560px] h-[560px] rounded-full blur-[130px] pointer-events-none -z-10"
+        style={{ background: 'rgba(34, 120, 96, 0.30)' }}
+      />
 
       {/* HERO SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Column */}
         <div className="lg:col-span-6 flex flex-col gap-6 text-left">
           {/* Announcement Pill */}
-          <div className="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full bg-surface-container-high/90 text-on-surface w-fit shadow-md border border-white/10">
-            <span className="w-2 h-2 rounded-full bg-secondary animate-ping" />
-            <span className="font-code-sm text-secondary tracking-wide">
-              ✨ New: Python 3.12 AST &amp; Heap Graph Visualizer
-            </span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-glass border border-border text-text-2 text-xs font-sans w-fit">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+            <span>Python 3.12 AST &amp; Virtual Heap Visualizer</span>
           </div>
 
-          {/* Headline */}
-          <h1 className="font-headline-xl text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.08] text-white">
+          {/* Headline in Instrument Serif */}
+          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-normal tracking-tight leading-[1.06] text-text">
             Watch your code <br />
-            <span className="bg-gradient-to-r from-primary via-tertiary to-secondary bg-clip-text text-transparent">
-              think in real-time.
-            </span>
+            <span className="italic text-accent">think in real-time.</span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="font-body-md text-on-surface-variant text-base lg:text-lg max-w-xl leading-relaxed">
+          {/* Subtitle in Inter */}
+          <p className="font-sans text-text-2 text-base lg:text-lg max-w-xl leading-relaxed">
             Step-by-step Python execution visualizer designed for CS students and coding interview prep.
             Demystify recursion, pointers, and memory allocations with synchronized virtual heap diagrams.
           </p>
@@ -40,8 +43,7 @@ export const LandingPage: React.FC = () => {
               <GlassButton
                 variant="primary"
                 size="lg"
-                glow
-                leftIcon={<span className="material-symbols-outlined text-[20px]">bolt</span>}
+                leftIcon={<span className="material-symbols-outlined text-[20px]">play_arrow</span>}
               >
                 Launch Studio
               </GlassButton>
@@ -50,7 +52,7 @@ export const LandingPage: React.FC = () => {
               <GlassButton
                 variant="secondary"
                 size="lg"
-                leftIcon={<span className="material-symbols-outlined text-secondary text-[20px]">play_circle</span>}
+                leftIcon={<span className="material-symbols-outlined text-accent text-[20px]">explore</span>}
               >
                 Browse Algorithms
               </GlassButton>
@@ -58,84 +60,77 @@ export const LandingPage: React.FC = () => {
           </div>
 
           {/* Social Proof Strip */}
-          <div className="pt-6 flex flex-col gap-3 border-t border-white/5">
+          <div className="pt-6 flex flex-col gap-3 border-t border-border">
             <div className="flex items-center gap-2">
-              <div className="flex text-amber-300">
+              <div className="flex text-accent">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="material-symbols-outlined text-sm">star</span>
                 ))}
               </div>
-              <span className="font-body-sm font-semibold text-white">4.9/5</span>
-              <span className="font-body-sm text-outline">from 2,300+ engineering reviews</span>
+              <span className="font-sans font-semibold text-text text-xs">4.9/5</span>
+              <span className="font-sans text-text-3 text-xs">from 2,300+ CS students &amp; engineers</span>
             </div>
-            <p className="font-code-sm text-outline uppercase tracking-wider text-[10px]">
-              Trusted by 45,000+ students &amp; engineers at
-            </p>
-            <div className="flex flex-wrap items-center gap-4 text-on-surface-variant font-headline-sm text-sm opacity-80">
-              <span className="font-semibold text-white">Stanford</span>
-              <span className="text-outline">•</span>
-              <span className="font-semibold text-white">MIT</span>
-              <span className="text-outline">•</span>
-              <span className="font-semibold text-white">UC Berkeley</span>
-              <span className="text-outline">•</span>
-              <span className="font-semibold text-white">Waterloo</span>
+            <div className="flex flex-wrap items-center gap-3 text-text-3 font-sans text-xs">
+              <span className="text-text-2">Stanford</span>
+              <span className="text-border-strong">•</span>
+              <span className="text-text-2">MIT</span>
+              <span className="text-border-strong">•</span>
+              <span className="text-text-2">UC Berkeley</span>
+              <span className="text-border-strong">•</span>
+              <span className="text-text-2">Waterloo</span>
             </div>
           </div>
         </div>
 
-        {/* Right Column: 3D Perspective Glass IDE Preview */}
-        <div className="lg:col-span-6 relative perspective-[1000px] group">
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-secondary/20 blur-3xl -z-10 group-hover:blur-[80px] transition-all duration-700" />
+        {/* Right Column: Hero Preview Window */}
+        <div className="lg:col-span-6 relative group">
           <GlassPanel
-            level={3}
-            className="w-full rounded-2xl transform lg:[transform:rotateY(-6deg)_rotateX(4deg)] group-hover:transform-none transition-transform duration-700 overflow-hidden flex flex-col"
+            level={1}
+            className="w-full rounded-panel border border-border shadow-panel overflow-hidden flex flex-col"
           >
             {/* Header bar */}
-            <div className="h-10 px-4 bg-surface-container-lowest/90 flex items-center justify-between border-b border-white/5">
+            <div className="h-9 px-4 bg-glass-sunken flex items-center justify-between border-b border-border">
               <div className="flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-rose-500/80" />
-                <span className="w-3 h-3 rounded-full bg-amber-500/80" />
-                <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
-                <div className="ml-3 px-3 py-0.5 rounded-t-lg bg-surface-container-high/80 text-white font-code-sm text-xs flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-secondary text-xs">terminal</span>
+                <span className="w-2.5 h-2.5 rounded-full bg-border-strong" />
+                <div className="ml-1 text-text font-mono text-xs flex items-center gap-1.5">
                   <span>two_sum.py</span>
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-outline font-code-sm text-[11px]">
-                <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+              <div className="flex items-center gap-2 text-text-3 font-mono text-[11px]">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                 <span>AST Live Trace</span>
               </div>
             </div>
 
-            {/* Split Editor and Visualizer Stack */}
-            <div className="p-4 grid grid-cols-1 md:grid-cols-12 gap-3 bg-surface-container/40">
+            {/* Split Editor and Visualizer Stack with Near-Opaque Panel Body */}
+            <div className="p-4 grid grid-cols-1 md:grid-cols-12 gap-3 bg-panel-body">
               {/* Code sub-pane */}
-              <div className="md:col-span-7 rounded-xl bg-surface-container-lowest/90 p-3 flex flex-col font-code-sm text-xs leading-relaxed text-on-surface-variant overflow-x-auto shadow-inner">
-                <div className="flex gap-3"><span className="text-outline-variant select-none">1</span><span className="text-tertiary">def</span> <span className="text-secondary font-medium">two_sum</span>(nums, target):</div>
-                <div className="flex gap-3"><span className="text-outline-variant select-none">2</span><span className="pl-4 text-on-surface">seen = &#123;&#125;</span></div>
-                <div className="flex gap-3"><span className="text-outline-variant select-none">3</span><span className="pl-4 text-tertiary">for</span> i, num <span className="text-tertiary">in</span> <span className="text-secondary">enumerate</span>(nums):</div>
-                <div className="flex gap-3"><span className="text-outline-variant select-none">4</span><span className="pl-8 text-outline"># Compute complement</span></div>
-                {/* Active line with glow */}
-                <div className="flex gap-2 bg-secondary/15 rounded px-1 -mx-1 text-white shadow-[0_0_16px_rgba(93,230,255,0.25)] relative my-0.5 border-l-2 border-secondary">
-                  <span className="text-secondary font-bold select-none">5</span>
+              <div className="md:col-span-7 rounded-inner bg-glass-sunken border border-border p-3 flex flex-col font-mono text-xs leading-relaxed text-text-2 overflow-x-auto">
+                <div className="flex gap-3"><span className="text-text-3 select-none">1</span><span className="text-sage">def</span> <span className="text-accent font-medium">two_sum</span>(nums, target):</div>
+                <div className="flex gap-3"><span className="text-text-3 select-none">2</span><span className="pl-4 text-text">seen = &#123;&#125;</span></div>
+                <div className="flex gap-3"><span className="text-text-3 select-none">3</span><span className="pl-4 text-sage">for</span> i, num <span className="text-sage">in</span> <span className="text-accent">enumerate</span>(nums):</div>
+                <div className="flex gap-3"><span className="text-text-3 select-none">4</span><span className="pl-8 text-text-3"># Compute complement</span></div>
+                {/* Active line without neon glow */}
+                <div className="flex gap-2 bg-accent-soft border-l-2 border-accent rounded px-1 -mx-1 text-text relative my-0.5">
+                  <span className="text-accent font-bold select-none">5</span>
                   <span className="pl-6 font-medium">diff = target - num</span>
-                  <span className="ml-auto px-1.5 rounded bg-amber-400/20 text-amber-300 font-bold text-[10px] animate-pulse">diff = 7</span>
+                  <span className="ml-auto px-1.5 rounded bg-sage-soft text-sage font-mono text-[10px]">diff = 7</span>
                 </div>
-                <div className="flex gap-3"><span className="text-outline-variant select-none">6</span><span className="pl-8 text-tertiary">if</span> diff <span className="text-tertiary">in</span> seen:</div>
-                <div className="flex gap-3"><span className="text-outline-variant select-none">7</span><span className="pl-12 text-tertiary">return</span> [seen[diff], i]</div>
+                <div className="flex gap-3"><span className="text-text-3 select-none">6</span><span className="pl-8 text-sage">if</span> diff <span className="text-sage">in</span> seen:</div>
+                <div className="flex gap-3"><span className="text-text-3 select-none">7</span><span className="pl-12 text-sage">return</span> [seen[diff], i]</div>
               </div>
 
               {/* Right Mini Stack & Heap Preview */}
               <div className="md:col-span-5 flex flex-col gap-2.5">
-                <div className="p-2.5 rounded-xl bg-surface-container-high/70 border border-white/5 flex flex-col gap-1.5 shadow-sm">
-                  <span className="font-label-caps text-[10px] text-primary uppercase">Stack Frame: two_sum()</span>
-                  <div className="flex justify-between font-code-sm text-[11px]"><span className="text-outline">num</span><span className="text-secondary font-bold">7</span></div>
-                  <div className="flex justify-between font-code-sm text-[11px]"><span className="text-outline">diff</span><span className="text-amber-300 font-bold">2</span></div>
+                <div className="p-2.5 rounded-inner bg-glass-sunken border border-border flex flex-col gap-1.5 shadow-panel">
+                  <span className="font-sans text-[11px] font-medium text-text-3 uppercase tracking-[0.08em]">Stack: two_sum()</span>
+                  <div className="flex justify-between font-mono text-[11px]"><span className="text-text-3">num</span><span className="text-accent font-medium">7</span></div>
+                  <div className="flex justify-between font-mono text-[11px]"><span className="text-text-3">diff</span><span className="text-sage font-medium">2</span></div>
                 </div>
 
-                <div className="p-2.5 rounded-xl bg-surface-container-high/70 border border-white/5 flex flex-col gap-1.5 shadow-sm">
-                  <span className="font-label-caps text-[10px] text-secondary uppercase">Heap Allocation: seen (dict)</span>
-                  <div className="p-1 rounded bg-surface-container-lowest font-code-sm text-[11px] text-center text-primary">
+                <div className="p-2.5 rounded-inner bg-glass-sunken border border-border flex flex-col gap-1.5 shadow-panel">
+                  <span className="font-sans text-[11px] font-medium text-text-3 uppercase tracking-[0.08em]">Heap: seen (dict)</span>
+                  <div className="p-1 rounded-control bg-glass border border-border font-mono text-[11px] text-center text-text">
                     &#123; 2: 0 &#125;
                   </div>
                 </div>
@@ -148,41 +143,41 @@ export const LandingPage: React.FC = () => {
       {/* THREE PILLAR FEATURES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col gap-8">
         <div className="text-center flex flex-col items-center gap-2">
-          <span className="font-code-sm text-secondary uppercase tracking-widest text-xs">
+          <span className="font-sans text-xs uppercase tracking-[0.08em] text-text-3">
             Architected for CS Mastery
           </span>
-          <h2 className="font-headline-lg text-2xl sm:text-3xl font-bold text-white">
+          <h2 className="font-serif text-3xl sm:text-4xl font-normal text-text">
             Everything your debugger never showed you.
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <GlassPanel level={1} className="p-6 flex flex-col gap-3">
-            <div className="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center">
-              <span className="material-symbols-outlined text-[24px]">layers</span>
+          <GlassPanel level={1} className="p-6 flex flex-col gap-3 rounded-panel border border-border shadow-panel">
+            <div className="w-9 h-9 rounded-control bg-glass border border-border text-accent flex items-center justify-center">
+              <span className="material-symbols-outlined text-[20px]">layers</span>
             </div>
-            <h3 className="font-headline-sm text-lg text-white font-semibold">Recursive Call Stacks</h3>
-            <p className="font-body-sm text-on-surface-variant leading-relaxed">
+            <h3 className="font-serif text-xl text-text font-normal">Recursive Call Stacks</h3>
+            <p className="font-sans text-sm text-text-2 leading-relaxed">
               Visualize push and pop stack physics with depth telemetry. See parameters bound, return values bubbling up, and base case terminations.
             </p>
           </GlassPanel>
 
-          <GlassPanel level={1} className="p-6 flex flex-col gap-3">
-            <div className="w-10 h-10 rounded-xl bg-secondary/20 text-secondary flex items-center justify-center">
-              <span className="material-symbols-outlined text-[24px]">account_tree</span>
+          <GlassPanel level={1} className="p-6 flex flex-col gap-3 rounded-panel border border-border shadow-panel">
+            <div className="w-9 h-9 rounded-control bg-glass border border-border text-accent flex items-center justify-center">
+              <span className="material-symbols-outlined text-[20px]">account_tree</span>
             </div>
-            <h3 className="font-headline-sm text-lg text-white font-semibold">Virtual Heap &amp; Pointers</h3>
-            <p className="font-body-sm text-on-surface-variant leading-relaxed">
+            <h3 className="font-serif text-xl text-text font-normal">Virtual Heap &amp; Pointers</h3>
+            <p className="font-sans text-sm text-text-2 leading-relaxed">
               Demystify reference types, array slicing, object mutation, and hash collision tables with animated SVG pointer connections.
             </p>
           </GlassPanel>
 
-          <GlassPanel level={1} className="p-6 flex flex-col gap-3">
-            <div className="w-10 h-10 rounded-xl bg-tertiary/20 text-tertiary flex items-center justify-center">
-              <span className="material-symbols-outlined text-[24px]">psychology</span>
+          <GlassPanel level={1} className="p-6 flex flex-col gap-3 rounded-panel border border-border shadow-panel">
+            <div className="w-9 h-9 rounded-control bg-glass border border-border text-accent flex items-center justify-center">
+              <span className="material-symbols-outlined text-[20px]">psychology</span>
             </div>
-            <h3 className="font-headline-sm text-lg text-white font-semibold">Active Recall &amp; Compare</h3>
-            <p className="font-body-sm text-on-surface-variant leading-relaxed">
+            <h3 className="font-serif text-xl text-text font-normal">Active Recall &amp; Compare</h3>
+            <p className="font-sans text-sm text-text-2 leading-relaxed">
               Predict mode pauses execution before branch dispatch to test mental models. Compare mode synchronizes brute force vs optimal solutions side by side.
             </p>
           </GlassPanel>
@@ -191,16 +186,16 @@ export const LandingPage: React.FC = () => {
 
       {/* BOTTOM CTA BANNER */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 w-full pt-12">
-        <GlassPanel level={3} className="p-8 sm:p-12 text-center flex flex-col items-center gap-6 shadow-glow-primary">
-          <h2 className="font-headline-xl text-3xl sm:text-4xl font-bold text-white">
+        <GlassPanel level={1} className="p-8 sm:p-12 text-center flex flex-col items-center gap-6 rounded-panel border border-border-strong shadow-float bg-glass-raised">
+          <h2 className="font-serif text-3xl sm:text-4xl font-normal text-text">
             Ready to master algorithmic execution?
           </h2>
-          <p className="font-body-md text-on-surface-variant max-w-xl">
+          <p className="font-sans text-sm text-text-2 max-w-xl leading-relaxed">
             Join thousands of students and engineers tracing Python bytecode with zero configuration.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/workspace">
-              <GlassButton variant="primary" size="lg" glow>
+              <GlassButton variant="primary" size="lg">
                 Launch CodeTrace Free
               </GlassButton>
             </Link>
