@@ -13,6 +13,16 @@ import {
 } from '@/components/workspace'
 import { useTraceStore, ExecutionMode } from '@/store/useTraceStore'
 import { PRESETS } from '@/mocks'
+import { createSnippet, fetchSnippet, compareCode, CompareResult } from '@/lib/api'
+import { toast } from '@/components/ui/toastStore'
+
+const DEFAULT_CODE_B = `def factorial_iterative(n):
+    res = 1
+    for i in range(1, n + 1):
+        res *= i
+    return res
+
+print(factorial_iterative(5))`
 
 export const WorkspacePage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -20,6 +30,10 @@ export const WorkspacePage: React.FC = () => {
   const mode = qMode && ['visualize', 'predict', 'compare'].includes(qMode) ? qMode : 'visualize'
 
   const [mobileTab, setMobileTab] = useState('editor')
+  const [isSharing, setIsSharing] = useState(false)
+  const [isComparing, setIsComparing] = useState(false)
+  const [codeB, setCodeB] = useState(DEFAULT_CODE_B)
+  const [compareResult, setCompareResult] = useState<CompareResult | null>(null)
 
   const {
     code,
@@ -34,6 +48,7 @@ export const WorkspacePage: React.FC = () => {
     selectedAnswer,
     answerFeedback,
     setCode,
+    setSteps,
     nextStep,
     prevStep,
     togglePlay,
@@ -50,6 +65,19 @@ export const WorkspacePage: React.FC = () => {
   useEffect(() => {
     setMode(mode)
   }, [mode, setMode])
+
+  // Load shared snippet from URL if present (?snippet=id)
+  useEffect(() => {
+    const snippetId = searchParams.get('snippet')
+    if (snippetId) {
+      fetchSnippet(snippetId).then((fetchedCode) => {
+        if (fetchedCode) {
+          setCode(fetchedCode)
+          toast.info('Snippet Loaded', `Loaded shared snippet '${snippetId}'`)
+        }
+      })
+    }
+  }, [searchParams, setCode])
 
   // Global Keyboard shortcuts: Space (play/pause), ArrowLeft (prev), ArrowRight (next)
   useEffect(() => {
@@ -81,6 +109,39 @@ export const WorkspacePage: React.FC = () => {
 
   const handleModeChange = (newMode: ExecutionMode) => {
     setSearchParams(newMode === 'visualize' ? {} : { mode: newMode })
+  }
+
+  const handleShare = async () => {
+    try {
+      setIsSharing(true)
+      const snippetId = await createSnippet(code)
+      if (snippetId) {
+        const shareUrl = `${window.location.origin}/workspace?snippet=${snippetId}`
+        await navigator.clipboard.writeText(shareUrl).catch(() => {})
+        setSearchParams({ snippet: snippetId })
+        toast.success('Share Link Created', `Link copied: ${shareUrl}`)
+      }
+    } catch {
+      // toast already fired in createSnippet
+    } finally {
+      setIsSharing(false)
+    }
+  }
+
+  const handleCompare = async () => {
+    try {
+      setIsComparing(true)
+      const result = await compareCode(code, codeB)
+      setCompareResult(result)
+      toast.success(
+        'Comparison Complete',
+        `Solution A: ${result.step_counts.a} steps vs Solution B: ${result.step_counts.b} steps`
+      )
+    } catch {
+      // toast already fired
+    } finally {
+      setIsComparing(false)
+    }
   }
 
   return (
@@ -132,6 +193,17 @@ export const WorkspacePage: React.FC = () => {
           <GlassButton
             variant="ghost"
             size="sm"
+            onClick={handleShare}
+            disabled={isSharing}
+            leftIcon={<span className="material-symbols-outlined text-[16px]">share</span>}
+            aria-label="Share code snippet"
+          >
+            {isSharing ? 'Sharing...' : 'Share'}
+          </GlassButton>
+
+          <GlassButton
+            variant="ghost"
+            size="sm"
             onClick={resetExecution}
             leftIcon={<span className="material-symbols-outlined text-[16px]">restart_alt</span>}
             aria-label="Reset execution"
@@ -142,16 +214,16 @@ export const WorkspacePage: React.FC = () => {
           <GlassButton
             variant="primary"
             size="sm"
-            onClick={runCurrentCode}
-            disabled={isLoading}
+            onClick={mode === 'compare' ? handleCompare : runCurrentCode}
+            disabled={isLoading || isComparing}
             leftIcon={
-              <span className={`material-symbols-outlined text-[16px] ${isLoading ? 'animate-spin' : ''}`}>
-                {isLoading ? 'progress_activity' : 'play_arrow'}
+              <span className={`material-symbols-outlined text-[16px] ${isLoading || isComparing ? 'animate-spin' : ''}`}>
+                {isLoading || isComparing ? 'progress_activity' : 'play_arrow'}
               </span>
             }
             aria-label="Run Python code"
           >
-            {isLoading ? 'Running...' : 'Run'}
+            {isLoading ? 'Running...' : isComparing ? 'Comparing...' : mode === 'compare' ? 'Compare' : 'Run'}
           </GlassButton>
         </div>
       </div>
@@ -172,18 +244,86 @@ export const WorkspacePage: React.FC = () => {
 
       {/* Main Multi-Pane Visualizer Grid */}
       <div className="flex-1 w-full px-4 sm:px-6 py-4 grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
-        {/* Left Column: Monaco Code Editor & Quiz (12 cols mobile, 5 cols desktop) */}
+        {/* Left Column: Monaco Code Editor(s) & Quiz (12 cols mobile, 5 cols desktop) */}
         <div
           className={`flex flex-col gap-4 lg:col-span-5 ${
             mobileTab !== 'editor' ? 'hidden lg:flex' : 'flex'
           }`}
         >
-          <CodeEditor
-            code={code}
-            currentLine={step?.line || 1}
-            onChange={(newCode) => setCode(newCode || '')}
-            height="440px"
-          />
+          {/* Solution A Editor */}
+          <div className="flex flex-col gap-1">
+            {mode === 'compare' && (
+              <span className="text-[11px] font-mono font-bold text-cyan uppercase tracking-wider px-1">
+                Solution A (Primary)
+              </span>
+            )}
+            <CodeEditor
+              code={code}
+              currentLine={step?.line || 1}
+              onChange={(newCode) => setCode(newCode || '')}
+              height={mode === 'compare' ? '240px' : '440px'}
+            />
+          </div>
+
+          {/* Solution B Editor in Compare Mode */}
+          {mode === 'compare' && (
+            <div className="flex flex-col gap-1" data-testid="compare-solution-b-container">
+              <span className="text-[11px] font-mono font-bold text-violet uppercase tracking-wider px-1">
+                Solution B (Alternative)
+              </span>
+              <CodeEditor
+                code={codeB}
+                currentLine={1}
+                onChange={(newCode) => setCodeB(newCode || '')}
+                height="240px"
+              />
+            </div>
+          )}
+
+          {/* Compare Results Summary Card */}
+          {mode === 'compare' && compareResult && (
+            <div
+              data-testid="compare-results-card"
+              className="p-3.5 rounded-xl bg-violet/15 border border-violet/30 flex flex-col gap-2 text-xs"
+            >
+              <div className="flex items-center justify-between">
+                <span className="font-semibold text-violet uppercase tracking-wider text-[10px]">
+                  Comparison Results
+                </span>
+                <span className="text-[11px] font-mono text-text-tertiary">
+                  {compareResult.step_counts.a < compareResult.step_counts.b
+                    ? '⚡ Solution A is more efficient'
+                    : compareResult.step_counts.a > compareResult.step_counts.b
+                    ? '⚡ Solution B is more efficient'
+                    : 'Equal step count'}
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-2 text-center font-mono">
+                <div className="p-2 rounded-lg bg-bg-surface/80 border border-cyan/30">
+                  <span className="text-[10px] text-text-tertiary block">Solution A</span>
+                  <span className="text-base font-bold text-cyan">{compareResult.step_counts.a} steps</span>
+                </div>
+                <div className="p-2 rounded-lg bg-bg-surface/80 border border-violet/30">
+                  <span className="text-[10px] text-text-tertiary block">Solution B</span>
+                  <span className="text-base font-bold text-violet">{compareResult.step_counts.b} steps</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 mt-1">
+                <button
+                  onClick={() => setSteps(compareResult.a.steps, compareResult.a.truncated, compareResult.a.error)}
+                  className="flex-1 py-1 px-2 rounded-md bg-cyan/15 border border-cyan/30 text-cyan text-[11px] font-mono hover:bg-cyan/25"
+                >
+                  View Solution A Trace
+                </button>
+                <button
+                  onClick={() => setSteps(compareResult.b.steps, compareResult.b.truncated, compareResult.b.error)}
+                  className="flex-1 py-1 px-2 rounded-md bg-violet/15 border border-violet/30 text-violet text-[11px] font-mono hover:bg-violet/25"
+                >
+                  View Solution B Trace
+                </button>
+              </div>
+            </div>
+          )}
 
           {/* Truncated Notice Banner */}
           {isTruncated && (

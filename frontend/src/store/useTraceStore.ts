@@ -180,6 +180,8 @@ export const useTraceStore = create<TraceState>((set, get) => ({
           answerFeedback: 'idle',
         })
       }
+    } catch {
+      // Toast notification is handled in executeCode - do not rethrow to avoid unhandled promise rejection
     } finally {
       set({ isLoading: false })
     }
@@ -203,3 +205,8 @@ export const useTraceStore = create<TraceState>((set, get) => ({
 
   clearPredictAnswer: () => set({ selectedAnswer: null, answerFeedback: 'idle' }),
 }))
+
+// Expose store globally for automated E2E testing
+if (typeof window !== 'undefined') {
+  ;(window as any).useTraceStore = useTraceStore
+}

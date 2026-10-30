@@ -24,6 +24,12 @@ export interface ExecuteOptions {
   apiUrl?: string
 }
 
+export interface CompareResult {
+  a: { steps: TraceStep[]; truncated: boolean; error: string | null }
+  b: { steps: TraceStep[]; truncated: boolean; error: string | null }
+  step_counts: { a: number; b: number }
+}
+
 /**
  * Finds the closest mock preset steps based on Python code signature
  */
@@ -192,4 +198,71 @@ export async function executeCode(
 export async function runCode(code: string, options?: ExecuteOptions): Promise<TraceStep[]> {
   const result = await executeCode(code, options)
   return result.steps
+}
+
+/**
+ * Persists a code snippet to the backend and returns the share ID
+ */
+export async function createSnippet(code: string, title?: string): Promise<string> {
+  const trimmed = code.trim()
+  if (!trimmed) {
+    toast.warning('Empty Code', 'Please enter some Python code before sharing.')
+    return ''
+  }
+
+  try {
+    const response = await fetch(`${API_URL}/snippets`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code: trimmed, title }),
+    })
+    if (!response.ok) {
+      throw new Error(`Failed to create snippet: ${response.status}`)
+    }
+    const data = (await response.json()) as { id: string }
+    return data.id
+  } catch (error) {
+    toast.error('Share Failed', 'Could not create share link on server.')
+    throw error
+  }
+}
+
+/**
+ * Retrieves a persisted snippet by share ID
+ */
+export async function fetchSnippet(id: string): Promise<string | null> {
+  try {
+    const response = await fetch(`${API_URL}/snippets/${id}`)
+    if (!response.ok) {
+      toast.error('Snippet Not Found', `Snippet with ID '${id}' could not be found.`)
+      return null
+    }
+    const data = (await response.json()) as { code: string }
+    return data.code
+  } catch {
+    toast.error('Snippet Fetch Failed', 'Could not retrieve shared snippet.')
+    return null
+  }
+}
+
+/**
+ * Executes two Python programs concurrently and compares their execution metrics
+ */
+export async function compareCode(codeA: string, codeB: string): Promise<CompareResult> {
+  try {
+    const response = await fetch(`${API_URL}/compare`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code_a: codeA.trim(), code_b: codeB.trim() }),
+    })
+    if (!response.ok) {
+      const errText = await response.text().catch(() => '')
+      toast.error('Compare Failed', `Server responded with ${response.status}: ${errText}`)
+      throw new Error(`Compare failed: ${response.status}`)
+    }
+    return (await response.json()) as CompareResult
+  } catch (error) {
+    toast.error('Comparison Error', 'Could not execute dual-program comparison.')
+    throw error
+  }
 }
