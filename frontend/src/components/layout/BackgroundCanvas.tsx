@@ -9,7 +9,6 @@ interface BackgroundCanvasProps {
 
 export const BackgroundCanvas: React.FC<BackgroundCanvasProps> = ({
   showOrbs = true,
-  showGrid = true,
   className = '',
 }) => {
   const shouldReduceMotion = useReducedMotion()
@@ -17,51 +16,36 @@ export const BackgroundCanvas: React.FC<BackgroundCanvasProps> = ({
   return (
     <div
       aria-hidden="true"
-      className={`fixed inset-0 pointer-events-none overflow-hidden z-0 bg-surface ${className}`}
+      className={`fixed inset-0 pointer-events-none overflow-hidden z-0 bg-bg ${className}`}
     >
-      {/* Dynamic Ambient Gradient Orbs */}
+      {/* Dynamic Ambient Blurred Orbs (Midnight Blue & Deep Sage) */}
       {showOrbs && !shouldReduceMotion && (
         <>
-          {/* Top-Left Electric Violet Glow */}
+          {/* Orb 1: Deep Blue (Top-Left ~620px, 40s slow drift) */}
           <motion.div
-            className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary-container/20 blur-[128px]"
+            className="absolute -top-48 -left-48 w-[620px] h-[620px] rounded-full blur-[100px] pointer-events-none"
+            style={{ background: 'var(--orb-1)' }}
             animate={{
-              x: [0, 30, -20, 0],
-              y: [0, 25, -15, 0],
-              scale: [1, 1.08, 0.94, 1],
+              x: [0, 40, -30, 0],
+              y: [0, 30, -25, 0],
             }}
             transition={{
-              duration: 20,
+              duration: 40,
               repeat: Infinity,
               ease: 'easeInOut',
             }}
           />
 
-          {/* Center-Right Cyan Glow */}
+          {/* Orb 2: Deep Teal-Green / Sage (Bottom-Right ~680px, 40s slow drift) */}
           <motion.div
-            className="absolute top-1/3 -right-24 w-[480px] h-[480px] rounded-full bg-secondary/15 blur-[140px]"
+            className="absolute -bottom-56 -right-56 w-[680px] h-[680px] rounded-full blur-[100px] pointer-events-none"
+            style={{ background: 'var(--orb-2)' }}
             animate={{
-              x: [0, -35, 20, 0],
-              y: [0, -30, 25, 0],
-              scale: [1, 0.93, 1.07, 1],
+              x: [0, -35, 25, 0],
+              y: [0, -30, 35, 0],
             }}
             transition={{
-              duration: 24,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />
-
-          {/* Bottom-Center Tertiary Amber/Magenta Glow */}
-          <motion.div
-            className="absolute -bottom-40 left-1/4 w-[520px] h-[520px] rounded-full bg-tertiary-container/10 blur-[150px]"
-            animate={{
-              x: [0, 25, -25, 0],
-              y: [0, -20, 20, 0],
-              scale: [1, 1.06, 0.95, 1],
-            }}
-            transition={{
-              duration: 28,
+              duration: 40,
               repeat: Infinity,
               ease: 'easeInOut',
             }}
@@ -69,15 +53,22 @@ export const BackgroundCanvas: React.FC<BackgroundCanvasProps> = ({
         </>
       )}
 
-      {/* Static ambient gradient fallback for reduced motion */}
+      {/* Static Orbs Fallback for Reduced Motion */}
       {showOrbs && shouldReduceMotion && (
-        <div className="absolute inset-0 bg-radial-gradient from-primary-container/10 via-transparent to-transparent opacity-50" />
+        <>
+          <div
+            className="absolute -top-48 -left-48 w-[620px] h-[620px] rounded-full blur-[100px] pointer-events-none opacity-80"
+            style={{ background: 'var(--orb-1)' }}
+          />
+          <div
+            className="absolute -bottom-56 -right-56 w-[680px] h-[680px] rounded-full blur-[100px] pointer-events-none opacity-80"
+            style={{ background: 'var(--orb-2)' }}
+          />
+        </>
       )}
 
-      {/* Substrate Dot Grid */}
-      {showGrid && (
-        <div className="absolute inset-0 bg-dot-grid opacity-35" />
-      )}
+      {/* Subtle 3% Opacity Noise Overlay */}
+      <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none" />
     </div>
   )
 }

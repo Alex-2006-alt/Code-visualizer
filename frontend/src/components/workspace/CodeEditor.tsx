@@ -31,7 +31,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
     const monaco = monacoRef.current
     const newDecorations: monacoType.editor.IModelDeltaDecoration[] = []
 
-    // 1. Current executing line decoration with cyan glow and gutter arrow
+    // 1. Current executing line decoration with accent highlight and gutter arrow
     if (currentLine > 0) {
       newDecorations.push({
         range: new monaco.Range(currentLine, 1, currentLine, 1),
@@ -40,7 +40,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
           className: 'current-execution-line',
           glyphMarginClassName: 'execution-arrow-glyph',
           overviewRuler: {
-            color: '#22d3ee',
+            color: '#7FA8D1',
             position: monaco.editor.OverviewRulerLane.Full,
           },
         },
@@ -68,29 +68,61 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
     editorRef.current = editor
     monacoRef.current = monaco
 
-    // Define custom Obsidian Trace theme
+    // Define Midnight Blue & Sage editor theme
+    monaco.editor.defineTheme('midnight-sage', {
+      base: 'vs-dark',
+      inherit: true,
+      rules: [
+        { token: 'comment', foreground: '6F7A8A', fontStyle: 'italic' },
+        { token: 'keyword', foreground: '8FC4A8' },
+        { token: 'identifier', foreground: 'E8EBF0' },
+        { token: 'type', foreground: '8FB9E3' },
+        { token: 'function', foreground: '8FB9E3' },
+        { token: 'string', foreground: 'C3D9CB' },
+        { token: 'number', foreground: 'C9D6EA' },
+        { token: 'delimiter', foreground: 'A5ACB8' },
+        { token: 'operator', foreground: 'A5ACB8' },
+      ],
+      colors: {
+        'editor.background': '#08090B',
+        'editor.foreground': '#E8EBF0',
+        'editorLineNumber.foreground': '#8791A0',
+        'editorLineNumber.activeForeground': '#7FA8D1',
+        'editor.selectionBackground': '#7FA8D133',
+        'editor.lineHighlightBackground': '#00000000',
+        'editorGutter.background': '#08090B',
+        'editorCursor.foreground': '#7FA8D1',
+      },
+    })
+
+    // Fallback theme registration for backward compatibility
     monaco.editor.defineTheme('codetrace-dark', {
       base: 'vs-dark',
       inherit: true,
       rules: [
-        { token: 'comment', foreground: '64748b', fontStyle: 'italic' },
-        { token: 'keyword', foreground: 'cabeff', fontStyle: 'bold' },
-        { token: 'identifier', foreground: 'dfe2f2' },
-        { token: 'string', foreground: 'a2eeff' },
-        { token: 'number', foreground: 'f8acff' },
-        { token: 'delimiter', foreground: '938ea1' },
+        { token: 'comment', foreground: '6F7A8A', fontStyle: 'italic' },
+        { token: 'keyword', foreground: '8FC4A8' },
+        { token: 'identifier', foreground: 'E8EBF0' },
+        { token: 'type', foreground: '8FB9E3' },
+        { token: 'function', foreground: '8FB9E3' },
+        { token: 'string', foreground: 'C3D9CB' },
+        { token: 'number', foreground: 'C9D6EA' },
+        { token: 'delimiter', foreground: 'A5ACB8' },
+        { token: 'operator', foreground: 'A5ACB8' },
       ],
       colors: {
-        'editor.background': '#0a0e19',
-        'editor.foreground': '#dfe2f2',
-        'editorLineNumber.foreground': '#484555',
-        'editorLineNumber.activeForeground': '#5de6ff',
-        'editor.selectionBackground': '#947dff33',
-        'editor.lineHighlightBackground': '#171b2766',
-        'editorGutter.background': '#0a0e19',
+        'editor.background': '#08090B',
+        'editor.foreground': '#E8EBF0',
+        'editorLineNumber.foreground': '#8791A0',
+        'editorLineNumber.activeForeground': '#7FA8D1',
+        'editor.selectionBackground': '#7FA8D133',
+        'editor.lineHighlightBackground': '#00000000',
+        'editorGutter.background': '#08090B',
+        'editorCursor.foreground': '#7FA8D1',
       },
     })
-    monaco.editor.setTheme('codetrace-dark')
+
+    monaco.editor.setTheme('midnight-sage')
 
     // Handle gutter click for armed breakpoints
     editor.onMouseDown((e) => {
@@ -116,22 +148,20 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
   }, [updateDecorations])
 
   return (
-    <GlassPanel level={2} className="w-full flex flex-col overflow-hidden shadow-2xl">
+    <GlassPanel level={2} className="w-full flex flex-col overflow-hidden shadow-panel">
       {/* Editor Bar */}
-      <div className="px-4 py-2 bg-surface-container-high/60 border-b border-white/5 flex items-center justify-between text-xs font-code-sm">
+      <div className="px-4 py-2.5 bg-glass-sunken border-b border-border flex items-center justify-between text-xs font-mono">
         <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
-          <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-          <span className="ml-2 text-white font-medium">script.py</span>
+          <span className="w-2 h-2 rounded-full bg-border-strong" />
+          <span className="text-text font-medium tracking-tight">script.py</span>
         </div>
 
-        <div className="flex items-center gap-3 text-outline">
-          <span className="text-secondary font-mono text-[11px]" data-testid="current-line-display">
+        <div className="flex items-center gap-3 text-text-3">
+          <span className="text-accent font-mono text-[11px]" data-testid="current-line-display">
             Ln {currentLine}
           </span>
-          <span className="text-white/20">•</span>
-          <span className="text-[11px]">Python 3.12</span>
+          <span className="text-border-strong">•</span>
+          <span className="text-[11px] text-text-3">Python 3.12</span>
         </div>
       </div>
 
@@ -141,7 +171,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
           height="100%"
           language="python"
           value={code}
-          theme="codetrace-dark"
+          theme="midnight-sage"
           onChange={(val) => onChange?.(val || '')}
           onMount={handleEditorDidMount}
           options={{
