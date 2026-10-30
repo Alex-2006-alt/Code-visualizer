@@ -208,5 +208,5 @@ export const useTraceStore = create<TraceState>((set, get) => ({
 
 // Expose store globally for automated E2E testing
 if (typeof window !== 'undefined') {
-  ;(window as any).useTraceStore = useTraceStore
+  ;(window as unknown as { useTraceStore?: typeof useTraceStore }).useTraceStore = useTraceStore
 }

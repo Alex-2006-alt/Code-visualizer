@@ -2,7 +2,6 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { GlassPanel } from '@/components/ui/GlassPanel'
 import { GlassButton } from '@/components/ui/GlassButton'
-import { Chip } from '@/components/ui/Chip'
 import { PredictQuestion } from '@/types/trace'
 
 interface PredictQuizCardProps {
@@ -26,35 +25,32 @@ export const PredictQuizCard: React.FC<PredictQuizCardProps> = ({
 }) => {
   if (!question) {
     return (
-      <GlassPanel level={1} className={`p-4 text-center text-text-tertiary ${className}`}>
-        <span className="material-symbols-outlined text-2xl mb-1 opacity-40">psychology</span>
+      <GlassPanel level={2} className={`p-4 text-center text-text-2 bg-glass-sunken border border-border ${className}`}>
+        <span className="material-symbols-outlined text-2xl mb-1 text-text-3">psychology</span>
         <p className="text-xs">No active prediction for this step. Step forward to test your recall!</p>
       </GlassPanel>
     )
   }
 
   return (
-    <GlassPanel level={2} glow="primary" className={`p-4 border border-violet/30 overflow-hidden ${className}`}>
+    <GlassPanel level={2} className={`p-4 border border-border overflow-hidden bg-glass-sunken ${className}`}>
       {/* Header with Streak */}
-      <div className="flex items-center justify-between mb-3 pb-2 border-b border-border-subtle">
+      <div className="flex items-center justify-between mb-3 pb-2 border-b border-border">
         <div className="flex items-center gap-2">
-          <span className="material-symbols-outlined text-sm text-violet">psychology</span>
-          <h4 className="text-xs font-semibold uppercase tracking-wider text-text-primary">
+          <span className="material-symbols-outlined text-sm text-accent">psychology</span>
+          <h4 className="text-[11px] font-sans font-medium uppercase tracking-[0.08em] text-text-3">
             Predict Mode
           </h4>
         </div>
         {streak > 0 && (
-          <Chip
-            label={`🔥 ${streak} Streak`}
-            variant="tertiary"
-            active
-            className="font-mono text-[10px] py-0.5 px-2"
-          />
+          <span className="px-2 py-0.5 rounded-full bg-accent-soft border border-accent/30 text-accent font-mono text-[10px]">
+            🔥 {streak} Streak
+          </span>
         )}
       </div>
 
       {/* Question Prompt */}
-      <p className="text-xs font-medium text-text-primary mb-3.5 leading-relaxed">
+      <p className="text-xs font-sans font-medium text-text mb-3.5 leading-relaxed">
         {question.prompt}
       </p>
 
@@ -65,14 +61,14 @@ export const PredictQuizCard: React.FC<PredictQuizCardProps> = ({
           const isCorrect = idx === question.correctIndex
           const showResult = feedback !== 'idle'
 
-          let style = 'bg-bg-surface/70 border-border-subtle text-text-secondary hover:border-violet/40 hover:text-text-primary'
+          let style = 'bg-glass border-border text-text hover:border-border-strong'
           if (showResult) {
             if (isCorrect) {
-              style = 'bg-emerald-500/20 border-emerald-500/60 text-emerald-300 font-semibold shadow-[0_0_12px_rgba(16,185,129,0.2)]'
+              style = 'bg-sage-soft border-sage/60 text-sage font-medium'
             } else if (isSelected) {
-              style = 'bg-coral/20 border-coral/60 text-coral font-semibold'
+              style = 'bg-error/15 border-error/50 text-error font-medium'
             } else {
-              style = 'opacity-40 bg-bg-surface/30 border-border-subtle text-text-tertiary'
+              style = 'opacity-40 bg-glass border-border text-text-3'
             }
           }
 
@@ -81,17 +77,17 @@ export const PredictQuizCard: React.FC<PredictQuizCardProps> = ({
               key={idx}
               disabled={showResult}
               onClick={() => onSelectOption(idx)}
-              className={`w-full text-left px-3 py-2 rounded-lg border text-xs font-mono transition-all flex items-center justify-between ${style}`}
+              className={`w-full text-left px-3 py-2 rounded-control border text-xs font-mono transition-colors flex items-center justify-between cursor-pointer ${style}`}
             >
               <div className="flex items-center gap-2">
-                <span className="text-[10px] opacity-60">[{String.fromCharCode(65 + idx)}]</span>
+                <span className="text-[10px] text-text-3">[{String.fromCharCode(65 + idx)}]</span>
                 <span>{opt}</span>
               </div>
               {showResult && isCorrect && (
-                <span className="material-symbols-outlined text-sm text-emerald-400">check_circle</span>
+                <span className="material-symbols-outlined text-sm text-sage">check_circle</span>
               )}
               {showResult && isSelected && !isCorrect && (
-                <span className="material-symbols-outlined text-sm text-coral">cancel</span>
+                <span className="material-symbols-outlined text-sm text-error">cancel</span>
               )}
             </button>
           )
@@ -103,14 +99,14 @@ export const PredictQuizCard: React.FC<PredictQuizCardProps> = ({
         <motion.div
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-3 p-2.5 rounded-lg bg-container-lowest/80 border border-border-subtle text-xs"
+          className="mt-3 p-2.5 rounded-control bg-panel-body border border-border text-xs"
         >
           <div className="flex items-center gap-1.5 mb-1">
-            <span className={`font-semibold ${feedback === 'correct' ? 'text-emerald-400' : 'text-coral'}`}>
+            <span className={`font-medium ${feedback === 'correct' ? 'text-sage' : 'text-error'}`}>
               {feedback === 'correct' ? 'Correct!' : 'Incorrect'}
             </span>
           </div>
-          <p className="text-[11px] text-text-tertiary leading-relaxed mb-2">
+          <p className="text-[11px] text-text-2 leading-relaxed mb-2">
             {question.explanation}
           </p>
           {onNextStep && (

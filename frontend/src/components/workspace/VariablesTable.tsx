@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { GlassPanel } from '@/components/ui/GlassPanel'
-import { Chip } from '@/components/ui/Chip'
 
 interface VariablesTableProps {
   locals: Record<string, unknown>
@@ -9,17 +8,17 @@ interface VariablesTableProps {
   className?: string
 }
 
-function getTypeBadge(val: unknown): { label: string; variant: 'primary' | 'secondary' | 'tertiary' | 'default' } {
-  if (val === null || val === undefined) return { label: 'None', variant: 'default' }
-  if (typeof val === 'number') return { label: Number.isInteger(val) ? 'int' : 'float', variant: 'secondary' }
+function getTypeBadge(val: unknown): { label: string; dotClass: string } {
+  if (val === null || val === undefined) return { label: 'none', dotClass: 'bg-text-3' }
+  if (typeof val === 'number') return { label: Number.isInteger(val) ? 'int' : 'float', dotClass: 'bg-syn-number' }
   if (typeof val === 'string') {
-    if (val.startsWith('0x')) return { label: 'ref', variant: 'primary' }
-    return { label: 'str', variant: 'secondary' }
+    if (val.startsWith('0x')) return { label: 'ref', dotClass: 'bg-accent' }
+    return { label: 'str', dotClass: 'bg-syn-keyword' }
   }
-  if (typeof val === 'boolean') return { label: 'bool', variant: 'tertiary' }
-  if (Array.isArray(val)) return { label: 'list', variant: 'primary' }
-  if (typeof val === 'object') return { label: 'dict', variant: 'primary' }
-  return { label: typeof val, variant: 'default' }
+  if (typeof val === 'boolean') return { label: 'bool', dotClass: 'bg-syn-number' }
+  if (Array.isArray(val)) return { label: 'list', dotClass: 'bg-syn-function' }
+  if (typeof val === 'object') return { label: 'dict', dotClass: 'bg-syn-string' }
+  return { label: typeof val, dotClass: 'bg-text-3' }
 }
 
 function formatValue(val: unknown): string {
@@ -53,13 +52,13 @@ export const VariablesTable: React.FC<VariablesTableProps> = ({
   }, [locals, filter])
 
   return (
-    <GlassPanel level={1} className={`flex flex-col h-full overflow-hidden ${className}`}>
+    <GlassPanel level={2} className={`flex flex-col h-full border border-border overflow-hidden ${className}`}>
       {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-border-subtle bg-container-lowest/40">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-glass-sunken">
         <div className="flex items-center gap-2">
-          <span className="material-symbols-outlined text-sm text-cyan">data_object</span>
-          <h3 className="text-xs font-semibold text-text-primary tracking-wide uppercase">Variables</h3>
-          <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-border-subtle text-text-tertiary">
+          <span className="material-symbols-outlined text-sm text-accent">data_object</span>
+          <h3 className="text-[11px] font-sans font-medium text-text-3 tracking-[0.08em] uppercase">Variables</h3>
+          <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-glass border border-border text-text-3">
             {Object.keys(locals).length}
           </span>
         </div>
@@ -71,17 +70,17 @@ export const VariablesTable: React.FC<VariablesTableProps> = ({
               value={filter}
               onChange={(e) => setFilter(e.target.value)}
               placeholder="Filter..."
-              className="w-24 focus:w-32 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] text-xs bg-bg-surface/60 border border-border-subtle rounded-md px-2 py-0.5 text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-cyan/50"
+              className="w-24 focus:w-32 transition-all duration-200 text-xs bg-glass-sunken border border-border rounded-control px-2 py-0.5 text-text placeholder:text-text-3 focus:outline-none focus:border-accent"
             />
           </div>
         )}
       </div>
 
-      {/* Content */}
-      <div className="flex-1 overflow-y-auto custom-scrollbar p-3">
+      {/* Content Area with Flat Solid Fill for Crisp Contrast */}
+      <div className="flex-1 overflow-y-auto custom-scrollbar p-3 bg-panel-body">
         {entries.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-full text-center py-6 text-text-tertiary">
-            <span className="material-symbols-outlined text-2xl mb-1 opacity-40">hourglass_empty</span>
+          <div className="flex flex-col items-center justify-center h-full text-center py-6 text-text-2">
+            <span className="material-symbols-outlined text-2xl mb-1 text-text-3">hourglass_empty</span>
             <p className="text-xs">No variables in current scope</p>
           </div>
         ) : (
@@ -89,7 +88,7 @@ export const VariablesTable: React.FC<VariablesTableProps> = ({
             <AnimatePresence initial={false}>
               {entries.map(([name, value]) => {
                 const isMutated = mutatedVariable === name
-                const { label, variant } = getTypeBadge(value)
+                const { label, dotClass } = getTypeBadge(value)
                 const formatted = formatValue(value)
                 const isRef = typeof value === 'string' && value.startsWith('0x')
 
@@ -100,41 +99,39 @@ export const VariablesTable: React.FC<VariablesTableProps> = ({
                     initial={{ opacity: 0, y: 6 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                    className={`flex items-center justify-between px-3 py-2 rounded-lg border transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                    transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                    className={`flex items-center justify-between px-3 py-2 rounded-inner border transition-colors duration-200 ${
                       isMutated
-                        ? 'animate-amber-flash border-amber-400/60 shadow-[0_0_16px_rgba(251,191,36,0.35)]'
-                        : 'bg-container-lowest/50 border-border-subtle hover:border-border-default'
+                        ? 'animate-changed-flash border-sage/50'
+                        : 'bg-glass border-border hover:border-border-strong'
                     }`}
                   >
-                    {/* Var Name + Type */}
+                    {/* Var Name + Clean Neutral Glass Type Badge with Dot */}
                     <div className="flex items-center gap-2 min-w-0 pr-2">
-                      <span className={`text-xs font-mono font-medium truncate ${isMutated ? 'text-amber-300' : 'text-text-primary'}`}>
+                      <span className={`text-xs font-mono font-medium truncate ${isMutated ? 'text-sage' : 'text-text'}`}>
                         {name}
                       </span>
-                      <Chip
-                        label={label}
-                        variant={variant}
-                        active
-                        className="font-mono text-[9px] py-0 px-1.5"
-                      />
+                      <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-glass border border-border text-text-2 font-sans text-[11px] lowercase">
+                        <span className={`w-1.5 h-1.5 rounded-full ${dotClass}`} />
+                        {label}
+                      </span>
                     </div>
 
                     {/* Var Value */}
                     <div className="flex items-center gap-1.5 max-w-[55%]">
                       {isRef && (
-                        <span className="material-symbols-outlined text-[13px] text-violet shrink-0">
+                        <span className="material-symbols-outlined text-[13px] text-accent shrink-0">
                           arrow_forward
                         </span>
                       )}
                       <span
                         title={formatted}
-                        className={`text-xs font-mono truncate transition-colors duration-300 ${
+                        className={`text-xs font-mono truncate ${
                           isRef
-                            ? 'text-violet font-semibold'
+                            ? 'text-accent font-medium'
                             : isMutated
-                            ? 'text-amber-200 font-semibold'
-                            : 'text-text-secondary'
+                            ? 'text-sage font-medium'
+                            : 'text-text-2'
                         }`}
                       >
                         {formatted}

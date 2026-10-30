@@ -24,36 +24,36 @@ export const StackFrameCard: React.FC<StackFrameCardProps> = ({
       animate={{ opacity: 1, x: 0, scale: 1 }}
       exit={{ opacity: 0, x: 16, scale: 0.96 }}
       transition={{
-        duration: 0.28,
+        duration: 0.25,
         ease: [0.22, 1, 0.36, 1],
       }}
       onClick={onClick}
-      className={`p-3 rounded-lg border cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+      className={`p-3 rounded-inner border cursor-pointer transition-colors duration-200 ${
         isTop
-          ? 'bg-violet/10 border-violet/40 shadow-[0_0_16px_rgba(202,190,255,0.15)] ring-1 ring-violet/30'
-          : 'bg-container-lowest/40 border-border-subtle hover:border-border-default opacity-80 hover:opacity-100'
+          ? 'bg-accent-soft border-accent/40 shadow-panel'
+          : 'bg-glass border-border hover:border-border-strong opacity-80 hover:opacity-100'
       }`}
     >
       <div className="flex items-center justify-between mb-1.5">
         <div className="flex items-center gap-1.5">
-          <span className="font-mono text-[10px] text-text-tertiary">#{depth}</span>
-          <span className={`text-xs font-mono font-bold ${isTop ? 'text-violet' : 'text-text-primary'}`}>
+          <span className="font-mono text-[10px] text-text-3">#{depth}</span>
+          <span className={`text-xs font-mono font-medium ${isTop ? 'text-accent' : 'text-text'}`}>
             {frame.fn}()
           </span>
           {isTop && (
-            <span className="inline-flex items-center px-1.5 py-0.2 rounded text-[9px] font-semibold bg-violet/20 text-violet">
-              Active
+            <span className="inline-flex items-center px-1.5 py-0.2 rounded-full text-[10px] font-sans bg-accent/20 text-accent font-medium">
+              active
             </span>
           )}
         </div>
-        <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-bg-surface/80 border border-border-subtle text-cyan font-semibold">
+        <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-glass border border-border ${isTop ? 'text-accent' : 'text-text-3'}`}>
           line {frame.line}
         </span>
       </div>
 
-      <div className="flex items-center justify-between text-[11px] text-text-tertiary">
+      <div className="flex items-center justify-between text-[11px] text-text-3">
         <span>{localCount} {localCount === 1 ? 'local' : 'locals'}</span>
-        <div className="flex items-center gap-1 max-w-[60%] truncate font-mono text-[10px] text-text-secondary">
+        <div className="flex items-center gap-1 max-w-[60%] truncate font-mono text-[10px] text-text-2">
           {Object.entries(frame.locals)
             .slice(0, 3)
             .map(([k, v]) => `${k}=${String(v)}`)

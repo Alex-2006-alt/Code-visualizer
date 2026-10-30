@@ -252,7 +252,7 @@ export const WorkspacePage: React.FC = () => {
           {/* Solution A Editor */}
           <div className="flex flex-col gap-1">
             {mode === 'compare' && (
-              <span className="text-[11px] font-mono font-bold text-cyan uppercase tracking-wider px-1">
+              <span className="text-[11px] font-mono font-medium text-accent uppercase tracking-wider px-1">
                 Solution A (Primary)
               </span>
             )}
@@ -267,7 +267,7 @@ export const WorkspacePage: React.FC = () => {
           {/* Solution B Editor in Compare Mode */}
           {mode === 'compare' && (
             <div className="flex flex-col gap-1" data-testid="compare-solution-b-container">
-              <span className="text-[11px] font-mono font-bold text-violet uppercase tracking-wider px-1">
+              <span className="text-[11px] font-mono font-medium text-sage uppercase tracking-wider px-1">
                 Solution B (Alternative)
               </span>
               <CodeEditor
@@ -283,13 +283,13 @@ export const WorkspacePage: React.FC = () => {
           {mode === 'compare' && compareResult && (
             <div
               data-testid="compare-results-card"
-              className="p-3.5 rounded-xl bg-violet/15 border border-violet/30 flex flex-col gap-2 text-xs"
+              className="p-3.5 rounded-panel bg-glass-raised border border-border-strong shadow-panel flex flex-col gap-2 text-xs"
             >
               <div className="flex items-center justify-between">
-                <span className="font-semibold text-violet uppercase tracking-wider text-[10px]">
+                <span className="font-medium text-accent uppercase tracking-wider text-[10px]">
                   Comparison Results
                 </span>
-                <span className="text-[11px] font-mono text-text-tertiary">
+                <span className="text-[11px] font-mono text-text-3">
                   {compareResult.step_counts.a < compareResult.step_counts.b
                     ? '⚡ Solution A is more efficient'
                     : compareResult.step_counts.a > compareResult.step_counts.b
@@ -298,25 +298,25 @@ export const WorkspacePage: React.FC = () => {
                 </span>
               </div>
               <div className="grid grid-cols-2 gap-2 text-center font-mono">
-                <div className="p-2 rounded-lg bg-bg-surface/80 border border-cyan/30">
-                  <span className="text-[10px] text-text-tertiary block">Solution A</span>
-                  <span className="text-base font-bold text-cyan">{compareResult.step_counts.a} steps</span>
+                <div className="p-2 rounded-inner bg-panel-body border border-accent/30">
+                  <span className="text-[10px] text-text-3 block">Solution A</span>
+                  <span className="text-base font-bold text-accent">{compareResult.step_counts.a} steps</span>
                 </div>
-                <div className="p-2 rounded-lg bg-bg-surface/80 border border-violet/30">
-                  <span className="text-[10px] text-text-tertiary block">Solution B</span>
-                  <span className="text-base font-bold text-violet">{compareResult.step_counts.b} steps</span>
+                <div className="p-2 rounded-inner bg-panel-body border border-sage/30">
+                  <span className="text-[10px] text-text-3 block">Solution B</span>
+                  <span className="text-base font-bold text-sage">{compareResult.step_counts.b} steps</span>
                 </div>
               </div>
               <div className="flex items-center gap-2 mt-1">
                 <button
                   onClick={() => setSteps(compareResult.a.steps, compareResult.a.truncated, compareResult.a.error)}
-                  className="flex-1 py-1 px-2 rounded-md bg-cyan/15 border border-cyan/30 text-cyan text-[11px] font-mono hover:bg-cyan/25"
+                  className="flex-1 py-1 px-2 rounded-control bg-accent-soft border border-accent/30 text-accent text-[11px] font-mono hover:bg-accent/20 cursor-pointer"
                 >
                   View Solution A Trace
                 </button>
                 <button
                   onClick={() => setSteps(compareResult.b.steps, compareResult.b.truncated, compareResult.b.error)}
-                  className="flex-1 py-1 px-2 rounded-md bg-violet/15 border border-violet/30 text-violet text-[11px] font-mono hover:bg-violet/25"
+                  className="flex-1 py-1 px-2 rounded-control bg-sage-soft border border-sage/30 text-sage text-[11px] font-mono hover:bg-sage/20 cursor-pointer"
                 >
                   View Solution B Trace
                 </button>
@@ -328,14 +328,14 @@ export const WorkspacePage: React.FC = () => {
           {isTruncated && (
             <div
               data-testid="truncated-notice"
-              className="p-3.5 rounded-xl bg-amber-400/15 border border-amber-400/40 flex items-start gap-3 text-xs shadow-md shadow-amber-400/10"
+              className="p-3.5 rounded-panel bg-panel-body border border-border-strong flex items-start gap-3 text-xs shadow-panel"
             >
-              <span className="material-symbols-outlined text-base text-amber-400 mt-0.5">warning</span>
+              <span className="material-symbols-outlined text-base text-accent mt-0.5">warning</span>
               <div>
-                <span className="font-semibold text-amber-300 uppercase tracking-wider text-[10px] block">
+                <span className="font-medium text-text uppercase tracking-wider text-[10px] block">
                   Step Limit Reached
                 </span>
-                <p className="text-text-secondary leading-relaxed font-mono text-[11px] mt-0.5">
+                <p className="text-text-2 leading-relaxed font-mono text-[11px] mt-0.5">
                   Execution exceeded the maximum step threshold (2000 steps) and was truncated.
                 </p>
               </div>
@@ -346,14 +346,14 @@ export const WorkspacePage: React.FC = () => {
           {step?.event === 'exception' && (
             <div
               data-testid="exception-notice"
-              className="p-3.5 rounded-xl bg-coral/15 border border-coral/40 flex items-start gap-3 text-xs shadow-md shadow-coral/10"
+              className="p-3.5 rounded-panel bg-error/15 border border-error/40 flex items-start gap-3 text-xs shadow-panel"
             >
-              <span className="material-symbols-outlined text-base text-coral mt-0.5">error</span>
+              <span className="material-symbols-outlined text-base text-error mt-0.5">error</span>
               <div>
-                <span className="font-semibold text-coral uppercase tracking-wider text-[10px] block">
+                <span className="font-medium text-error uppercase tracking-wider text-[10px] block">
                   Exception Step
                 </span>
-                <p className="text-text-primary leading-relaxed font-mono text-[11px] mt-0.5">
+                <p className="text-text leading-relaxed font-mono text-[11px] mt-0.5">
                   {step.explanation || 'An unhandled exception occurred at this execution step.'}
                 </p>
               </div>
@@ -362,9 +362,9 @@ export const WorkspacePage: React.FC = () => {
 
           {/* Explanation Banner */}
           {step?.explanation && step?.event !== 'exception' && (
-            <div className="p-3 rounded-xl bg-cyan/10 border border-cyan/25 flex items-start gap-2 text-xs">
-              <span className="material-symbols-outlined text-sm text-cyan mt-0.5">info</span>
-              <p className="text-text-secondary leading-relaxed font-mono text-[11px]">
+            <div className="p-3 rounded-panel bg-panel-body border border-border flex items-start gap-2 text-xs">
+              <span className="material-symbols-outlined text-sm text-accent mt-0.5">info</span>
+              <p className="text-text-2 leading-relaxed font-mono text-[11px]">
                 {step.explanation}
               </p>
             </div>

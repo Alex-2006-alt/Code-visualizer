@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { HeapObject } from '@/types/trace'
-import { Chip } from '@/components/ui/Chip'
 
 interface MemoryBoxProps {
   obj: HeapObject
@@ -18,26 +17,26 @@ export const MemoryBox: React.FC<MemoryBoxProps> = ({ obj, referrers = [], class
     <motion.div
       layout
       data-testid={`heap-object-${obj.address}`}
-      initial={{ opacity: 0, scale: 0.88, y: 14 }}
+      initial={{ opacity: 0, scale: 0.92, y: 12 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.88, y: -10 }}
+      exit={{ opacity: 0, scale: 0.92, y: -10 }}
       transition={{
         type: 'spring',
         stiffness: 380,
         damping: 26,
         mass: 0.8,
       }}
-      className={`rounded-xl border ${
-        isShared ? 'border-violet/50 shadow-violet/10' : 'border-violet/30'
-      } bg-container-lowest/70 backdrop-blur-md p-3.5 shadow-lg shadow-black/20 ${className}`}
+      className={`rounded-inner border ${
+        isShared ? 'border-accent/40' : 'border-border'
+      } bg-glass-sunken p-3.5 shadow-panel ${className}`}
     >
       {/* Shared reference notice and pointer arrows */}
       {isShared && (
         <div
           data-testid="shared-reference-badge"
-          className="mb-2.5 px-2.5 py-1.5 rounded-lg bg-violet/15 border border-violet/30 flex items-center justify-between"
+          className="mb-2.5 px-2.5 py-1.5 rounded-control bg-accent-soft border border-accent/30 flex items-center justify-between"
         >
-          <div className="flex items-center gap-1.5 text-xs font-mono text-violet font-semibold">
+          <div className="flex items-center gap-1.5 text-xs font-mono text-accent font-medium">
             <span className="material-symbols-outlined text-xs">link</span>
             <span>Shared: {referrers.join(' = ')}</span>
           </div>
@@ -46,7 +45,7 @@ export const MemoryBox: React.FC<MemoryBoxProps> = ({ obj, referrers = [], class
               <span
                 key={refName}
                 data-testid={`ref-arrow-${refName}`}
-                className="px-1.5 py-0.5 rounded bg-violet/25 text-[10px] font-mono font-bold text-violet flex items-center gap-0.5"
+                className="px-1.5 py-0.5 rounded-control bg-glass border border-border text-[10px] font-mono text-accent flex items-center gap-0.5"
               >
                 <span>{refName}</span>
                 <span>&rarr;</span>
@@ -57,21 +56,19 @@ export const MemoryBox: React.FC<MemoryBoxProps> = ({ obj, referrers = [], class
       )}
 
       {/* Header: Type, ID, Address */}
-      <div className="flex items-center justify-between gap-2 mb-3 pb-2 border-b border-border-subtle">
+      <div className="flex items-center justify-between gap-2 mb-3 pb-2 border-b border-border">
         <div className="flex items-center gap-2">
-          <Chip
-            label={obj.type}
-            variant="primary"
-            active
-            className="font-mono text-[9px] uppercase py-0.5 px-2"
-          />
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-glass border border-border text-text-2 font-sans text-[11px] lowercase">
+            <span className={`w-1.5 h-1.5 rounded-full ${obj.type === 'list' ? 'bg-syn-function' : 'bg-syn-string'}`} />
+            {obj.type}
+          </span>
           {obj.label && (
-            <span className="text-xs font-mono font-medium text-text-primary">
+            <span className="text-xs font-mono font-medium text-text">
               {obj.label}
             </span>
           )}
         </div>
-        <span className="text-[10px] font-mono text-cyan bg-cyan/10 px-1.5 py-0.5 rounded border border-cyan/20">
+        <span className="text-[10px] font-mono text-accent bg-glass px-1.5 py-0.5 rounded-control border border-border">
           {obj.address}
         </span>
       </div>
@@ -86,16 +83,16 @@ export const MemoryBox: React.FC<MemoryBoxProps> = ({ obj, referrers = [], class
                 key={idx}
                 layout
                 transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                className={`flex flex-col items-center min-w-[3rem] px-2 py-1.5 rounded-lg border transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                className={`flex flex-col items-center min-w-[3rem] px-2 py-1.5 rounded-control border transition-colors duration-200 ${
                   isTarget
-                    ? 'bg-amber-400/20 border-amber-400/60 shadow-[0_0_12px_rgba(251,191,36,0.3)] ring-1 ring-amber-400/40'
-                    : 'bg-bg-surface/70 border-border-subtle hover:border-border-default'
+                    ? 'bg-sage-soft border-sage/60 text-sage'
+                    : 'bg-glass border-border hover:border-border-strong text-text'
                 }`}
               >
-                <span className="text-[9px] font-mono text-text-tertiary">[{idx}]</span>
+                <span className="text-[9px] font-mono text-text-3">[{idx}]</span>
                 <span
-                  className={`text-xs font-mono font-bold mt-0.5 ${
-                    isTarget ? 'text-amber-300' : 'text-text-primary'
+                  className={`text-xs font-mono font-medium mt-0.5 ${
+                    isTarget ? 'text-sage' : 'text-text'
                   }`}
                 >
                   {String(val)}
@@ -112,10 +109,10 @@ export const MemoryBox: React.FC<MemoryBoxProps> = ({ obj, referrers = [], class
           {Object.entries(obj.value as Record<string, unknown>).map(([k, v]) => (
             <div
               key={k}
-              className="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-bg-surface/70 border border-border-subtle"
+              className="flex items-center justify-between px-2.5 py-1.5 rounded-control bg-glass border border-border"
             >
-              <span className="text-violet font-medium">{k}:</span>
-              <span className="text-text-primary font-bold">{String(v)}</span>
+              <span className="text-accent font-medium">{k}:</span>
+              <span className="text-text font-normal">{String(v)}</span>
             </div>
           ))}
         </div>
