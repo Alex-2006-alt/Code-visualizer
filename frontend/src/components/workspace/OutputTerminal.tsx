@@ -69,17 +69,23 @@ export const OutputTerminal: React.FC<OutputTerminalProps> = ({
         </button>
       </div>
 
-      {/* Terminal Body with Flat Solid Fill for Crisp Contrast */}
+      {/* Terminal Body with Flat Solid Fill and $ Prompt in --accent */}
       {!isCollapsed && (
         <div className="p-3 bg-panel-body font-mono text-xs overflow-y-auto max-h-48 min-h-[5rem] custom-scrollbar">
           {activeTab === 'stdout' && (
             <div>
               {stdout ? (
-                <pre className="text-text whitespace-pre-wrap leading-relaxed selection:bg-accent/20">
-                  {stdout}
-                </pre>
+                <div className="flex items-start gap-2">
+                  <span className="text-accent select-none font-mono shrink-0">$</span>
+                  <pre className="text-text whitespace-pre-wrap leading-relaxed selection:bg-accent/20 flex-1 font-mono">
+                    {stdout}
+                  </pre>
+                </div>
               ) : (
-                <span className="text-text-2 italic">No console output yet</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-accent select-none font-mono shrink-0">$</span>
+                  <span className="text-text-2 italic">No console output yet</span>
+                </div>
               )}
             </div>
           )}
@@ -87,9 +93,12 @@ export const OutputTerminal: React.FC<OutputTerminalProps> = ({
           {activeTab === 'stderr' && (
             <div>
               {stderr ? (
-                <pre className="text-error whitespace-pre-wrap leading-relaxed selection:bg-error/20">
-                  {stderr}
-                </pre>
+                <div className="flex items-start gap-2">
+                  <span className="text-error select-none font-mono shrink-0">!</span>
+                  <pre className="text-error whitespace-pre-wrap leading-relaxed selection:bg-error/20 flex-1 font-mono">
+                    {stderr}
+                  </pre>
+                </div>
               ) : (
                 <span className="text-text-2 italic">No errors reported</span>
               )}

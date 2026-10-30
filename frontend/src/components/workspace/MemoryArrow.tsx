@@ -15,7 +15,7 @@ export const MemoryArrow: React.FC<MemoryArrowProps> = ({
   startY,
   endX,
   endY,
-  color = '#CABEFF',
+  color = '#7FA8D1',
   className = '',
 }) => {
   const shouldReduceMotion = useReducedMotion()
@@ -32,38 +32,30 @@ export const MemoryArrow: React.FC<MemoryArrowProps> = ({
       <defs>
         <marker
           id="arrowhead"
-          markerWidth="8"
-          markerHeight="8"
-          refX="6"
-          refY="4"
+          markerWidth="7"
+          markerHeight="7"
+          refX="5"
+          refY="3.5"
           orient="auto"
         >
-          <polygon points="0 0, 8 4, 0 8" fill={color} />
+          <polygon points="0 0, 7 3.5, 0 7" fill={color} />
         </marker>
-        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="2" result="blur" />
-          <feMerge>
-            <feMergeNode in="blur" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
       </defs>
 
       <motion.path
         d={pathData}
         fill="none"
         stroke={color}
-        strokeWidth="2"
-        strokeDasharray="4 4"
+        strokeWidth="1.5"
+        strokeDasharray="4 3"
         initial={shouldReduceMotion ? false : { pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 0.85 }}
+        animate={{ pathLength: 1, opacity: 0.9 }}
         transition={{
           duration: 0.35,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className={shouldReduceMotion ? '' : 'animate-[dash_1.5s_linear_infinite]'}
+        className={shouldReduceMotion ? '' : 'animate-[dash_2s_linear_infinite]'}
         markerEnd="url(#arrowhead)"
-        filter="url(#glow)"
       />
     </svg>
   )
