@@ -99,9 +99,12 @@ class SubprocessSandboxRunner(BaseSandboxRunner):
             )
         except TimeoutError:
             if proc:
-                with contextlib.suppress(ProcessLookupError):
+                with contextlib.suppress(Exception):
+                    if proc.stdin and not proc.stdin.is_closing():
+                        proc.stdin.close()
                     proc.kill()
-                    await proc.wait()
+                with contextlib.suppress(Exception):
+                    await asyncio.wait_for(proc.wait(), timeout=1.0)
             logger.warning("subprocess_timeout", timeout=self.timeout_seconds)
             raise SandboxTimeoutError(timeout=self.timeout_seconds) from None
         except Exception as exc:

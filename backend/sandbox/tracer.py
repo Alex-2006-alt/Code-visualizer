@@ -44,7 +44,12 @@ def _safe_serialize(val: Any, depth: int = 0) -> Any:
     if depth > MAX_DEPTH:
         return "..."
 
-    if val is None or isinstance(val, (int, float, bool, str)):
+    if val is None or isinstance(val, (int, float, bool)):
+        return val
+
+    if isinstance(val, str):
+        if len(val) > 1000:
+            return val[:1000] + f"... ({len(val)} chars)"
         return val
 
     if isinstance(val, list):
