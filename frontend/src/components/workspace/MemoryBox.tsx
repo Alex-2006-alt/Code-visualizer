@@ -5,16 +5,19 @@ import { Chip } from '@/components/ui/Chip'
 
 interface MemoryBoxProps {
   obj: HeapObject
+  referrers?: string[]
   className?: string
 }
 
-export const MemoryBox: React.FC<MemoryBoxProps> = ({ obj, className = '' }) => {
+export const MemoryBox: React.FC<MemoryBoxProps> = ({ obj, referrers = [], className = '' }) => {
   const isList = obj.type === 'list' && Array.isArray(obj.value)
   const isDict = obj.type === 'dict' && typeof obj.value === 'object' && !Array.isArray(obj.value)
+  const isShared = referrers.length > 1
 
   return (
     <motion.div
       layout
+      data-testid={`heap-object-${obj.address}`}
       initial={{ opacity: 0, scale: 0.88, y: 14 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.88, y: -10 }}
@@ -24,8 +27,35 @@ export const MemoryBox: React.FC<MemoryBoxProps> = ({ obj, className = '' }) => 
         damping: 26,
         mass: 0.8,
       }}
-      className={`rounded-xl border border-violet/30 bg-container-lowest/70 backdrop-blur-md p-3.5 shadow-lg shadow-black/20 ${className}`}
+      className={`rounded-xl border ${
+        isShared ? 'border-violet/50 shadow-violet/10' : 'border-violet/30'
+      } bg-container-lowest/70 backdrop-blur-md p-3.5 shadow-lg shadow-black/20 ${className}`}
     >
+      {/* Shared reference notice and pointer arrows */}
+      {isShared && (
+        <div
+          data-testid="shared-reference-badge"
+          className="mb-2.5 px-2.5 py-1.5 rounded-lg bg-violet/15 border border-violet/30 flex items-center justify-between"
+        >
+          <div className="flex items-center gap-1.5 text-xs font-mono text-violet font-semibold">
+            <span className="material-symbols-outlined text-xs">link</span>
+            <span>Shared: {referrers.join(' = ')}</span>
+          </div>
+          <div className="flex items-center gap-1.5" data-testid="shared-reference-arrows">
+            {referrers.map((refName) => (
+              <span
+                key={refName}
+                data-testid={`ref-arrow-${refName}`}
+                className="px-1.5 py-0.5 rounded bg-violet/25 text-[10px] font-mono font-bold text-violet flex items-center gap-0.5"
+              >
+                <span>{refName}</span>
+                <span>&rarr;</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Header: Type, ID, Address */}
       <div className="flex items-center justify-between gap-2 mb-3 pb-2 border-b border-border-subtle">
         <div className="flex items-center gap-2">
@@ -48,7 +78,7 @@ export const MemoryBox: React.FC<MemoryBoxProps> = ({ obj, className = '' }) => 
 
       {/* List layout: memory cells */}
       {isList && (
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-1.5" data-testid="heap-list-cells">
           {(obj.value as unknown[]).map((val, idx) => {
             const isTarget = obj.targetIndex === idx
             return (
@@ -78,7 +108,7 @@ export const MemoryBox: React.FC<MemoryBoxProps> = ({ obj, className = '' }) => 
 
       {/* Dict layout: key-value pairs */}
       {isDict && (
-        <div className="grid grid-cols-2 gap-1.5 text-xs font-mono">
+        <div className="grid grid-cols-2 gap-1.5 text-xs font-mono" data-testid="heap-dict-cells">
           {Object.entries(obj.value as Record<string, unknown>).map(([k, v]) => (
             <div
               key={k}

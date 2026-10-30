@@ -29,6 +29,7 @@ export const WorkspacePage: React.FC = () => {
     isLoading,
     speed,
     currentPreset,
+    isTruncated,
     streak,
     selectedAnswer,
     answerFeedback,
@@ -184,8 +185,44 @@ export const WorkspacePage: React.FC = () => {
             height="440px"
           />
 
+          {/* Truncated Notice Banner */}
+          {isTruncated && (
+            <div
+              data-testid="truncated-notice"
+              className="p-3.5 rounded-xl bg-amber-400/15 border border-amber-400/40 flex items-start gap-3 text-xs shadow-md shadow-amber-400/10"
+            >
+              <span className="material-symbols-outlined text-base text-amber-400 mt-0.5">warning</span>
+              <div>
+                <span className="font-semibold text-amber-300 uppercase tracking-wider text-[10px] block">
+                  Step Limit Reached
+                </span>
+                <p className="text-text-secondary leading-relaxed font-mono text-[11px] mt-0.5">
+                  Execution exceeded the maximum step threshold (2000 steps) and was truncated.
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Exception Notice Banner */}
+          {step?.event === 'exception' && (
+            <div
+              data-testid="exception-notice"
+              className="p-3.5 rounded-xl bg-coral/15 border border-coral/40 flex items-start gap-3 text-xs shadow-md shadow-coral/10"
+            >
+              <span className="material-symbols-outlined text-base text-coral mt-0.5">error</span>
+              <div>
+                <span className="font-semibold text-coral uppercase tracking-wider text-[10px] block">
+                  Exception Step
+                </span>
+                <p className="text-text-primary leading-relaxed font-mono text-[11px] mt-0.5">
+                  {step.explanation || 'An unhandled exception occurred at this execution step.'}
+                </p>
+              </div>
+            </div>
+          )}
+
           {/* Explanation Banner */}
-          {step?.explanation && (
+          {step?.explanation && step?.event !== 'exception' && (
             <div className="p-3 rounded-xl bg-cyan/10 border border-cyan/25 flex items-start gap-2 text-xs">
               <span className="material-symbols-outlined text-sm text-cyan mt-0.5">info</span>
               <p className="text-text-secondary leading-relaxed font-mono text-[11px]">
@@ -236,7 +273,10 @@ export const WorkspacePage: React.FC = () => {
 
           {/* Virtual Heap Graph */}
           <div className="h-64">
-            <MemoryHeap objects={step?.heapObjects || []} />
+            <MemoryHeap
+              objects={step?.heapObjects || []}
+              locals={activeFrame?.locals || {}}
+            />
           </div>
 
           {/* Output Terminal */}

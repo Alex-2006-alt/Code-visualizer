@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { TraceStep, TracePreset } from '@/types/trace'
 import { PRESETS, DEFAULT_PRESET } from '@/mocks'
-import { runCode } from '@/lib/api'
+import { executeCode } from '@/lib/api'
 
 export type ExecutionMode = 'visualize' | 'predict' | 'compare'
 
@@ -15,6 +15,8 @@ interface TraceState {
   speed: number
   mode: ExecutionMode
   currentPreset: TracePreset
+  isTruncated: boolean
+  executionError: string | null
 
   // Predict Mode Scoring
   streak: number
@@ -25,7 +27,7 @@ interface TraceState {
 
   // Actions
   setCode: (code: string) => void
-  setSteps: (steps: TraceStep[]) => void
+  setSteps: (steps: TraceStep[], isTruncated?: boolean, executionError?: string | null) => void
   setCurrentStep: (step: number) => void
   nextStep: () => void
   prevStep: () => void
@@ -54,6 +56,8 @@ export const useTraceStore = create<TraceState>((set, get) => ({
   speed: 1,
   mode: 'visualize',
   currentPreset: DEFAULT_PRESET,
+  isTruncated: false,
+  executionError: null,
 
   streak: 0,
   correctCount: 0,
@@ -62,7 +66,16 @@ export const useTraceStore = create<TraceState>((set, get) => ({
   answerFeedback: 'idle',
 
   setCode: (code) => set({ code }),
-  setSteps: (steps) => set({ steps, currentStep: 0, isPlaying: false }),
+  setSteps: (steps, isTruncated = false, executionError = null) =>
+    set({
+      steps,
+      currentStep: 0,
+      isPlaying: false,
+      isTruncated,
+      executionError,
+      selectedAnswer: null,
+      answerFeedback: 'idle',
+    }),
   setCurrentStep: (step) => {
     const { steps } = get()
     const target = Math.max(0, Math.min(steps.length - 1, step))
@@ -135,6 +148,8 @@ export const useTraceStore = create<TraceState>((set, get) => ({
       code: preset.code,
       steps: preset.steps,
       currentStep: 0,
+      isTruncated: false,
+      executionError: null,
       selectedAnswer: null,
       answerFeedback: 'idle',
     })
@@ -154,9 +169,16 @@ export const useTraceStore = create<TraceState>((set, get) => ({
     pause()
     set({ isLoading: true })
     try {
-      const steps = await runCode(code)
-      if (steps && steps.length > 0) {
-        set({ steps, currentStep: 0, selectedAnswer: null, answerFeedback: 'idle' })
+      const result = await executeCode(code)
+      if (result.steps && result.steps.length > 0) {
+        set({
+          steps: result.steps,
+          currentStep: 0,
+          isTruncated: result.truncated,
+          executionError: result.error,
+          selectedAnswer: null,
+          answerFeedback: 'idle',
+        })
       }
     } finally {
       set({ isLoading: false })
