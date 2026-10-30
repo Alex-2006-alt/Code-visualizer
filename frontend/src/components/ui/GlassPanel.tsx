@@ -21,32 +21,34 @@ export const GlassPanel = React.forwardRef<HTMLDivElement, GlassPanelProps>(
     },
     ref
   ) => {
+    // Midnight Blue & Sage Glass Layering Hierarchy
     const levelClasses = solid
       ? {
-          1: 'bg-surface-container border border-white/10 shadow-lg',
-          2: 'bg-surface-lowest border border-white/[0.08] shadow-md',
-          3: 'bg-surface-high border border-white/20 shadow-xl',
+          1: 'bg-[#12151D] border border-border shadow-panel rounded-panel',
+          2: 'bg-[#08090B] border border-border rounded-inner',
+          3: 'bg-[#151922] border border-border-strong shadow-float rounded-panel',
         }[level]
       : {
-          1: 'glass-panel-1 bg-surface-container/60 backdrop-blur-xl border border-white/10 shadow-glass-1',
-          2: 'glass-panel-2 bg-surface-container-lowest/85 backdrop-blur-md border border-white/[0.08]',
-          3: 'glass-panel-3 bg-surface-container-high/90 backdrop-blur-2xl border border-white/20 shadow-glass-2',
+          1: 'glass-panel',
+          2: 'glass-panel-sunken',
+          3: 'glass-panel-raised',
         }[level]
 
+    // Restrained hairline highlight - never colorful neon glow
     const glowClasses = {
       none: '',
-      primary: 'shadow-glow-primary border-primary/30',
-      secondary: 'shadow-glow-secondary border-secondary/30',
-      cyan: 'shadow-glow-cyan border-secondary/40',
-      amber: 'shadow-glow-amber border-amber-mutation/40',
-      error: 'shadow-glow-error border-error/40',
+      primary: 'border-accent/40',
+      secondary: 'border-sage/40',
+      cyan: 'border-accent/40',
+      amber: 'border-sage/40',
+      error: 'border-error/40',
     }[glow]
 
     return (
       <Component
         ref={ref}
         className={cn(
-          'relative rounded-xl transition-all duration-200',
+          'relative transition-all duration-200',
           levelClasses,
           glowClasses,
           className

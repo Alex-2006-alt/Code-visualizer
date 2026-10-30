@@ -35,7 +35,7 @@ export const BottomSheet: React.FC<BottomSheetProps> = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/75 backdrop-blur-sm"
+            className="fixed inset-0 bg-bg/80 backdrop-blur-md"
             aria-hidden="true"
           />
 
@@ -48,25 +48,25 @@ export const BottomSheet: React.FC<BottomSheetProps> = ({
             exit={{ y: '100%' }}
             transition={{ type: 'spring', damping: 28, stiffness: 300 }}
             className={cn(
-              'relative z-10 w-full max-h-[85vh] overflow-y-auto rounded-t-3xl',
-              'bg-surface-container-high/95 backdrop-blur-2xl border-t border-white/20 shadow-glass-2',
+              'relative z-10 w-full max-h-[85vh] overflow-y-auto rounded-t-2xl',
+              'bg-glass-raised backdrop-blur-xl border-t border-x border-border-strong shadow-float',
               'p-4 pb-8 flex flex-col gap-3',
               className
             )}
           >
             {/* Grab Handle */}
-            <div className="w-12 h-1.5 rounded-full bg-white/25 mx-auto mb-1 shrink-0" />
+            <div className="w-10 h-1 rounded-full bg-border-strong mx-auto mb-1 shrink-0" />
 
             {title && (
-              <div className="flex items-center justify-between px-2 pb-2 border-b border-white/10">
-                <h3 className="font-headline-sm text-base text-white font-semibold">
+              <div className="flex items-center justify-between px-2 pb-2 border-b border-border">
+                <h3 className="font-serif text-xl text-text font-normal tracking-tight">
                   {title}
                 </h3>
                 <button
                   type="button"
                   onClick={onClose}
                   aria-label="Close sheet"
-                  className="p-1 rounded-full text-on-surface-variant hover:text-white"
+                  className="p-1 rounded-control text-text-3 hover:text-text cursor-pointer"
                 >
                   <span className="material-symbols-outlined text-[18px]">close</span>
                 </button>

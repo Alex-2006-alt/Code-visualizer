@@ -53,14 +53,14 @@ export const Tooltip: React.FC<TooltipProps> = ({
         {isVisible && (
           <motion.div
             role="tooltip"
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            exit={{ opacity: 0, scale: 0.96 }}
             transition={{ duration: 0.15 }}
             className={cn(
               'absolute z-50 pointer-events-none whitespace-nowrap',
-              'px-2.5 py-1 rounded-lg bg-surface-container-highest/95 backdrop-blur-md',
-              'border border-white/15 text-white font-code-sm text-[11px] shadow-glass-2',
+              'px-2.5 py-1 rounded-control bg-glass-raised backdrop-blur-xl',
+              'border border-border-strong text-text font-sans text-[11px] shadow-float',
               positionClasses,
               className
             )}

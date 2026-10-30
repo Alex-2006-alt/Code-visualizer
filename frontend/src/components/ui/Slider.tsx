@@ -21,7 +21,7 @@ export const Slider: React.FC<SliderProps> = ({
   step = 1,
   value,
   onChange,
-  glow = true,
+  glow: _glow = false,
   disabled = false,
   label,
   formatValue,
@@ -40,9 +40,9 @@ export const Slider: React.FC<SliderProps> = ({
   return (
     <div className={cn('flex flex-col gap-1 w-full select-none', className)}>
       {label && (
-        <div className="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+        <div className="flex items-center justify-between font-sans text-xs text-text-3">
           <span>{label}</span>
-          <span className="text-secondary font-medium">
+          <span className="text-accent font-mono font-medium">
             {formatValue ? formatValue(value) : value}
           </span>
         </div>
@@ -50,13 +50,10 @@ export const Slider: React.FC<SliderProps> = ({
 
       <div className="relative flex items-center h-5 w-full group">
         {/* Track Background */}
-        <div className="w-full h-1.5 rounded-full bg-surface-container-high/90 overflow-hidden relative">
+        <div className="w-full h-1.5 rounded-full bg-glass-sunken border border-border/40 overflow-hidden relative">
           {/* Active Fill Track */}
           <div
-            className={cn(
-              'h-full bg-secondary rounded-full transition-all duration-75',
-              glow && 'shadow-[0_0_12px_rgba(93,230,255,0.7)]'
-            )}
+            className="h-full bg-accent rounded-full transition-all duration-75"
             style={{ width: `${percentage}%` }}
           />
         </div>
@@ -76,17 +73,17 @@ export const Slider: React.FC<SliderProps> = ({
           aria-valuenow={value}
           className={cn(
             'absolute inset-0 w-full h-full opacity-0 cursor-pointer',
-            'focus-visible:outline-none focus-visible:opacity-100 focus-visible:accent-secondary',
+            'focus-visible:outline-none focus-visible:opacity-100 focus-visible:accent-accent',
             'disabled:cursor-not-allowed'
           )}
         />
 
-        {/* Custom Glowing Thumb Marker */}
+        {/* Restrained Thumb Marker */}
         <div
           aria-hidden="true"
           className={cn(
-            'pointer-events-none absolute w-3.5 h-3.5 -ml-1.5 rounded-full bg-white border-2 border-secondary shadow-[0_0_10px_#5de6ff]',
-            'transition-transform group-hover:scale-125 duration-150',
+            'pointer-events-none absolute w-3.5 h-3.5 -ml-1.5 rounded-full bg-text border-2 border-accent shadow-panel',
+            'transition-transform group-hover:scale-110 duration-150',
             disabled && 'opacity-40'
           )}
           style={{ left: `${percentage}%` }}

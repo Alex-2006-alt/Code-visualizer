@@ -33,8 +33,8 @@ export const Tabs: React.FC<TabsProps> = ({
         className={cn(
           'flex items-center gap-1',
           variant === 'line'
-            ? 'border-b border-white/[0.08] px-2'
-            : 'p-1 rounded-full bg-surface-container-lowest/80 border border-white/5'
+            ? 'border-b border-border px-2'
+            : 'p-1 rounded-inner bg-glass-sunken border border-border'
         )}
       >
         {tabs.map((tab) => {
@@ -47,12 +47,13 @@ export const Tabs: React.FC<TabsProps> = ({
               type="button"
               onClick={() => onChange(tab.id)}
               className={cn(
-                'relative flex items-center gap-1.5 px-3 py-1.5 font-code-sm text-code-sm transition-colors duration-150 select-none',
-                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded-lg',
-                variant === 'pill' && 'rounded-full',
+                'relative flex items-center gap-1.5 px-3 py-1.5 font-sans text-xs transition-colors duration-150 select-none cursor-pointer',
+                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 rounded-control',
                 isActive
-                  ? 'text-on-surface font-semibold'
-                  : 'text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/40'
+                  ? variant === 'line'
+                    ? 'text-text font-medium'
+                    : 'text-accent font-medium'
+                  : 'text-text-2 hover:text-text hover:bg-glass'
               )}
             >
               {tab.icon && <span className="shrink-0">{tab.icon}</span>}
@@ -60,29 +61,29 @@ export const Tabs: React.FC<TabsProps> = ({
               {tab.badge !== undefined && (
                 <span
                   className={cn(
-                    'px-1.5 py-0.2 rounded-full font-code-sm text-[10px]',
+                    'px-1.5 py-0.2 rounded-full font-mono text-[10px]',
                     isActive
-                      ? 'bg-primary/20 text-primary border border-primary/30'
-                      : 'bg-surface-container-high text-outline'
+                      ? 'bg-accent-soft text-accent border border-accent/20'
+                      : 'bg-glass-sunken text-text-3'
                   )}
                 >
                   {tab.badge}
                 </span>
               )}
 
-              {/* Animated line indicator */}
+              {/* Animated 2px accent underline */}
               {variant === 'line' && isActive && (
                 <motion.div
                   layoutId="tab-underline"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary shadow-[0_0_8px_#5de6ff]"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent"
                 />
               )}
 
-              {/* Animated pill indicator */}
+              {/* Animated glass-raised pill fill */}
               {variant === 'pill' && isActive && (
                 <motion.div
                   layoutId="tab-pill"
-                  className="absolute inset-0 rounded-full bg-surface-container-high text-primary shadow-sm border border-white/10 z-[-1]"
+                  className="absolute inset-0 rounded-control bg-glass-raised border border-border-strong shadow-panel z-[-1]"
                 />
               )}
             </button>
