@@ -147,7 +147,7 @@ export const WorkspacePage: React.FC = () => {
   return (
     <div className="flex flex-col w-full min-h-[calc(100vh-4rem)] pb-28 select-none">
       {/* Workspace Cockpit Sub-Header */}
-      <div className="w-full px-4 sm:px-6 py-2.5 bg-glass-sunken border-b border-border backdrop-blur-xl flex flex-wrap items-center justify-between gap-3">
+      <div className="w-full px-4 sm:px-6 py-2.5 bg-glass border-b border-border backdrop-blur-xl flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           {/* Preset Selector */}
           <Select
