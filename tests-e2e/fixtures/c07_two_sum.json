@@ -1,0 +1,769 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "two_sum": "0x19f5ae07240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x19f5ae07240": "<function two_sum at 0x0000019F5AE07240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x19f5ae07240",
+            "type": "object",
+            "address": "0x19f5ae07240",
+            "value": "<function two_sum at 0x0000019F5AE07240>",
+            "targetIndex": null,
+            "label": "two_sum"
+          }
+        ],
+        "mutatedVariable": "two_sum",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "two_sum": "0x19f5ae07240"
+            }
+          },
+          {
+            "fn": "two_sum",
+            "line": 1,
+            "locals": {
+              "nums": "0x19f5ae25dc0",
+              "target": 9
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x19f5ae25dc0": [
+            2,
+            7,
+            11,
+            15
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x19f5ae25dc0",
+            "type": "list",
+            "address": "0x19f5ae25dc0",
+            "value": [
+              2,
+              7,
+              11,
+              15
+            ],
+            "targetIndex": null,
+            "label": "nums"
+          }
+        ],
+        "mutatedVariable": "nums",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "two_sum": "0x19f5ae07240"
+            }
+          },
+          {
+            "fn": "two_sum",
+            "line": 2,
+            "locals": {
+              "nums": "0x19f5ae25dc0",
+              "target": 9
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x19f5ae25dc0": [
+            2,
+            7,
+            11,
+            15
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x19f5ae25dc0",
+            "type": "list",
+            "address": "0x19f5ae25dc0",
+            "value": [
+              2,
+              7,
+              11,
+              15
+            ],
+            "targetIndex": null,
+            "label": "nums"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "two_sum": "0x19f5ae07240"
+            }
+          },
+          {
+            "fn": "two_sum",
+            "line": 3,
+            "locals": {
+              "nums": "0x19f5ae25dc0",
+              "target": 9,
+              "seen": "0x19f5ae25840"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x19f5ae25dc0": [
+            2,
+            7,
+            11,
+            15
+          ],
+          "0x19f5ae25840": {}
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x19f5ae25dc0",
+            "type": "list",
+            "address": "0x19f5ae25dc0",
+            "value": [
+              2,
+              7,
+              11,
+              15
+            ],
+            "targetIndex": null,
+            "label": "nums"
+          },
+          {
+            "id": "heap-0x19f5ae25840",
+            "type": "dict",
+            "address": "0x19f5ae25840",
+            "value": {},
+            "targetIndex": null,
+            "label": "seen"
+          }
+        ],
+        "mutatedVariable": "seen",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "two_sum": "0x19f5ae07240"
+            }
+          },
+          {
+            "fn": "two_sum",
+            "line": 4,
+            "locals": {
+              "nums": "0x19f5ae25dc0",
+              "target": 9,
+              "seen": "0x19f5ae25840",
+              "i": 0,
+              "num": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x19f5ae25dc0": [
+            2,
+            7,
+            11,
+            15
+          ],
+          "0x19f5ae25840": {}
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x19f5ae25dc0",
+            "type": "list",
+            "address": "0x19f5ae25dc0",
+            "value": [
+              2,
+              7,
+              11,
+              15
+            ],
+            "targetIndex": null,
+            "label": "nums"
+          },
+          {
+            "id": "heap-0x19f5ae25840",
+            "type": "dict",
+            "address": "0x19f5ae25840",
+            "value": {},
+            "targetIndex": null,
+            "label": "seen"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "two_sum": "0x19f5ae07240"
+            }
+          },
+          {
+            "fn": "two_sum",
+            "line": 5,
+            "locals": {
+              "nums": "0x19f5ae25dc0",
+              "target": 9,
+              "seen": "0x19f5ae25840",
+              "i": 0,
+              "num": 2,
+              "compl": 7
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x19f5ae25dc0": [
+            2,
+            7,
+            11,
+            15
+          ],
+          "0x19f5ae25840": {}
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x19f5ae25dc0",
+            "type": "list",
+            "address": "0x19f5ae25dc0",
+            "value": [
+              2,
+              7,
+              11,
+              15
+            ],
+            "targetIndex": null,
+            "label": "nums"
+          },
+          {
+            "id": "heap-0x19f5ae25840",
+            "type": "dict",
+            "address": "0x19f5ae25840",
+            "value": {},
+            "targetIndex": null,
+            "label": "seen"
+          }
+        ],
+        "mutatedVariable": "compl",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "two_sum": "0x19f5ae07240"
+            }
+          },
+          {
+            "fn": "two_sum",
+            "line": 7,
+            "locals": {
+              "nums": "0x19f5ae25dc0",
+              "target": 9,
+              "seen": "0x19f5ae25840",
+              "i": 0,
+              "num": 2,
+              "compl": 7
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x19f5ae25dc0": [
+            2,
+            7,
+            11,
+            15
+          ],
+          "0x19f5ae25840": {}
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x19f5ae25dc0",
+            "type": "list",
+            "address": "0x19f5ae25dc0",
+            "value": [
+              2,
+              7,
+              11,
+              15
+            ],
+            "targetIndex": null,
+            "label": "nums"
+          },
+          {
+            "id": "heap-0x19f5ae25840",
+            "type": "dict",
+            "address": "0x19f5ae25840",
+            "value": {},
+            "targetIndex": null,
+            "label": "seen"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "two_sum": "0x19f5ae07240"
+            }
+          },
+          {
+            "fn": "two_sum",
+            "line": 3,
+            "locals": {
+              "nums": "0x19f5ae25dc0",
+              "target": 9,
+              "seen": "0x19f5ae25840",
+              "i": 0,
+              "num": 2,
+              "compl": 7
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x19f5ae25dc0": [
+            2,
+            7,
+            11,
+            15
+          ],
+          "0x19f5ae25840": {
+            "2": 0
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x19f5ae25dc0",
+            "type": "list",
+            "address": "0x19f5ae25dc0",
+            "value": [
+              2,
+              7,
+              11,
+              15
+            ],
+            "targetIndex": null,
+            "label": "nums"
+          },
+          {
+            "id": "heap-0x19f5ae25840",
+            "type": "dict",
+            "address": "0x19f5ae25840",
+            "value": {
+              "2": 0
+            },
+            "targetIndex": null,
+            "label": "seen"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "two_sum": "0x19f5ae07240"
+            }
+          },
+          {
+            "fn": "two_sum",
+            "line": 4,
+            "locals": {
+              "nums": "0x19f5ae25dc0",
+              "target": 9,
+              "seen": "0x19f5ae25840",
+              "i": 1,
+              "num": 7,
+              "compl": 7
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x19f5ae25dc0": [
+            2,
+            7,
+            11,
+            15
+          ],
+          "0x19f5ae25840": {
+            "2": 0
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x19f5ae25dc0",
+            "type": "list",
+            "address": "0x19f5ae25dc0",
+            "value": [
+              2,
+              7,
+              11,
+              15
+            ],
+            "targetIndex": null,
+            "label": "nums"
+          },
+          {
+            "id": "heap-0x19f5ae25840",
+            "type": "dict",
+            "address": "0x19f5ae25840",
+            "value": {
+              "2": 0
+            },
+            "targetIndex": null,
+            "label": "seen"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "two_sum": "0x19f5ae07240"
+            }
+          },
+          {
+            "fn": "two_sum",
+            "line": 5,
+            "locals": {
+              "nums": "0x19f5ae25dc0",
+              "target": 9,
+              "seen": "0x19f5ae25840",
+              "i": 1,
+              "num": 7,
+              "compl": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x19f5ae25dc0": [
+            2,
+            7,
+            11,
+            15
+          ],
+          "0x19f5ae25840": {
+            "2": 0
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x19f5ae25dc0",
+            "type": "list",
+            "address": "0x19f5ae25dc0",
+            "value": [
+              2,
+              7,
+              11,
+              15
+            ],
+            "targetIndex": null,
+            "label": "nums"
+          },
+          {
+            "id": "heap-0x19f5ae25840",
+            "type": "dict",
+            "address": "0x19f5ae25840",
+            "value": {
+              "2": 0
+            },
+            "targetIndex": null,
+            "label": "seen"
+          }
+        ],
+        "mutatedVariable": "compl",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "two_sum": "0x19f5ae07240"
+            }
+          },
+          {
+            "fn": "two_sum",
+            "line": 6,
+            "locals": {
+              "nums": "0x19f5ae25dc0",
+              "target": 9,
+              "seen": "0x19f5ae25840",
+              "i": 1,
+              "num": 7,
+              "compl": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x19f5ae25dc0": [
+            2,
+            7,
+            11,
+            15
+          ],
+          "0x19f5ae25840": {
+            "2": 0
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x19f5ae25dc0",
+            "type": "list",
+            "address": "0x19f5ae25dc0",
+            "value": [
+              2,
+              7,
+              11,
+              15
+            ],
+            "targetIndex": null,
+            "label": "nums"
+          },
+          {
+            "id": "heap-0x19f5ae25840",
+            "type": "dict",
+            "address": "0x19f5ae25840",
+            "value": {
+              "2": 0
+            },
+            "targetIndex": null,
+            "label": "seen"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "two_sum": "0x19f5ae07240"
+            }
+          },
+          {
+            "fn": "two_sum",
+            "line": 6,
+            "locals": {
+              "nums": "0x19f5ae25dc0",
+              "target": 9,
+              "seen": "0x19f5ae25840",
+              "i": 1,
+              "num": 7,
+              "compl": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          0,
+          1
+        ],
+        "heap": {
+          "0x19f5ae25dc0": [
+            2,
+            7,
+            11,
+            15
+          ],
+          "0x19f5ae25840": {
+            "2": 0
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x19f5ae25dc0",
+            "type": "list",
+            "address": "0x19f5ae25dc0",
+            "value": [
+              2,
+              7,
+              11,
+              15
+            ],
+            "targetIndex": null,
+            "label": "nums"
+          },
+          {
+            "id": "heap-0x19f5ae25840",
+            "type": "dict",
+            "address": "0x19f5ae25840",
+            "value": {
+              "2": 0
+            },
+            "targetIndex": null,
+            "label": "seen"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "two_sum": "0x19f5ae07240"
+            }
+          }
+        ],
+        "output": "Indices: [0, 1]\n",
+        "ret": null,
+        "heap": {
+          "0x19f5ae07240": "<function two_sum at 0x0000019F5AE07240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x19f5ae07240",
+            "type": "object",
+            "address": "0x19f5ae07240",
+            "value": "<function two_sum at 0x0000019F5AE07240>",
+            "targetIndex": null,
+            "label": "two_sum"
+          }
+        ],
+        "mutatedVariable": "two_sum",
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 202.74
+}

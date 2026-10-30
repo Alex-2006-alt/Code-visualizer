@@ -1,0 +1,738 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "count_up": "0x23a94a27240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x23a94a27240": "<function count_up at 0x0000023A94A27240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x23a94a27240",
+            "type": "object",
+            "address": "0x23a94a27240",
+            "value": "<function count_up at 0x0000023A94A27240>",
+            "targetIndex": null,
+            "label": "count_up"
+          }
+        ],
+        "mutatedVariable": "count_up",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x23a94a27240": "<function count_up at 0x0000023A94A27240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x23a94a27240",
+            "type": "object",
+            "address": "0x23a94a27240",
+            "value": "<function count_up at 0x0000023A94A27240>",
+            "targetIndex": null,
+            "label": "count_up"
+          }
+        ],
+        "mutatedVariable": "gen",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 1,
+            "locals": {
+              "n": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 2,
+            "locals": {
+              "n": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 3,
+            "locals": {
+              "n": 4,
+              "i": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 3,
+            "locals": {
+              "n": 4,
+              "i": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": 0,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 3,
+            "locals": {
+              "n": 4,
+              "i": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 2,
+            "locals": {
+              "n": 4,
+              "i": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 3,
+            "locals": {
+              "n": 4,
+              "i": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 3,
+            "locals": {
+              "n": 4,
+              "i": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": 2,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 3,
+            "locals": {
+              "n": 4,
+              "i": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 2,
+            "locals": {
+              "n": 4,
+              "i": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 3,
+            "locals": {
+              "n": 4,
+              "i": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 3,
+            "locals": {
+              "n": 4,
+              "i": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": 4,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 3,
+            "locals": {
+              "n": 4,
+              "i": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 2,
+            "locals": {
+              "n": 4,
+              "i": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 3,
+            "locals": {
+              "n": 4,
+              "i": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 3,
+            "locals": {
+              "n": 4,
+              "i": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": 6,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 3,
+            "locals": {
+              "n": 4,
+              "i": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 2,
+            "locals": {
+              "n": 4,
+              "i": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>"
+            }
+          },
+          {
+            "fn": "count_up",
+            "line": 2,
+            "locals": {
+              "n": 4,
+              "i": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>",
+              "items": "0x23a94a44ac0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x23a94a27240": "<function count_up at 0x0000023A94A27240>",
+          "0x23a94a44ac0": [
+            0,
+            2,
+            4,
+            6
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x23a94a27240",
+            "type": "object",
+            "address": "0x23a94a27240",
+            "value": "<function count_up at 0x0000023A94A27240>",
+            "targetIndex": null,
+            "label": "count_up"
+          },
+          {
+            "id": "heap-0x23a94a44ac0",
+            "type": "list",
+            "address": "0x23a94a44ac0",
+            "value": [
+              0,
+              2,
+              4,
+              6
+            ],
+            "targetIndex": null,
+            "label": "items"
+          }
+        ],
+        "mutatedVariable": "count_up",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "count_up": "0x23a94a27240",
+              "gen": "<generator object count_up at 0x0000023A94A12810>",
+              "items": "0x23a94a44ac0"
+            }
+          }
+        ],
+        "output": "Generator yield: [0, 2, 4, 6]\n",
+        "ret": null,
+        "heap": {
+          "0x23a94a27240": "<function count_up at 0x0000023A94A27240>",
+          "0x23a94a44ac0": [
+            0,
+            2,
+            4,
+            6
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x23a94a27240",
+            "type": "object",
+            "address": "0x23a94a27240",
+            "value": "<function count_up at 0x0000023A94A27240>",
+            "targetIndex": null,
+            "label": "count_up"
+          },
+          {
+            "id": "heap-0x23a94a44ac0",
+            "type": "list",
+            "address": "0x23a94a44ac0",
+            "value": [
+              0,
+              2,
+              4,
+              6
+            ],
+            "targetIndex": null,
+            "label": "items"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 171.89
+}

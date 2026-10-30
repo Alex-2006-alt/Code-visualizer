@@ -41,6 +41,7 @@ class RateLimiter:
         self.max_concurrent = max_concurrent
         self._redis: Any = None
         self._redis_available: bool = False
+        self._last_redis_try: float = 0.0
 
         # In-memory fallback data structures
         self._in_memory_requests: dict[str, list[float]] = defaultdict(list)
@@ -53,6 +54,12 @@ class RateLimiter:
             return None
 
         if self._redis is None:
+            now = time.time()
+            # If Redis connection recently failed, back off for 30s to avoid blocking requests
+            if now - self._last_redis_try < 30.0:
+                return None
+            self._last_redis_try = now
+
             try:
                 self._redis = aioredis.from_url(
                     self.redis_url,

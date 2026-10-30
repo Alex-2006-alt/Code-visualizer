@@ -1,0 +1,3947 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          },
+          {
+            "fn": "TreeNode",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          },
+          {
+            "fn": "TreeNode",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          },
+          {
+            "fn": "TreeNode",
+            "line": 2,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          },
+          {
+            "fn": "TreeNode",
+            "line": 2,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f9367650": "<class '__main__.TreeNode'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f9367650",
+            "type": "object",
+            "address": "0x289f9367650",
+            "value": "<class '__main__.TreeNode'>",
+            "targetIndex": null,
+            "label": "TreeNode"
+          }
+        ],
+        "mutatedVariable": "TreeNode",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 2,
+            "locals": {
+              "self": "0x289f94b0c50",
+              "val": 1,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": "self",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 3,
+            "locals": {
+              "self": "0x289f94b0c50",
+              "val": 1,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 4,
+            "locals": {
+              "self": "0x289f94b0c50",
+              "val": 1,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 5,
+            "locals": {
+              "self": "0x289f94b0c50",
+              "val": 1,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 5,
+            "locals": {
+              "self": "0x289f94b0c50",
+              "val": 1,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 2,
+            "locals": {
+              "self": "0x289f94b0ce0",
+              "val": 3,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": "self",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 3,
+            "locals": {
+              "self": "0x289f94b0ce0",
+              "val": 3,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 4,
+            "locals": {
+              "self": "0x289f94b0ce0",
+              "val": 3,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 5,
+            "locals": {
+              "self": "0x289f94b0ce0",
+              "val": 3,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 5,
+            "locals": {
+              "self": "0x289f94b0ce0",
+              "val": 3,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 2,
+            "locals": {
+              "self": "0x289f94b0d10",
+              "val": 2,
+              "left": "0x289f94b0c50",
+              "right": "0x289f94b0ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "self"
+          },
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "left"
+          },
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "right"
+          }
+        ],
+        "mutatedVariable": "self",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 3,
+            "locals": {
+              "self": "0x289f94b0d10",
+              "val": 2,
+              "left": "0x289f94b0c50",
+              "right": "0x289f94b0ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "self"
+          },
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "left"
+          },
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "right"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 4,
+            "locals": {
+              "self": "0x289f94b0d10",
+              "val": 2,
+              "left": "0x289f94b0c50",
+              "right": "0x289f94b0ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "self"
+          },
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "left"
+          },
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "right"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 5,
+            "locals": {
+              "self": "0x289f94b0d10",
+              "val": 2,
+              "left": "0x289f94b0c50",
+              "right": "0x289f94b0ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "self"
+          },
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "left"
+          },
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "right"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 5,
+            "locals": {
+              "self": "0x289f94b0d10",
+              "val": 2,
+              "left": "0x289f94b0c50",
+              "right": "0x289f94b0ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "self"
+          },
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "left"
+          },
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "right"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 2,
+            "locals": {
+              "self": "0x289f94b0d40",
+              "val": 5,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": "self",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 3,
+            "locals": {
+              "self": "0x289f94b0d40",
+              "val": 5,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 4,
+            "locals": {
+              "self": "0x289f94b0d40",
+              "val": 5,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 5,
+            "locals": {
+              "self": "0x289f94b0d40",
+              "val": 5,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 5,
+            "locals": {
+              "self": "0x289f94b0d40",
+              "val": 5,
+              "left": null,
+              "right": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 2,
+            "locals": {
+              "self": "0x289f94b0d70",
+              "val": 4,
+              "left": "0x289f94b0d10",
+              "right": "0x289f94b0d40"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "self"
+          },
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "left"
+          },
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "right"
+          }
+        ],
+        "mutatedVariable": "self",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 3,
+            "locals": {
+              "self": "0x289f94b0d70",
+              "val": 4,
+              "left": "0x289f94b0d10",
+              "right": "0x289f94b0d40"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "self"
+          },
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "left"
+          },
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "right"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 4,
+            "locals": {
+              "self": "0x289f94b0d70",
+              "val": 4,
+              "left": "0x289f94b0d10",
+              "right": "0x289f94b0d40"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "self"
+          },
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "left"
+          },
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "right"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 5,
+            "locals": {
+              "self": "0x289f94b0d70",
+              "val": 4,
+              "left": "0x289f94b0d10",
+              "right": "0x289f94b0d40"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "self"
+          },
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "left"
+          },
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "right"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "TreeNode": "0x289f9367650"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 5,
+            "locals": {
+              "self": "0x289f94b0d70",
+              "val": 4,
+              "left": "0x289f94b0d10",
+              "right": "0x289f94b0d40"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "self"
+          },
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "left"
+          },
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "right"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f9367650": "<class '__main__.TreeNode'>",
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f9367650",
+            "type": "object",
+            "address": "0x289f9367650",
+            "value": "<class '__main__.TreeNode'>",
+            "targetIndex": null,
+            "label": "TreeNode"
+          },
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "root"
+          }
+        ],
+        "mutatedVariable": "TreeNode",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f9367650": "<class '__main__.TreeNode'>",
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+          "0x289f94c4d40": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f9367650",
+            "type": "object",
+            "address": "0x289f9367650",
+            "value": "<class '__main__.TreeNode'>",
+            "targetIndex": null,
+            "label": "TreeNode"
+          },
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x289f94c4d40",
+            "type": "list",
+            "address": "0x289f94c4d40",
+            "value": [],
+            "targetIndex": null,
+            "label": "out"
+          }
+        ],
+        "mutatedVariable": "out",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f9367650": "<class '__main__.TreeNode'>",
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+          "0x289f94c4d40": [],
+          "0x289f9497240": "<function inorder at 0x00000289F9497240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f9367650",
+            "type": "object",
+            "address": "0x289f9367650",
+            "value": "<class '__main__.TreeNode'>",
+            "targetIndex": null,
+            "label": "TreeNode"
+          },
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x289f94c4d40",
+            "type": "list",
+            "address": "0x289f94c4d40",
+            "value": [],
+            "targetIndex": null,
+            "label": "out"
+          },
+          {
+            "id": "heap-0x289f9497240",
+            "type": "object",
+            "address": "0x289f9497240",
+            "value": "<function inorder at 0x00000289F9497240>",
+            "targetIndex": null,
+            "label": "inorder"
+          }
+        ],
+        "mutatedVariable": "inorder",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 9,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 9,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 9,
+            "locals": {
+              "node": "0x289f94b0c50"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": "0x289f94b0c50"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0c50"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0c50"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 9,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0c50"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0c50"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 12,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 12,
+            "locals": {
+              "node": "0x289f94b0c50"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0c50"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0c50"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 9,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0c50"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0c50"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0c50"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0c50": "<__main__.TreeNode object at 0x00000289F94B0C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0c50",
+            "type": "object",
+            "address": "0x289f94b0c50",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0C50>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 12,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 12,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 9,
+            "locals": {
+              "node": "0x289f94b0ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": "0x289f94b0ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0ce0"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 9,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0ce0"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0ce0"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 12,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 12,
+            "locals": {
+              "node": "0x289f94b0ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0ce0"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 9,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0ce0"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0ce0"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0ce0": "<__main__.TreeNode object at 0x00000289F94B0CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0ce0",
+            "type": "object",
+            "address": "0x289f94b0ce0",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0CE0>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d10"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d10": "<__main__.TreeNode object at 0x00000289F94B0D10>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d10",
+            "type": "object",
+            "address": "0x289f94b0d10",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D10>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 12,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 12,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 9,
+            "locals": {
+              "node": "0x289f94b0d40"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": "0x289f94b0d40"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d40"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d40"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 9,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d40"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 11,
+            "locals": {
+              "node": "0x289f94b0d40"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 12,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 12,
+            "locals": {
+              "node": "0x289f94b0d40"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d40"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d40"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 9,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d40"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d40"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 10,
+            "locals": {
+              "node": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d40"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d40": "<__main__.TreeNode object at 0x00000289F94B0D40>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d40",
+            "type": "object",
+            "address": "0x289f94b0d40",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D40>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          },
+          {
+            "fn": "inorder",
+            "line": 13,
+            "locals": {
+              "node": "0x289f94b0d70"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "node"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 16,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 16,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x289f9367650": "<class '__main__.TreeNode'>",
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+          "0x289f94c4d40": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "0x289f9497240": "<function inorder at 0x00000289F9497240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f9367650",
+            "type": "object",
+            "address": "0x289f9367650",
+            "value": "<class '__main__.TreeNode'>",
+            "targetIndex": null,
+            "label": "TreeNode"
+          },
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x289f94c4d40",
+            "type": "list",
+            "address": "0x289f94c4d40",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "out"
+          },
+          {
+            "id": "heap-0x289f9497240",
+            "type": "object",
+            "address": "0x289f9497240",
+            "value": "<function inorder at 0x00000289F9497240>",
+            "targetIndex": null,
+            "label": "inorder"
+          }
+        ],
+        "mutatedVariable": "TreeNode",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 16,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 16,
+            "locals": {
+              "TreeNode": "0x289f9367650",
+              "root": "0x289f94b0d70",
+              "out": "0x289f94c4d40",
+              "inorder": "0x289f9497240"
+            }
+          }
+        ],
+        "output": "Inorder: [1, 2, 3, 4, 5]\n",
+        "ret": null,
+        "heap": {
+          "0x289f9367650": "<class '__main__.TreeNode'>",
+          "0x289f94b0d70": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+          "0x289f94c4d40": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "0x289f9497240": "<function inorder at 0x00000289F9497240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x289f9367650",
+            "type": "object",
+            "address": "0x289f9367650",
+            "value": "<class '__main__.TreeNode'>",
+            "targetIndex": null,
+            "label": "TreeNode"
+          },
+          {
+            "id": "heap-0x289f94b0d70",
+            "type": "object",
+            "address": "0x289f94b0d70",
+            "value": "<__main__.TreeNode object at 0x00000289F94B0D70>",
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x289f94c4d40",
+            "type": "list",
+            "address": "0x289f94c4d40",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "out"
+          },
+          {
+            "id": "heap-0x289f9497240",
+            "type": "object",
+            "address": "0x289f9497240",
+            "value": "<function inorder at 0x00000289F9497240>",
+            "targetIndex": null,
+            "label": "inorder"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 144.34
+}

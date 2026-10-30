@@ -1,0 +1,263 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "collections": "0x1ce3991efc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1ce3991efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1ce3991efc0",
+            "type": "object",
+            "address": "0x1ce3991efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          }
+        ],
+        "mutatedVariable": "collections",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "collections": "0x1ce3991efc0",
+              "q": "deque([])"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1ce3991efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1ce3991efc0",
+            "type": "object",
+            "address": "0x1ce3991efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          }
+        ],
+        "mutatedVariable": "q",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "collections": "0x1ce3991efc0",
+              "q": "deque([1])"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1ce3991efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1ce3991efc0",
+            "type": "object",
+            "address": "0x1ce3991efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          }
+        ],
+        "mutatedVariable": "q",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "collections": "0x1ce3991efc0",
+              "q": "deque([1, 2])"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1ce3991efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1ce3991efc0",
+            "type": "object",
+            "address": "0x1ce3991efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          }
+        ],
+        "mutatedVariable": "q",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "collections": "0x1ce3991efc0",
+              "q": "deque([1, 2, 3])"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1ce3991efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1ce3991efc0",
+            "type": "object",
+            "address": "0x1ce3991efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          }
+        ],
+        "mutatedVariable": "q",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "collections": "0x1ce3991efc0",
+              "q": "deque([2, 3])",
+              "first": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1ce3991efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1ce3991efc0",
+            "type": "object",
+            "address": "0x1ce3991efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          }
+        ],
+        "mutatedVariable": "q",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "collections": "0x1ce3991efc0",
+              "q": "deque([2, 3])",
+              "first": 1
+            }
+          }
+        ],
+        "output": "first dequeued: 1 remaining: [2, 3]\n",
+        "ret": null,
+        "heap": {
+          "0x1ce3991efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1ce3991efc0",
+            "type": "object",
+            "address": "0x1ce3991efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 153.27
+}

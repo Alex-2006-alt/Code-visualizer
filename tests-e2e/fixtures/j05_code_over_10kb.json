@@ -1,0 +1,10 @@
+{
+  "status_code": 400,
+  "data": {
+    "error": "CODE_TOO_LARGE",
+    "detail": "Code size 10253 bytes exceeds limit of 10240 bytes.",
+    "size": 10253,
+    "limit": 10240
+  },
+  "latency_ms": 6.1
+}

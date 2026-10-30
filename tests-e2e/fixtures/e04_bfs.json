@@ -1,0 +1,3035 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "collections": "0x1d55e22efc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e22efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e22efc0",
+            "type": "object",
+            "address": "0x1d55e22efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          }
+        ],
+        "mutatedVariable": "collections",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "collections": "0x1d55e22efc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e22efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e22efc0",
+            "type": "object",
+            "address": "0x1d55e22efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "collections": "0x1d55e22efc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e22efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e22efc0",
+            "type": "object",
+            "address": "0x1d55e22efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "collections": "0x1d55e22efc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e22efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e22efc0",
+            "type": "object",
+            "address": "0x1d55e22efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "collections": "0x1d55e22efc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e22efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e22efc0",
+            "type": "object",
+            "address": "0x1d55e22efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "collections": "0x1d55e22efc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e22efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e22efc0",
+            "type": "object",
+            "address": "0x1d55e22efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "collections": "0x1d55e22efc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e22efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e22efc0",
+            "type": "object",
+            "address": "0x1d55e22efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e22efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+          "0x1d55e526700": {
+            "A": [
+              "...",
+              "..."
+            ],
+            "B": [
+              "...",
+              "..."
+            ],
+            "C": [
+              "..."
+            ],
+            "D": [],
+            "E": [
+              "..."
+            ],
+            "F": []
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e22efc0",
+            "type": "object",
+            "address": "0x1d55e22efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          },
+          {
+            "id": "heap-0x1d55e526700",
+            "type": "dict",
+            "address": "0x1d55e526700",
+            "value": {
+              "A": [
+                "...",
+                "..."
+              ],
+              "B": [
+                "...",
+                "..."
+              ],
+              "C": [
+                "..."
+              ],
+              "D": [],
+              "E": [
+                "..."
+              ],
+              "F": []
+            },
+            "targetIndex": null,
+            "label": "graph"
+          }
+        ],
+        "mutatedVariable": "graph",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 22,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e22efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+          "0x1d55e526700": {
+            "A": [
+              "...",
+              "..."
+            ],
+            "B": [
+              "...",
+              "..."
+            ],
+            "C": [
+              "..."
+            ],
+            "D": [],
+            "E": [
+              "..."
+            ],
+            "F": []
+          },
+          "0x1d55e507240": "<function bfs at 0x000001D55E507240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e22efc0",
+            "type": "object",
+            "address": "0x1d55e22efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          },
+          {
+            "id": "heap-0x1d55e526700",
+            "type": "dict",
+            "address": "0x1d55e526700",
+            "value": {
+              "A": [
+                "...",
+                "..."
+              ],
+              "B": [
+                "...",
+                "..."
+              ],
+              "C": [
+                "..."
+              ],
+              "D": [],
+              "E": [
+                "..."
+              ],
+              "F": []
+            },
+            "targetIndex": null,
+            "label": "graph"
+          },
+          {
+            "id": "heap-0x1d55e507240",
+            "type": "object",
+            "address": "0x1d55e507240",
+            "value": "<function bfs at 0x000001D55E507240>",
+            "targetIndex": null,
+            "label": "bfs"
+          }
+        ],
+        "mutatedVariable": "bfs",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 11,
+            "locals": {
+              "start": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "start",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 12,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 12,
+            "locals": {
+              "start": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 13,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "visited",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 14,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['A'])"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "queue",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 15,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['A'])"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 16,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 16,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque([])",
+              "vertex": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "queue",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 17,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque([])",
+              "vertex": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 18,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 18,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque([])",
+              "vertex": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 19,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 19,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque([])",
+              "vertex": "A",
+              "neighbor": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "neighbor",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 18,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 18,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['B'])",
+              "vertex": "A",
+              "neighbor": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "queue",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 19,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 19,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['B'])",
+              "vertex": "A",
+              "neighbor": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "neighbor",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 18,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 18,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['B', 'C'])",
+              "vertex": "A",
+              "neighbor": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "queue",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 14,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['B', 'C'])",
+              "vertex": "A",
+              "neighbor": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 15,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['B', 'C'])",
+              "vertex": "A",
+              "neighbor": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 16,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 16,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['C'])",
+              "vertex": "B",
+              "neighbor": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "queue",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 17,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['C'])",
+              "vertex": "B",
+              "neighbor": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 18,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 18,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['C'])",
+              "vertex": "B",
+              "neighbor": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 19,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 19,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['C'])",
+              "vertex": "B",
+              "neighbor": "D"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "neighbor",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 18,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 18,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['C', 'D'])",
+              "vertex": "B",
+              "neighbor": "D"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "queue",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 19,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 19,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['C', 'D'])",
+              "vertex": "B",
+              "neighbor": "E"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "neighbor",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 18,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 18,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['C', 'D', 'E'])",
+              "vertex": "B",
+              "neighbor": "E"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "queue",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 14,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['C', 'D', 'E'])",
+              "vertex": "B",
+              "neighbor": "E"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 15,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['C', 'D', 'E'])",
+              "vertex": "B",
+              "neighbor": "E"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 16,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 16,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['D', 'E'])",
+              "vertex": "C",
+              "neighbor": "E"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "queue",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 17,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['D', 'E'])",
+              "vertex": "C",
+              "neighbor": "E"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 18,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 18,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['D', 'E'])",
+              "vertex": "C",
+              "neighbor": "E"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 19,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 19,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['D', 'E'])",
+              "vertex": "C",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "neighbor",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 18,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 18,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['D', 'E', 'F'])",
+              "vertex": "C",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "queue",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 14,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['D', 'E', 'F'])",
+              "vertex": "C",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 15,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['D', 'E', 'F'])",
+              "vertex": "C",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 16,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 16,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['E', 'F'])",
+              "vertex": "D",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "queue",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 17,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['E', 'F'])",
+              "vertex": "D",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 18,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 18,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['E', 'F'])",
+              "vertex": "D",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 14,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['E', 'F'])",
+              "vertex": "D",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 15,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['E', 'F'])",
+              "vertex": "D",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 16,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 16,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['F'])",
+              "vertex": "E",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "queue",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 17,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['F'])",
+              "vertex": "E",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 18,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 18,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['F'])",
+              "vertex": "E",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 19,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 19,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['F'])",
+              "vertex": "E",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 18,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 18,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['F', 'F'])",
+              "vertex": "E",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "queue",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 14,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['F', 'F'])",
+              "vertex": "E",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 15,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['F', 'F'])",
+              "vertex": "E",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 16,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 16,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['F'])",
+              "vertex": "F",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "queue",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 17,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['F'])",
+              "vertex": "F",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 18,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 18,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['F'])",
+              "vertex": "F",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 14,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['F'])",
+              "vertex": "F",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 15,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque(['F'])",
+              "vertex": "F",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 16,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 16,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque([])",
+              "vertex": "F",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "queue",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 14,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque([])",
+              "vertex": "F",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 20,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 20,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque([])",
+              "vertex": "F",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 20,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          },
+          {
+            "fn": "bfs",
+            "line": 20,
+            "locals": {
+              "start": "A",
+              "visited": "0x1d55e525600",
+              "queue": "deque([])",
+              "vertex": "F",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "heap": {
+          "0x1d55e525600": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e525600",
+            "type": "list",
+            "address": "0x1d55e525600",
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 22,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 22,
+            "locals": {
+              "collections": "0x1d55e22efc0",
+              "graph": "0x1d55e526700",
+              "bfs": "0x1d55e507240"
+            }
+          }
+        ],
+        "output": "BFS traversal: ['A', 'B', 'C', 'D', 'E', 'F']\n",
+        "ret": null,
+        "heap": {
+          "0x1d55e22efc0": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+          "0x1d55e526700": {
+            "A": [
+              "...",
+              "..."
+            ],
+            "B": [
+              "...",
+              "..."
+            ],
+            "C": [
+              "..."
+            ],
+            "D": [],
+            "E": [
+              "..."
+            ],
+            "F": []
+          },
+          "0x1d55e507240": "<function bfs at 0x000001D55E507240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d55e22efc0",
+            "type": "object",
+            "address": "0x1d55e22efc0",
+            "value": "<module 'collections' from 'C:\\\\Users\\\\Samiran_Bera\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib\\\\collections\\\\__init__.py'>",
+            "targetIndex": null,
+            "label": "collections"
+          },
+          {
+            "id": "heap-0x1d55e526700",
+            "type": "dict",
+            "address": "0x1d55e526700",
+            "value": {
+              "A": [
+                "...",
+                "..."
+              ],
+              "B": [
+                "...",
+                "..."
+              ],
+              "C": [
+                "..."
+              ],
+              "D": [],
+              "E": [
+                "..."
+              ],
+              "F": []
+            },
+            "targetIndex": null,
+            "label": "graph"
+          },
+          {
+            "id": "heap-0x1d55e507240",
+            "type": "object",
+            "address": "0x1d55e507240",
+            "value": "<function bfs at 0x000001D55E507240>",
+            "targetIndex": null,
+            "label": "bfs"
+          }
+        ],
+        "mutatedVariable": "collections",
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 187.99
+}

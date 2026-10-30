@@ -1,0 +1,712 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          },
+          {
+            "fn": "Engine",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          },
+          {
+            "fn": "Engine",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          },
+          {
+            "fn": "Engine",
+            "line": 2,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          },
+          {
+            "fn": "Engine",
+            "line": 2,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "Engine": "0x20ee6724020"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20ee6724020": "<class '__main__.Engine'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20ee6724020",
+            "type": "object",
+            "address": "0x20ee6724020",
+            "value": "<class '__main__.Engine'>",
+            "targetIndex": null,
+            "label": "Engine"
+          }
+        ],
+        "mutatedVariable": "Engine",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "Engine": "0x20ee6724020"
+            }
+          },
+          {
+            "fn": "Car",
+            "line": 5,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "Engine": "0x20ee6724020"
+            }
+          },
+          {
+            "fn": "Car",
+            "line": 5,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "Engine": "0x20ee6724020"
+            }
+          },
+          {
+            "fn": "Car",
+            "line": 6,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "Engine": "0x20ee6724020"
+            }
+          },
+          {
+            "fn": "Car",
+            "line": 6,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "Engine": "0x20ee6724020",
+              "Car": "0x20ee6722500"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20ee6724020": "<class '__main__.Engine'>",
+          "0x20ee6722500": "<class '__main__.Car'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20ee6724020",
+            "type": "object",
+            "address": "0x20ee6724020",
+            "value": "<class '__main__.Engine'>",
+            "targetIndex": null,
+            "label": "Engine"
+          },
+          {
+            "id": "heap-0x20ee6722500",
+            "type": "object",
+            "address": "0x20ee6722500",
+            "value": "<class '__main__.Car'>",
+            "targetIndex": null,
+            "label": "Car"
+          }
+        ],
+        "mutatedVariable": "Engine",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "Engine": "0x20ee6724020",
+              "Car": "0x20ee6722500"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 2,
+            "locals": {
+              "self": "0x20ee6860c50",
+              "horsepower": 500
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20ee6860c50": "<__main__.Engine object at 0x0000020EE6860C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20ee6860c50",
+            "type": "object",
+            "address": "0x20ee6860c50",
+            "value": "<__main__.Engine object at 0x0000020EE6860C50>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": "self",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "Engine": "0x20ee6724020",
+              "Car": "0x20ee6722500"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 3,
+            "locals": {
+              "self": "0x20ee6860c50",
+              "horsepower": 500
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20ee6860c50": "<__main__.Engine object at 0x0000020EE6860C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20ee6860c50",
+            "type": "object",
+            "address": "0x20ee6860c50",
+            "value": "<__main__.Engine object at 0x0000020EE6860C50>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "Engine": "0x20ee6724020",
+              "Car": "0x20ee6722500"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 3,
+            "locals": {
+              "self": "0x20ee6860c50",
+              "horsepower": 500
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20ee6860c50": "<__main__.Engine object at 0x0000020EE6860C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20ee6860c50",
+            "type": "object",
+            "address": "0x20ee6860c50",
+            "value": "<__main__.Engine object at 0x0000020EE6860C50>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "Engine": "0x20ee6724020",
+              "Car": "0x20ee6722500"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 6,
+            "locals": {
+              "self": "0x20ee6860c80",
+              "model": "Roadster",
+              "engine": "0x20ee6860c50"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20ee6860c80": "<__main__.Car object at 0x0000020EE6860C80>",
+          "0x20ee6860c50": "<__main__.Engine object at 0x0000020EE6860C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20ee6860c80",
+            "type": "object",
+            "address": "0x20ee6860c80",
+            "value": "<__main__.Car object at 0x0000020EE6860C80>",
+            "targetIndex": null,
+            "label": "self"
+          },
+          {
+            "id": "heap-0x20ee6860c50",
+            "type": "object",
+            "address": "0x20ee6860c50",
+            "value": "<__main__.Engine object at 0x0000020EE6860C50>",
+            "targetIndex": null,
+            "label": "engine"
+          }
+        ],
+        "mutatedVariable": "self",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "Engine": "0x20ee6724020",
+              "Car": "0x20ee6722500"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 7,
+            "locals": {
+              "self": "0x20ee6860c80",
+              "model": "Roadster",
+              "engine": "0x20ee6860c50"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20ee6860c80": "<__main__.Car object at 0x0000020EE6860C80>",
+          "0x20ee6860c50": "<__main__.Engine object at 0x0000020EE6860C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20ee6860c80",
+            "type": "object",
+            "address": "0x20ee6860c80",
+            "value": "<__main__.Car object at 0x0000020EE6860C80>",
+            "targetIndex": null,
+            "label": "self"
+          },
+          {
+            "id": "heap-0x20ee6860c50",
+            "type": "object",
+            "address": "0x20ee6860c50",
+            "value": "<__main__.Engine object at 0x0000020EE6860C50>",
+            "targetIndex": null,
+            "label": "engine"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "Engine": "0x20ee6724020",
+              "Car": "0x20ee6722500"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 8,
+            "locals": {
+              "self": "0x20ee6860c80",
+              "model": "Roadster",
+              "engine": "0x20ee6860c50"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20ee6860c80": "<__main__.Car object at 0x0000020EE6860C80>",
+          "0x20ee6860c50": "<__main__.Engine object at 0x0000020EE6860C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20ee6860c80",
+            "type": "object",
+            "address": "0x20ee6860c80",
+            "value": "<__main__.Car object at 0x0000020EE6860C80>",
+            "targetIndex": null,
+            "label": "self"
+          },
+          {
+            "id": "heap-0x20ee6860c50",
+            "type": "object",
+            "address": "0x20ee6860c50",
+            "value": "<__main__.Engine object at 0x0000020EE6860C50>",
+            "targetIndex": null,
+            "label": "engine"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "Engine": "0x20ee6724020",
+              "Car": "0x20ee6722500"
+            }
+          },
+          {
+            "fn": "__init__",
+            "line": 8,
+            "locals": {
+              "self": "0x20ee6860c80",
+              "model": "Roadster",
+              "engine": "0x20ee6860c50"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20ee6860c80": "<__main__.Car object at 0x0000020EE6860C80>",
+          "0x20ee6860c50": "<__main__.Engine object at 0x0000020EE6860C50>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20ee6860c80",
+            "type": "object",
+            "address": "0x20ee6860c80",
+            "value": "<__main__.Car object at 0x0000020EE6860C80>",
+            "targetIndex": null,
+            "label": "self"
+          },
+          {
+            "id": "heap-0x20ee6860c50",
+            "type": "object",
+            "address": "0x20ee6860c50",
+            "value": "<__main__.Engine object at 0x0000020EE6860C50>",
+            "targetIndex": null,
+            "label": "engine"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "Engine": "0x20ee6724020",
+              "Car": "0x20ee6722500",
+              "car": "0x20ee6860c80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20ee6724020": "<class '__main__.Engine'>",
+          "0x20ee6722500": "<class '__main__.Car'>",
+          "0x20ee6860c80": "<__main__.Car object at 0x0000020EE6860C80>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20ee6724020",
+            "type": "object",
+            "address": "0x20ee6724020",
+            "value": "<class '__main__.Engine'>",
+            "targetIndex": null,
+            "label": "Engine"
+          },
+          {
+            "id": "heap-0x20ee6722500",
+            "type": "object",
+            "address": "0x20ee6722500",
+            "value": "<class '__main__.Car'>",
+            "targetIndex": null,
+            "label": "Car"
+          },
+          {
+            "id": "heap-0x20ee6860c80",
+            "type": "object",
+            "address": "0x20ee6860c80",
+            "value": "<__main__.Car object at 0x0000020EE6860C80>",
+            "targetIndex": null,
+            "label": "car"
+          }
+        ],
+        "mutatedVariable": "Engine",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "Engine": "0x20ee6724020",
+              "Car": "0x20ee6722500",
+              "car": "0x20ee6860c80"
+            }
+          }
+        ],
+        "output": "Car: Roadster, HP: 500\n",
+        "ret": null,
+        "heap": {
+          "0x20ee6724020": "<class '__main__.Engine'>",
+          "0x20ee6722500": "<class '__main__.Car'>",
+          "0x20ee6860c80": "<__main__.Car object at 0x0000020EE6860C80>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20ee6724020",
+            "type": "object",
+            "address": "0x20ee6724020",
+            "value": "<class '__main__.Engine'>",
+            "targetIndex": null,
+            "label": "Engine"
+          },
+          {
+            "id": "heap-0x20ee6722500",
+            "type": "object",
+            "address": "0x20ee6722500",
+            "value": "<class '__main__.Car'>",
+            "targetIndex": null,
+            "label": "Car"
+          },
+          {
+            "id": "heap-0x20ee6860c80",
+            "type": "object",
+            "address": "0x20ee6860c80",
+            "value": "<__main__.Car object at 0x0000020EE6860C80>",
+            "targetIndex": null,
+            "label": "car"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 188.47
+}

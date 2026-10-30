@@ -1,0 +1,166 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "d": "0x16e0eba4ac0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x16e0eba4ac0": {
+            "name": "Alice"
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x16e0eba4ac0",
+            "type": "dict",
+            "address": "0x16e0eba4ac0",
+            "value": {
+              "name": "Alice"
+            },
+            "targetIndex": null,
+            "label": "d"
+          }
+        ],
+        "mutatedVariable": "d",
+        "explanation": null
+      },
+      {
+        "event": "exception",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "d": "0x16e0eba4ac0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x16e0eba4ac0": {
+            "name": "Alice"
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x16e0eba4ac0",
+            "type": "dict",
+            "address": "0x16e0eba4ac0",
+            "value": {
+              "name": "Alice"
+            },
+            "targetIndex": null,
+            "label": "d"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": "KeyError: 'age'"
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "d": "0x16e0eba4ac0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x16e0eba4ac0": {
+            "name": "Alice"
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x16e0eba4ac0",
+            "type": "dict",
+            "address": "0x16e0eba4ac0",
+            "value": {
+              "name": "Alice"
+            },
+            "targetIndex": null,
+            "label": "d"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "exception",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "d": "0x16e0eba4ac0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": null,
+        "heapObjects": null,
+        "mutatedVariable": null,
+        "explanation": "KeyError: 'age'"
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": "KeyError: 'age'"
+  },
+  "latency_ms": 155.1
+}

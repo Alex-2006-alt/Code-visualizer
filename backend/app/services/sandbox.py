@@ -10,6 +10,7 @@ from __future__ import annotations
 import asyncio
 import contextlib
 import json
+import os
 import sys
 from abc import ABC, abstractmethod
 from pathlib import Path
@@ -77,6 +78,10 @@ class SubprocessSandboxRunner(BaseSandboxRunner):
             timeout=self.timeout_seconds,
         )
 
+        runner_env = os.environ.copy()
+        runner_env["PYTHONIOENCODING"] = "utf-8"
+        runner_env["PYTHONUTF8"] = "1"
+
         proc: asyncio.subprocess.Process | None = None
         try:
             proc = await asyncio.create_subprocess_exec(
@@ -85,6 +90,7 @@ class SubprocessSandboxRunner(BaseSandboxRunner):
                 stdin=asyncio.subprocess.PIPE,
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE,
+                env=runner_env,
             )
 
             stdout_bytes, stderr_bytes = await asyncio.wait_for(

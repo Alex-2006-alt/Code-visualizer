@@ -1,0 +1,669 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "unused_a": 100
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "unused_a",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "unused_b",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary",
+              "unused_list": "0x27d68885100"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27d68885100": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27d68885100",
+            "type": "list",
+            "address": "0x27d68885100",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "unused_list"
+          }
+        ],
+        "mutatedVariable": "unused_list",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary",
+              "unused_list": "0x27d68885100",
+              "active_sum": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27d68885100": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27d68885100",
+            "type": "list",
+            "address": "0x27d68885100",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "unused_list"
+          }
+        ],
+        "mutatedVariable": "active_sum",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary",
+              "unused_list": "0x27d68885100",
+              "active_sum": 0,
+              "i": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27d68885100": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27d68885100",
+            "type": "list",
+            "address": "0x27d68885100",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "unused_list"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary",
+              "unused_list": "0x27d68885100",
+              "active_sum": 0,
+              "i": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27d68885100": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27d68885100",
+            "type": "list",
+            "address": "0x27d68885100",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "unused_list"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary",
+              "unused_list": "0x27d68885100",
+              "active_sum": 0,
+              "i": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27d68885100": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27d68885100",
+            "type": "list",
+            "address": "0x27d68885100",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "unused_list"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary",
+              "unused_list": "0x27d68885100",
+              "active_sum": 1,
+              "i": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27d68885100": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27d68885100",
+            "type": "list",
+            "address": "0x27d68885100",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "unused_list"
+          }
+        ],
+        "mutatedVariable": "active_sum",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary",
+              "unused_list": "0x27d68885100",
+              "active_sum": 1,
+              "i": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27d68885100": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27d68885100",
+            "type": "list",
+            "address": "0x27d68885100",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "unused_list"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary",
+              "unused_list": "0x27d68885100",
+              "active_sum": 3,
+              "i": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27d68885100": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27d68885100",
+            "type": "list",
+            "address": "0x27d68885100",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "unused_list"
+          }
+        ],
+        "mutatedVariable": "active_sum",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary",
+              "unused_list": "0x27d68885100",
+              "active_sum": 3,
+              "i": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27d68885100": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27d68885100",
+            "type": "list",
+            "address": "0x27d68885100",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "unused_list"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary",
+              "unused_list": "0x27d68885100",
+              "active_sum": 6,
+              "i": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27d68885100": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27d68885100",
+            "type": "list",
+            "address": "0x27d68885100",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "unused_list"
+          }
+        ],
+        "mutatedVariable": "active_sum",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary",
+              "unused_list": "0x27d68885100",
+              "active_sum": 6,
+              "i": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27d68885100": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27d68885100",
+            "type": "list",
+            "address": "0x27d68885100",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "unused_list"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary",
+              "unused_list": "0x27d68885100",
+              "active_sum": 10,
+              "i": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27d68885100": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27d68885100",
+            "type": "list",
+            "address": "0x27d68885100",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "unused_list"
+          }
+        ],
+        "mutatedVariable": "active_sum",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary",
+              "unused_list": "0x27d68885100",
+              "active_sum": 10,
+              "i": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27d68885100": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27d68885100",
+            "type": "list",
+            "address": "0x27d68885100",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "unused_list"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "unused_a": 100,
+              "unused_b": "temporary",
+              "unused_list": "0x27d68885100",
+              "active_sum": 10,
+              "i": 4
+            }
+          }
+        ],
+        "output": "Final sum: 10\n",
+        "ret": null,
+        "heap": {
+          "0x27d68885100": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27d68885100",
+            "type": "list",
+            "address": "0x27d68885100",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "unused_list"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 166.37
+}

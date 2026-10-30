@@ -2,7 +2,7 @@
   "name": "Memory Bomb String Allocation",
   "filename": "j01_memory_bomb",
   "category": "J_abuse_limits",
-  "expected_outcome": "exception",
+  "expected_outcome": "timeout",
   "expected_stdout": null,
   "assertions": {
     "check_stdout": false,

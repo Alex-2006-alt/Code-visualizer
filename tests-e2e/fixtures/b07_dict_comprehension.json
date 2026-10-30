@@ -1,0 +1,312 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "words": "0x1d1d57a5180"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d1d57a5180": [
+            "apple",
+            "banana",
+            "cherry"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d1d57a5180",
+            "type": "list",
+            "address": "0x1d1d57a5180",
+            "value": [
+              "apple",
+              "banana",
+              "cherry"
+            ],
+            "targetIndex": null,
+            "label": "words"
+          }
+        ],
+        "mutatedVariable": "words",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "words": "0x1d1d57a5180",
+              "w": "apple"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d1d57a5180": [
+            "apple",
+            "banana",
+            "cherry"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d1d57a5180",
+            "type": "list",
+            "address": "0x1d1d57a5180",
+            "value": [
+              "apple",
+              "banana",
+              "cherry"
+            ],
+            "targetIndex": null,
+            "label": "words"
+          }
+        ],
+        "mutatedVariable": "w",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "words": "0x1d1d57a5180",
+              "w": "banana"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d1d57a5180": [
+            "apple",
+            "banana",
+            "cherry"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d1d57a5180",
+            "type": "list",
+            "address": "0x1d1d57a5180",
+            "value": [
+              "apple",
+              "banana",
+              "cherry"
+            ],
+            "targetIndex": null,
+            "label": "words"
+          }
+        ],
+        "mutatedVariable": "w",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "words": "0x1d1d57a5180",
+              "w": "cherry"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d1d57a5180": [
+            "apple",
+            "banana",
+            "cherry"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d1d57a5180",
+            "type": "list",
+            "address": "0x1d1d57a5180",
+            "value": [
+              "apple",
+              "banana",
+              "cherry"
+            ],
+            "targetIndex": null,
+            "label": "words"
+          }
+        ],
+        "mutatedVariable": "w",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "words": "0x1d1d57a5180",
+              "lengths": "0x1d1d57a55c0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1d1d57a5180": [
+            "apple",
+            "banana",
+            "cherry"
+          ],
+          "0x1d1d57a55c0": {
+            "apple": 5,
+            "banana": 6,
+            "cherry": 6
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d1d57a5180",
+            "type": "list",
+            "address": "0x1d1d57a5180",
+            "value": [
+              "apple",
+              "banana",
+              "cherry"
+            ],
+            "targetIndex": null,
+            "label": "words"
+          },
+          {
+            "id": "heap-0x1d1d57a55c0",
+            "type": "dict",
+            "address": "0x1d1d57a55c0",
+            "value": {
+              "apple": 5,
+              "banana": 6,
+              "cherry": 6
+            },
+            "targetIndex": null,
+            "label": "lengths"
+          }
+        ],
+        "mutatedVariable": "lengths",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "words": "0x1d1d57a5180",
+              "lengths": "0x1d1d57a55c0"
+            }
+          }
+        ],
+        "output": "lengths: [('apple', 5), ('banana', 6), ('cherry', 6)]\n",
+        "ret": null,
+        "heap": {
+          "0x1d1d57a5180": [
+            "apple",
+            "banana",
+            "cherry"
+          ],
+          "0x1d1d57a55c0": {
+            "apple": 5,
+            "banana": 6,
+            "cherry": 6
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1d1d57a5180",
+            "type": "list",
+            "address": "0x1d1d57a5180",
+            "value": [
+              "apple",
+              "banana",
+              "cherry"
+            ],
+            "targetIndex": null,
+            "label": "words"
+          },
+          {
+            "id": "heap-0x1d1d57a55c0",
+            "type": "dict",
+            "address": "0x1d1d57a55c0",
+            "value": {
+              "apple": 5,
+              "banana": 6,
+              "cherry": 6
+            },
+            "targetIndex": null,
+            "label": "lengths"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 154.24
+}

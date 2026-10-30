@@ -1,0 +1,1573 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa077240": "<function recursive_sum at 0x000001FBAA077240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa077240",
+            "type": "object",
+            "address": "0x1fbaa077240",
+            "value": "<function recursive_sum at 0x000001FBAA077240>",
+            "targetIndex": null,
+            "label": "recursive_sum"
+          }
+        ],
+        "mutatedVariable": "recursive_sum",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 1,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa094dc0": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa094dc0",
+            "type": "list",
+            "address": "0x1fbaa094dc0",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 2,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa094dc0": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa094dc0",
+            "type": "list",
+            "address": "0x1fbaa094dc0",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa094dc0": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa094dc0",
+            "type": "list",
+            "address": "0x1fbaa094dc0",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 1,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa095c00": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa095c00",
+            "type": "list",
+            "address": "0x1fbaa095c00",
+            "value": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 2,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa095c00": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa095c00",
+            "type": "list",
+            "address": "0x1fbaa095c00",
+            "value": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa095c00": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa095c00",
+            "type": "list",
+            "address": "0x1fbaa095c00",
+            "value": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 1,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa096a00": [
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa096a00",
+            "type": "list",
+            "address": "0x1fbaa096a00",
+            "value": [
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 2,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa096a00": [
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa096a00",
+            "type": "list",
+            "address": "0x1fbaa096a00",
+            "value": [
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa096a00": [
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa096a00",
+            "type": "list",
+            "address": "0x1fbaa096a00",
+            "value": [
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 1,
+            "locals": {
+              "arr": "0x1fbaa097a80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa097a80": [
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa097a80",
+            "type": "list",
+            "address": "0x1fbaa097a80",
+            "value": [
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 2,
+            "locals": {
+              "arr": "0x1fbaa097a80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa097a80": [
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa097a80",
+            "type": "list",
+            "address": "0x1fbaa097a80",
+            "value": [
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa097a80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa097a80": [
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa097a80",
+            "type": "list",
+            "address": "0x1fbaa097a80",
+            "value": [
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa097a80"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 1,
+            "locals": {
+              "arr": "0x1fbaa09cf00"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa09cf00": [
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa09cf00",
+            "type": "list",
+            "address": "0x1fbaa09cf00",
+            "value": [
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa097a80"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 2,
+            "locals": {
+              "arr": "0x1fbaa09cf00"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa09cf00": [
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa09cf00",
+            "type": "list",
+            "address": "0x1fbaa09cf00",
+            "value": [
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa097a80"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa09cf00"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa09cf00": [
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa09cf00",
+            "type": "list",
+            "address": "0x1fbaa09cf00",
+            "value": [
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa097a80"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa09cf00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 1,
+            "locals": {
+              "arr": "0x1fbaa09e6c0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa09e6c0": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa09e6c0",
+            "type": "list",
+            "address": "0x1fbaa09e6c0",
+            "value": [],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa097a80"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa09cf00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 2,
+            "locals": {
+              "arr": "0x1fbaa09e6c0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa09e6c0": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa09e6c0",
+            "type": "list",
+            "address": "0x1fbaa09e6c0",
+            "value": [],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa097a80"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa09cf00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 3,
+            "locals": {
+              "arr": "0x1fbaa09e6c0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1fbaa09e6c0": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa09e6c0",
+            "type": "list",
+            "address": "0x1fbaa09e6c0",
+            "value": [],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa097a80"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa09cf00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 3,
+            "locals": {
+              "arr": "0x1fbaa09e6c0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": 0,
+        "heap": {
+          "0x1fbaa09e6c0": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa09e6c0",
+            "type": "list",
+            "address": "0x1fbaa09e6c0",
+            "value": [],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa097a80"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa09cf00"
+            }
+          }
+        ],
+        "output": "",
+        "ret": 5,
+        "heap": {
+          "0x1fbaa09cf00": [
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa09cf00",
+            "type": "list",
+            "address": "0x1fbaa09cf00",
+            "value": [
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa097a80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": 9,
+        "heap": {
+          "0x1fbaa097a80": [
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa097a80",
+            "type": "list",
+            "address": "0x1fbaa097a80",
+            "value": [
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa096a00"
+            }
+          }
+        ],
+        "output": "",
+        "ret": 12,
+        "heap": {
+          "0x1fbaa096a00": [
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa096a00",
+            "type": "list",
+            "address": "0x1fbaa096a00",
+            "value": [
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa095c00"
+            }
+          }
+        ],
+        "output": "",
+        "ret": 14,
+        "heap": {
+          "0x1fbaa095c00": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa095c00",
+            "type": "list",
+            "address": "0x1fbaa095c00",
+            "value": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          },
+          {
+            "fn": "recursive_sum",
+            "line": 4,
+            "locals": {
+              "arr": "0x1fbaa094dc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": 15,
+        "heap": {
+          "0x1fbaa094dc0": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa094dc0",
+            "type": "list",
+            "address": "0x1fbaa094dc0",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "recursive_sum": "0x1fbaa077240"
+            }
+          }
+        ],
+        "output": "Sum: 15\n",
+        "ret": null,
+        "heap": {
+          "0x1fbaa077240": "<function recursive_sum at 0x000001FBAA077240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1fbaa077240",
+            "type": "object",
+            "address": "0x1fbaa077240",
+            "value": "<function recursive_sum at 0x000001FBAA077240>",
+            "targetIndex": null,
+            "label": "recursive_sum"
+          }
+        ],
+        "mutatedVariable": "recursive_sum",
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 163.85
+}

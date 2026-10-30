@@ -1,0 +1,934 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          },
+          {
+            "fn": "Animal",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          },
+          {
+            "fn": "Animal",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          },
+          {
+            "fn": "Animal",
+            "line": 2,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          },
+          {
+            "fn": "Animal",
+            "line": 2,
+            "locals": {
+              "sound": "0x14942ae72e0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x14942ae72e0": "<function Animal.sound at 0x0000014942AE72E0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x14942ae72e0",
+            "type": "object",
+            "address": "0x14942ae72e0",
+            "value": "<function Animal.sound at 0x0000014942AE72E0>",
+            "targetIndex": null,
+            "label": "sound"
+          }
+        ],
+        "mutatedVariable": "sound",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "Animal": "0x1494299ba90"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1494299ba90": "<class '__main__.Animal'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1494299ba90",
+            "type": "object",
+            "address": "0x1494299ba90",
+            "value": "<class '__main__.Animal'>",
+            "targetIndex": null,
+            "label": "Animal"
+          }
+        ],
+        "mutatedVariable": "Animal",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "Animal": "0x1494299ba90"
+            }
+          },
+          {
+            "fn": "Dog",
+            "line": 5,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "Animal": "0x1494299ba90"
+            }
+          },
+          {
+            "fn": "Dog",
+            "line": 5,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "Animal": "0x1494299ba90"
+            }
+          },
+          {
+            "fn": "Dog",
+            "line": 6,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "Animal": "0x1494299ba90"
+            }
+          },
+          {
+            "fn": "Dog",
+            "line": 6,
+            "locals": {
+              "sound": "0x14942ae7380"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x14942ae7380": "<function Dog.sound at 0x0000014942AE7380>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x14942ae7380",
+            "type": "object",
+            "address": "0x14942ae7380",
+            "value": "<function Dog.sound at 0x0000014942AE7380>",
+            "targetIndex": null,
+            "label": "sound"
+          }
+        ],
+        "mutatedVariable": "sound",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1494299ba90": "<class '__main__.Animal'>",
+          "0x1494299f890": "<class '__main__.Dog'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1494299ba90",
+            "type": "object",
+            "address": "0x1494299ba90",
+            "value": "<class '__main__.Animal'>",
+            "targetIndex": null,
+            "label": "Animal"
+          },
+          {
+            "id": "heap-0x1494299f890",
+            "type": "object",
+            "address": "0x1494299f890",
+            "value": "<class '__main__.Dog'>",
+            "targetIndex": null,
+            "label": "Dog"
+          }
+        ],
+        "mutatedVariable": "Animal",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890"
+            }
+          },
+          {
+            "fn": "Cat",
+            "line": 9,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890"
+            }
+          },
+          {
+            "fn": "Cat",
+            "line": 9,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890"
+            }
+          },
+          {
+            "fn": "Cat",
+            "line": 10,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890"
+            }
+          },
+          {
+            "fn": "Cat",
+            "line": 10,
+            "locals": {
+              "sound": "0x14942ae74c0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x14942ae74c0": "<function Cat.sound at 0x0000014942AE74C0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x14942ae74c0",
+            "type": "object",
+            "address": "0x14942ae74c0",
+            "value": "<function Cat.sound at 0x0000014942AE74C0>",
+            "targetIndex": null,
+            "label": "sound"
+          }
+        ],
+        "mutatedVariable": "sound",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 13,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890",
+              "Cat": "0x1494299be70"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1494299ba90": "<class '__main__.Animal'>",
+          "0x1494299f890": "<class '__main__.Dog'>",
+          "0x1494299be70": "<class '__main__.Cat'>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1494299ba90",
+            "type": "object",
+            "address": "0x1494299ba90",
+            "value": "<class '__main__.Animal'>",
+            "targetIndex": null,
+            "label": "Animal"
+          },
+          {
+            "id": "heap-0x1494299f890",
+            "type": "object",
+            "address": "0x1494299f890",
+            "value": "<class '__main__.Dog'>",
+            "targetIndex": null,
+            "label": "Dog"
+          },
+          {
+            "id": "heap-0x1494299be70",
+            "type": "object",
+            "address": "0x1494299be70",
+            "value": "<class '__main__.Cat'>",
+            "targetIndex": null,
+            "label": "Cat"
+          }
+        ],
+        "mutatedVariable": "Animal",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 14,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890",
+              "Cat": "0x1494299be70",
+              "d": "0x14942b00c80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1494299ba90": "<class '__main__.Animal'>",
+          "0x1494299f890": "<class '__main__.Dog'>",
+          "0x1494299be70": "<class '__main__.Cat'>",
+          "0x14942b00c80": "<__main__.Dog object at 0x0000014942B00C80>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1494299ba90",
+            "type": "object",
+            "address": "0x1494299ba90",
+            "value": "<class '__main__.Animal'>",
+            "targetIndex": null,
+            "label": "Animal"
+          },
+          {
+            "id": "heap-0x1494299f890",
+            "type": "object",
+            "address": "0x1494299f890",
+            "value": "<class '__main__.Dog'>",
+            "targetIndex": null,
+            "label": "Dog"
+          },
+          {
+            "id": "heap-0x1494299be70",
+            "type": "object",
+            "address": "0x1494299be70",
+            "value": "<class '__main__.Cat'>",
+            "targetIndex": null,
+            "label": "Cat"
+          },
+          {
+            "id": "heap-0x14942b00c80",
+            "type": "object",
+            "address": "0x14942b00c80",
+            "value": "<__main__.Dog object at 0x0000014942B00C80>",
+            "targetIndex": null,
+            "label": "d"
+          }
+        ],
+        "mutatedVariable": "d",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890",
+              "Cat": "0x1494299be70",
+              "d": "0x14942b00c80",
+              "c": "0x14942b00ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1494299ba90": "<class '__main__.Animal'>",
+          "0x1494299f890": "<class '__main__.Dog'>",
+          "0x1494299be70": "<class '__main__.Cat'>",
+          "0x14942b00c80": "<__main__.Dog object at 0x0000014942B00C80>",
+          "0x14942b00ce0": "<__main__.Cat object at 0x0000014942B00CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1494299ba90",
+            "type": "object",
+            "address": "0x1494299ba90",
+            "value": "<class '__main__.Animal'>",
+            "targetIndex": null,
+            "label": "Animal"
+          },
+          {
+            "id": "heap-0x1494299f890",
+            "type": "object",
+            "address": "0x1494299f890",
+            "value": "<class '__main__.Dog'>",
+            "targetIndex": null,
+            "label": "Dog"
+          },
+          {
+            "id": "heap-0x1494299be70",
+            "type": "object",
+            "address": "0x1494299be70",
+            "value": "<class '__main__.Cat'>",
+            "targetIndex": null,
+            "label": "Cat"
+          },
+          {
+            "id": "heap-0x14942b00c80",
+            "type": "object",
+            "address": "0x14942b00c80",
+            "value": "<__main__.Dog object at 0x0000014942B00C80>",
+            "targetIndex": null,
+            "label": "d"
+          },
+          {
+            "id": "heap-0x14942b00ce0",
+            "type": "object",
+            "address": "0x14942b00ce0",
+            "value": "<__main__.Cat object at 0x0000014942B00CE0>",
+            "targetIndex": null,
+            "label": "c"
+          }
+        ],
+        "mutatedVariable": "c",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890",
+              "Cat": "0x1494299be70",
+              "d": "0x14942b00c80",
+              "c": "0x14942b00ce0"
+            }
+          },
+          {
+            "fn": "sound",
+            "line": 6,
+            "locals": {
+              "self": "0x14942b00c80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x14942b00c80": "<__main__.Dog object at 0x0000014942B00C80>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x14942b00c80",
+            "type": "object",
+            "address": "0x14942b00c80",
+            "value": "<__main__.Dog object at 0x0000014942B00C80>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": "self",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890",
+              "Cat": "0x1494299be70",
+              "d": "0x14942b00c80",
+              "c": "0x14942b00ce0"
+            }
+          },
+          {
+            "fn": "sound",
+            "line": 7,
+            "locals": {
+              "self": "0x14942b00c80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x14942b00c80": "<__main__.Dog object at 0x0000014942B00C80>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x14942b00c80",
+            "type": "object",
+            "address": "0x14942b00c80",
+            "value": "<__main__.Dog object at 0x0000014942B00C80>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890",
+              "Cat": "0x1494299be70",
+              "d": "0x14942b00c80",
+              "c": "0x14942b00ce0"
+            }
+          },
+          {
+            "fn": "sound",
+            "line": 7,
+            "locals": {
+              "self": "0x14942b00c80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": "bark",
+        "heap": {
+          "0x14942b00c80": "<__main__.Dog object at 0x0000014942B00C80>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x14942b00c80",
+            "type": "object",
+            "address": "0x14942b00c80",
+            "value": "<__main__.Dog object at 0x0000014942B00C80>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890",
+              "Cat": "0x1494299be70",
+              "d": "0x14942b00c80",
+              "c": "0x14942b00ce0"
+            }
+          },
+          {
+            "fn": "sound",
+            "line": 10,
+            "locals": {
+              "self": "0x14942b00ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x14942b00ce0": "<__main__.Cat object at 0x0000014942B00CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x14942b00ce0",
+            "type": "object",
+            "address": "0x14942b00ce0",
+            "value": "<__main__.Cat object at 0x0000014942B00CE0>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": "self",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890",
+              "Cat": "0x1494299be70",
+              "d": "0x14942b00c80",
+              "c": "0x14942b00ce0"
+            }
+          },
+          {
+            "fn": "sound",
+            "line": 11,
+            "locals": {
+              "self": "0x14942b00ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x14942b00ce0": "<__main__.Cat object at 0x0000014942B00CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x14942b00ce0",
+            "type": "object",
+            "address": "0x14942b00ce0",
+            "value": "<__main__.Cat object at 0x0000014942B00CE0>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890",
+              "Cat": "0x1494299be70",
+              "d": "0x14942b00c80",
+              "c": "0x14942b00ce0"
+            }
+          },
+          {
+            "fn": "sound",
+            "line": 11,
+            "locals": {
+              "self": "0x14942b00ce0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": "meow",
+        "heap": {
+          "0x14942b00ce0": "<__main__.Cat object at 0x0000014942B00CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x14942b00ce0",
+            "type": "object",
+            "address": "0x14942b00ce0",
+            "value": "<__main__.Cat object at 0x0000014942B00CE0>",
+            "targetIndex": null,
+            "label": "self"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "Animal": "0x1494299ba90",
+              "Dog": "0x1494299f890",
+              "Cat": "0x1494299be70",
+              "d": "0x14942b00c80",
+              "c": "0x14942b00ce0"
+            }
+          }
+        ],
+        "output": "Dog: bark Cat: meow\n",
+        "ret": null,
+        "heap": {
+          "0x1494299ba90": "<class '__main__.Animal'>",
+          "0x1494299f890": "<class '__main__.Dog'>",
+          "0x1494299be70": "<class '__main__.Cat'>",
+          "0x14942b00c80": "<__main__.Dog object at 0x0000014942B00C80>",
+          "0x14942b00ce0": "<__main__.Cat object at 0x0000014942B00CE0>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1494299ba90",
+            "type": "object",
+            "address": "0x1494299ba90",
+            "value": "<class '__main__.Animal'>",
+            "targetIndex": null,
+            "label": "Animal"
+          },
+          {
+            "id": "heap-0x1494299f890",
+            "type": "object",
+            "address": "0x1494299f890",
+            "value": "<class '__main__.Dog'>",
+            "targetIndex": null,
+            "label": "Dog"
+          },
+          {
+            "id": "heap-0x1494299be70",
+            "type": "object",
+            "address": "0x1494299be70",
+            "value": "<class '__main__.Cat'>",
+            "targetIndex": null,
+            "label": "Cat"
+          },
+          {
+            "id": "heap-0x14942b00c80",
+            "type": "object",
+            "address": "0x14942b00c80",
+            "value": "<__main__.Dog object at 0x0000014942B00C80>",
+            "targetIndex": null,
+            "label": "d"
+          },
+          {
+            "id": "heap-0x14942b00ce0",
+            "type": "object",
+            "address": "0x14942b00ce0",
+            "value": "<__main__.Cat object at 0x0000014942B00CE0>",
+            "targetIndex": null,
+            "label": "c"
+          }
+        ],
+        "mutatedVariable": "Animal",
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 189.28
+}

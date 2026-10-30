@@ -2,6 +2,14 @@
 
 from __future__ import annotations
 
+import sys
+
+# Ensure Windows uses ProactorEventLoop for asyncio subprocess support
+if sys.platform == "win32":
+    import asyncio
+    if not isinstance(asyncio.get_event_loop_policy(), asyncio.WindowsProactorEventLoopPolicy):
+        asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
+
 import time
 import uuid
 from collections.abc import AsyncGenerator, Awaitable, Callable
