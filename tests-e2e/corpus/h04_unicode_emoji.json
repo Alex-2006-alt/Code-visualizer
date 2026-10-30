@@ -3,7 +3,7 @@
   "filename": "h04_unicode_emoji",
   "category": "H_messy_code",
   "expected_outcome": "ok",
-  "expected_stdout": "",
+  "expected_stdout": "こんにちは世界 🚀 CodeTrace ⚡ 7\n",
   "assertions": {
     "check_stdout": true,
     "forbidden_imports": false,

@@ -1,0 +1,2204 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dab7240": "<function bubble_sort at 0x0000024A4DAB7240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dab7240",
+            "type": "object",
+            "address": "0x24a4dab7240",
+            "value": "<function bubble_sort at 0x0000024A4DAB7240>",
+            "targetIndex": null,
+            "label": "bubble_sort"
+          }
+        ],
+        "mutatedVariable": "bubble_sort",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 1,
+            "locals": {
+              "arr": "0x24a4dad5d80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            5,
+            1,
+            4,
+            2,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              5,
+              1,
+              4,
+              2,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 2,
+            "locals": {
+              "arr": "0x24a4dad5d80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            5,
+            1,
+            4,
+            2,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              5,
+              1,
+              4,
+              2,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 3,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            5,
+            1,
+            4,
+            2,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              5,
+              1,
+              4,
+              2,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            5,
+            1,
+            4,
+            2,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              5,
+              1,
+              4,
+              2,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 5,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 0,
+              "j": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            5,
+            1,
+            4,
+            2,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              5,
+              1,
+              4,
+              2,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "j",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 6,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 0,
+              "j": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            5,
+            1,
+            4,
+            2,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              5,
+              1,
+              4,
+              2,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 0,
+              "j": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            5,
+            4,
+            2,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              5,
+              4,
+              2,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 5,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 0,
+              "j": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            5,
+            4,
+            2,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              5,
+              4,
+              2,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "j",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 6,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 0,
+              "j": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            5,
+            4,
+            2,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              5,
+              4,
+              2,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 0,
+              "j": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            4,
+            5,
+            2,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              4,
+              5,
+              2,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 5,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 0,
+              "j": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            4,
+            5,
+            2,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              4,
+              5,
+              2,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "j",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 6,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 0,
+              "j": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            4,
+            5,
+            2,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              4,
+              5,
+              2,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 0,
+              "j": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            4,
+            2,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              4,
+              2,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 5,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 0,
+              "j": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            4,
+            2,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              4,
+              2,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "j",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 0,
+              "j": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            4,
+            2,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              4,
+              2,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 3,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 0,
+              "j": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            4,
+            2,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              4,
+              2,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 1,
+              "j": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            4,
+            2,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              4,
+              2,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 5,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 1,
+              "j": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            4,
+            2,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              4,
+              2,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "j",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 1,
+              "j": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            4,
+            2,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              4,
+              2,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 5,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 1,
+              "j": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            4,
+            2,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              4,
+              2,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "j",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 6,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 1,
+              "j": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            4,
+            2,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              4,
+              2,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 1,
+              "j": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 5,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 1,
+              "j": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "j",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 1,
+              "j": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 3,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 1,
+              "j": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 2,
+              "j": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 5,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 2,
+              "j": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "j",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 2,
+              "j": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 5,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 2,
+              "j": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "j",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 2,
+              "j": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 3,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 2,
+              "j": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 3,
+              "j": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 5,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 3,
+              "j": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "j",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 3,
+              "j": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 3,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 3,
+              "j": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 4,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 4,
+              "j": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 3,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 4,
+              "j": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 7,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 4,
+              "j": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240"
+            }
+          },
+          {
+            "fn": "bubble_sort",
+            "line": 7,
+            "locals": {
+              "arr": "0x24a4dad5d80",
+              "n": 5,
+              "i": 4,
+              "j": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          1,
+          2,
+          4,
+          5,
+          8
+        ],
+        "heap": {
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240",
+              "res": "0x24a4dad5d80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24a4dab7240": "<function bubble_sort at 0x0000024A4DAB7240>",
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dab7240",
+            "type": "object",
+            "address": "0x24a4dab7240",
+            "value": "<function bubble_sort at 0x0000024A4DAB7240>",
+            "targetIndex": null,
+            "label": "bubble_sort"
+          },
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "res"
+          }
+        ],
+        "mutatedVariable": "bubble_sort",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "bubble_sort": "0x24a4dab7240",
+              "res": "0x24a4dad5d80"
+            }
+          }
+        ],
+        "output": "Sorted: [1, 2, 4, 5, 8]\n",
+        "ret": null,
+        "heap": {
+          "0x24a4dab7240": "<function bubble_sort at 0x0000024A4DAB7240>",
+          "0x24a4dad5d80": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24a4dab7240",
+            "type": "object",
+            "address": "0x24a4dab7240",
+            "value": "<function bubble_sort at 0x0000024A4DAB7240>",
+            "targetIndex": null,
+            "label": "bubble_sort"
+          },
+          {
+            "id": "heap-0x24a4dad5d80",
+            "type": "list",
+            "address": "0x24a4dad5d80",
+            "value": [
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "targetIndex": null,
+            "label": "res"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 166.11
+}

@@ -1,0 +1,3583 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "moves": "0x27286de6040"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27286de6040": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27286de6040",
+            "type": "list",
+            "address": "0x27286de6040",
+            "value": [],
+            "targetIndex": null,
+            "label": "moves"
+          }
+        ],
+        "mutatedVariable": "moves",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27286de6040": [],
+          "0x27286dc7240": "<function hanoi at 0x0000027286DC7240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27286de6040",
+            "type": "list",
+            "address": "0x27286de6040",
+            "value": [],
+            "targetIndex": null,
+            "label": "moves"
+          },
+          {
+            "id": "heap-0x27286dc7240",
+            "type": "object",
+            "address": "0x27286dc7240",
+            "value": "<function hanoi at 0x0000027286DC7240>",
+            "targetIndex": null,
+            "label": "hanoi"
+          }
+        ],
+        "mutatedVariable": "hanoi",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 0,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 5,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 0,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 5,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 1,
+              "source": "C",
+              "target": "B",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 1,
+              "source": "C",
+              "target": "B",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "C",
+              "target": "B",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "C",
+              "target": "B",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 0,
+              "source": "C",
+              "target": "A",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "C",
+              "target": "B",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "C",
+              "target": "A",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "C",
+              "target": "B",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "C",
+              "target": "A",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 5,
+            "locals": {
+              "n": 1,
+              "source": "C",
+              "target": "B",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "C",
+              "target": "B",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "C",
+              "target": "B",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 0,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "C",
+              "target": "B",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "C",
+              "target": "B",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "C",
+              "target": "B",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 5,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 1,
+              "source": "B",
+              "target": "A",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 1,
+              "source": "B",
+              "target": "A",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "B",
+              "target": "A",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "B",
+              "target": "A",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 0,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "B",
+              "target": "A",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "B",
+              "target": "A",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 5,
+            "locals": {
+              "n": 1,
+              "source": "B",
+              "target": "A",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "B",
+              "target": "A",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "B",
+              "target": "A",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 0,
+              "source": "C",
+              "target": "A",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "B",
+              "target": "A",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "C",
+              "target": "A",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "B",
+              "target": "A",
+              "auxiliary": "C"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "C",
+              "target": "A",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "B",
+              "target": "A",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 5,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 0,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 4,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "A",
+              "target": "B",
+              "auxiliary": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 5,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 2,
+            "locals": {
+              "n": 0,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 3,
+            "locals": {
+              "n": 0,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 1,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 2,
+              "source": "B",
+              "target": "C",
+              "auxiliary": "A"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 8,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          },
+          {
+            "fn": "hanoi",
+            "line": 6,
+            "locals": {
+              "n": 3,
+              "source": "A",
+              "target": "C",
+              "auxiliary": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x27286de6040": [
+            "A->C",
+            "A->B",
+            "C->B",
+            "A->C",
+            "B->A",
+            "B->C",
+            "A->C"
+          ],
+          "0x27286dc7240": "<function hanoi at 0x0000027286DC7240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27286de6040",
+            "type": "list",
+            "address": "0x27286de6040",
+            "value": [
+              "A->C",
+              "A->B",
+              "C->B",
+              "A->C",
+              "B->A",
+              "B->C",
+              "A->C"
+            ],
+            "targetIndex": null,
+            "label": "moves"
+          },
+          {
+            "id": "heap-0x27286dc7240",
+            "type": "object",
+            "address": "0x27286dc7240",
+            "value": "<function hanoi at 0x0000027286DC7240>",
+            "targetIndex": null,
+            "label": "hanoi"
+          }
+        ],
+        "mutatedVariable": "moves",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          }
+        ],
+        "output": "Moves count: 7\n",
+        "ret": null,
+        "heap": {
+          "0x27286de6040": [
+            "A->C",
+            "A->B",
+            "C->B",
+            "A->C",
+            "B->A",
+            "B->C",
+            "A->C"
+          ],
+          "0x27286dc7240": "<function hanoi at 0x0000027286DC7240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27286de6040",
+            "type": "list",
+            "address": "0x27286de6040",
+            "value": [
+              "A->C",
+              "A->B",
+              "C->B",
+              "A->C",
+              "B->A",
+              "B->C",
+              "A->C"
+            ],
+            "targetIndex": null,
+            "label": "moves"
+          },
+          {
+            "id": "heap-0x27286dc7240",
+            "type": "object",
+            "address": "0x27286dc7240",
+            "value": "<function hanoi at 0x0000027286DC7240>",
+            "targetIndex": null,
+            "label": "hanoi"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "moves": "0x27286de6040",
+              "hanoi": "0x27286dc7240"
+            }
+          }
+        ],
+        "output": "Moves count: 7\nMoves: ['A->C', 'A->B', 'C->B', 'A->C', 'B->A', 'B->C', 'A->C']\n",
+        "ret": null,
+        "heap": {
+          "0x27286de6040": [
+            "A->C",
+            "A->B",
+            "C->B",
+            "A->C",
+            "B->A",
+            "B->C",
+            "A->C"
+          ],
+          "0x27286dc7240": "<function hanoi at 0x0000027286DC7240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x27286de6040",
+            "type": "list",
+            "address": "0x27286de6040",
+            "value": [
+              "A->C",
+              "A->B",
+              "C->B",
+              "A->C",
+              "B->A",
+              "B->C",
+              "A->C"
+            ],
+            "targetIndex": null,
+            "label": "moves"
+          },
+          {
+            "id": "heap-0x27286dc7240",
+            "type": "object",
+            "address": "0x27286dc7240",
+            "value": "<function hanoi at 0x0000027286DC7240>",
+            "targetIndex": null,
+            "label": "hanoi"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 134.17
+}

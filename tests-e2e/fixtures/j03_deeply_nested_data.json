@@ -1,0 +1,3588 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "root": "0x24c63735380"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [],
+            "targetIndex": null,
+            "label": "root"
+          }
+        ],
+        "mutatedVariable": "root",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63735380"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [],
+            "targetIndex": null,
+            "label": "root"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63735380",
+              "i": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [],
+            "targetIndex": null,
+            "label": "root"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63735380",
+              "i": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c634a1180",
+              "i": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "..."
+            ]
+          ],
+          "0x24c634a1180": [
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c634a1180",
+            "type": "list",
+            "address": "0x24c634a1180",
+            "value": [
+              0
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c634a1180",
+              "i": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "..."
+            ]
+          ],
+          "0x24c634a1180": [
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c634a1180",
+            "type": "list",
+            "address": "0x24c634a1180",
+            "value": [
+              0
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c634a1180",
+              "i": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c634a1180": [
+            0,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c634a1180",
+            "type": "list",
+            "address": "0x24c634a1180",
+            "value": [
+              0,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c634a1880",
+              "i": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c634a1880": [
+            1
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c634a1880",
+            "type": "list",
+            "address": "0x24c634a1880",
+            "value": [
+              1
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c634a1880",
+              "i": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c634a1880": [
+            1
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c634a1880",
+            "type": "list",
+            "address": "0x24c634a1880",
+            "value": [
+              1
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c634a1880",
+              "i": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c634a1880": [
+            1,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c634a1880",
+            "type": "list",
+            "address": "0x24c634a1880",
+            "value": [
+              1,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63736680",
+              "i": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63736680": [
+            2
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63736680",
+            "type": "list",
+            "address": "0x24c63736680",
+            "value": [
+              2
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63736680",
+              "i": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63736680": [
+            2
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63736680",
+            "type": "list",
+            "address": "0x24c63736680",
+            "value": [
+              2
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63736680",
+              "i": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63736680": [
+            2,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63736680",
+            "type": "list",
+            "address": "0x24c63736680",
+            "value": [
+              2,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63737400",
+              "i": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63737400": [
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63737400",
+            "type": "list",
+            "address": "0x24c63737400",
+            "value": [
+              3
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63737400",
+              "i": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63737400": [
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63737400",
+            "type": "list",
+            "address": "0x24c63737400",
+            "value": [
+              3
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63737400",
+              "i": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63737400": [
+            3,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63737400",
+            "type": "list",
+            "address": "0x24c63737400",
+            "value": [
+              3,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373c1c0",
+              "i": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373c1c0": [
+            4
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373c1c0",
+            "type": "list",
+            "address": "0x24c6373c1c0",
+            "value": [
+              4
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373c1c0",
+              "i": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373c1c0": [
+            4
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373c1c0",
+            "type": "list",
+            "address": "0x24c6373c1c0",
+            "value": [
+              4
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373c1c0",
+              "i": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373c1c0": [
+            4,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373c1c0",
+            "type": "list",
+            "address": "0x24c6373c1c0",
+            "value": [
+              4,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373cf40",
+              "i": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373cf40": [
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373cf40",
+            "type": "list",
+            "address": "0x24c6373cf40",
+            "value": [
+              5
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373cf40",
+              "i": 6
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373cf40": [
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373cf40",
+            "type": "list",
+            "address": "0x24c6373cf40",
+            "value": [
+              5
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373cf40",
+              "i": 6
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373cf40": [
+            5,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373cf40",
+            "type": "list",
+            "address": "0x24c6373cf40",
+            "value": [
+              5,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373dcc0",
+              "i": 6
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373dcc0": [
+            6
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373dcc0",
+            "type": "list",
+            "address": "0x24c6373dcc0",
+            "value": [
+              6
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373dcc0",
+              "i": 7
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373dcc0": [
+            6
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373dcc0",
+            "type": "list",
+            "address": "0x24c6373dcc0",
+            "value": [
+              6
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373dcc0",
+              "i": 7
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373dcc0": [
+            6,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373dcc0",
+            "type": "list",
+            "address": "0x24c6373dcc0",
+            "value": [
+              6,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373ea40",
+              "i": 7
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373ea40": [
+            7
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373ea40",
+            "type": "list",
+            "address": "0x24c6373ea40",
+            "value": [
+              7
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373ea40",
+              "i": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373ea40": [
+            7
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373ea40",
+            "type": "list",
+            "address": "0x24c6373ea40",
+            "value": [
+              7
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373ea40",
+              "i": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373ea40": [
+            7,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373ea40",
+            "type": "list",
+            "address": "0x24c6373ea40",
+            "value": [
+              7,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373f7c0",
+              "i": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373f7c0": [
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373f7c0",
+            "type": "list",
+            "address": "0x24c6373f7c0",
+            "value": [
+              8
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373f7c0",
+              "i": 9
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373f7c0": [
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373f7c0",
+            "type": "list",
+            "address": "0x24c6373f7c0",
+            "value": [
+              8
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6373f7c0",
+              "i": 9
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6373f7c0": [
+            8,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6373f7c0",
+            "type": "list",
+            "address": "0x24c6373f7c0",
+            "value": [
+              8,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63740580",
+              "i": 9
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63740580": [
+            9
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63740580",
+            "type": "list",
+            "address": "0x24c63740580",
+            "value": [
+              9
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63740580",
+              "i": 10
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63740580": [
+            9
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63740580",
+            "type": "list",
+            "address": "0x24c63740580",
+            "value": [
+              9
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63740580",
+              "i": 10
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63740580": [
+            9,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63740580",
+            "type": "list",
+            "address": "0x24c63740580",
+            "value": [
+              9,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63741300",
+              "i": 10
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63741300": [
+            10
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63741300",
+            "type": "list",
+            "address": "0x24c63741300",
+            "value": [
+              10
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63741300",
+              "i": 11
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63741300": [
+            10
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63741300",
+            "type": "list",
+            "address": "0x24c63741300",
+            "value": [
+              10
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63741300",
+              "i": 11
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63741300": [
+            10,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63741300",
+            "type": "list",
+            "address": "0x24c63741300",
+            "value": [
+              10,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63742080",
+              "i": 11
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63742080": [
+            11
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63742080",
+            "type": "list",
+            "address": "0x24c63742080",
+            "value": [
+              11
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63742080",
+              "i": 12
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63742080": [
+            11
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63742080",
+            "type": "list",
+            "address": "0x24c63742080",
+            "value": [
+              11
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63742080",
+              "i": 12
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63742080": [
+            11,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63742080",
+            "type": "list",
+            "address": "0x24c63742080",
+            "value": [
+              11,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63742e00",
+              "i": 12
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63742e00": [
+            12
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63742e00",
+            "type": "list",
+            "address": "0x24c63742e00",
+            "value": [
+              12
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63742e00",
+              "i": 13
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63742e00": [
+            12
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63742e00",
+            "type": "list",
+            "address": "0x24c63742e00",
+            "value": [
+              12
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63742e00",
+              "i": 13
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63742e00": [
+            12,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63742e00",
+            "type": "list",
+            "address": "0x24c63742e00",
+            "value": [
+              12,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63743b80",
+              "i": 13
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63743b80": [
+            13
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63743b80",
+            "type": "list",
+            "address": "0x24c63743b80",
+            "value": [
+              13
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63743b80",
+              "i": 14
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63743b80": [
+            13
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63743b80",
+            "type": "list",
+            "address": "0x24c63743b80",
+            "value": [
+              13
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63743b80",
+              "i": 14
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63743b80": [
+            13,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63743b80",
+            "type": "list",
+            "address": "0x24c63743b80",
+            "value": [
+              13,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374c940",
+              "i": 14
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374c940": [
+            14
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374c940",
+            "type": "list",
+            "address": "0x24c6374c940",
+            "value": [
+              14
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374c940",
+              "i": 15
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374c940": [
+            14
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374c940",
+            "type": "list",
+            "address": "0x24c6374c940",
+            "value": [
+              14
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374c940",
+              "i": 15
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374c940": [
+            14,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374c940",
+            "type": "list",
+            "address": "0x24c6374c940",
+            "value": [
+              14,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374d6c0",
+              "i": 15
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374d6c0": [
+            15
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374d6c0",
+            "type": "list",
+            "address": "0x24c6374d6c0",
+            "value": [
+              15
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374d6c0",
+              "i": 16
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374d6c0": [
+            15
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374d6c0",
+            "type": "list",
+            "address": "0x24c6374d6c0",
+            "value": [
+              15
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374d6c0",
+              "i": 16
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374d6c0": [
+            15,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374d6c0",
+            "type": "list",
+            "address": "0x24c6374d6c0",
+            "value": [
+              15,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374e440",
+              "i": 16
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374e440": [
+            16
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374e440",
+            "type": "list",
+            "address": "0x24c6374e440",
+            "value": [
+              16
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374e440",
+              "i": 17
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374e440": [
+            16
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374e440",
+            "type": "list",
+            "address": "0x24c6374e440",
+            "value": [
+              16
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374e440",
+              "i": 17
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374e440": [
+            16,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374e440",
+            "type": "list",
+            "address": "0x24c6374e440",
+            "value": [
+              16,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374f1c0",
+              "i": 17
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374f1c0": [
+            17
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374f1c0",
+            "type": "list",
+            "address": "0x24c6374f1c0",
+            "value": [
+              17
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374f1c0",
+              "i": 18
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374f1c0": [
+            17
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374f1c0",
+            "type": "list",
+            "address": "0x24c6374f1c0",
+            "value": [
+              17
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374f1c0",
+              "i": 18
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374f1c0": [
+            17,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374f1c0",
+            "type": "list",
+            "address": "0x24c6374f1c0",
+            "value": [
+              17,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374ff40",
+              "i": 18
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374ff40": [
+            18
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374ff40",
+            "type": "list",
+            "address": "0x24c6374ff40",
+            "value": [
+              18
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374ff40",
+              "i": 19
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374ff40": [
+            18
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374ff40",
+            "type": "list",
+            "address": "0x24c6374ff40",
+            "value": [
+              18
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c6374ff40",
+              "i": 19
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c6374ff40": [
+            18,
+            [
+              "..."
+            ]
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c6374ff40",
+            "type": "list",
+            "address": "0x24c6374ff40",
+            "value": [
+              18,
+              [
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63750d00",
+              "i": 19
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63750d00": [
+            19
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63750d00",
+            "type": "list",
+            "address": "0x24c63750d00",
+            "value": [
+              19
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": "curr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63750d00",
+              "i": 19
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63750d00": [
+            19
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63750d00",
+            "type": "list",
+            "address": "0x24c63750d00",
+            "value": [
+              19
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "root": "0x24c63735380",
+              "curr": "0x24c63750d00",
+              "i": 19
+            }
+          }
+        ],
+        "output": "Deep nesting depth: 1\n",
+        "ret": null,
+        "heap": {
+          "0x24c63735380": [
+            [
+              "...",
+              "..."
+            ]
+          ],
+          "0x24c63750d00": [
+            19
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x24c63735380",
+            "type": "list",
+            "address": "0x24c63735380",
+            "value": [
+              [
+                "...",
+                "..."
+              ]
+            ],
+            "targetIndex": null,
+            "label": "root"
+          },
+          {
+            "id": "heap-0x24c63750d00",
+            "type": "list",
+            "address": "0x24c63750d00",
+            "value": [
+              19
+            ],
+            "targetIndex": null,
+            "label": "curr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 360.95
+}

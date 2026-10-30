@@ -1,0 +1,241 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "point": [
+                10,
+                20,
+                30
+              ]
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "point",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "point": [
+                10,
+                20,
+                30
+              ],
+              "x": 10,
+              "y": 20,
+              "z": 30
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "point": [
+                10,
+                20,
+                30
+              ],
+              "x": 10,
+              "y": 20,
+              "z": 30,
+              "first": 1,
+              "rest": "0x2e6a56d0d80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x2e6a56d0d80": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x2e6a56d0d80",
+            "type": "list",
+            "address": "0x2e6a56d0d80",
+            "value": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "rest"
+          }
+        ],
+        "mutatedVariable": "first",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "point": [
+                10,
+                20,
+                30
+              ],
+              "x": 10,
+              "y": 20,
+              "z": 30,
+              "first": 1,
+              "rest": "0x2e6a56d0d80"
+            }
+          }
+        ],
+        "output": "x, y, z: 10 20 30\n",
+        "ret": null,
+        "heap": {
+          "0x2e6a56d0d80": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x2e6a56d0d80",
+            "type": "list",
+            "address": "0x2e6a56d0d80",
+            "value": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "rest"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "point": [
+                10,
+                20,
+                30
+              ],
+              "x": 10,
+              "y": 20,
+              "z": 30,
+              "first": 1,
+              "rest": "0x2e6a56d0d80"
+            }
+          }
+        ],
+        "output": "x, y, z: 10 20 30\nfirst: 1 rest: [2, 3, 4, 5]\n",
+        "ret": null,
+        "heap": {
+          "0x2e6a56d0d80": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x2e6a56d0d80",
+            "type": "list",
+            "address": "0x2e6a56d0d80",
+            "value": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "targetIndex": null,
+            "label": "rest"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 179.27
+}

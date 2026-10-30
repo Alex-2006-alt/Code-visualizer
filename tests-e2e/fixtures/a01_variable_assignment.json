@@ -1,0 +1,173 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "x": 10
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "x": 10,
+              "y": 20
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "y",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "x": 10,
+              "y": 20,
+              "z": 30
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "z",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "x": 10,
+              "y": 20,
+              "z": 30,
+              "name": "CodeTrace"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "name",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "x": 10,
+              "y": 20,
+              "z": 30,
+              "name": "CodeTrace",
+              "is_active": true
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "is_active",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "x": 10,
+              "y": 20,
+              "z": 30,
+              "name": "CodeTrace",
+              "is_active": true
+            }
+          }
+        ],
+        "output": "x=10, y=20, z=30, name=CodeTrace, is_active=True\n",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 1175.4
+}

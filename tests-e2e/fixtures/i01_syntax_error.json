@@ -1,0 +1,7 @@
+{
+  "status_code": 400,
+  "data": {
+    "detail": "SyntaxError: invalid syntax on line 1"
+  },
+  "latency_ms": 171.96
+}

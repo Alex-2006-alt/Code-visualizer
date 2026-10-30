@@ -1,0 +1,9 @@
+{
+  "status_code": 408,
+  "data": {
+    "error": "SANDBOX_TIMEOUT",
+    "detail": "Execution timed out after 5 seconds.",
+    "timeout_seconds": 5
+  },
+  "latency_ms": 5104.15
+}

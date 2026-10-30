@@ -1,0 +1,1183 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c37240": "<function climb_stairs at 0x0000021498C37240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c37240",
+            "type": "object",
+            "address": "0x21498c37240",
+            "value": "<function climb_stairs at 0x0000021498C37240>",
+            "targetIndex": null,
+            "label": "climb_stairs"
+          }
+        ],
+        "mutatedVariable": "climb_stairs",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 1,
+            "locals": {
+              "n": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "n",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 2,
+            "locals": {
+              "n": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 4,
+            "locals": {
+              "n": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 5,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": "dp",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 6,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 7,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 8,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840",
+              "i": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 7,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840",
+              "i": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 8,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840",
+              "i": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 7,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840",
+              "i": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              0,
+              0,
+              0,
+              0
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 8,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840",
+              "i": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              0,
+              0,
+              0,
+              0
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 7,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840",
+              "i": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            8,
+            0,
+            0,
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              8,
+              0,
+              0,
+              0
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 8,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840",
+              "i": 6
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            8,
+            0,
+            0,
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              8,
+              0,
+              0,
+              0
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 7,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840",
+              "i": 6
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            8,
+            13,
+            0,
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              8,
+              13,
+              0,
+              0
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 8,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840",
+              "i": 7
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            8,
+            13,
+            0,
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              8,
+              13,
+              0,
+              0
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 7,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840",
+              "i": 7
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            8,
+            13,
+            21,
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              8,
+              13,
+              21,
+              0
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 8,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840",
+              "i": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            8,
+            13,
+            21,
+            0
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              8,
+              13,
+              21,
+              0
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 7,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840",
+              "i": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            8,
+            13,
+            21,
+            34
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              8,
+              13,
+              21,
+              34
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 9,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840",
+              "i": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            8,
+            13,
+            21,
+            34
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              8,
+              13,
+              21,
+              34
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          },
+          {
+            "fn": "climb_stairs",
+            "line": 9,
+            "locals": {
+              "n": 8,
+              "dp": "0x21498c55840",
+              "i": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": 34,
+        "heap": {
+          "0x21498c55840": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            8,
+            13,
+            21,
+            34
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c55840",
+            "type": "list",
+            "address": "0x21498c55840",
+            "value": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              8,
+              13,
+              21,
+              34
+            ],
+            "targetIndex": null,
+            "label": "dp"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 11,
+            "locals": {
+              "climb_stairs": "0x21498c37240"
+            }
+          }
+        ],
+        "output": "Ways to climb 8 stairs: 34\n",
+        "ret": null,
+        "heap": {
+          "0x21498c37240": "<function climb_stairs at 0x0000021498C37240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21498c37240",
+            "type": "object",
+            "address": "0x21498c37240",
+            "value": "<function climb_stairs at 0x0000021498C37240>",
+            "targetIndex": null,
+            "label": "climb_stairs"
+          }
+        ],
+        "mutatedVariable": "climb_stairs",
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 220.56
+}

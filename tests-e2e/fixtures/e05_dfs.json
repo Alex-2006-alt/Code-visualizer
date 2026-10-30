@@ -1,0 +1,3361 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "graph": "0x20da2bc5780"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc5780": {
+            "A": [
+              "...",
+              "..."
+            ],
+            "B": [
+              "..."
+            ],
+            "C": [
+              "...",
+              "..."
+            ],
+            "D": [],
+            "E": [],
+            "F": []
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc5780",
+            "type": "dict",
+            "address": "0x20da2bc5780",
+            "value": {
+              "A": [
+                "...",
+                "..."
+              ],
+              "B": [
+                "..."
+              ],
+              "C": [
+                "...",
+                "..."
+              ],
+              "D": [],
+              "E": [],
+              "F": []
+            },
+            "targetIndex": null,
+            "label": "graph"
+          }
+        ],
+        "mutatedVariable": "graph",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 19,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc5780": {
+            "A": [
+              "...",
+              "..."
+            ],
+            "B": [
+              "..."
+            ],
+            "C": [
+              "...",
+              "..."
+            ],
+            "D": [],
+            "E": [],
+            "F": []
+          },
+          "0x20da2ba7240": "<function dfs at 0x0000020DA2BA7240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc5780",
+            "type": "dict",
+            "address": "0x20da2bc5780",
+            "value": {
+              "A": [
+                "...",
+                "..."
+              ],
+              "B": [
+                "..."
+              ],
+              "C": [
+                "...",
+                "..."
+              ],
+              "D": [],
+              "E": [],
+              "F": []
+            },
+            "targetIndex": null,
+            "label": "graph"
+          },
+          {
+            "id": "heap-0x20da2ba7240",
+            "type": "object",
+            "address": "0x20da2ba7240",
+            "value": "<function dfs at 0x0000020DA2BA7240>",
+            "targetIndex": null,
+            "label": "dfs"
+          }
+        ],
+        "mutatedVariable": "dfs",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 10,
+            "locals": {
+              "node": "A",
+              "visited": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 11,
+            "locals": {
+              "node": "A",
+              "visited": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 12,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 12,
+            "locals": {
+              "node": "A",
+              "visited": null
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 13,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "visited",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 14,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 15,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "neighbor",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 16,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 10,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 11,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 13,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 14,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 15,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980",
+              "neighbor": "D"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "neighbor",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 16,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980",
+              "neighbor": "D"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980",
+              "neighbor": "D"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 10,
+            "locals": {
+              "node": "D",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980",
+              "neighbor": "D"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 11,
+            "locals": {
+              "node": "D",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980",
+              "neighbor": "D"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 13,
+            "locals": {
+              "node": "D",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980",
+              "neighbor": "D"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 14,
+            "locals": {
+              "node": "D",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980",
+              "neighbor": "D"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 17,
+            "locals": {
+              "node": "D",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980",
+              "neighbor": "D"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 17,
+            "locals": {
+              "node": "D",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "A",
+          "B",
+          "D"
+        ],
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 14,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980",
+              "neighbor": "D"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 17,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980",
+              "neighbor": "D"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 17,
+            "locals": {
+              "node": "B",
+              "visited": "0x20da2bc4980",
+              "neighbor": "D"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "A",
+          "B",
+          "D"
+        ],
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 14,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "B"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 15,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "neighbor",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 16,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 10,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 11,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 13,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 14,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 15,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "E"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "neighbor",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 16,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "E"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "E"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 10,
+            "locals": {
+              "node": "E",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "E"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 11,
+            "locals": {
+              "node": "E",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "E"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 13,
+            "locals": {
+              "node": "E",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "E"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 14,
+            "locals": {
+              "node": "E",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "E"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 17,
+            "locals": {
+              "node": "E",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "E"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 17,
+            "locals": {
+              "node": "E",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "A",
+          "B",
+          "D",
+          "C",
+          "E"
+        ],
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 14,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "E"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 15,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "neighbor",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 16,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "F"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 10,
+            "locals": {
+              "node": "F",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "F"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 11,
+            "locals": {
+              "node": "F",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "F"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 13,
+            "locals": {
+              "node": "F",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "F"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 14,
+            "locals": {
+              "node": "F",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "F"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 17,
+            "locals": {
+              "node": "F",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "F"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 17,
+            "locals": {
+              "node": "F",
+              "visited": "0x20da2bc4980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "A",
+          "B",
+          "D",
+          "C",
+          "E",
+          "F"
+        ],
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 14,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 17,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 16,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 17,
+            "locals": {
+              "node": "C",
+              "visited": "0x20da2bc4980",
+              "neighbor": "F"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "A",
+          "B",
+          "D",
+          "C",
+          "E",
+          "F"
+        ],
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 14,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": "node",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 17,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 17,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          },
+          {
+            "fn": "dfs",
+            "line": 17,
+            "locals": {
+              "node": "A",
+              "visited": "0x20da2bc4980",
+              "neighbor": "C"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "A",
+          "B",
+          "D",
+          "C",
+          "E",
+          "F"
+        ],
+        "heap": {
+          "0x20da2bc4980": [
+            "A",
+            "B",
+            "D",
+            "C",
+            "E",
+            "F"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc4980",
+            "type": "list",
+            "address": "0x20da2bc4980",
+            "value": [
+              "A",
+              "B",
+              "D",
+              "C",
+              "E",
+              "F"
+            ],
+            "targetIndex": null,
+            "label": "visited"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 19,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 19,
+            "locals": {
+              "graph": "0x20da2bc5780",
+              "dfs": "0x20da2ba7240"
+            }
+          }
+        ],
+        "output": "DFS order: ['A', 'B', 'D', 'C', 'E', 'F']\n",
+        "ret": null,
+        "heap": {
+          "0x20da2bc5780": {
+            "A": [
+              "...",
+              "..."
+            ],
+            "B": [
+              "..."
+            ],
+            "C": [
+              "...",
+              "..."
+            ],
+            "D": [],
+            "E": [],
+            "F": []
+          },
+          "0x20da2ba7240": "<function dfs at 0x0000020DA2BA7240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20da2bc5780",
+            "type": "dict",
+            "address": "0x20da2bc5780",
+            "value": {
+              "A": [
+                "...",
+                "..."
+              ],
+              "B": [
+                "..."
+              ],
+              "C": [
+                "...",
+                "..."
+              ],
+              "D": [],
+              "E": [],
+              "F": []
+            },
+            "targetIndex": null,
+            "label": "graph"
+          },
+          {
+            "id": "heap-0x20da2ba7240",
+            "type": "object",
+            "address": "0x20da2ba7240",
+            "value": "<function dfs at 0x0000020DA2BA7240>",
+            "targetIndex": null,
+            "label": "dfs"
+          }
+        ],
+        "mutatedVariable": "graph",
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 245.11
+}

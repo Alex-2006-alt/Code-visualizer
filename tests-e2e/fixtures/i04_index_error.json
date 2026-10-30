@@ -1,0 +1,178 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "arr": "0x2d3baa94980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x2d3baa94980": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x2d3baa94980",
+            "type": "list",
+            "address": "0x2d3baa94980",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "exception",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "arr": "0x2d3baa94980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x2d3baa94980": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x2d3baa94980",
+            "type": "list",
+            "address": "0x2d3baa94980",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": "IndexError: list index out of range"
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "arr": "0x2d3baa94980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x2d3baa94980": [
+            1,
+            2,
+            3
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x2d3baa94980",
+            "type": "list",
+            "address": "0x2d3baa94980",
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "exception",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "arr": "0x2d3baa94980"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": null,
+        "heapObjects": null,
+        "mutatedVariable": null,
+        "explanation": "IndexError: list index out of range"
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": "IndexError: list index out of range"
+  },
+  "latency_ms": 148.16
+}

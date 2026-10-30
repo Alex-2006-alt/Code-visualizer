@@ -1,0 +1,2365 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x14193675dc0": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x14193675dc0",
+            "type": "list",
+            "address": "0x14193675dc0",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "targetIndex": null,
+            "label": "numbers"
+          }
+        ],
+        "mutatedVariable": "numbers",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": ".0",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": 4,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": 8,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 6
+            }
+          }
+        ],
+        "output": "",
+        "ret": 12,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 6
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 6
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 7
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": 16,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 9
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 10
+            }
+          }
+        ],
+        "output": "",
+        "ret": 20,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 10
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 10
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 11
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 12
+            }
+          }
+        ],
+        "output": "",
+        "ret": 24,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 12
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 12
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 13
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 14
+            }
+          }
+        ],
+        "output": "",
+        "ret": 28,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 14
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 14
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 15
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 16
+            }
+          }
+        ],
+        "output": "",
+        "ret": 32,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 16
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 16
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 17
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 18
+            }
+          }
+        ],
+        "output": "",
+        "ret": 36,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 18
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 18
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 19
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 20
+            }
+          }
+        ],
+        "output": "",
+        "ret": 40,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 20
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 20
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 20
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": 9,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 6
+            }
+          }
+        ],
+        "output": "",
+        "ret": 18,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 6
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 6
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 7
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 9
+            }
+          }
+        ],
+        "output": "",
+        "ret": 27,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 9
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 9
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 10
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 11
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 12
+            }
+          }
+        ],
+        "output": "",
+        "ret": 36,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 12
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 12
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 13
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 14
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 15
+            }
+          }
+        ],
+        "output": "",
+        "ret": 45,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 15
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 15
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 16
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 17
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 18
+            }
+          }
+        ],
+        "output": "",
+        "ret": 54,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 18
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 18
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 19
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 20
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "numbers": "0x14193675dc0"
+            }
+          },
+          {
+            "fn": "<genexpr>",
+            "line": 2,
+            "locals": {
+              ".0": "<list_iterator object at 0x0000014193670CA0>",
+              "x": 20
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "numbers": "0x14193675dc0",
+              "combined": 409
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x14193675dc0": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x14193675dc0",
+            "type": "list",
+            "address": "0x14193675dc0",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "targetIndex": null,
+            "label": "numbers"
+          }
+        ],
+        "mutatedVariable": "numbers",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "numbers": "0x14193675dc0",
+              "combined": 409
+            }
+          }
+        ],
+        "output": "Combined long calc: 409\n",
+        "ret": null,
+        "heap": {
+          "0x14193675dc0": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x14193675dc0",
+            "type": "list",
+            "address": "0x14193675dc0",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "targetIndex": null,
+            "label": "numbers"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 175.02
+}

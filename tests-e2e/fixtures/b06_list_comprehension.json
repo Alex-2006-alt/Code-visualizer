@@ -1,0 +1,684 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {
+              "x": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {
+              "x": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {
+              "x": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {
+              "x": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {
+              "x": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {
+              "x": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {
+              "x": 6
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {
+              "x": 7
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {
+              "x": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {
+              "x": 9
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "evens": "0x21137f35280"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21137f35280": [
+            0,
+            2,
+            4,
+            6,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21137f35280",
+            "type": "list",
+            "address": "0x21137f35280",
+            "value": [
+              0,
+              2,
+              4,
+              6,
+              8
+            ],
+            "targetIndex": null,
+            "label": "evens"
+          }
+        ],
+        "mutatedVariable": "evens",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "evens": "0x21137f35280",
+              "x": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21137f35280": [
+            0,
+            2,
+            4,
+            6,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21137f35280",
+            "type": "list",
+            "address": "0x21137f35280",
+            "value": [
+              0,
+              2,
+              4,
+              6,
+              8
+            ],
+            "targetIndex": null,
+            "label": "evens"
+          }
+        ],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "evens": "0x21137f35280",
+              "x": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21137f35280": [
+            0,
+            2,
+            4,
+            6,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21137f35280",
+            "type": "list",
+            "address": "0x21137f35280",
+            "value": [
+              0,
+              2,
+              4,
+              6,
+              8
+            ],
+            "targetIndex": null,
+            "label": "evens"
+          }
+        ],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "evens": "0x21137f35280",
+              "x": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21137f35280": [
+            0,
+            2,
+            4,
+            6,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21137f35280",
+            "type": "list",
+            "address": "0x21137f35280",
+            "value": [
+              0,
+              2,
+              4,
+              6,
+              8
+            ],
+            "targetIndex": null,
+            "label": "evens"
+          }
+        ],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "evens": "0x21137f35280",
+              "x": 6
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21137f35280": [
+            0,
+            2,
+            4,
+            6,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21137f35280",
+            "type": "list",
+            "address": "0x21137f35280",
+            "value": [
+              0,
+              2,
+              4,
+              6,
+              8
+            ],
+            "targetIndex": null,
+            "label": "evens"
+          }
+        ],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "evens": "0x21137f35280",
+              "x": 8
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21137f35280": [
+            0,
+            2,
+            4,
+            6,
+            8
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21137f35280",
+            "type": "list",
+            "address": "0x21137f35280",
+            "value": [
+              0,
+              2,
+              4,
+              6,
+              8
+            ],
+            "targetIndex": null,
+            "label": "evens"
+          }
+        ],
+        "mutatedVariable": "x",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "evens": "0x21137f35280",
+              "squares": "0x21137ca1000"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x21137f35280": [
+            0,
+            2,
+            4,
+            6,
+            8
+          ],
+          "0x21137ca1000": [
+            0,
+            4,
+            16,
+            36,
+            64
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21137f35280",
+            "type": "list",
+            "address": "0x21137f35280",
+            "value": [
+              0,
+              2,
+              4,
+              6,
+              8
+            ],
+            "targetIndex": null,
+            "label": "evens"
+          },
+          {
+            "id": "heap-0x21137ca1000",
+            "type": "list",
+            "address": "0x21137ca1000",
+            "value": [
+              0,
+              4,
+              16,
+              36,
+              64
+            ],
+            "targetIndex": null,
+            "label": "squares"
+          }
+        ],
+        "mutatedVariable": "squares",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "evens": "0x21137f35280",
+              "squares": "0x21137ca1000"
+            }
+          }
+        ],
+        "output": "evens: [0, 2, 4, 6, 8]\n",
+        "ret": null,
+        "heap": {
+          "0x21137f35280": [
+            0,
+            2,
+            4,
+            6,
+            8
+          ],
+          "0x21137ca1000": [
+            0,
+            4,
+            16,
+            36,
+            64
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21137f35280",
+            "type": "list",
+            "address": "0x21137f35280",
+            "value": [
+              0,
+              2,
+              4,
+              6,
+              8
+            ],
+            "targetIndex": null,
+            "label": "evens"
+          },
+          {
+            "id": "heap-0x21137ca1000",
+            "type": "list",
+            "address": "0x21137ca1000",
+            "value": [
+              0,
+              4,
+              16,
+              36,
+              64
+            ],
+            "targetIndex": null,
+            "label": "squares"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "evens": "0x21137f35280",
+              "squares": "0x21137ca1000"
+            }
+          }
+        ],
+        "output": "evens: [0, 2, 4, 6, 8]\nsquares: [0, 4, 16, 36, 64]\n",
+        "ret": null,
+        "heap": {
+          "0x21137f35280": [
+            0,
+            2,
+            4,
+            6,
+            8
+          ],
+          "0x21137ca1000": [
+            0,
+            4,
+            16,
+            36,
+            64
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x21137f35280",
+            "type": "list",
+            "address": "0x21137f35280",
+            "value": [
+              0,
+              2,
+              4,
+              6,
+              8
+            ],
+            "targetIndex": null,
+            "label": "evens"
+          },
+          {
+            "id": "heap-0x21137ca1000",
+            "type": "list",
+            "address": "0x21137ca1000",
+            "value": [
+              0,
+              4,
+              16,
+              36,
+              64
+            ],
+            "targetIndex": null,
+            "label": "squares"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 150.72
+}

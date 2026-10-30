@@ -1,0 +1,554 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "append_to": "0x25b43187240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x25b43187240": "<function append_to at 0x0000025B43187240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x25b43187240",
+            "type": "object",
+            "address": "0x25b43187240",
+            "value": "<function append_to at 0x0000025B43187240>",
+            "targetIndex": null,
+            "label": "append_to"
+          }
+        ],
+        "mutatedVariable": "append_to",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "append_to": "0x25b43187240"
+            }
+          },
+          {
+            "fn": "append_to",
+            "line": 1,
+            "locals": {
+              "element": 1,
+              "target": "0x25b431a4fc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x25b431a4fc0": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x25b431a4fc0",
+            "type": "list",
+            "address": "0x25b431a4fc0",
+            "value": [],
+            "targetIndex": null,
+            "label": "target"
+          }
+        ],
+        "mutatedVariable": "element",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "append_to": "0x25b43187240"
+            }
+          },
+          {
+            "fn": "append_to",
+            "line": 2,
+            "locals": {
+              "element": 1,
+              "target": "0x25b431a4fc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x25b431a4fc0": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x25b431a4fc0",
+            "type": "list",
+            "address": "0x25b431a4fc0",
+            "value": [],
+            "targetIndex": null,
+            "label": "target"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "append_to": "0x25b43187240"
+            }
+          },
+          {
+            "fn": "append_to",
+            "line": 3,
+            "locals": {
+              "element": 1,
+              "target": "0x25b431a4fc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x25b431a4fc0": [
+            1
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x25b431a4fc0",
+            "type": "list",
+            "address": "0x25b431a4fc0",
+            "value": [
+              1
+            ],
+            "targetIndex": null,
+            "label": "target"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "append_to": "0x25b43187240"
+            }
+          },
+          {
+            "fn": "append_to",
+            "line": 3,
+            "locals": {
+              "element": 1,
+              "target": "0x25b431a4fc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          1
+        ],
+        "heap": {
+          "0x25b431a4fc0": [
+            1
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x25b431a4fc0",
+            "type": "list",
+            "address": "0x25b431a4fc0",
+            "value": [
+              1
+            ],
+            "targetIndex": null,
+            "label": "target"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "append_to": "0x25b43187240",
+              "r1": "0x25b431a4fc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x25b43187240": "<function append_to at 0x0000025B43187240>",
+          "0x25b431a4fc0": [
+            1
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x25b43187240",
+            "type": "object",
+            "address": "0x25b43187240",
+            "value": "<function append_to at 0x0000025B43187240>",
+            "targetIndex": null,
+            "label": "append_to"
+          },
+          {
+            "id": "heap-0x25b431a4fc0",
+            "type": "list",
+            "address": "0x25b431a4fc0",
+            "value": [
+              1
+            ],
+            "targetIndex": null,
+            "label": "r1"
+          }
+        ],
+        "mutatedVariable": "append_to",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "append_to": "0x25b43187240",
+              "r1": "0x25b431a4fc0"
+            }
+          },
+          {
+            "fn": "append_to",
+            "line": 1,
+            "locals": {
+              "element": 2,
+              "target": "0x25b431a4fc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x25b431a4fc0": [
+            1
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x25b431a4fc0",
+            "type": "list",
+            "address": "0x25b431a4fc0",
+            "value": [
+              1
+            ],
+            "targetIndex": null,
+            "label": "target"
+          }
+        ],
+        "mutatedVariable": "element",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "append_to": "0x25b43187240",
+              "r1": "0x25b431a4fc0"
+            }
+          },
+          {
+            "fn": "append_to",
+            "line": 2,
+            "locals": {
+              "element": 2,
+              "target": "0x25b431a4fc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x25b431a4fc0": [
+            1
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x25b431a4fc0",
+            "type": "list",
+            "address": "0x25b431a4fc0",
+            "value": [
+              1
+            ],
+            "targetIndex": null,
+            "label": "target"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "append_to": "0x25b43187240",
+              "r1": "0x25b431a4fc0"
+            }
+          },
+          {
+            "fn": "append_to",
+            "line": 3,
+            "locals": {
+              "element": 2,
+              "target": "0x25b431a4fc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x25b431a4fc0": [
+            1,
+            2
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x25b431a4fc0",
+            "type": "list",
+            "address": "0x25b431a4fc0",
+            "value": [
+              1,
+              2
+            ],
+            "targetIndex": null,
+            "label": "target"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "append_to": "0x25b43187240",
+              "r1": "0x25b431a4fc0"
+            }
+          },
+          {
+            "fn": "append_to",
+            "line": 3,
+            "locals": {
+              "element": 2,
+              "target": "0x25b431a4fc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          1,
+          2
+        ],
+        "heap": {
+          "0x25b431a4fc0": [
+            1,
+            2
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x25b431a4fc0",
+            "type": "list",
+            "address": "0x25b431a4fc0",
+            "value": [
+              1,
+              2
+            ],
+            "targetIndex": null,
+            "label": "target"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "append_to": "0x25b43187240",
+              "r1": "0x25b431a4fc0",
+              "r2": "0x25b431a4fc0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x25b43187240": "<function append_to at 0x0000025B43187240>",
+          "0x25b431a4fc0": [
+            1,
+            2
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x25b43187240",
+            "type": "object",
+            "address": "0x25b43187240",
+            "value": "<function append_to at 0x0000025B43187240>",
+            "targetIndex": null,
+            "label": "append_to"
+          },
+          {
+            "id": "heap-0x25b431a4fc0",
+            "type": "list",
+            "address": "0x25b431a4fc0",
+            "value": [
+              1,
+              2
+            ],
+            "targetIndex": null,
+            "label": "r1"
+          }
+        ],
+        "mutatedVariable": "append_to",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 7,
+            "locals": {
+              "append_to": "0x25b43187240",
+              "r1": "0x25b431a4fc0",
+              "r2": "0x25b431a4fc0"
+            }
+          }
+        ],
+        "output": "r1: [1, 2] r2: [1, 2] same list: True\n",
+        "ret": null,
+        "heap": {
+          "0x25b43187240": "<function append_to at 0x0000025B43187240>",
+          "0x25b431a4fc0": [
+            1,
+            2
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x25b43187240",
+            "type": "object",
+            "address": "0x25b43187240",
+            "value": "<function append_to at 0x0000025B43187240>",
+            "targetIndex": null,
+            "label": "append_to"
+          },
+          {
+            "id": "heap-0x25b431a4fc0",
+            "type": "list",
+            "address": "0x25b431a4fc0",
+            "value": [
+              1,
+              2
+            ],
+            "targetIndex": null,
+            "label": "r1"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 171.77
+}

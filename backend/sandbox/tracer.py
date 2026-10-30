@@ -148,7 +148,7 @@ def _build_stack(current_frame: types.FrameType) -> list[dict[str, Any]]:
 
             stack.append({
                 "fn": fn_name,
-                "line": frame.f_lineno,
+                "line": max(1, frame.f_lineno),
                 "locals": clean_locals,
             })
         frame = frame.f_back
@@ -165,13 +165,28 @@ def _secure_import(
     level: int = 0,
 ) -> Any:
     """Guarded import function restricting imports to the allowlist."""
-    top_level = name.split(".")[0]
-    if top_level not in IMPORT_ALLOWLIST:
-        raise ImportError(f"Importing '{name}' is forbidden for security reasons.")
+    try:
+        caller = sys._getframe(1)
+        # Enforce allowlist on user code frames
+        if caller.f_code.co_filename == USER_FILENAME:
+            top_level = name.split(".")[0]
+            if top_level not in IMPORT_ALLOWLIST:
+                raise ImportError(f"Importing '{name}' is forbidden for security reasons.")
+    except (ValueError, AttributeError):
+        top_level = name.split(".")[0]
+        if top_level not in IMPORT_ALLOWLIST:
+            raise ImportError(f"Importing '{name}' is forbidden for security reasons.") from None
+
     return orig_import(name, globals_dict, locals_dict, fromlist, level)
 
 
+def _blocked_open(*args: Any, **kwargs: Any) -> Any:
+    """Prohibit arbitrary filesystem access via open() in sandbox."""
+    raise PermissionError("Direct file system access via open() is prohibited in the sandbox.")
+
+
 orig_import = builtins.__import__
+orig_open = builtins.open
 
 
 def trace_code(
@@ -228,7 +243,7 @@ def trace_code(
 
             step_data: dict[str, Any] = {
                 "event": event,
-                "line": frame.f_lineno,
+                "line": max(1, frame.f_lineno),
                 "stack": stack,
                 "output": current_output,
                 "heap": heap_mapping,
@@ -255,6 +270,7 @@ def trace_code(
     sys.stdout = stdout_capture
     sys.stdin = stdin_capture
     builtins.__import__ = _secure_import  # type: ignore[assignment]
+    builtins.open = _blocked_open
 
     # Compile user code
     try:
@@ -263,6 +279,7 @@ def trace_code(
         sys.stdout = old_stdout
         sys.stdin = old_stdin
         builtins.__import__ = orig_import
+        builtins.open = orig_open
         return {
             "steps": [],
             "truncated": False,
@@ -273,6 +290,7 @@ def trace_code(
         sys.stdout = old_stdout
         sys.stdin = old_stdin
         builtins.__import__ = orig_import
+        builtins.open = orig_open
         return {
             "steps": [],
             "truncated": False,
@@ -308,6 +326,7 @@ def trace_code(
         sys.stdout = old_stdout
         sys.stdin = old_stdin
         builtins.__import__ = orig_import
+        builtins.open = orig_open
 
     return {
         "steps": steps,

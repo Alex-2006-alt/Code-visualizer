@@ -1,0 +1,2453 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 13,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 13,
+            "locals": {
+              "binary_search": "0x15909107240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x15909107240": "<function binary_search at 0x0000015909107240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909107240",
+            "type": "object",
+            "address": "0x15909107240",
+            "value": "<function binary_search at 0x0000015909107240>",
+            "targetIndex": null,
+            "label": "binary_search"
+          }
+        ],
+        "mutatedVariable": "binary_search",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 14,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 14,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x15909107240": "<function binary_search at 0x0000015909107240>",
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909107240",
+            "type": "object",
+            "address": "0x15909107240",
+            "value": "<function binary_search at 0x0000015909107240>",
+            "targetIndex": null,
+            "label": "binary_search"
+          },
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "items"
+          }
+        ],
+        "mutatedVariable": "items",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 14,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 1,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 23
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 14,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 2,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 23
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 14,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 3,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 23,
+              "low": 0,
+              "high": 7
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "low",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 14,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 4,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 23,
+              "low": 0,
+              "high": 7
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 14,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 5,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 23,
+              "low": 0,
+              "high": 7,
+              "mid": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "mid",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 14,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 7,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 23,
+              "low": 0,
+              "high": 7,
+              "mid": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 14,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 8,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 23,
+              "low": 0,
+              "high": 7,
+              "mid": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 14,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 3,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 23,
+              "low": 4,
+              "high": 7,
+              "mid": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "low",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 14,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 4,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 23,
+              "low": 4,
+              "high": 7,
+              "mid": 3
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 14,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 5,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 23,
+              "low": 4,
+              "high": 7,
+              "mid": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "mid",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 14,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 6,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 23,
+              "low": 4,
+              "high": 7,
+              "mid": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 14,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 6,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 23,
+              "low": 4,
+              "high": 7,
+              "mid": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": 5,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909107240": "<function binary_search at 0x0000015909107240>",
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909107240",
+            "type": "object",
+            "address": "0x15909107240",
+            "value": "<function binary_search at 0x0000015909107240>",
+            "targetIndex": null,
+            "label": "binary_search"
+          },
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "items"
+          }
+        ],
+        "mutatedVariable": "binary_search",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 1,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "arr",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 2,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 3,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 0,
+              "high": 7
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "low",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 4,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 0,
+              "high": 7
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 5,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 0,
+              "high": 7,
+              "mid": 3
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "mid",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 7,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 0,
+              "high": 7,
+              "mid": 3
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 8,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 0,
+              "high": 7,
+              "mid": 3
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 3,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 4,
+              "high": 7,
+              "mid": 3
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "low",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 4,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 4,
+              "high": 7,
+              "mid": 3
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 5,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 4,
+              "high": 7,
+              "mid": 5
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "mid",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 7,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 4,
+              "high": 7,
+              "mid": 5
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 8,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 4,
+              "high": 7,
+              "mid": 5
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 3,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 6,
+              "high": 7,
+              "mid": 5
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "low",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 4,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 6,
+              "high": 7,
+              "mid": 5
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 5,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 6,
+              "high": 7,
+              "mid": 6
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "mid",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 7,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 6,
+              "high": 7,
+              "mid": 6
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 8,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 6,
+              "high": 7,
+              "mid": 6
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 3,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 7,
+              "high": 7,
+              "mid": 6
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "low",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 4,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 7,
+              "high": 7,
+              "mid": 6
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 5,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 7,
+              "high": 7,
+              "mid": 7
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "mid",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 7,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 7,
+              "high": 7,
+              "mid": 7
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 8,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 7,
+              "high": 7,
+              "mid": 7
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 3,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 8,
+              "high": 7,
+              "mid": 7
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": "low",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 11,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 8,
+              "high": 7,
+              "mid": 7
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": null,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 11,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          },
+          {
+            "fn": "binary_search",
+            "line": 11,
+            "locals": {
+              "arr": "0x15909127700",
+              "target": 99,
+              "low": 8,
+              "high": 7,
+              "mid": 7
+            }
+          }
+        ],
+        "output": "Index of 23: 5\n",
+        "ret": -1,
+        "heap": {
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "arr"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 15,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 15,
+            "locals": {
+              "binary_search": "0x15909107240",
+              "items": "0x15909127700"
+            }
+          }
+        ],
+        "output": "Index of 23: 5\nIndex of 99: -1\n",
+        "ret": null,
+        "heap": {
+          "0x15909107240": "<function binary_search at 0x0000015909107240>",
+          "0x15909127700": [
+            2,
+            5,
+            8,
+            12,
+            16,
+            23,
+            38,
+            56
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x15909107240",
+            "type": "object",
+            "address": "0x15909107240",
+            "value": "<function binary_search at 0x0000015909107240>",
+            "targetIndex": null,
+            "label": "binary_search"
+          },
+          {
+            "id": "heap-0x15909127700",
+            "type": "list",
+            "address": "0x15909127700",
+            "value": [
+              2,
+              5,
+              8,
+              12,
+              16,
+              23,
+              38,
+              56
+            ],
+            "targetIndex": null,
+            "label": "items"
+          }
+        ],
+        "mutatedVariable": "binary_search",
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 162.1
+}

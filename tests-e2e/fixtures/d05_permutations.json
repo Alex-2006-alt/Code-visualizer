@@ -1,0 +1,4511 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541e87240": "<function permute at 0x0000020541E87240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541e87240",
+            "type": "object",
+            "address": "0x20541e87240",
+            "value": "<function permute at 0x0000020541E87240>",
+            "targetIndex": null,
+            "label": "permute"
+          }
+        ],
+        "mutatedVariable": "permute",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 1,
+            "locals": {
+              "s": "abc"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 2,
+            "locals": {
+              "s": "abc"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 4,
+            "locals": {
+              "s": "abc"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 5,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "perms",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 1,
+            "locals": {
+              "s": "bc"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 2,
+            "locals": {
+              "s": "bc"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 4,
+            "locals": {
+              "s": "bc"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 5,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea6a00": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea6a00",
+            "type": "list",
+            "address": "0x20541ea6a00",
+            "value": [],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "perms",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 0,
+              "c": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea6a00": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea6a00",
+            "type": "list",
+            "address": "0x20541ea6a00",
+            "value": [],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 0,
+              "c": "b"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 1,
+            "locals": {
+              "s": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 0,
+              "c": "b"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 2,
+            "locals": {
+              "s": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 0,
+              "c": "b"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 3,
+            "locals": {
+              "s": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 0,
+              "c": "b"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 3,
+            "locals": {
+              "s": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "c"
+        ],
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 7,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 0,
+              "c": "b",
+              "p": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea6a00": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea6a00",
+            "type": "list",
+            "address": "0x20541ea6a00",
+            "value": [],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 0,
+              "c": "b",
+              "p": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea6a00": [
+            "bc"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea6a00",
+            "type": "list",
+            "address": "0x20541ea6a00",
+            "value": [
+              "bc"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 5,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 0,
+              "c": "b",
+              "p": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea6a00": [
+            "bc"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea6a00",
+            "type": "list",
+            "address": "0x20541ea6a00",
+            "value": [
+              "bc"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 1,
+              "c": "c",
+              "p": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea6a00": [
+            "bc"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea6a00",
+            "type": "list",
+            "address": "0x20541ea6a00",
+            "value": [
+              "bc"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 1,
+              "c": "c",
+              "p": "c"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 1,
+            "locals": {
+              "s": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 1,
+              "c": "c",
+              "p": "c"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 2,
+            "locals": {
+              "s": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 1,
+              "c": "c",
+              "p": "c"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 3,
+            "locals": {
+              "s": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 1,
+              "c": "c",
+              "p": "c"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 3,
+            "locals": {
+              "s": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "b"
+        ],
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 7,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 1,
+              "c": "c",
+              "p": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea6a00": [
+            "bc"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea6a00",
+            "type": "list",
+            "address": "0x20541ea6a00",
+            "value": [
+              "bc"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 1,
+              "c": "c",
+              "p": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea6a00": [
+            "bc",
+            "cb"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea6a00",
+            "type": "list",
+            "address": "0x20541ea6a00",
+            "value": [
+              "bc",
+              "cb"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 5,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 1,
+              "c": "c",
+              "p": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea6a00": [
+            "bc",
+            "cb"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea6a00",
+            "type": "list",
+            "address": "0x20541ea6a00",
+            "value": [
+              "bc",
+              "cb"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 8,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 1,
+              "c": "c",
+              "p": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea6a00": [
+            "bc",
+            "cb"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea6a00",
+            "type": "list",
+            "address": "0x20541ea6a00",
+            "value": [
+              "bc",
+              "cb"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 8,
+            "locals": {
+              "s": "bc",
+              "perms": "0x20541ea6a00",
+              "i": 1,
+              "c": "c",
+              "p": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "bc",
+          "cb"
+        ],
+        "heap": {
+          "0x20541ea6a00": [
+            "bc",
+            "cb"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea6a00",
+            "type": "list",
+            "address": "0x20541ea6a00",
+            "value": [
+              "bc",
+              "cb"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 7,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a",
+              "p": "bc"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a",
+              "p": "bc"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 7,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a",
+              "p": "cb"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "p",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a",
+              "p": "cb"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 5,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 0,
+              "c": "a",
+              "p": "cb"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 1,
+            "locals": {
+              "s": "ac"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 2,
+            "locals": {
+              "s": "ac"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 4,
+            "locals": {
+              "s": "ac"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 5,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541eb5f80": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541eb5f80",
+            "type": "list",
+            "address": "0x20541eb5f80",
+            "value": [],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "perms",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 0,
+              "c": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541eb5f80": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541eb5f80",
+            "type": "list",
+            "address": "0x20541eb5f80",
+            "value": [],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 1,
+            "locals": {
+              "s": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 2,
+            "locals": {
+              "s": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 3,
+            "locals": {
+              "s": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 3,
+            "locals": {
+              "s": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "c"
+        ],
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 7,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 0,
+              "c": "a",
+              "p": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541eb5f80": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541eb5f80",
+            "type": "list",
+            "address": "0x20541eb5f80",
+            "value": [],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 0,
+              "c": "a",
+              "p": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541eb5f80": [
+            "ac"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541eb5f80",
+            "type": "list",
+            "address": "0x20541eb5f80",
+            "value": [
+              "ac"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 5,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 0,
+              "c": "a",
+              "p": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541eb5f80": [
+            "ac"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541eb5f80",
+            "type": "list",
+            "address": "0x20541eb5f80",
+            "value": [
+              "ac"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 1,
+              "c": "c",
+              "p": "c"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541eb5f80": [
+            "ac"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541eb5f80",
+            "type": "list",
+            "address": "0x20541eb5f80",
+            "value": [
+              "ac"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 1,
+              "c": "c",
+              "p": "c"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 1,
+            "locals": {
+              "s": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 1,
+              "c": "c",
+              "p": "c"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 2,
+            "locals": {
+              "s": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 1,
+              "c": "c",
+              "p": "c"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 3,
+            "locals": {
+              "s": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 1,
+              "c": "c",
+              "p": "c"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 3,
+            "locals": {
+              "s": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "a"
+        ],
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 7,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 1,
+              "c": "c",
+              "p": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541eb5f80": [
+            "ac"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541eb5f80",
+            "type": "list",
+            "address": "0x20541eb5f80",
+            "value": [
+              "ac"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 1,
+              "c": "c",
+              "p": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541eb5f80": [
+            "ac",
+            "ca"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541eb5f80",
+            "type": "list",
+            "address": "0x20541eb5f80",
+            "value": [
+              "ac",
+              "ca"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 5,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 1,
+              "c": "c",
+              "p": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541eb5f80": [
+            "ac",
+            "ca"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541eb5f80",
+            "type": "list",
+            "address": "0x20541eb5f80",
+            "value": [
+              "ac",
+              "ca"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 8,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 1,
+              "c": "c",
+              "p": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541eb5f80": [
+            "ac",
+            "ca"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541eb5f80",
+            "type": "list",
+            "address": "0x20541eb5f80",
+            "value": [
+              "ac",
+              "ca"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "cb"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 8,
+            "locals": {
+              "s": "ac",
+              "perms": "0x20541eb5f80",
+              "i": 1,
+              "c": "c",
+              "p": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "ac",
+          "ca"
+        ],
+        "heap": {
+          "0x20541eb5f80": [
+            "ac",
+            "ca"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541eb5f80",
+            "type": "list",
+            "address": "0x20541eb5f80",
+            "value": [
+              "ac",
+              "ca"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 7,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "ac"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "ac"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb",
+            "bac"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb",
+              "bac"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 7,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "ca"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb",
+            "bac"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb",
+              "bac"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "p",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "ca"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb",
+            "bac",
+            "bca"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb",
+              "bac",
+              "bca"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 5,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 1,
+              "c": "b",
+              "p": "ca"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb",
+            "bac",
+            "bca"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb",
+              "bac",
+              "bca"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb",
+            "bac",
+            "bca"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb",
+              "bac",
+              "bca"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 1,
+            "locals": {
+              "s": "ab"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 2,
+            "locals": {
+              "s": "ab"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 4,
+            "locals": {
+              "s": "ab"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 5,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ec8d80": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ec8d80",
+            "type": "list",
+            "address": "0x20541ec8d80",
+            "value": [],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "perms",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 0,
+              "c": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ec8d80": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ec8d80",
+            "type": "list",
+            "address": "0x20541ec8d80",
+            "value": [],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 1,
+            "locals": {
+              "s": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 2,
+            "locals": {
+              "s": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 3,
+            "locals": {
+              "s": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 0,
+              "c": "a"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 3,
+            "locals": {
+              "s": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "b"
+        ],
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 7,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 0,
+              "c": "a",
+              "p": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ec8d80": []
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ec8d80",
+            "type": "list",
+            "address": "0x20541ec8d80",
+            "value": [],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 0,
+              "c": "a",
+              "p": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ec8d80": [
+            "ab"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ec8d80",
+            "type": "list",
+            "address": "0x20541ec8d80",
+            "value": [
+              "ab"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 5,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 0,
+              "c": "a",
+              "p": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ec8d80": [
+            "ab"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ec8d80",
+            "type": "list",
+            "address": "0x20541ec8d80",
+            "value": [
+              "ab"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 1,
+              "c": "b",
+              "p": "b"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ec8d80": [
+            "ab"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ec8d80",
+            "type": "list",
+            "address": "0x20541ec8d80",
+            "value": [
+              "ab"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "i",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 1,
+              "c": "b",
+              "p": "b"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 1,
+            "locals": {
+              "s": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 1,
+              "c": "b",
+              "p": "b"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 2,
+            "locals": {
+              "s": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 1,
+              "c": "b",
+              "p": "b"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 3,
+            "locals": {
+              "s": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 1,
+              "c": "b",
+              "p": "b"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 3,
+            "locals": {
+              "s": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "a"
+        ],
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 7,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 1,
+              "c": "b",
+              "p": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ec8d80": [
+            "ab"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ec8d80",
+            "type": "list",
+            "address": "0x20541ec8d80",
+            "value": [
+              "ab"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 1,
+              "c": "b",
+              "p": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ec8d80": [
+            "ab",
+            "ba"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ec8d80",
+            "type": "list",
+            "address": "0x20541ec8d80",
+            "value": [
+              "ab",
+              "ba"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 5,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 1,
+              "c": "b",
+              "p": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ec8d80": [
+            "ab",
+            "ba"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ec8d80",
+            "type": "list",
+            "address": "0x20541ec8d80",
+            "value": [
+              "ab",
+              "ba"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 8,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 1,
+              "c": "b",
+              "p": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ec8d80": [
+            "ab",
+            "ba"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ec8d80",
+            "type": "list",
+            "address": "0x20541ec8d80",
+            "value": [
+              "ab",
+              "ba"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ca"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 8,
+            "locals": {
+              "s": "ab",
+              "perms": "0x20541ec8d80",
+              "i": 1,
+              "c": "b",
+              "p": "a"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "ab",
+          "ba"
+        ],
+        "heap": {
+          "0x20541ec8d80": [
+            "ab",
+            "ba"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ec8d80",
+            "type": "list",
+            "address": "0x20541ec8d80",
+            "value": [
+              "ab",
+              "ba"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 7,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ab"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb",
+            "bac",
+            "bca"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb",
+              "bac",
+              "bca"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "s",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ab"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb",
+            "bac",
+            "bca",
+            "cab"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb",
+              "bac",
+              "bca",
+              "cab"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 7,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ba"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb",
+            "bac",
+            "bca",
+            "cab"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb",
+              "bac",
+              "bca",
+              "cab"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": "p",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 6,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ba"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb",
+            "bac",
+            "bca",
+            "cab",
+            "cba"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb",
+              "bac",
+              "bca",
+              "cab",
+              "cba"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 5,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ba"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb",
+            "bac",
+            "bca",
+            "cab",
+            "cba"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb",
+              "bac",
+              "bca",
+              "cab",
+              "cba"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 8,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ba"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb",
+            "bac",
+            "bca",
+            "cab",
+            "cba"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb",
+              "bac",
+              "bca",
+              "cab",
+              "cba"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 8,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          },
+          {
+            "fn": "permute",
+            "line": 8,
+            "locals": {
+              "s": "abc",
+              "perms": "0x20541ea5640",
+              "i": 2,
+              "c": "c",
+              "p": "ba"
+            }
+          }
+        ],
+        "output": "",
+        "ret": [
+          "abc",
+          "acb",
+          "bac",
+          "bca",
+          "cab",
+          "cba"
+        ],
+        "heap": {
+          "0x20541ea5640": [
+            "abc",
+            "acb",
+            "bac",
+            "bca",
+            "cab",
+            "cba"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541ea5640",
+            "type": "list",
+            "address": "0x20541ea5640",
+            "value": [
+              "abc",
+              "acb",
+              "bac",
+              "bca",
+              "cab",
+              "cba"
+            ],
+            "targetIndex": null,
+            "label": "perms"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 10,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 10,
+            "locals": {
+              "permute": "0x20541e87240"
+            }
+          }
+        ],
+        "output": "Permutations of 'abc': ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']\n",
+        "ret": null,
+        "heap": {
+          "0x20541e87240": "<function permute at 0x0000020541E87240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x20541e87240",
+            "type": "object",
+            "address": "0x20541e87240",
+            "value": "<function permute at 0x0000020541E87240>",
+            "targetIndex": null,
+            "label": "permute"
+          }
+        ],
+        "mutatedVariable": "permute",
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 165.05
+}

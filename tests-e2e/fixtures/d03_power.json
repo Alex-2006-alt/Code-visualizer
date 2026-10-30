@@ -1,0 +1,1575 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x13243f67240": "<function fast_power at 0x0000013243F67240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x13243f67240",
+            "type": "object",
+            "address": "0x13243f67240",
+            "value": "<function fast_power at 0x0000013243F67240>",
+            "targetIndex": null,
+            "label": "fast_power"
+          }
+        ],
+        "mutatedVariable": "fast_power",
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 1,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "base",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 2,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 4,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 1,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "exp",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 2,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 4,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 1,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "exp",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 2,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 4,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 1,
+            "locals": {
+              "base": 2,
+              "exp": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "exp",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 2,
+            "locals": {
+              "base": 2,
+              "exp": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 4,
+            "locals": {
+              "base": 2,
+              "exp": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 2
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 1,
+            "locals": {
+              "base": 2,
+              "exp": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "exp",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 2
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 2,
+            "locals": {
+              "base": 2,
+              "exp": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 2
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 4,
+            "locals": {
+              "base": 2,
+              "exp": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 2
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 2
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 1
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 1,
+            "locals": {
+              "base": 2,
+              "exp": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "exp",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 2
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 1
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 2,
+            "locals": {
+              "base": 2,
+              "exp": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 2
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 1
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 3,
+            "locals": {
+              "base": 2,
+              "exp": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 2
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 1
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 3,
+            "locals": {
+              "base": 2,
+              "exp": 0
+            }
+          }
+        ],
+        "output": "",
+        "ret": 1,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 2
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 1
+            }
+          }
+        ],
+        "output": "",
+        "ret": 2,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "exp",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 6,
+            "locals": {
+              "base": 2,
+              "exp": 2,
+              "half": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "exp",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 4
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 6,
+            "locals": {
+              "base": 2,
+              "exp": 2,
+              "half": 2
+            }
+          }
+        ],
+        "output": "",
+        "ret": 4,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 6,
+            "locals": {
+              "base": 2,
+              "exp": 4,
+              "half": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "exp",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 6,
+            "locals": {
+              "base": 2,
+              "exp": 4,
+              "half": 4
+            }
+          }
+        ],
+        "output": "",
+        "ret": 16,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 7,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 5,
+            "locals": {
+              "base": 2,
+              "exp": 10
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 7,
+            "locals": {
+              "base": 2,
+              "exp": 5
+            }
+          }
+        ],
+        "output": "",
+        "ret": 32,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "exp",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 6,
+            "locals": {
+              "base": 2,
+              "exp": 10,
+              "half": 32
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": "exp",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          },
+          {
+            "fn": "fast_power",
+            "line": 6,
+            "locals": {
+              "base": 2,
+              "exp": 10,
+              "half": 32
+            }
+          }
+        ],
+        "output": "",
+        "ret": 1024,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 9,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 9,
+            "locals": {
+              "fast_power": "0x13243f67240"
+            }
+          }
+        ],
+        "output": "2^10 = 1024\n",
+        "ret": null,
+        "heap": {
+          "0x13243f67240": "<function fast_power at 0x0000013243F67240>"
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x13243f67240",
+            "type": "object",
+            "address": "0x13243f67240",
+            "value": "<function fast_power at 0x0000013243F67240>",
+            "targetIndex": null,
+            "label": "fast_power"
+          }
+        ],
+        "mutatedVariable": "fast_power",
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 150.14
+}

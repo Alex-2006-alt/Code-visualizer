@@ -1,0 +1,7 @@
+{
+  "status_code": 400,
+  "data": {
+    "detail": "Code cannot be empty."
+  },
+  "latency_ms": 5.12
+}

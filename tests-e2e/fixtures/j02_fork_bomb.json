@@ -1,0 +1,9 @@
+{
+  "status_code": 400,
+  "data": {
+    "error": "FORBIDDEN_IMPORT",
+    "detail": "Import of 'os' is not allowed for security reasons.",
+    "module": "os"
+  },
+  "latency_ms": 296.09
+}

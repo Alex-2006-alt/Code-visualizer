@@ -1,0 +1,297 @@
+{
+  "status_code": 200,
+  "data": {
+    "steps": [
+      {
+        "event": "call",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 1,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 1,
+            "locals": {}
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {},
+        "heapObjects": [],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 2,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 2,
+            "locals": {
+              "d": "0x1b6c38856c0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1b6c38856c0": {
+            "a": 1,
+            "b": 2
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1b6c38856c0",
+            "type": "dict",
+            "address": "0x1b6c38856c0",
+            "value": {
+              "a": 1,
+              "b": 2
+            },
+            "targetIndex": null,
+            "label": "d"
+          }
+        ],
+        "mutatedVariable": "d",
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 3,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 3,
+            "locals": {
+              "d": "0x1b6c38856c0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1b6c38856c0": {
+            "a": 1,
+            "b": 2,
+            "c": 3
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1b6c38856c0",
+            "type": "dict",
+            "address": "0x1b6c38856c0",
+            "value": {
+              "a": 1,
+              "b": 2,
+              "c": 3
+            },
+            "targetIndex": null,
+            "label": "d"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 4,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 4,
+            "locals": {
+              "d": "0x1b6c38856c0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1b6c38856c0": {
+            "a": 10,
+            "b": 2,
+            "c": 3
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1b6c38856c0",
+            "type": "dict",
+            "address": "0x1b6c38856c0",
+            "value": {
+              "a": 10,
+              "b": 2,
+              "c": 3
+            },
+            "targetIndex": null,
+            "label": "d"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 5,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 5,
+            "locals": {
+              "d": "0x1b6c38856c0"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1b6c38856c0": {
+            "a": 10,
+            "c": 3
+          }
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1b6c38856c0",
+            "type": "dict",
+            "address": "0x1b6c38856c0",
+            "value": {
+              "a": 10,
+              "c": 3
+            },
+            "targetIndex": null,
+            "label": "d"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      },
+      {
+        "event": "line",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "d": "0x1b6c38856c0",
+              "keys": "0x1b6c3884740"
+            }
+          }
+        ],
+        "output": "",
+        "ret": null,
+        "heap": {
+          "0x1b6c38856c0": {
+            "a": 10,
+            "c": 3
+          },
+          "0x1b6c3884740": [
+            "a",
+            "c"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1b6c38856c0",
+            "type": "dict",
+            "address": "0x1b6c38856c0",
+            "value": {
+              "a": 10,
+              "c": 3
+            },
+            "targetIndex": null,
+            "label": "d"
+          },
+          {
+            "id": "heap-0x1b6c3884740",
+            "type": "list",
+            "address": "0x1b6c3884740",
+            "value": [
+              "a",
+              "c"
+            ],
+            "targetIndex": null,
+            "label": "keys"
+          }
+        ],
+        "mutatedVariable": "keys",
+        "explanation": null
+      },
+      {
+        "event": "return",
+        "line": 6,
+        "stack": [
+          {
+            "fn": "<module>",
+            "line": 6,
+            "locals": {
+              "d": "0x1b6c38856c0",
+              "keys": "0x1b6c3884740"
+            }
+          }
+        ],
+        "output": "dict: {'a': 10, 'c': 3} keys: ['a', 'c']\n",
+        "ret": null,
+        "heap": {
+          "0x1b6c38856c0": {
+            "a": 10,
+            "c": 3
+          },
+          "0x1b6c3884740": [
+            "a",
+            "c"
+          ]
+        },
+        "heapObjects": [
+          {
+            "id": "heap-0x1b6c38856c0",
+            "type": "dict",
+            "address": "0x1b6c38856c0",
+            "value": {
+              "a": 10,
+              "c": 3
+            },
+            "targetIndex": null,
+            "label": "d"
+          },
+          {
+            "id": "heap-0x1b6c3884740",
+            "type": "list",
+            "address": "0x1b6c3884740",
+            "value": [
+              "a",
+              "c"
+            ],
+            "targetIndex": null,
+            "label": "keys"
+          }
+        ],
+        "mutatedVariable": null,
+        "explanation": null
+      }
+    ],
+    "truncated": false,
+    "step_limit_reached": false,
+    "error": null
+  },
+  "latency_ms": 173.9
+}
