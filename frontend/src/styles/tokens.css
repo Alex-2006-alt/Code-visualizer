@@ -1,20 +1,21 @@
 :root {
   /* Canvas and Background */
   --bg: #0B0D12;
-  --orb-1: rgba(36, 78, 148, 0.50);     /* deep blue, top-left */
-  --orb-2: rgba(36, 92, 80, 0.45);      /* deep teal-green, bottom-right */
+  --orb-1: rgba(36, 78, 148, 0.26);     /* deep blue, top-left, blur 120px */
+  --orb-2: rgba(36, 78, 148, 0.14);     /* faint deep blue, bottom-right, blur 140px */
 
   /* Glass Layers */
   --glass: rgba(255, 255, 255, 0.045);
   --glass-raised: rgba(255, 255, 255, 0.075);
   --glass-sunken: rgba(8, 9, 11, 0.55);
+  --panel-body: rgba(11, 13, 18, 0.72);  /* solid-ish dark surface for crisp readability */
   --border: rgba(255, 255, 255, 0.09);
   --border-strong: rgba(255, 255, 255, 0.16);
   --highlight: rgba(255, 255, 255, 0.14);   /* 1px top edge highlight */
 
   /* Typography Colors */
   --text: #E8EBF0;
-  --text-2: #A5ACB8;
+  --text-2: #A5ACB8;                      /* passes WCAG AA contrast (>= 4.5:1 on panel body) */
   --text-3: #8791A0;                      /* do not go darker: contrast */
   --text-disabled: #566070;
 
@@ -25,7 +26,7 @@
   --accent-soft: rgba(127, 168, 209, 0.14);
   --on-accent: #0A121B;
 
-  /* Secondary: Sage */
+  /* Secondary: Sage (Small accents only: changed values, keywords, success, compare bar B) */
   --sage: #8FC4A8;
   --sage-soft: rgba(143, 196, 168, 0.14);
   --changed: var(--sage);                 /* value-changed flash */
@@ -47,7 +48,7 @@
   --radius-inner: 10px;
   --radius-control: 10px;
   --radius-full: 9999px;
-  --blur: 20px;
+  --blur: 16px;                          /* crisp 16px blur without saturation boosts */
   --shadow-panel: 0 10px 30px -12px rgba(0, 0, 0, 0.65);
   --shadow-float: 0 18px 48px -14px rgba(0, 0, 0, 0.75);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -79,11 +80,11 @@
   --color-success: var(--success);
 }
 
-/* Glass Utility Classes */
+/* Glass Utility Classes (saturate boosts removed to eliminate colour bleed) */
 .glass-panel {
   background: var(--glass);
-  backdrop-filter: blur(var(--blur)) saturate(115%);
-  -webkit-backdrop-filter: blur(var(--blur)) saturate(115%);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
   border: 1px solid var(--border);
   box-shadow: inset 0 1px 0 var(--highlight), var(--shadow-panel);
   border-radius: var(--radius-panel);
@@ -91,8 +92,8 @@
 
 .glass-panel-raised {
   background: var(--glass-raised);
-  backdrop-filter: blur(var(--blur)) saturate(115%);
-  -webkit-backdrop-filter: blur(var(--blur)) saturate(115%);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
   border: 1px solid var(--border-strong);
   box-shadow: inset 0 1px 0 var(--highlight), var(--shadow-float);
   border-radius: var(--radius-panel);
@@ -100,32 +101,37 @@
 
 .glass-panel-sunken {
   background: var(--glass-sunken);
-  backdrop-filter: blur(var(--blur)) saturate(115%);
-  -webkit-backdrop-filter: blur(var(--blur)) saturate(115%);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
   border: 1px solid var(--border);
   border-radius: var(--radius-inner);
+}
+
+/* Crisp Panel Body Fill */
+.panel-body {
+  background-color: var(--panel-body);
 }
 
 /* Backwards compatibility classes */
 .glass-panel-1 {
   background: var(--glass);
-  backdrop-filter: blur(var(--blur)) saturate(115%);
-  -webkit-backdrop-filter: blur(var(--blur)) saturate(115%);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
   border: 1px solid var(--border);
   box-shadow: inset 0 1px 0 var(--highlight), var(--shadow-panel);
 }
 
 .glass-panel-2 {
   background: var(--glass-sunken);
-  backdrop-filter: blur(var(--blur)) saturate(115%);
-  -webkit-backdrop-filter: blur(var(--blur)) saturate(115%);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
   border: 1px solid var(--border);
 }
 
 .glass-panel-3 {
   background: var(--glass-raised);
-  backdrop-filter: blur(var(--blur)) saturate(115%);
-  -webkit-backdrop-filter: blur(var(--blur)) saturate(115%);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
   border: 1px solid var(--border-strong);
   box-shadow: inset 0 1px 0 var(--highlight), var(--shadow-float);
 }

@@ -139,7 +139,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
 
     // Expose instance for automated E2E testing
     if (typeof window !== 'undefined') {
-      ;(window as any).__codeEditor = editor
+      ;(window as unknown as { __codeEditor?: unknown }).__codeEditor = editor
     }
   }
 

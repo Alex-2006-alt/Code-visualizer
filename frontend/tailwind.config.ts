@@ -11,6 +11,7 @@ const config: Config = {
         glass: 'var(--glass)',
         'glass-raised': 'var(--glass-raised)',
         'glass-sunken': 'var(--glass-sunken)',
+        'panel-body': 'var(--panel-body)',
         border: 'var(--border)',
         'border-strong': 'var(--border-strong)',
         highlight: 'var(--highlight)',

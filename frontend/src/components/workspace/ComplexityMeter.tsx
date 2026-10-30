@@ -1,7 +1,6 @@
 import React from 'react'
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts'
 import { GlassPanel } from '@/components/ui/GlassPanel'
-import { Chip } from '@/components/ui/Chip'
 
 interface ComplexityMeterProps {
   timeComplexity: string
@@ -27,66 +26,62 @@ export const ComplexityMeter: React.FC<ComplexityMeterProps> = ({
   className = '',
 }) => {
   return (
-    <GlassPanel level={1} className={`flex flex-col p-3 overflow-hidden ${className}`}>
+    <GlassPanel level={2} className={`flex flex-col p-3 border border-border overflow-hidden bg-glass-sunken ${className}`}>
       {/* Header */}
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-1.5">
-          <span className="material-symbols-outlined text-sm text-amber-400">speed</span>
-          <span className="text-xs font-semibold uppercase tracking-wider text-text-primary">
+          <span className="material-symbols-outlined text-sm text-accent">speed</span>
+          <span className="text-[11px] font-sans font-medium uppercase tracking-[0.08em] text-text-3">
             Complexity
           </span>
         </div>
         <div className="flex items-center gap-1.5">
-          <Chip
-            label={`T: ${timeComplexity}`}
-            variant="secondary"
-            active
-            className="font-mono text-[9px] py-0.5 px-2"
-          />
-          <Chip
-            label={`S: ${spaceComplexity}`}
-            variant="primary"
-            active
-            className="font-mono text-[9px] py-0.5 px-2"
-          />
+          {/* Neutral glass chips with mono text, no colored fill */}
+          <span className="px-2 py-0.5 rounded-full bg-glass border border-border text-text font-mono text-[10px]">
+            T: {timeComplexity}
+          </span>
+          <span className="px-2 py-0.5 rounded-full bg-glass border border-border text-text font-mono text-[10px]">
+            S: {spaceComplexity}
+          </span>
         </div>
       </div>
 
-      {/* Progress & Big-O Chart */}
-      <div className="h-24 w-full mt-1">
+      {/* Progress & Big-O Chart on Flat Solid Surface */}
+      <div className="h-24 w-full mt-1 p-1 rounded-inner bg-panel-body border border-border/40">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={COMPLEXITY_DATA} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
-            <XAxis dataKey="n" stroke="#525866" fontSize={9} tickLine={false} />
-            <YAxis stroke="#525866" fontSize={9} tickLine={false} domain={[0, 70]} />
+            <XAxis dataKey="n" stroke="#6F7A8A" fontSize={9} tickLine={false} />
+            <YAxis stroke="#6F7A8A" fontSize={9} tickLine={false} domain={[0, 70]} />
             <Tooltip
               contentStyle={{
-                backgroundColor: '#0A0E19',
-                borderColor: '#262A36',
+                backgroundColor: '#08090B',
+                borderColor: 'rgba(255,255,255,0.12)',
                 borderRadius: '8px',
                 fontSize: '10px',
+                color: '#E8EBF0',
               }}
             />
             <Line
               type="monotone"
               dataKey="O(1)"
-              stroke="#5DE6FF"
-              strokeWidth={timeComplexity === 'O(1)' ? 3 : 1}
+              stroke="#7FA8D1"
+              strokeWidth={timeComplexity === 'O(1)' ? 2.5 : 1}
               dot={false}
               opacity={timeComplexity === 'O(1)' ? 1 : 0.3}
             />
             <Line
               type="monotone"
               dataKey="O(n)"
-              stroke="#CABEFF"
-              strokeWidth={timeComplexity === 'O(n)' ? 3 : 1}
+              stroke="#8FC4A8"
+              strokeWidth={timeComplexity === 'O(n)' ? 2.5 : 1}
               dot={false}
               opacity={timeComplexity === 'O(n)' ? 1 : 0.3}
             />
             <Line
               type="monotone"
               dataKey="O(n^2)"
-              stroke="#FBBF24"
-              strokeWidth={timeComplexity === 'O(n^2)' ? 3 : 1}
+              stroke="#C9D6EA"
+              strokeWidth={timeComplexity === 'O(n^2)' ? 2.5 : 1}
               dot={false}
               opacity={timeComplexity === 'O(n^2)' ? 1 : 0.3}
             />
@@ -95,9 +90,9 @@ export const ComplexityMeter: React.FC<ComplexityMeterProps> = ({
       </div>
 
       {/* Execution Step Progress Bar */}
-      <div className="mt-2 pt-2 border-t border-border-subtle flex items-center justify-between text-[10px] font-mono">
-        <span className="text-text-tertiary">Step Overhead:</span>
-        <span className="text-cyan font-bold">
+      <div className="mt-2 pt-2 border-t border-border flex items-center justify-between text-[10px] font-mono">
+        <span className="text-text-3">Step Overhead:</span>
+        <span className="text-accent font-medium">
           {Math.round(((currentStep + 1) / totalSteps) * 100)}%
         </span>
       </div>

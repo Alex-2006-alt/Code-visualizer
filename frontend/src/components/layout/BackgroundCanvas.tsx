@@ -18,16 +18,16 @@ export const BackgroundCanvas: React.FC<BackgroundCanvasProps> = ({
       aria-hidden="true"
       className={`fixed inset-0 pointer-events-none overflow-hidden z-0 bg-bg ${className}`}
     >
-      {/* Dynamic Ambient Blurred Orbs (Midnight Blue & Deep Sage) */}
+      {/* Restrained Ambient Blurred Shapes (Faint Deep Blue only - No Green Haze) */}
       {showOrbs && !shouldReduceMotion && (
         <>
-          {/* Orb 1: Deep Blue (Top-Left ~620px, 40s slow drift) */}
+          {/* Orb 1: Deep Blue (Top-Left ~620px, blur 120px, 40s slow drift) */}
           <motion.div
-            className="absolute -top-48 -left-48 w-[620px] h-[620px] rounded-full blur-[100px] pointer-events-none"
+            className="absolute -top-48 -left-48 w-[620px] h-[620px] rounded-full blur-[120px] pointer-events-none"
             style={{ background: 'var(--orb-1)' }}
             animate={{
-              x: [0, 40, -30, 0],
-              y: [0, 30, -25, 0],
+              x: [0, 35, -25, 0],
+              y: [0, 25, -20, 0],
             }}
             transition={{
               duration: 40,
@@ -36,13 +36,13 @@ export const BackgroundCanvas: React.FC<BackgroundCanvasProps> = ({
             }}
           />
 
-          {/* Orb 2: Deep Teal-Green / Sage (Bottom-Right ~680px, 40s slow drift) */}
+          {/* Orb 2: Faint Deep Blue (Bottom-Right ~520px, blur 140px, 40s slow drift) */}
           <motion.div
-            className="absolute -bottom-56 -right-56 w-[680px] h-[680px] rounded-full blur-[100px] pointer-events-none"
+            className="absolute -bottom-48 -right-48 w-[520px] h-[520px] rounded-full blur-[140px] pointer-events-none"
             style={{ background: 'var(--orb-2)' }}
             animate={{
-              x: [0, -35, 25, 0],
-              y: [0, -30, 35, 0],
+              x: [0, -30, 20, 0],
+              y: [0, -25, 30, 0],
             }}
             transition={{
               duration: 40,
@@ -57,11 +57,11 @@ export const BackgroundCanvas: React.FC<BackgroundCanvasProps> = ({
       {showOrbs && shouldReduceMotion && (
         <>
           <div
-            className="absolute -top-48 -left-48 w-[620px] h-[620px] rounded-full blur-[100px] pointer-events-none opacity-80"
+            className="absolute -top-48 -left-48 w-[620px] h-[620px] rounded-full blur-[120px] pointer-events-none opacity-80"
             style={{ background: 'var(--orb-1)' }}
           />
           <div
-            className="absolute -bottom-56 -right-56 w-[680px] h-[680px] rounded-full blur-[100px] pointer-events-none opacity-80"
+            className="absolute -bottom-48 -right-48 w-[520px] h-[520px] rounded-full blur-[140px] pointer-events-none opacity-80"
             style={{ background: 'var(--orb-2)' }}
           />
         </>

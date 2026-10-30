@@ -38,8 +38,8 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
 
   return (
     <GlassPanel
-      level={2}
-      className={`px-4 py-3 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-xl ${className}`}
+      level={3}
+      className={`px-4 py-2.5 rounded-panel border border-border-strong shadow-float ${className}`}
     >
       <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6">
         {/* Playback action controls */}
@@ -75,7 +75,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
               variant={isPlaying ? 'secondary' : 'primary'}
               size="md"
               onClick={onPlayToggle}
-              className="px-4 py-2 font-bold"
+              className="px-4 py-2 font-medium"
               aria-label={isPlaying ? 'Pause' : 'Play'}
             >
               <span className="material-symbols-outlined text-lg mr-1">
@@ -102,7 +102,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
         {/* Timeline Scrubber */}
         <div className="flex-1 w-full flex items-center gap-3">
           <span
-            className="text-[11px] font-mono font-medium text-cyan min-w-[2.5rem] text-right"
+            className="text-[11px] font-mono font-medium text-accent min-w-[2.5rem] text-right"
             data-testid="current-step-display"
           >
             {currentStep + 1}
@@ -116,7 +116,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
             className="flex-1"
           />
           <span
-            className="text-[11px] font-mono text-text-tertiary min-w-[2.5rem]"
+            className="text-[11px] font-mono text-text-3 min-w-[2.5rem]"
             data-testid="total-steps-display"
           >
             / {totalSteps}
@@ -124,15 +124,15 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
         </div>
 
         {/* Speed toggle pills */}
-        <div className="flex items-center gap-1 shrink-0 bg-container-lowest/50 p-1 rounded-xl border border-border-subtle">
+        <div className="flex items-center gap-1 shrink-0 bg-glass-sunken p-1 rounded-control border border-border">
           {SPEEDS.map((s) => (
             <button
               key={s}
               onClick={() => onSpeedChange(s)}
-              className={`px-2 py-0.5 rounded-lg text-[10px] font-mono font-semibold transition-all ${
+              className={`px-2 py-0.5 rounded-control text-[11px] font-mono transition-colors cursor-pointer ${
                 speed === s
-                  ? 'bg-cyan/20 text-cyan border border-cyan/40 shadow-[0_0_8px_rgba(93,230,255,0.3)]'
-                  : 'text-text-tertiary hover:text-text-secondary'
+                  ? 'bg-glass-raised text-accent border border-border-strong font-medium'
+                  : 'text-text-3 hover:text-text'
               }`}
             >
               {s}x

@@ -21,37 +21,37 @@ export const OutputTerminal: React.FC<OutputTerminalProps> = ({
   const [isCollapsed, setIsCollapsed] = useState(false)
 
   return (
-    <GlassPanel level={1} className={`flex flex-col border border-border-subtle overflow-hidden ${className}`}>
+    <GlassPanel level={2} className={`flex flex-col border border-border overflow-hidden ${className}`}>
       {/* Header bar */}
-      <div className="flex items-center justify-between px-3 py-2 border-b border-border-subtle bg-container-lowest/60">
+      <div className="flex items-center justify-between px-3 py-2 border-b border-border bg-glass-sunken">
         <div className="flex items-center gap-1.5">
           <button
             onClick={() => setActiveTab('stdout')}
-            className={`px-2.5 py-1 text-xs font-mono font-medium rounded-md transition-all ${
+            className={`px-2.5 py-1 text-xs font-mono font-medium rounded-control transition-colors cursor-pointer ${
               activeTab === 'stdout'
-                ? 'bg-cyan/15 text-cyan border border-cyan/30'
-                : 'text-text-tertiary hover:text-text-secondary'
+                ? 'bg-accent-soft text-accent border border-accent/30'
+                : 'text-text-3 hover:text-text'
             }`}
           >
             STDOUT
           </button>
           <button
             onClick={() => setActiveTab('stderr')}
-            className={`px-2.5 py-1 text-xs font-mono font-medium rounded-md transition-all flex items-center gap-1 ${
+            className={`px-2.5 py-1 text-xs font-mono font-medium rounded-control transition-colors flex items-center gap-1 cursor-pointer ${
               activeTab === 'stderr'
-                ? 'bg-coral/15 text-coral border border-coral/30'
-                : 'text-text-tertiary hover:text-text-secondary'
+                ? 'bg-error/15 text-error border border-error/30'
+                : 'text-text-3 hover:text-text'
             }`}
           >
             <span>STDERR</span>
-            {stderr && <span className="w-1.5 h-1.5 rounded-full bg-coral animate-ping" />}
+            {stderr && <span className="w-1.5 h-1.5 rounded-full bg-error" />}
           </button>
           <button
             onClick={() => setActiveTab('stats')}
-            className={`px-2.5 py-1 text-xs font-mono font-medium rounded-md transition-all ${
+            className={`px-2.5 py-1 text-xs font-mono font-medium rounded-control transition-colors cursor-pointer ${
               activeTab === 'stats'
-                ? 'bg-violet/15 text-violet border border-violet/30'
-                : 'text-text-tertiary hover:text-text-secondary'
+                ? 'bg-glass-raised text-text border border-border-strong'
+                : 'text-text-3 hover:text-text'
             }`}
           >
             STATS
@@ -60,7 +60,7 @@ export const OutputTerminal: React.FC<OutputTerminalProps> = ({
 
         <button
           onClick={() => setIsCollapsed(!isCollapsed)}
-          className="p-1 rounded text-text-tertiary hover:text-text-primary hover:bg-white/5 transition-all"
+          className="p-1 rounded-control text-text-3 hover:text-text hover:bg-glass transition-colors cursor-pointer"
           title={isCollapsed ? 'Expand terminal' : 'Collapse terminal'}
         >
           <span className="material-symbols-outlined text-sm">
@@ -69,17 +69,17 @@ export const OutputTerminal: React.FC<OutputTerminalProps> = ({
         </button>
       </div>
 
-      {/* Terminal Body */}
+      {/* Terminal Body with Flat Solid Fill for Crisp Contrast */}
       {!isCollapsed && (
-        <div className="p-3 bg-bg-surface/90 font-mono text-xs overflow-y-auto max-h-48 min-h-[5rem] custom-scrollbar">
+        <div className="p-3 bg-panel-body font-mono text-xs overflow-y-auto max-h-48 min-h-[5rem] custom-scrollbar">
           {activeTab === 'stdout' && (
             <div>
               {stdout ? (
-                <pre className="text-emerald-400 whitespace-pre-wrap leading-relaxed">
+                <pre className="text-text whitespace-pre-wrap leading-relaxed selection:bg-accent/20">
                   {stdout}
                 </pre>
               ) : (
-                <span className="text-text-tertiary italic">No console output yet</span>
+                <span className="text-text-2 italic">No console output yet</span>
               )}
             </div>
           )}
@@ -87,28 +87,28 @@ export const OutputTerminal: React.FC<OutputTerminalProps> = ({
           {activeTab === 'stderr' && (
             <div>
               {stderr ? (
-                <pre className="text-coral whitespace-pre-wrap leading-relaxed">
+                <pre className="text-error whitespace-pre-wrap leading-relaxed selection:bg-error/20">
                   {stderr}
                 </pre>
               ) : (
-                <span className="text-text-tertiary italic">No errors reported</span>
+                <span className="text-text-2 italic">No errors reported</span>
               )}
             </div>
           )}
 
           {activeTab === 'stats' && (
             <div className="grid grid-cols-3 gap-2 py-1">
-              <div className="p-2 rounded bg-container-lowest/60 border border-border-subtle">
-                <span className="text-[10px] text-text-tertiary uppercase block">Steps Executed</span>
-                <span className="text-sm font-bold text-cyan">{currentStep + 1} / {totalSteps}</span>
+              <div className="p-2 rounded-inner bg-glass border border-border">
+                <span className="text-[10px] text-text-3 uppercase tracking-wider font-sans block">Steps Executed</span>
+                <span className="text-sm font-mono font-semibold text-accent">{currentStep + 1} / {totalSteps}</span>
               </div>
-              <div className="p-2 rounded bg-container-lowest/60 border border-border-subtle">
-                <span className="text-[10px] text-text-tertiary uppercase block">Virtual Memory</span>
-                <span className="text-sm font-bold text-violet">~4.2 KB</span>
+              <div className="p-2 rounded-inner bg-glass border border-border">
+                <span className="text-[10px] text-text-3 uppercase tracking-wider font-sans block">Virtual Memory</span>
+                <span className="text-sm font-mono font-semibold text-text">~4.2 KB</span>
               </div>
-              <div className="p-2 rounded bg-container-lowest/60 border border-border-subtle">
-                <span className="text-[10px] text-text-tertiary uppercase block">Status</span>
-                <Chip label="Ready" variant="secondary" active className="mt-0.5 text-[9px] py-0 px-2" />
+              <div className="p-2 rounded-inner bg-glass border border-border">
+                <span className="text-[10px] text-text-3 uppercase tracking-wider font-sans block">Status</span>
+                <Chip label="Ready" variant="secondary" active className="mt-0.5 text-[10px] py-0 px-2" />
               </div>
             </div>
           )}
