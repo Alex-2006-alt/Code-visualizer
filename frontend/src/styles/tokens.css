@@ -158,6 +158,9 @@
 
 /* Reduced transparency: panel fills rgba(20,24,32,0.96), no blur */
 @media (prefers-reduced-transparency: reduce) {
+  .ambient-glow {
+    opacity: 0.5 !important;
+  }
   .glass-panel,
   .glass-panel-raised,
   .glass-panel-sunken,
