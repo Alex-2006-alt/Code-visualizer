@@ -35,8 +35,8 @@ async def check_rate_limit(request: Request) -> None:
 
 async def concurrency_guard() -> AsyncGenerator[None, None]:
     """FastAPI dependency: guard execution under a global concurrency cap."""
-    await rate_limiter.acquire_concurrency()
+    lease_id = await rate_limiter.acquire_concurrency()
     try:
         yield
     finally:
-        await rate_limiter.release_concurrency()
+        await rate_limiter.release_concurrency(lease_id)

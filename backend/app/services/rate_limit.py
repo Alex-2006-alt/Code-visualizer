@@ -45,7 +45,7 @@ class RateLimiter:
 
         # In-memory fallback data structures
         self._in_memory_requests: dict[str, list[float]] = defaultdict(list)
-        self._in_memory_concurrency: int = 0
+        self._in_memory_active_leases: dict[str, float] = {}
         self._lock = asyncio.Lock()
 
     async def get_redis(self) -> Any:
@@ -146,7 +146,7 @@ class RateLimiter:
 
             timestamps.append(now)
 
-    async def acquire_concurrency(self) -> None:
+    async def acquire_concurrency(self) -> str:
         """Acquire a slot under the global concurrency limit."""
         redis_client = await self.get_redis()
 
@@ -156,19 +156,26 @@ class RateLimiter:
                 if active > self.max_concurrent:
                     await redis_client.decr("concurrency:active_runs")
                     raise ConcurrencyLimitError()
-                return
+                return str(time.time_ns())
             except ConcurrencyLimitError:
                 raise
             except Exception as e:
                 logger.warning("redis_concurrency_failed", error=str(e))
 
-        # In-memory concurrency fallback
+        # In-memory concurrency fallback with auto-expiring safety lease
         async with self._lock:
-            if self._in_memory_concurrency >= self.max_concurrent:
+            now = time.time()
+            # Prune any stale lease older than 15s to guarantee no permanent leak
+            self._in_memory_active_leases = {
+                k: ts for k, ts in self._in_memory_active_leases.items() if now - ts < 15.0
+            }
+            if len(self._in_memory_active_leases) >= self.max_concurrent:
                 raise ConcurrencyLimitError()
-            self._in_memory_concurrency += 1
+            lease_id = str(time.time_ns())
+            self._in_memory_active_leases[lease_id] = now
+            return lease_id
 
-    async def release_concurrency(self) -> None:
+    async def release_concurrency(self, lease_id: str | None = None) -> None:
         """Release an acquired concurrency slot."""
         redis_client = await self.get_redis()
 
@@ -181,8 +188,17 @@ class RateLimiter:
 
         # In-memory fallback
         async with self._lock:
-            if self._in_memory_concurrency > 0:
-                self._in_memory_concurrency -= 1
+            now = time.time()
+            if lease_id and lease_id in self._in_memory_active_leases:
+                del self._in_memory_active_leases[lease_id]
+            elif self._in_memory_active_leases:
+                # Pop the oldest lease
+                oldest = min(self._in_memory_active_leases, key=self._in_memory_active_leases.get)
+                del self._in_memory_active_leases[oldest]
+            # Prune expired
+            self._in_memory_active_leases = {
+                k: ts for k, ts in self._in_memory_active_leases.items() if now - ts < 15.0
+            }
 
     async def close(self) -> None:
         """Close Redis connection pool on application shutdown."""
