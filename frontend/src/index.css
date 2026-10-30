@@ -5,8 +5,7 @@
 @tailwind utilities;
 
 @layer base {
-  html,
-  body {
+  html {
     margin: 0;
     padding: 0;
     background-color: var(--bg);
@@ -14,6 +13,15 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
+  }
+
+  body,
+  #root {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: var(--text);
+    min-height: 100vh;
   }
 
   /* Restrained dark scrollbar */
@@ -98,8 +106,11 @@
   }
 }
 
-/* Accessibility: Reduced-transparency fallback with solid panels */
+/* Accessibility: Reduced-transparency fallback with solid panels & 50% glow opacity */
 @media (prefers-reduced-transparency: reduce) {
+  .ambient-glow {
+    opacity: 0.5 !important;
+  }
   .glass-panel,
   .glass-panel-raised,
   .glass-panel-sunken,

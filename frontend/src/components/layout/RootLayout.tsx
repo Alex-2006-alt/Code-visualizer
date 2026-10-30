@@ -10,12 +10,12 @@ export const RootLayout: React.FC = () => {
   const isWorkspace = location.pathname.startsWith('/workspace')
 
   return (
-    <div className="relative min-h-screen w-full flex flex-col bg-bg text-text selection:bg-accent/20 selection:text-text">
+    <div className="relative min-h-screen w-full flex flex-col bg-transparent text-text selection:bg-accent/20 selection:text-text">
       <AmbientBackground />
       <Navbar />
       <ToastContainer />
 
-      <main className="flex-1 w-full pt-16 flex flex-col relative z-10">
+      <main className="flex-1 w-full pt-16 flex flex-col relative z-10 bg-transparent">
         <Outlet />
       </main>
 

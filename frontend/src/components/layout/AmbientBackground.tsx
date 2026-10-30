@@ -13,11 +13,12 @@ export const AmbientBackground: React.FC<AmbientBackgroundProps> = ({
   return (
     <div
       aria-hidden="true"
-      className={`fixed inset-0 pointer-events-none overflow-hidden -z-10 bg-bg ${className}`}
+      style={{ zIndex: -1 }}
+      className={`fixed inset-0 pointer-events-none overflow-hidden bg-transparent z-[-1] ${className}`}
     >
       {/* Layer 1: Blue Glow (Top-Left 640px circle, blur 130px, partly off-screen: top -200px, left -160px) */}
       <motion.div
-        className="fixed -top-[200px] -left-[160px] w-[640px] h-[640px] rounded-full blur-[130px] pointer-events-none"
+        className="fixed -top-[200px] -left-[160px] w-[640px] h-[640px] rounded-full blur-[130px] pointer-events-none ambient-glow"
         style={{ background: 'var(--orb-1)' }}
         animate={
           shouldReduceMotion
@@ -35,7 +36,7 @@ export const AmbientBackground: React.FC<AmbientBackgroundProps> = ({
 
       {/* Layer 2: GREEN Glow (Bottom-Right deep teal-green 700px circle, blur 140px, partly off-screen: bottom -240px, right -180px) */}
       <motion.div
-        className="fixed -bottom-[240px] -right-[180px] w-[700px] h-[700px] rounded-full blur-[140px] pointer-events-none"
+        className="fixed -bottom-[240px] -right-[180px] w-[700px] h-[700px] rounded-full blur-[140px] pointer-events-none ambient-glow"
         style={{ background: 'var(--orb-2)' }}
         animate={
           shouldReduceMotion
