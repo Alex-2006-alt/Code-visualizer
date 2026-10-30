@@ -104,6 +104,11 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
 
     decorationsCollectionRef.current = editor.createDecorationsCollection([])
     updateDecorations()
+
+    // Expose instance for automated E2E testing
+    if (typeof window !== 'undefined') {
+      ;(window as any).__codeEditor = editor
+    }
   }
 
   useEffect(() => {
@@ -122,7 +127,9 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
         </div>
 
         <div className="flex items-center gap-3 text-outline">
-          <span className="text-secondary font-mono text-[11px]">Ln {currentLine}</span>
+          <span className="text-secondary font-mono text-[11px]" data-testid="current-line-display">
+            Ln {currentLine}
+          </span>
           <span className="text-white/20">•</span>
           <span className="text-[11px]">Python 3.12</span>
         </div>

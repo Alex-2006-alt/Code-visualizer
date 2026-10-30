@@ -101,7 +101,10 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
 
         {/* Timeline Scrubber */}
         <div className="flex-1 w-full flex items-center gap-3">
-          <span className="text-[11px] font-mono font-medium text-cyan min-w-[2.5rem] text-right">
+          <span
+            className="text-[11px] font-mono font-medium text-cyan min-w-[2.5rem] text-right"
+            data-testid="current-step-display"
+          >
             {currentStep + 1}
           </span>
           <Slider
@@ -112,7 +115,10 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
             aria-label="Execution step scrubber"
             className="flex-1"
           />
-          <span className="text-[11px] font-mono text-text-tertiary min-w-[2.5rem]">
+          <span
+            className="text-[11px] font-mono text-text-tertiary min-w-[2.5rem]"
+            data-testid="total-steps-display"
+          >
             / {totalSteps}
           </span>
         </div>
