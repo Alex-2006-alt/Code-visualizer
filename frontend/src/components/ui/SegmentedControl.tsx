@@ -31,7 +31,7 @@ export function SegmentedControl<T extends string = string>({
     <div
       role="radiogroup"
       className={cn(
-        'inline-flex items-center p-1 rounded-full bg-surface-container-lowest/90 border border-white/[0.08] backdrop-blur-xl shadow-inner relative',
+        'inline-flex items-center p-0.5 rounded-full bg-glass-sunken border border-border backdrop-blur-xl relative',
         className
       )}
     >
@@ -45,12 +45,14 @@ export function SegmentedControl<T extends string = string>({
             type="button"
             onClick={() => onChange(option.value)}
             className={cn(
-              'relative z-10 inline-flex items-center justify-center font-sans transition-colors duration-150',
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-1 focus-visible:ring-offset-surface',
+              'relative z-10 inline-flex items-center justify-center font-sans transition-colors duration-150 cursor-pointer',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-1 focus-visible:ring-offset-bg',
               size === 'sm'
-                ? 'px-2.5 py-1 text-code-sm font-medium gap-1'
-                : 'px-3.5 py-1.5 text-body-sm font-medium gap-1.5',
-              isSelected ? 'text-on-primary-container font-semibold' : 'text-on-surface-variant hover:text-on-surface'
+                ? 'px-3 py-1 text-xs font-normal gap-1'
+                : 'px-4 py-1.5 text-sm font-normal gap-1.5',
+              isSelected
+                ? 'text-accent font-medium'
+                : 'text-text-2 hover:text-text'
             )}
           >
             {isSelected && (
@@ -61,7 +63,7 @@ export function SegmentedControl<T extends string = string>({
                   stiffness: 450,
                   damping: 35,
                 }}
-                className="absolute inset-0 rounded-full bg-primary-container shadow-[0_0_16px_rgba(148,125,255,0.4)] border border-primary/30 z-[-1]"
+                className="absolute inset-0 rounded-full bg-glass-raised border border-border-strong shadow-panel z-[-1]"
               />
             )}
             {option.icon && (
@@ -71,7 +73,7 @@ export function SegmentedControl<T extends string = string>({
             )}
             <span>{option.label}</span>
             {option.badge !== undefined && (
-              <span className="ml-1 px-1.5 py-0.2 rounded-full font-code-sm text-[10px] bg-black/20">
+              <span className="ml-1 px-1.5 py-0.2 rounded-full font-mono text-[10px] bg-glass-sunken text-text-3">
                 {option.badge}
               </span>
             )}

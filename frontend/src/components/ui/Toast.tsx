@@ -9,23 +9,23 @@ export const ToastContainer: React.FC = () => {
   const typeConfig = {
     info: {
       icon: 'info',
-      iconClass: 'text-primary bg-primary/20',
-      badgeClass: 'text-primary',
+      iconClass: 'text-info bg-accent-soft',
+      badgeClass: 'text-info',
     },
     warning: {
       icon: 'warning',
-      iconClass: 'text-tertiary bg-surface-container-highest',
-      badgeClass: 'text-tertiary',
+      iconClass: 'text-accent bg-accent-soft',
+      badgeClass: 'text-accent',
     },
     error: {
-      icon: 'timer',
-      iconClass: 'text-error bg-error-container/40',
+      icon: 'error',
+      iconClass: 'text-error bg-error/15',
       badgeClass: 'text-error',
     },
     success: {
       icon: 'check_circle',
-      iconClass: 'text-secondary bg-secondary-container/20',
-      badgeClass: 'text-secondary',
+      iconClass: 'text-success bg-sage-soft',
+      badgeClass: 'text-success',
     },
   }
 
@@ -41,33 +41,33 @@ export const ToastContainer: React.FC = () => {
             <motion.div
               key={t.id}
               layout
-              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              initial={{ opacity: 0, y: 15, scale: 0.96 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -20, scale: 0.95 }}
-              transition={{ duration: 0.2 }}
+              exit={{ opacity: 0, y: -15, scale: 0.96 }}
+              transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className={cn(
-                'pointer-events-auto p-4 rounded-xl bg-surface-container-high/95 backdrop-blur-2xl border border-white/20 shadow-glass-2',
+                'pointer-events-auto p-4 rounded-panel bg-glass-raised backdrop-blur-xl border border-border-strong shadow-float',
                 'flex flex-col gap-2'
               )}
             >
               <div className="flex items-start gap-3">
                 <div
                   className={cn(
-                    'w-8 h-8 rounded-full flex items-center justify-center shrink-0',
+                    'w-7 h-7 rounded-full flex items-center justify-center shrink-0',
                     config.iconClass
                   )}
                 >
-                  <span className="material-symbols-outlined text-[18px]">
+                  <span className="material-symbols-outlined text-[16px]">
                     {config.icon}
                   </span>
                 </div>
 
                 <div className="flex flex-col flex-1 min-w-0">
-                  <span className="font-headline-sm text-sm text-on-surface font-semibold">
+                  <span className="font-sans text-sm text-text font-medium">
                     {t.title}
                   </span>
                   {t.description && (
-                    <span className="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">
+                    <span className="font-sans text-xs text-text-2 mt-0.5 leading-relaxed">
                       {t.description}
                     </span>
                   )}
@@ -77,7 +77,7 @@ export const ToastContainer: React.FC = () => {
                   type="button"
                   onClick={() => removeToast(t.id)}
                   aria-label="Close notification"
-                  className="text-on-surface-variant hover:text-white p-1 rounded-full hover:bg-surface-container-highest transition-colors"
+                  className="text-text-3 hover:text-text p-1 rounded-control hover:bg-glass transition-colors cursor-pointer"
                 >
                   <span className="material-symbols-outlined text-[16px]">close</span>
                 </button>
@@ -92,8 +92,8 @@ export const ToastContainer: React.FC = () => {
                       removeToast(t.id)
                     }}
                     className={cn(
-                      'px-3 py-1 rounded-full font-label-caps text-label-caps uppercase transition-colors',
-                      'bg-surface-container-highest hover:bg-surface-bright',
+                      'px-3 py-1 rounded-control font-sans text-xs transition-colors cursor-pointer',
+                      'bg-glass hover:bg-glass-raised border border-border hover:border-border-strong',
                       config.badgeClass
                     )}
                   >

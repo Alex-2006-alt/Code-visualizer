@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { SegmentedControl, Tabs, GlassButton } from '@/components/ui'
+import { SegmentedControl, Tabs, GlassButton, Select } from '@/components/ui'
 import {
   CodeEditor,
   VariablesTable,
@@ -147,23 +147,22 @@ export const WorkspacePage: React.FC = () => {
   return (
     <div className="flex flex-col w-full min-h-[calc(100vh-4rem)] pb-28 select-none">
       {/* Workspace Cockpit Sub-Header */}
-      <div className="w-full px-4 sm:px-6 py-2.5 bg-container-lowest/80 border-b border-border-subtle backdrop-blur-xl flex flex-wrap items-center justify-between gap-3">
+      <div className="w-full px-4 sm:px-6 py-2.5 bg-glass-sunken border-b border-border backdrop-blur-xl flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           {/* Preset Selector */}
-          <select
+          <Select
             value={currentPreset.id}
             onChange={(e) => loadPreset(e.target.value)}
-            className="bg-bg-surface/80 border border-border-subtle rounded-lg px-2.5 py-1 text-xs font-semibold text-text-primary focus:outline-none focus:border-cyan/50 cursor-pointer"
             aria-label="Select Python preset"
           >
             {Object.values(PRESETS).map((p) => (
-              <option key={p.id} value={p.id} className="bg-bg-surface text-text-primary">
+              <option key={p.id} value={p.id} className="bg-bg text-text">
                 {p.title} ({p.difficulty})
               </option>
             ))}
-          </select>
+          </Select>
 
-          <span className="hidden sm:inline-block px-2 py-0.5 rounded-full bg-border-subtle text-text-tertiary text-[11px] font-mono">
+          <span className="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-glass text-text-3 text-[11px] font-mono border border-border">
             CPython 3.12
           </span>
         </div>

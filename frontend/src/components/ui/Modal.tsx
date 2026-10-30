@@ -48,7 +48,7 @@ export const Modal: React.FC<ModalProps> = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/70 backdrop-blur-md transition-opacity"
+            className="fixed inset-0 bg-bg/80 backdrop-blur-md transition-opacity"
             aria-hidden="true"
           />
 
@@ -58,13 +58,13 @@ export const Modal: React.FC<ModalProps> = ({
             aria-modal="true"
             aria-labelledby={title ? 'modal-title' : undefined}
             aria-describedby={description ? 'modal-desc' : undefined}
-            initial={{ opacity: 0, scale: 0.95, y: 15 }}
+            initial={{ opacity: 0, scale: 0.96, y: 12 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 15 }}
-            transition={{ type: 'spring', damping: 25, stiffness: 350 }}
+            exit={{ opacity: 0, scale: 0.96, y: 12 }}
+            transition={{ type: 'spring', damping: 28, stiffness: 350 }}
             className={cn(
-              'relative w-full rounded-2xl bg-surface-container-high/95 backdrop-blur-2xl',
-              'border border-white/20 shadow-glass-2 p-6 z-10 flex flex-col gap-4',
+              'relative w-full rounded-panel bg-glass-raised backdrop-blur-xl',
+              'border border-border-strong shadow-float p-6 z-10 flex flex-col gap-4',
               sizeClasses,
               className
             )}
@@ -75,7 +75,7 @@ export const Modal: React.FC<ModalProps> = ({
                   {title && (
                     <h3
                       id="modal-title"
-                      className="font-headline-lg text-lg sm:text-xl text-white font-semibold tracking-tight"
+                      className="font-serif text-2xl text-text font-normal tracking-tight"
                     >
                       {title}
                     </h3>
@@ -83,7 +83,7 @@ export const Modal: React.FC<ModalProps> = ({
                   {description && (
                     <p
                       id="modal-desc"
-                      className="font-body-sm text-on-surface-variant text-sm mt-1"
+                      className="font-sans text-sm text-text-2 mt-1"
                     >
                       {description}
                     </p>
@@ -94,7 +94,7 @@ export const Modal: React.FC<ModalProps> = ({
                   type="button"
                   onClick={onClose}
                   aria-label="Close modal"
-                  className="p-1 rounded-full text-on-surface-variant hover:text-white hover:bg-surface-container-highest transition-colors"
+                  className="p-1 rounded-control text-text-3 hover:text-text hover:bg-glass transition-colors cursor-pointer"
                 >
                   <span className="material-symbols-outlined text-[20px]">close</span>
                 </button>
