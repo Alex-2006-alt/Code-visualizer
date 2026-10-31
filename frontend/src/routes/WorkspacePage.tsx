@@ -66,8 +66,13 @@ export const WorkspacePage: React.FC = () => {
     setMode(mode)
   }, [mode, setMode])
 
-  // Load shared snippet from URL if present (?snippet=id)
+  // Load preset or shared snippet from URL query parameters (?preset=id or ?snippet=id)
   useEffect(() => {
+    const presetId = searchParams.get('preset')
+    if (presetId && PRESETS[presetId]) {
+      loadPreset(presetId)
+    }
+
     const snippetId = searchParams.get('snippet')
     if (snippetId) {
       fetchSnippet(snippetId).then((fetchedCode) => {
@@ -77,7 +82,7 @@ export const WorkspacePage: React.FC = () => {
         }
       })
     }
-  }, [searchParams, setCode])
+  }, [searchParams, setCode, loadPreset])
 
   // Global Keyboard shortcuts: Space (play/pause), ArrowLeft (prev), ArrowRight (next)
   useEffect(() => {
@@ -151,10 +156,19 @@ export const WorkspacePage: React.FC = () => {
         <div className="flex items-center gap-3">
           {/* Preset Selector */}
           <Select
-            value={currentPreset.id}
-            onChange={(e) => loadPreset(e.target.value)}
+            value={currentPreset ? currentPreset.id : 'custom'}
+            onChange={(e) => {
+              if (e.target.value !== 'custom') {
+                loadPreset(e.target.value)
+              }
+            }}
             aria-label="Select Python preset"
           >
+            {!currentPreset && (
+              <option value="custom" className="bg-bg text-text">
+                Custom Script
+              </option>
+            )}
             {Object.values(PRESETS).map((p) => (
               <option key={p.id} value={p.id} className="bg-bg text-text">
                 {p.title} ({p.difficulty})
@@ -415,8 +429,8 @@ export const WorkspacePage: React.FC = () => {
           )}
 
           <ComplexityMeter
-            timeComplexity={currentPreset.timeComplexity}
-            spaceComplexity={currentPreset.spaceComplexity}
+            timeComplexity={currentPreset?.timeComplexity || 'Custom'}
+            spaceComplexity={currentPreset?.spaceComplexity || '—'}
             currentStep={currentStep}
             totalSteps={steps.length}
           />

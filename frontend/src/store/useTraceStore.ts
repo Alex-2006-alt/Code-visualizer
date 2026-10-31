@@ -14,7 +14,7 @@ interface TraceState {
   isLoading: boolean
   speed: number
   mode: ExecutionMode
-  currentPreset: TracePreset
+  currentPreset: TracePreset | null
   isTruncated: boolean
   executionError: string | null
 
@@ -65,7 +65,14 @@ export const useTraceStore = create<TraceState>((set, get) => ({
   selectedAnswer: null,
   answerFeedback: 'idle',
 
-  setCode: (code) => set({ code }),
+  setCode: (code) => {
+    const { currentPreset } = get()
+    if (currentPreset && currentPreset.code !== code) {
+      set({ code, currentPreset: null })
+    } else {
+      set({ code })
+    }
+  },
   setSteps: (steps, isTruncated = false, executionError = null) =>
     set({
       steps,
@@ -167,7 +174,7 @@ export const useTraceStore = create<TraceState>((set, get) => ({
   runCurrentCode: async () => {
     const { code, pause } = get()
     pause()
-    set({ isLoading: true })
+    set({ isLoading: true, executionError: null })
     try {
       const result = await executeCode(code)
       if (result.steps && result.steps.length > 0) {
@@ -179,9 +186,25 @@ export const useTraceStore = create<TraceState>((set, get) => ({
           selectedAnswer: null,
           answerFeedback: 'idle',
         })
+      } else {
+        set({
+          steps: [],
+          currentStep: 0,
+          isTruncated: false,
+          executionError: result.error || 'Execution returned no steps.',
+          selectedAnswer: null,
+          answerFeedback: 'idle',
+        })
       }
-    } catch {
-      // Toast notification is handled in executeCode - do not rethrow to avoid unhandled promise rejection
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Execution failed'
+      set({
+        steps: [],
+        currentStep: 0,
+        executionError: msg,
+        selectedAnswer: null,
+        answerFeedback: 'idle',
+      })
     } finally {
       set({ isLoading: false })
     }

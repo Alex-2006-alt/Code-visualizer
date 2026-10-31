@@ -1,8 +1,18 @@
 import { TraceStep } from '@/types/trace'
 import { toast } from '@/components/ui/toastStore'
-import { PRESETS, DEFAULT_PRESET } from '@/mocks'
+import { PRESETS } from '@/mocks'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+function getEffectiveApiUrl(): string {
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL
+  }
+  if (typeof window !== 'undefined' && window.location.hostname === '127.0.0.1') {
+    return 'http://127.0.0.1:8000'
+  }
+  return 'http://localhost:8000'
+}
+
+const API_URL = getEffectiveApiUrl()
 const USE_MOCKS = import.meta.env.VITE_USE_MOCKS === 'true'
 
 export interface RunResponse {
@@ -33,18 +43,18 @@ export interface CompareResult {
 /**
  * Finds the closest mock preset steps based on Python code signature
  */
-function getMockStepsForCode(code: string): TraceStep[] {
+function getMockStepsForCode(code: string): TraceStep[] | null {
   const normalized = code.toLowerCase()
-  if (normalized.includes('bubble') || normalized.includes('swap')) {
+  if (normalized.includes('bubble_sort') || (normalized.includes('bubble') && normalized.includes('swap'))) {
     return PRESETS['bubble-sort'].steps
   }
-  if (normalized.includes('factorial')) {
+  if (normalized.includes('factorial') && (normalized.includes('def ') || normalized.includes('return '))) {
     return PRESETS['factorial'].steps
   }
-  if (normalized.includes('two_sum') || normalized.includes('target')) {
+  if (normalized.includes('two_sum') || (normalized.includes('target') && normalized.includes('seen'))) {
     return PRESETS['two-sum'].steps
   }
-  return DEFAULT_PRESET.steps
+  return null
 }
 
 /**
@@ -65,9 +75,18 @@ export async function executeCode(
   // 1. Mock execution path when active
   if (shouldMock) {
     await new Promise((resolve) => setTimeout(resolve, 50))
+    const mockSteps = getMockStepsForCode(trimmed)
+    if (!mockSteps) {
+      toast.warning('Mock Mode Limitation', 'Offline mock runner only supports preset examples. Please connect to the backend server to trace custom code.')
+      return {
+        steps: [],
+        truncated: false,
+        error: 'Offline mock runner only supports curated presets. Connect to the backend server to execute custom code.',
+      }
+    }
     toast.info('Simulated Run', 'Executed using offline mock trace engine.')
     return {
-      steps: getMockStepsForCode(trimmed),
+      steps: mockSteps,
       truncated: false,
       error: null,
     }
@@ -177,16 +196,8 @@ export async function executeCode(
     }
   } catch (error) {
     if (error instanceof TypeError && error.message.includes('fetch')) {
-      toast.error('Network Error', 'Could not connect to FastAPI server. Please check backend status.')
-      if (shouldMock) {
-        toast.warning('Backend Offline', 'Falling back to mock trace.')
-        return {
-          steps: getMockStepsForCode(trimmed),
-          truncated: false,
-          error: null,
-        }
-      }
-      throw error
+      toast.error('Network Error', `Could not connect to FastAPI backend at ${endpoint}. Please verify the server is running.`)
+      throw new Error(`Could not connect to FastAPI backend at ${endpoint}. Please verify the server is running.`)
     }
     throw error
   }
