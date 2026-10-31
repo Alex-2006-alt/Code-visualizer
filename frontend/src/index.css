@@ -108,6 +108,12 @@
 
 /* Accessibility: Reduced-transparency fallback with solid panels & 50% glow opacity */
 @media (prefers-reduced-transparency: reduce) {
+  :root {
+    --glass: rgba(20, 24, 32, 0.98);
+    --glass-sunken: rgba(16, 20, 29, 0.98);
+    --glass-raised: rgba(26, 32, 44, 0.98);
+    --panel-body: #10141D;
+  }
   .ambient-glow {
     opacity: 0.5 !important;
   }
