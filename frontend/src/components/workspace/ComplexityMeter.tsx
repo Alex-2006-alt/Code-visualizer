@@ -1,5 +1,5 @@
 import React from 'react'
-import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts'
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts'
 import { GlassPanel } from '@/components/ui/GlassPanel'
 
 interface ComplexityMeterProps {
@@ -50,6 +50,7 @@ export const ComplexityMeter: React.FC<ComplexityMeterProps> = ({
       <div className="h-24 w-full mt-1 p-1 rounded-inner bg-panel-body border border-border/40">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={COMPLEXITY_DATA} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
+            <CartesianGrid stroke="rgba(255, 255, 255, 0.05)" strokeDasharray="3 3" vertical={false} />
             <XAxis dataKey="n" stroke="#6F7A8A" fontSize={9} tickLine={false} />
             <YAxis stroke="#6F7A8A" fontSize={9} tickLine={false} domain={[0, 70]} />
             <Tooltip

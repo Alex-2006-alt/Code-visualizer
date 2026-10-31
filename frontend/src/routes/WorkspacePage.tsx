@@ -183,7 +183,7 @@ export const WorkspacePage: React.FC = () => {
         <div className="flex items-center gap-2">
           {mode === 'predict' && (
             <div className="hidden lg:flex items-center gap-2 text-xs font-mono">
-              <span className="px-2.5 py-0.5 rounded-full bg-amber-400/15 text-amber-300 border border-amber-400/30">
+              <span className="px-2.5 py-0.5 rounded-full bg-glass border border-border text-text-2">
                 🔥 {streak} Streak
               </span>
             </div>
@@ -305,6 +305,39 @@ export const WorkspacePage: React.FC = () => {
                 <div className="p-2 rounded-inner bg-panel-body border border-sage/30">
                   <span className="text-[10px] text-text-3 block">Solution B</span>
                   <span className="text-base font-bold text-sage">{compareResult.step_counts.b} steps</span>
+                </div>
+              </div>
+
+              {/* 6px Step-Count Comparison Bars */}
+              <div className="space-y-1.5 my-1" data-testid="compare-progress-bars">
+                <div className="space-y-0.5">
+                  <div className="flex justify-between text-[10px] font-mono text-text-3">
+                    <span>Solution A</span>
+                    <span className="text-accent">{compareResult.step_counts.a} steps</span>
+                  </div>
+                  <div className="w-full h-1.5 rounded-full bg-glass-sunken overflow-hidden border border-border">
+                    <div
+                      className="h-full bg-accent rounded-full transition-all duration-300"
+                      style={{
+                        width: `${Math.min(100, (compareResult.step_counts.a / Math.max(compareResult.step_counts.a, compareResult.step_counts.b, 1)) * 100)}%`
+                      }}
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-0.5">
+                  <div className="flex justify-between text-[10px] font-mono text-text-3">
+                    <span>Solution B</span>
+                    <span className="text-sage">{compareResult.step_counts.b} steps</span>
+                  </div>
+                  <div className="w-full h-1.5 rounded-full bg-glass-sunken overflow-hidden border border-border">
+                    <div
+                      className="h-full bg-sage rounded-full transition-all duration-300"
+                      style={{
+                        width: `${Math.min(100, (compareResult.step_counts.b / Math.max(compareResult.step_counts.a, compareResult.step_counts.b, 1)) * 100)}%`
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
               <div className="flex items-center gap-2 mt-1">
