@@ -13,7 +13,7 @@ import {
 } from '@/components/workspace'
 import { useTraceStore, ExecutionMode } from '@/store/useTraceStore'
 import { PRESETS } from '@/mocks'
-import { createSnippet, fetchSnippet, compareCode, CompareResult } from '@/lib/api'
+import { isMockMode, createSnippet, fetchSnippet, compareCode, CompareResult } from '@/lib/api'
 import { toast } from '@/components/ui/toastStore'
 
 const DEFAULT_CODE_B = `def factorial_iterative(n):
@@ -41,6 +41,7 @@ export const WorkspacePage: React.FC = () => {
     currentStep,
     isPlaying,
     isLoading,
+    isTraceOutdated,
     speed,
     currentPreset,
     isTruncated,
@@ -48,6 +49,7 @@ export const WorkspacePage: React.FC = () => {
     selectedAnswer,
     answerFeedback,
     setCode,
+    selectCustom,
     setSteps,
     nextStep,
     prevStep,
@@ -112,6 +114,34 @@ export const WorkspacePage: React.FC = () => {
     return step.stack[step.stack.length - 1]
   }, [step])
 
+  // Dynamic explanation generated from current trace or unedited preset metadata
+  const activeExplanation = useMemo(() => {
+    if (isTraceOutdated) return null
+    if (!step || step.event === 'exception') return null
+
+    // If an unedited preset is active and specifically provided a custom explanation
+    if (currentPreset && !isTraceOutdated && step.explanation) {
+      return step.explanation
+    }
+
+    // Generated from current trace step
+    if (step.mutatedVariable && activeFrame?.locals && activeFrame.locals[step.mutatedVariable] !== undefined) {
+      const val = JSON.stringify(activeFrame.locals[step.mutatedVariable])
+      return `Line ${step.line}: Variable \`${step.mutatedVariable}\` assigned ${val}`
+    }
+    if (step.event === 'call' && activeFrame?.fn) {
+      return `Line ${step.line}: Called \`${activeFrame.fn}()\``
+    }
+    if (step.event === 'return') {
+      const retVal = step.ret !== undefined ? JSON.stringify(step.ret) : 'None'
+      return `Line ${step.line}: Returned ${retVal}`
+    }
+    if (step.line && step.line > 0) {
+      return `Line ${step.line}: Executing statement`
+    }
+    return null
+  }, [step, isTraceOutdated, currentPreset, activeFrame])
+
   const handleModeChange = (newMode: ExecutionMode) => {
     setSearchParams(newMode === 'visualize' ? {} : { mode: newMode })
   }
@@ -158,17 +188,17 @@ export const WorkspacePage: React.FC = () => {
           <Select
             value={currentPreset ? currentPreset.id : 'custom'}
             onChange={(e) => {
-              if (e.target.value !== 'custom') {
+              if (e.target.value === 'custom') {
+                selectCustom()
+              } else {
                 loadPreset(e.target.value)
               }
             }}
             aria-label="Select Python preset"
           >
-            {!currentPreset && (
-              <option value="custom" className="bg-bg text-text">
-                Custom Script
-              </option>
-            )}
+            <option value="custom" className="bg-bg text-text">
+              Custom Script
+            </option>
             {Object.values(PRESETS).map((p) => (
               <option key={p.id} value={p.id} className="bg-bg text-text">
                 {p.title} ({p.difficulty})
@@ -179,6 +209,16 @@ export const WorkspacePage: React.FC = () => {
           <span className="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-glass text-text-3 text-[11px] font-mono border border-border">
             CPython 3.12
           </span>
+
+          {isMockMode && (
+            <span
+              data-testid="mock-data-badge"
+              className="px-2.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 text-[11px] font-mono font-medium flex items-center gap-1.5"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              Mock Data
+            </span>
+          )}
         </div>
 
         {/* View Mode Switcher */}
@@ -263,6 +303,28 @@ export const WorkspacePage: React.FC = () => {
             mobileTab !== 'editor' ? 'hidden lg:flex' : 'flex'
           }`}
         >
+          {/* Outdated Trace Notice Banner */}
+          {isTraceOutdated && (
+            <div
+              data-testid="code-changed-notice"
+              className="p-2.5 px-3 rounded-panel bg-amber-500/10 border border-amber-500/30 flex items-center justify-between text-xs text-amber-300 font-mono shadow-panel"
+            >
+              <div className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-base text-amber-400">warning</span>
+                <span>Code changed — press <strong>Run</strong> to update trace</span>
+              </div>
+              <GlassButton
+                variant="primary"
+                size="sm"
+                onClick={runCurrentCode}
+                disabled={isLoading}
+                className="!py-0.5 !px-2.5 !text-xs !bg-amber-500/20 !border-amber-500/40 text-amber-200 hover:!bg-amber-500/30 cursor-pointer"
+              >
+                Run
+              </GlassButton>
+            </div>
+          )}
+
           {/* Solution A Editor */}
           <div className="flex flex-col gap-1">
             {mode === 'compare' && (
@@ -408,11 +470,14 @@ export const WorkspacePage: React.FC = () => {
           )}
 
           {/* Explanation Banner */}
-          {step?.explanation && step?.event !== 'exception' && (
-            <div className="p-3 rounded-panel bg-panel-body border border-border flex items-start gap-2 text-xs">
+          {activeExplanation && (
+            <div
+              data-testid="step-explanation"
+              className="p-3 rounded-panel bg-panel-body border border-border flex items-start gap-2 text-xs"
+            >
               <span className="material-symbols-outlined text-sm text-accent mt-0.5">info</span>
               <p className="text-text-2 leading-relaxed font-mono text-[11px]">
-                {step.explanation}
+                {activeExplanation}
               </p>
             </div>
           )}
@@ -440,8 +505,15 @@ export const WorkspacePage: React.FC = () => {
         <div
           className={`flex flex-col gap-4 lg:col-span-7 ${
             mobileTab === 'editor' ? 'hidden lg:flex' : 'flex'
-          }`}
+          } ${isTraceOutdated ? 'opacity-65 transition-opacity' : 'transition-opacity'}`}
         >
+          {isTraceOutdated && (
+            <div className="px-3 py-1.5 rounded-inner bg-amber-500/10 border border-amber-500/20 text-amber-300 text-[11px] font-mono flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-xs">history</span>
+              <span>Showing previous execution trace. Press Run to trace the edited code.</span>
+            </div>
+          )}
+
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
             {/* Live Variables Watch */}
             <div className="md:col-span-7 h-64">

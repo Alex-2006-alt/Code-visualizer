@@ -33,8 +33,8 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
   onSpeedChange,
   className = '',
 }) => {
-  const isEnd = currentStep >= totalSteps - 1
-  const isStart = currentStep === 0
+  const isEnd = totalSteps === 0 || currentStep >= totalSteps - 1
+  const isStart = totalSteps === 0 || currentStep === 0
 
   return (
     <GlassPanel
@@ -75,6 +75,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
               variant={isPlaying ? 'secondary' : 'primary'}
               size="md"
               onClick={onPlayToggle}
+              disabled={totalSteps === 0}
               className="px-4 py-2 font-medium"
               aria-label={isPlaying ? 'Pause' : 'Play'}
             >
@@ -105,12 +106,13 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
             className="text-[11px] font-mono font-medium text-accent min-w-[2.5rem] text-right"
             data-testid="current-step-display"
           >
-            {currentStep + 1}
+            {totalSteps === 0 ? 0 : currentStep + 1}
           </span>
           <Slider
             min={0}
             max={Math.max(0, totalSteps - 1)}
-            value={currentStep}
+            value={totalSteps === 0 ? 0 : currentStep}
+            disabled={totalSteps === 0}
             onChange={onStepChange}
             aria-label="Execution step scrubber"
             className="flex-1"

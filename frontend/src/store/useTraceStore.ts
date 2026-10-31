@@ -12,6 +12,8 @@ interface TraceState {
   currentStep: number
   isPlaying: boolean
   isLoading: boolean
+  isTraceOutdated: boolean
+  activeRequestId: string | null
   speed: number
   mode: ExecutionMode
   currentPreset: TracePreset | null
@@ -27,6 +29,7 @@ interface TraceState {
 
   // Actions
   setCode: (code: string) => void
+  selectCustom: () => void
   setSteps: (steps: TraceStep[], isTruncated?: boolean, executionError?: string | null) => void
   setCurrentStep: (step: number) => void
   nextStep: () => void
@@ -49,10 +52,12 @@ let playTimer: ReturnType<typeof setInterval> | null = null
 
 export const useTraceStore = create<TraceState>((set, get) => ({
   code: DEFAULT_PRESET.code,
-  steps: DEFAULT_PRESET.steps,
+  steps: [],
   currentStep: 0,
   isPlaying: false,
   isLoading: false,
+  isTraceOutdated: false,
+  activeRequestId: null,
   speed: 1,
   mode: 'visualize',
   currentPreset: DEFAULT_PRESET,
@@ -66,13 +71,19 @@ export const useTraceStore = create<TraceState>((set, get) => ({
   answerFeedback: 'idle',
 
   setCode: (code) => {
-    const { currentPreset } = get()
+    const { currentPreset, steps } = get()
+    const updates: Partial<TraceState> = { code }
     if (currentPreset && currentPreset.code !== code) {
-      set({ code, currentPreset: null })
-    } else {
-      set({ code })
+      updates.currentPreset = null
     }
+    if (steps.length > 0) {
+      updates.isTraceOutdated = true
+    }
+    set(updates)
   },
+
+  selectCustom: () => set({ currentPreset: null }),
+
   setSteps: (steps, isTruncated = false, executionError = null) =>
     set({
       steps,
@@ -80,9 +91,11 @@ export const useTraceStore = create<TraceState>((set, get) => ({
       isPlaying: false,
       isTruncated,
       executionError,
+      isTraceOutdated: false,
       selectedAnswer: null,
       answerFeedback: 'idle',
     }),
+
   setCurrentStep: (step) => {
     const { steps } = get()
     const target = Math.max(0, Math.min(steps.length - 1, step))
@@ -107,7 +120,7 @@ export const useTraceStore = create<TraceState>((set, get) => ({
 
   play: () => {
     const { isPlaying, currentStep, steps, speed, nextStep } = get()
-    if (isPlaying) return
+    if (isPlaying || steps.length === 0) return
     if (currentStep >= steps.length - 1) {
       set({ currentStep: 0 })
     }
@@ -153,10 +166,11 @@ export const useTraceStore = create<TraceState>((set, get) => ({
     set({
       currentPreset: preset,
       code: preset.code,
-      steps: preset.steps,
+      steps: [], // Clears any previous trace; never attaches a saved trace
       currentStep: 0,
       isTruncated: false,
       executionError: null,
+      isTraceOutdated: false,
       selectedAnswer: null,
       answerFeedback: 'idle',
     })
@@ -174,15 +188,27 @@ export const useTraceStore = create<TraceState>((set, get) => ({
   runCurrentCode: async () => {
     const { code, pause } = get()
     pause()
-    set({ isLoading: true, executionError: null })
+    const requestId =
+      typeof crypto !== 'undefined' && crypto.randomUUID
+        ? crypto.randomUUID()
+        : `req_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`
+
+    set({ isLoading: true, activeRequestId: requestId, executionError: null })
     try {
-      const result = await executeCode(code)
+      const result = await executeCode(code, { requestId })
+
+      // Ignore stale response if another execution was started
+      if (get().activeRequestId !== requestId) {
+        return
+      }
+
       if (result.steps && result.steps.length > 0) {
         set({
           steps: result.steps,
           currentStep: 0,
           isTruncated: result.truncated,
           executionError: result.error,
+          isTraceOutdated: false,
           selectedAnswer: null,
           answerFeedback: 'idle',
         })
@@ -192,21 +218,28 @@ export const useTraceStore = create<TraceState>((set, get) => ({
           currentStep: 0,
           isTruncated: false,
           executionError: result.error || 'Execution returned no steps.',
+          isTraceOutdated: false,
           selectedAnswer: null,
           answerFeedback: 'idle',
         })
       }
     } catch (err: unknown) {
+      if (get().activeRequestId !== requestId) {
+        return
+      }
       const msg = err instanceof Error ? err.message : 'Execution failed'
       set({
         steps: [],
         currentStep: 0,
         executionError: msg,
+        isTraceOutdated: false,
         selectedAnswer: null,
         answerFeedback: 'idle',
       })
     } finally {
-      set({ isLoading: false })
+      if (get().activeRequestId === requestId) {
+        set({ isLoading: false, activeRequestId: null })
+      }
     }
   },
 

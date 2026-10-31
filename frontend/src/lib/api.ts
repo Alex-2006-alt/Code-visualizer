@@ -13,7 +13,13 @@ function getEffectiveApiUrl(): string {
 }
 
 const API_URL = getEffectiveApiUrl()
-const USE_MOCKS = import.meta.env.VITE_USE_MOCKS === 'true'
+
+/**
+ * Mock data is development only: guarded by an explicit flag, off by default, disabled in production builds.
+ */
+export const isMockMode = Boolean(
+  import.meta.env.DEV && import.meta.env.VITE_USE_MOCKS === 'true'
+)
 
 export interface RunResponse {
   steps?: TraceStep[]
@@ -32,6 +38,7 @@ export interface ExecutionResult {
 export interface ExecuteOptions {
   useMocks?: boolean
   apiUrl?: string
+  requestId?: string
 }
 
 export interface CompareResult {
@@ -70,7 +77,7 @@ export async function executeCode(
     return { steps: [], truncated: false, error: null }
   }
 
-  const shouldMock = options?.useMocks ?? USE_MOCKS
+  const shouldMock = options?.useMocks ?? isMockMode
 
   // 1. Mock execution path when active
   if (shouldMock) {
@@ -92,15 +99,19 @@ export async function executeCode(
     }
   }
 
-  const endpoint = `${options?.apiUrl || API_URL}/run`
+  const endpoint = `${options?.apiUrl || API_URL}/api/run`
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+  }
+  if (options?.requestId) {
+    headers['X-Request-ID'] = options.requestId
+  }
 
   // 2. Real API network request to FastAPI backend
   try {
     const response = await fetch(endpoint, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers,
       body: JSON.stringify({ code: trimmed }),
     })
 
@@ -197,7 +208,7 @@ export async function executeCode(
   } catch (error) {
     if (error instanceof TypeError && error.message.includes('fetch')) {
       toast.error('Network Error', `Could not connect to FastAPI backend at ${endpoint}. Please verify the server is running.`)
-      throw new Error(`Could not connect to FastAPI backend at ${endpoint}. Please verify the server is running.`)
+      throw error
     }
     throw error
   }
