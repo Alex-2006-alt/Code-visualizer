@@ -46,7 +46,7 @@ describe('Component Rendering with Real Corpus Fixtures', () => {
     expect(screen.getByText('20')).toBeInTheDocument()
     expect(screen.getByText('30')).toBeInTheDocument()
     expect(screen.getByText('"CodeTrace"')).toBeInTheDocument()
-    expect(screen.getByText('true')).toBeInTheDocument()
+    expect(screen.getByText(/true/i)).toBeInTheDocument()
   })
 
   it('renders CallStack with multiple recursion frames', () => {

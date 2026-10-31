@@ -9,7 +9,7 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Any
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, computed_field
 
 # ──────────────────────────────────────────────────────────────
 # Trace data models (match frontend/src/types/trace.ts)
@@ -25,11 +25,12 @@ class FrameSchema(BaseModel):
 class HeapObjectSchema(BaseModel):
     """A reference-type object living on the virtual heap."""
     id: str
-    type: str  # 'list' | 'dict' | 'set' | 'object'
+    type: str  # 'list' | 'dict' | 'set' | 'instance' | 'object'
     address: str
     value: Any  # list or dict
     target_index: int | None = Field(default=None, alias="targetIndex")
     label: str | None = None
+    className: str | None = None
 
     model_config = {"populate_by_name": True}
 
@@ -98,17 +99,39 @@ class CompareResponse(BaseModel):
 class ComplexityRequest(BaseModel):
     code: str
     function_name: str
-    sizes: list[int]
+    sizes: list[int] | None = None
+    input_kind: str = "int_list"  # 'int_list' | 'sorted_int_list' | 'reversed_int_list' | 'string' | 'int_n' | 'int_list_and_target'
+    case: str = "average"         # 'best' | 'average' | 'worst'
 
 
 class ComplexityPoint(BaseModel):
     n: int
-    ops: int
+    steps: int
+    peak_items: int = 0
+    depth: int = 1
+
+    @computed_field
+    @property
+    def ops(self) -> int:
+        """Backward compatibility alias for steps."""
+        return self.steps
 
 
 class ComplexityResponse(BaseModel):
+    time_label: str
+    space_label: str = "O(1)"
+    confidence: str = "medium"  # 'high' | 'medium' | 'low'
     points: list[ComplexityPoint]
-    label: str
+    fit: dict[str, Any] = Field(default_factory=dict)
+    notes: list[str] = Field(default_factory=list)
+    truncated: bool = False
+    case: str = "average"
+
+    @computed_field
+    @property
+    def label(self) -> str:
+        """Backward compatibility alias for time_label."""
+        return self.time_label
 
 
 # ──────────────────────────────────────────────────────────────

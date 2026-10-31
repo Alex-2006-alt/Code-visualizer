@@ -1,4 +1,4 @@
-import { TraceStep } from '@/types/trace'
+import { TraceStep, ComplexityParams, ComplexityResult } from '@/types/trace'
 import { toast } from '@/components/ui/toastStore'
 import { PRESETS } from '@/mocks'
 
@@ -285,6 +285,43 @@ export async function compareCode(codeA: string, codeB: string): Promise<Compare
     return (await response.json()) as CompareResult
   } catch (error) {
     toast.error('Comparison Error', 'Could not execute dual-program comparison.')
+    throw error
+  }
+}
+
+
+/**
+ * Runs empirical Big-O complexity analysis across varying input sizes
+ */
+export async function fetchComplexityAnalysis(
+  params: ComplexityParams
+): Promise<ComplexityResult> {
+  const endpoint = `${API_URL}/api/complexity`
+  try {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        code: params.code,
+        function_name: params.function_name,
+        input_kind: params.input_kind || 'int_list',
+        case: params.case || 'average',
+        sizes: params.sizes,
+      }),
+    })
+
+    if (!response.ok) {
+      const errData = await response.json().catch(() => ({ detail: 'Analysis failed' }))
+      const message = errData.detail || `Server returned status ${response.status}`
+      toast.error('Complexity Analysis Failed', message)
+      throw new Error(message)
+    }
+
+    return (await response.json()) as ComplexityResult
+  } catch (error) {
+    if (error instanceof TypeError && error.message.includes('fetch')) {
+      toast.error('Network Error', 'Could not connect to FastAPI complexity service.')
+    }
     throw error
   }
 }

@@ -18,6 +18,15 @@ router = APIRouter(tags=["Complexity"])
 settings = get_settings()
 
 _IDENTIFIER_REGEX = re.compile(r"^[a-zA-Z_][a-zA-Z0-9_]*$")
+_VALID_INPUT_KINDS = {
+    "int_list",
+    "sorted_int_list",
+    "reversed_int_list",
+    "string",
+    "int_n",
+    "int_list_and_target",
+}
+_VALID_CASES = {"best", "average", "worst"}
 
 
 @router.post(
@@ -34,7 +43,7 @@ async def analyze_complexity(
     request: ComplexityRequest,
     runner: Annotated[BaseSandboxRunner, Depends(get_sandbox_runner)],
 ) -> ComplexityResponse:
-    """Run code across multiple input sizes and estimate Big-O time complexity."""
+    """Run code across multiple input sizes and estimate Big-O time and space complexity."""
     if not request.code.strip():
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -49,6 +58,14 @@ async def analyze_complexity(
             detail=f"Invalid function name '{request.function_name}'.",
         )
 
+    input_kind = request.input_kind.strip().lower()
+    if input_kind not in _VALID_INPUT_KINDS:
+        input_kind = "int_list"
+
+    case = request.case.strip().lower()
+    if case not in _VALID_CASES:
+        case = "average"
+
     # Validate code size and imports
     validate_code_size(request.code, settings.max_code_size_bytes)
     validate_imports(request.code)
@@ -58,5 +75,6 @@ async def analyze_complexity(
         code=request.code,
         function_name=request.function_name.strip(),
         sizes=request.sizes,
+        input_kind=input_kind,
+        case=case,
     )
-

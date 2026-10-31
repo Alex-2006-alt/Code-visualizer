@@ -8,6 +8,7 @@ and stdout output under strict security and resource limits.
 from __future__ import annotations
 
 import builtins
+import inspect
 import io
 import json
 import sys
@@ -52,6 +53,18 @@ def _safe_serialize(val: Any, depth: int = 0) -> Any:
             return val[:1000] + f"... ({len(val)} chars)"
         return val
 
+    # Functions: formatted as "function func_name(params)" without heap card
+    if isinstance(val, (types.FunctionType, types.BuiltinFunctionType, types.MethodType)):
+        try:
+            sig = str(inspect.signature(val))
+            return f"function {val.__name__}{sig}"
+        except Exception:
+            return f"function {getattr(val, '__name__', 'func')}()"
+
+    # Classes: formatted as "class ClassName"
+    if isinstance(val, type):
+        return f"class {val.__name__}"
+
     if isinstance(val, list):
         items = val[:MAX_COLLECTION_LEN]
         serialized: list[Any] = [_safe_serialize(x, depth + 1) for x in items]
@@ -79,6 +92,20 @@ def _safe_serialize(val: Any, depth: int = 0) -> Any:
         items_set = list(val)[:MAX_COLLECTION_LEN]
         return [_safe_serialize(x, depth + 1) for x in items_set]
 
+    # Class instances: capture class name and user fields
+    if hasattr(val, "__dict__") and not isinstance(
+        val, (type, types.FunctionType, types.BuiltinFunctionType, types.MethodType, types.ModuleType)
+    ):
+        fields = {
+            str(k): _safe_serialize(v, depth + 1)
+            for k, v in getattr(val, "__dict__", {}).items()
+            if not k.startswith("__")
+        }
+        return {
+            "__class__": val.__class__.__name__,
+            "fields": fields,
+        }
+
     # Other objects
     try:
         return str(val)
@@ -88,9 +115,25 @@ def _safe_serialize(val: Any, depth: int = 0) -> Any:
 
 def _is_reference_type(val: Any) -> bool:
     """Return True if the object should be visualized as a virtual heap object."""
-    return isinstance(val, (list, dict, set)) or (
-        hasattr(val, "__dict__") and not isinstance(val, (int, float, str, bool, type(None)))
-    )
+    if isinstance(val, (list, dict, set)):
+        return True
+    if hasattr(val, "__dict__") and not isinstance(
+        val,
+        (
+            type,
+            types.FunctionType,
+            types.BuiltinFunctionType,
+            types.MethodType,
+            types.ModuleType,
+            int,
+            float,
+            str,
+            bool,
+            type(None),
+        ),
+    ):
+        return True
+    return False
 
 
 def _get_heap_type(val: Any) -> str:
@@ -101,6 +144,8 @@ def _get_heap_type(val: Any) -> str:
         return "dict"
     if isinstance(val, set):
         return "set"
+    if hasattr(val, "__class__"):
+        return "instance"
     return "object"
 
 
@@ -125,13 +170,16 @@ def _build_heap_and_locals(
             clean_locals[name] = addr
 
             if addr not in heap_objects_map:
-                heap_objects_map[addr] = {
+                heap_obj_dict: dict[str, Any] = {
                     "id": f"heap-{addr}",
                     "type": heap_type,
                     "address": addr,
                     "value": snap_val,
                     "label": name,
                 }
+                if heap_type == "instance" and hasattr(val, "__class__"):
+                    heap_obj_dict["className"] = val.__class__.__name__
+                heap_objects_map[addr] = heap_obj_dict
             heap_mapping[addr] = snap_val
         else:
             clean_locals[name] = _safe_serialize(val, depth=1)
@@ -158,36 +206,22 @@ def _build_stack(current_frame: types.FrameType) -> list[dict[str, Any]]:
             })
         frame = frame.f_back
 
-    stack.reverse()
-    return stack
+    return list(reversed(stack))
 
 
-def _secure_import(
-    name: str,
-    globals_dict: dict[str, Any] | None = None,
-    locals_dict: dict[str, Any] | None = None,
-    fromlist: tuple[str, ...] = (),
-    level: int = 0,
-) -> Any:
-    """Guarded import function restricting imports to the allowlist."""
-    try:
-        caller = sys._getframe(1)
-        # Enforce allowlist on user code frames
-        if caller.f_code.co_filename == USER_FILENAME:
-            top_level = name.split(".")[0]
-            if top_level not in IMPORT_ALLOWLIST:
-                raise ImportError(f"Importing '{name}' is forbidden for security reasons.")
-    except (ValueError, AttributeError):
-        top_level = name.split(".")[0]
-        if top_level not in IMPORT_ALLOWLIST:
-            raise ImportError(f"Importing '{name}' is forbidden for security reasons.") from None
-
-    return orig_import(name, globals_dict, locals_dict, fromlist, level)
+def _secure_import(name: str, *args: Any, **kwargs: Any) -> Any:
+    """Enforce import allowlist inside execution sandbox."""
+    base_module = name.split(".")[0]
+    if base_module not in IMPORT_ALLOWLIST:
+        raise ImportError(
+            f"Security Error: Import of '{name}' is forbidden. Allowed modules: {sorted(IMPORT_ALLOWLIST)}"
+        )
+    return orig_import(name, *args, **kwargs)
 
 
 def _blocked_open(*args: Any, **kwargs: Any) -> Any:
-    """Prohibit arbitrary filesystem access via open() in sandbox."""
-    raise PermissionError("Direct file system access via open() is prohibited in the sandbox.")
+    """Deny file system access inside execution sandbox."""
+    raise PermissionError("Security Error: File system access (open) is blocked.")
 
 
 orig_import = builtins.__import__
@@ -303,20 +337,14 @@ def trace_code(
             "error": f"CompileError: {e}",
         }
 
-    # Execute with tracer
-    global_namespace: dict[str, Any] = {
-        "__name__": "__main__",
-        "__builtins__": builtins,
-    }
-
+    # Execute user code under sys.settrace
     sys.settrace(trace_dispatcher)
     try:
-        exec(compiled, global_namespace)
+        exec(compiled, {})
     except StepLimitExceeded:
         truncated = True
     except Exception as e:
         runtime_error = f"{type(e).__name__}: {e}"
-        # Ensure the final exception step is captured if not already present
         if not steps or steps[-1].get("event") != "exception":
             final_output = stdout_capture.getvalue()
             steps.append({

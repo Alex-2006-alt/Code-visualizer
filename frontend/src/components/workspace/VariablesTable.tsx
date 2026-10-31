@@ -1,45 +1,23 @@
 import React, { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { GlassPanel } from '@/components/ui/GlassPanel'
+import { HeapObject } from '@/types/trace'
+import { formatVariableValue } from '@/lib/formatters'
 
 interface VariablesTableProps {
   locals: Record<string, unknown>
+  heap?: Record<string, unknown>
+  heapObjects?: HeapObject[]
+  addressLabels?: Map<string, string>
   mutatedVariable?: string
   className?: string
 }
 
-function getTypeBadge(val: unknown): { label: string; dotClass: string } {
-  if (val === null || val === undefined) return { label: 'none', dotClass: 'bg-text-3' }
-  if (typeof val === 'number') return { label: Number.isInteger(val) ? 'int' : 'float', dotClass: 'bg-syn-number' }
-  if (typeof val === 'string') {
-    if (val.startsWith('0x')) return { label: 'ref', dotClass: 'bg-accent' }
-    return { label: 'str', dotClass: 'bg-syn-keyword' }
-  }
-  if (typeof val === 'boolean') return { label: 'bool', dotClass: 'bg-syn-number' }
-  if (Array.isArray(val)) return { label: 'list', dotClass: 'bg-syn-function' }
-  if (typeof val === 'object') return { label: 'dict', dotClass: 'bg-syn-string' }
-  return { label: typeof val, dotClass: 'bg-text-3' }
-}
-
-function formatValue(val: unknown): string {
-  if (val === null) return 'None'
-  if (val === undefined) return 'undefined'
-  if (typeof val === 'string') {
-    if (val.startsWith('0x')) return val
-    return `"${val}"`
-  }
-  if (typeof val === 'object') {
-    try {
-      return JSON.stringify(val)
-    } catch {
-      return String(val)
-    }
-  }
-  return String(val)
-}
-
 export const VariablesTable: React.FC<VariablesTableProps> = ({
   locals,
+  heap,
+  heapObjects,
+  addressLabels,
   mutatedVariable,
   className = '',
 }) => {
@@ -52,7 +30,7 @@ export const VariablesTable: React.FC<VariablesTableProps> = ({
   }, [locals, filter])
 
   return (
-    <GlassPanel level={2} className={`flex flex-col h-full border border-border overflow-hidden ${className}`}>
+    <GlassPanel level={2} data-testid="variables-table" className={`flex flex-col h-full border border-border overflow-hidden ${className}`}>
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-glass-sunken">
         <div className="flex items-center gap-2">
@@ -88,13 +66,11 @@ export const VariablesTable: React.FC<VariablesTableProps> = ({
             <AnimatePresence initial={false}>
               {entries.map(([name, value]) => {
                 const isMutated = mutatedVariable === name
-                const { label, dotClass } = getTypeBadge(value)
-                const formatted = formatValue(value)
-                const isRef = typeof value === 'string' && value.startsWith('0x')
+                const formatted = formatVariableValue(value, heap, heapObjects, addressLabels)
 
                 return (
                   <motion.div
-                    key={`${name}-${formatted}-${isMutated}`}
+                    key={`${name}-${formatted.preview}-${isMutated}`}
                     layout
                     initial={{ opacity: 0, y: 6 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -112,30 +88,34 @@ export const VariablesTable: React.FC<VariablesTableProps> = ({
                         {name}
                       </span>
                       <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-glass border border-border text-text-2 font-sans text-[11px] lowercase">
-                        <span className={`w-1.5 h-1.5 rounded-full ${dotClass}`} />
-                        {label}
+                        <span className={`w-1.5 h-1.5 rounded-full ${formatted.badge.dotClass}`} />
+                        {formatted.badge.label}
                       </span>
                     </div>
 
-                    {/* Var Value */}
-                    <div className="flex items-center gap-1.5 max-w-[55%]">
-                      {isRef && (
-                        <span className="material-symbols-outlined text-[13px] text-accent shrink-0">
-                          arrow_forward
-                        </span>
-                      )}
+                    {/* Var Value Preview with optional friendly reference tag */}
+                    <div className="flex items-center gap-1.5 max-w-[60%] justify-end">
                       <span
-                        title={formatted}
+                        title={formatted.fullAddress || formatted.preview}
                         className={`text-xs font-mono truncate ${
-                          isRef
-                            ? 'text-accent font-medium'
-                            : isMutated
+                          isMutated
                             ? 'text-sage font-medium'
+                            : formatted.isRef
+                            ? 'text-text'
                             : 'text-text-2'
                         }`}
                       >
-                        {formatted}
+                        {formatted.preview}
                       </span>
+
+                      {formatted.isRef && formatted.refLabel && (
+                        <span
+                          title={formatted.fullAddress ? `Address: ${formatted.fullAddress}` : undefined}
+                          className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-glass border border-accent/40 text-accent font-medium shrink-0 cursor-help"
+                        >
+                          {formatted.refLabel}
+                        </span>
+                      )}
                     </div>
                   </motion.div>
                 )

@@ -14,6 +14,7 @@ import {
 import { useTraceStore, ExecutionMode } from '@/store/useTraceStore'
 import { PRESETS } from '@/mocks'
 import { isMockMode, createSnippet, fetchSnippet, compareCode, CompareResult } from '@/lib/api'
+import { buildAddressLabelMap, generateStepExplanation } from '@/lib/formatters'
 import { toast } from '@/components/ui/toastStore'
 
 const DEFAULT_CODE_B = `def factorial_iterative(n):
@@ -114,7 +115,12 @@ export const WorkspacePage: React.FC = () => {
     return step.stack[step.stack.length - 1]
   }, [step])
 
-  // Dynamic explanation generated from current trace or unedited preset metadata
+  // Stable friendly reference labels (@1, @2, @3) across the entire trace
+  const addressLabels = useMemo(() => {
+    return buildAddressLabelMap(steps)
+  }, [steps])
+
+  // Dynamic explanation generated from real execution step and source line
   const activeExplanation = useMemo(() => {
     if (isTraceOutdated) return null
     if (!step || step.event === 'exception') return null
@@ -124,23 +130,15 @@ export const WorkspacePage: React.FC = () => {
       return step.explanation
     }
 
-    // Generated from current trace step
-    if (step.mutatedVariable && activeFrame?.locals && activeFrame.locals[step.mutatedVariable] !== undefined) {
-      const val = JSON.stringify(activeFrame.locals[step.mutatedVariable])
-      return `Line ${step.line}: Variable \`${step.mutatedVariable}\` assigned ${val}`
-    }
-    if (step.event === 'call' && activeFrame?.fn) {
-      return `Line ${step.line}: Called \`${activeFrame.fn}()\``
-    }
-    if (step.event === 'return') {
-      const retVal = step.ret !== undefined ? JSON.stringify(step.ret) : 'None'
-      return `Line ${step.line}: Returned ${retVal}`
-    }
-    if (step.line && step.line > 0) {
-      return `Line ${step.line}: Executing statement`
-    }
-    return null
-  }, [step, isTraceOutdated, currentPreset, activeFrame])
+    return generateStepExplanation(
+      step,
+      code,
+      activeFrame,
+      step.heap,
+      step.heapObjects,
+      isTraceOutdated
+    )
+  }, [step, code, activeFrame, isTraceOutdated, currentPreset])
 
   const handleModeChange = (newMode: ExecutionMode) => {
     setSearchParams(newMode === 'visualize' ? {} : { mode: newMode })
@@ -494,6 +492,8 @@ export const WorkspacePage: React.FC = () => {
           )}
 
           <ComplexityMeter
+            code={code}
+            preset={currentPreset}
             timeComplexity={currentPreset?.timeComplexity || 'Custom'}
             spaceComplexity={currentPreset?.spaceComplexity || '—'}
             currentStep={currentStep}
@@ -519,6 +519,9 @@ export const WorkspacePage: React.FC = () => {
             <div className="md:col-span-7 h-64">
               <VariablesTable
                 locals={activeFrame?.locals || {}}
+                heap={step?.heap}
+                heapObjects={step?.heapObjects}
+                addressLabels={addressLabels}
                 mutatedVariable={step?.mutatedVariable}
               />
             </div>
@@ -534,6 +537,7 @@ export const WorkspacePage: React.FC = () => {
             <MemoryHeap
               objects={step?.heapObjects || []}
               locals={activeFrame?.locals || {}}
+              addressLabels={addressLabels}
             />
           </div>
 
