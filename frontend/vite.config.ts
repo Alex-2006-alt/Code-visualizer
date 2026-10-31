@@ -11,6 +11,26 @@ export default defineConfig({
       '@': path.resolve(import.meta.dirname, './src'),
     },
   },
+  server: {
+    proxy: {
+      '/run': 'http://127.0.0.1:8000',
+      '/api': 'http://127.0.0.1:8000',
+      '/compare': 'http://127.0.0.1:8000',
+      '/complexity': 'http://127.0.0.1:8000',
+      '/snippets': 'http://127.0.0.1:8000',
+      '/examples': 'http://127.0.0.1:8000',
+    },
+  },
+  preview: {
+    proxy: {
+      '/run': 'http://127.0.0.1:8000',
+      '/api': 'http://127.0.0.1:8000',
+      '/compare': 'http://127.0.0.1:8000',
+      '/complexity': 'http://127.0.0.1:8000',
+      '/snippets': 'http://127.0.0.1:8000',
+      '/examples': 'http://127.0.0.1:8000',
+    },
+  },
   test: {
     globals: true,
     environment: 'jsdom',

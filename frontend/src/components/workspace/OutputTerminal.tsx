@@ -71,7 +71,7 @@ export const OutputTerminal: React.FC<OutputTerminalProps> = ({
 
       {/* Terminal Body with Flat Solid Fill and $ Prompt in --accent */}
       {!isCollapsed && (
-        <div className="p-3 bg-panel-body font-mono text-xs overflow-y-auto max-h-48 min-h-[5rem] custom-scrollbar">
+        <div data-testid="terminal-content" className="p-3 bg-panel-body font-mono text-xs overflow-y-auto max-h-48 min-h-[5rem] custom-scrollbar">
           {activeTab === 'stdout' && (
             <div>
               {stdout ? (

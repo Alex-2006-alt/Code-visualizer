@@ -77,7 +77,7 @@ export const VariablesTable: React.FC<VariablesTableProps> = ({
       </div>
 
       {/* Content Area with Flat Solid Fill for Crisp Contrast */}
-      <div className="flex-1 overflow-y-auto custom-scrollbar p-3 bg-panel-body">
+      <div data-testid="variables-content" className="flex-1 overflow-y-auto custom-scrollbar p-3 bg-panel-body">
         {entries.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full text-center py-6 text-text-2">
             <span className="material-symbols-outlined text-2xl mb-1 text-text-3">hourglass_empty</span>
