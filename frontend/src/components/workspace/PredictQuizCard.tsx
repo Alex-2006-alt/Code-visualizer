@@ -33,7 +33,11 @@ export const PredictQuizCard: React.FC<PredictQuizCardProps> = ({
   }
 
   return (
-    <GlassPanel level={2} className={`p-4 border border-border overflow-hidden bg-glass-sunken ${className}`}>
+    <motion.div
+      animate={feedback === 'incorrect' ? { x: [0, -6, 6, -4, 4, 0] } : undefined}
+      transition={{ duration: 0.3 }}
+    >
+      <GlassPanel level={2} className={`p-4 border border-border overflow-hidden bg-glass-sunken ${className}`}>
       {/* Header with Streak */}
       <div className="flex items-center justify-between mb-3 pb-2 border-b border-border">
         <div className="flex items-center gap-2">
@@ -43,7 +47,7 @@ export const PredictQuizCard: React.FC<PredictQuizCardProps> = ({
           </h4>
         </div>
         {streak > 0 && (
-          <span className="px-2 py-0.5 rounded-full bg-accent-soft border border-accent/30 text-accent font-mono text-[10px]">
+          <span className="px-2 py-0.5 rounded-full bg-glass border border-border text-text-2 font-mono text-[10px]">
             🔥 {streak} Streak
           </span>
         )}
@@ -118,5 +122,6 @@ export const PredictQuizCard: React.FC<PredictQuizCardProps> = ({
         </motion.div>
       )}
     </GlassPanel>
+    </motion.div>
   )
 }

@@ -43,7 +43,7 @@ export const NotFoundPage: React.FC = () => {
         <div className="flex items-center justify-between pb-2 border-b border-border text-text-3">
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-error/80" />
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-400/80" />
+            <span className="w-2.5 h-2.5 rounded-full bg-text-3/60" />
             <span className="w-2.5 h-2.5 rounded-full bg-sage/80" />
             <span className="ml-2 font-mono text-text-3">crash_traceback.py — VM Stack Dump</span>
           </div>

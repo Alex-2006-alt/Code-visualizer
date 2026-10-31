@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils'
 
 export interface GlassPanelProps extends React.HTMLAttributes<HTMLDivElement> {
   level?: 1 | 2 | 3
-  glow?: 'none' | 'primary' | 'secondary' | 'cyan' | 'amber' | 'error'
+  glow?: 'none' | 'primary' | 'secondary' | 'accent' | 'sage' | 'error'
   solid?: boolean
   as?: React.ElementType
 }
@@ -39,8 +39,8 @@ export const GlassPanel = React.forwardRef<HTMLDivElement, GlassPanelProps>(
       none: '',
       primary: 'border-accent/40',
       secondary: 'border-sage/40',
-      cyan: 'border-accent/40',
-      amber: 'border-sage/40',
+      accent: 'border-accent/40',
+      sage: 'border-sage/40',
       error: 'border-error/40',
     }[glow]
 
@@ -48,7 +48,7 @@ export const GlassPanel = React.forwardRef<HTMLDivElement, GlassPanelProps>(
       <Component
         ref={ref}
         className={cn(
-          'relative transition-all duration-200',
+          'transition-all duration-200',
           levelClasses,
           glowClasses,
           className
