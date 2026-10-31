@@ -9,3 +9,5 @@ test-results/
 playwright-report/
 tests-e2e/test-results/
 tests-e2e/playwright-report/
+tests-e2e/reports/
+stitch_codetrace_python_visualizer/
