@@ -70,6 +70,7 @@ export const EventLogDrawer: React.FC<EventLogDrawerProps> = ({
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 28, stiffness: 300 }}
             className="w-full max-w-md h-full bg-bg border-l border-border shadow-float flex flex-col z-10"
+            data-testid="event-log-drawer"
           >
             {/* Header */}
             <div className="p-4 bg-glass-sunken border-b border-border flex items-center justify-between">
@@ -101,6 +102,7 @@ export const EventLogDrawer: React.FC<EventLogDrawerProps> = ({
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder="Filter by line #, event, or variable name..."
+                  data-testid="event-log-search"
                   className="w-full pl-9 pr-3 py-1.5 rounded-control bg-glass-sunken border border-border text-xs text-text placeholder:text-text-3 font-mono focus:outline-none focus:border-accent"
                 />
               </div>
@@ -120,6 +122,7 @@ export const EventLogDrawer: React.FC<EventLogDrawerProps> = ({
                       key={index}
                       level={1}
                       onClick={() => onSelectStep(index)}
+                      data-testid={`event-log-item-${index}`}
                       className={`p-3 rounded-inner border cursor-pointer transition-all flex flex-col gap-1.5 ${
                         isActive
                           ? 'border-accent bg-accent/10 shadow-panel'
@@ -177,3 +180,4 @@ export const EventLogDrawer: React.FC<EventLogDrawerProps> = ({
     </AnimatePresence>
   )
 }
+
