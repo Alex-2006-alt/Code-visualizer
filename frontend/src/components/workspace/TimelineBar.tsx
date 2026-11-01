@@ -75,6 +75,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
               disabled={isStart}
               className="p-1.5"
               aria-label="Restart execution"
+              data-testid="btn-restart"
             >
               <span className="material-symbols-outlined text-base">restart_alt</span>
             </GlassButton>
@@ -89,6 +90,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
               disabled={isStart}
               className="p-1.5"
               aria-label="Step backward"
+              data-testid="btn-step-prev"
             >
               <span className="material-symbols-outlined text-base">arrow_left</span>
             </GlassButton>
@@ -103,10 +105,13 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
               disabled={isDisabled}
               className="px-3.5 py-1.5 font-medium"
               aria-label={isPlaying ? 'Pause' : 'Play'}
+              data-testid="btn-play"
+              leftIcon={
+                <span className="material-symbols-outlined text-base mr-1">
+                  {isPlaying ? 'pause' : 'play_arrow'}
+                </span>
+              }
             >
-              <span className="material-symbols-outlined text-base mr-1">
-                {isPlaying ? 'pause' : 'play_arrow'}
-              </span>
               <span>{isPlaying ? 'Pause' : isEnd ? 'Replay' : 'Play'}</span>
             </GlassButton>
           </Tooltip>
@@ -120,6 +125,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
               disabled={isEnd}
               className="p-1.5"
               aria-label="Step forward"
+              data-testid="btn-step-forward"
             >
               <span className="material-symbols-outlined text-base">arrow_right</span>
             </GlassButton>
@@ -137,6 +143,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
                 disabled={isEnd}
                 className="p-1.5 text-text-2 hover:text-accent"
                 aria-label="Step Over"
+                data-testid="btn-step-over"
               >
                 <span className="material-symbols-outlined text-base">redo</span>
               </GlassButton>
@@ -153,6 +160,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
                 disabled={isEnd}
                 className="p-1.5 text-text-2 hover:text-accent"
                 aria-label="Step Into"
+                data-testid="btn-step-into"
               >
                 <span className="material-symbols-outlined text-base">south</span>
               </GlassButton>
@@ -169,6 +177,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
                 disabled={isEnd}
                 className="p-1.5 text-text-2 hover:text-accent"
                 aria-label="Step Out"
+                data-testid="btn-step-out"
               >
                 <span className="material-symbols-outlined text-base">north_east</span>
               </GlassButton>
@@ -185,6 +194,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
                 disabled={isEnd}
                 className="p-1.5 text-text-2 hover:text-sage"
                 aria-label="Next Call"
+                data-testid="btn-next-call"
               >
                 <span className="material-symbols-outlined text-base">call_made</span>
               </GlassButton>
@@ -201,6 +211,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
                 disabled={isEnd}
                 className="p-1.5 text-text-2 hover:text-accent font-mono text-xs"
                 aria-label="Continue"
+                data-testid="btn-continue"
               >
                 <span className="material-symbols-outlined text-base">fast_forward</span>
               </GlassButton>
@@ -236,6 +247,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
                   return (
                     <span
                       key={stepIdx}
+                      data-testid="breakpoint-tick"
                       className="absolute w-1.5 h-3 -translate-x-1/2 bg-accent rounded-full opacity-80"
                       style={{ left: `${pct}%` }}
                       title={`Breakpoint at Step ${stepIdx + 1}`}
@@ -282,6 +294,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
                 disabled={isDisabled}
                 className="p-1.5 rounded-control bg-glass-sunken border border-border text-text-2 hover:text-text disabled:opacity-40 cursor-pointer"
                 aria-label="Toggle event log drawer"
+                data-testid="btn-open-event-log"
               >
                 <span className="material-symbols-outlined text-base">list_alt</span>
               </button>
@@ -296,6 +309,7 @@ export const TimelineBar: React.FC<TimelineBarProps> = ({
                 onClick={onOpenShortcuts}
                 className="p-1.5 rounded-control bg-glass-sunken border border-border text-text-2 hover:text-text cursor-pointer"
                 aria-label="View keyboard shortcuts"
+                data-testid="btn-open-shortcuts"
               >
                 <span className="material-symbols-outlined text-base">keyboard</span>
               </button>
