@@ -27,3 +27,4 @@ export type FeatureKey = keyof typeof FEATURES
 export const isFeatureEnabled = (key: FeatureKey): boolean => {
   return FEATURES[key] ?? false
 }
+
