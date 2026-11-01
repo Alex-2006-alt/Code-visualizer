@@ -11,6 +11,9 @@ import {
   PredictQuizCard,
   ComplexityMeter,
 } from '@/components/workspace'
+import { EventLogDrawer } from '@/components/workspace/EventLogDrawer'
+import { KeyboardShortcutsModal } from '@/components/workspace/KeyboardShortcutsModal'
+import { FEATURES } from '@/config/features'
 import { useTraceStore, ExecutionMode } from '@/store/useTraceStore'
 import { PRESETS } from '@/mocks'
 import { isMockMode, createSnippet, fetchSnippet, compareCode, CompareResult } from '@/lib/api'
@@ -35,6 +38,8 @@ export const WorkspacePage: React.FC = () => {
   const [isComparing, setIsComparing] = useState(false)
   const [codeB, setCodeB] = useState(DEFAULT_CODE_B)
   const [compareResult, setCompareResult] = useState<CompareResult | null>(null)
+  const [isEventLogOpen, setIsEventLogOpen] = useState(false)
+  const [isShortcutsOpen, setIsShortcutsOpen] = useState(false)
 
   const {
     code,
@@ -49,6 +54,7 @@ export const WorkspacePage: React.FC = () => {
     streak,
     selectedAnswer,
     answerFeedback,
+    breakpoints,
     setCode,
     selectCustom,
     setSteps,
@@ -62,6 +68,13 @@ export const WorkspacePage: React.FC = () => {
     setMode,
     loadPreset,
     submitPredictAnswer,
+    toggleBreakpoint,
+    stepInto,
+    stepOver,
+    stepOut,
+    nextCall,
+    continueToBreakpoint,
+    restart,
   } = useTraceStore()
 
   // Sync mode with store
@@ -87,7 +100,20 @@ export const WorkspacePage: React.FC = () => {
     }
   }, [searchParams, setCode, loadPreset])
 
-  // Global Keyboard shortcuts: Space (play/pause), ArrowLeft (prev), ArrowRight (next)
+  // Breakpoint step indices on the current trace
+  const breakpointStepIndices = useMemo(() => {
+    if (!breakpoints || breakpoints.length === 0 || steps.length === 0) return []
+    const bpSet = new Set(breakpoints)
+    const indices: number[] = []
+    steps.forEach((s, idx) => {
+      if (bpSet.has(s.line)) {
+        indices.push(idx)
+      }
+    })
+    return indices
+  }, [breakpoints, steps])
+
+  // Global Keyboard shortcuts: Space, ArrowLeft, ArrowRight, F10, F11, Shift+F11, F8
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement)?.tagName?.toLowerCase()
@@ -102,12 +128,26 @@ export const WorkspacePage: React.FC = () => {
       } else if (e.code === 'ArrowLeft') {
         e.preventDefault()
         prevStep()
+      } else if (FEATURES.DEBUGGER_CONTROLS) {
+        if (e.code === 'F10') {
+          e.preventDefault()
+          stepOver()
+        } else if (e.code === 'F11' && e.shiftKey) {
+          e.preventDefault()
+          stepOut()
+        } else if (e.code === 'F11') {
+          e.preventDefault()
+          stepInto()
+        } else if (e.code === 'F8') {
+          e.preventDefault()
+          continueToBreakpoint()
+        }
       }
     }
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [togglePlay, nextStep, prevStep])
+  }, [togglePlay, nextStep, prevStep, stepOver, stepInto, stepOut, continueToBreakpoint])
 
   const step = useMemo(() => steps[currentStep] || steps[0], [steps, currentStep])
   const activeFrame = useMemo(() => {
@@ -334,6 +374,8 @@ export const WorkspacePage: React.FC = () => {
               code={code}
               currentLine={step?.line || 1}
               onChange={(newCode) => setCode(newCode || '')}
+              breakpoints={breakpoints}
+              onToggleBreakpoint={toggleBreakpoint}
               height={mode === 'compare' ? '240px' : '440px'}
             />
           </div>
@@ -563,8 +605,35 @@ export const WorkspacePage: React.FC = () => {
           onReset={resetExecution}
           onStepChange={setCurrentStep}
           onSpeedChange={setSpeed}
+          onStepOver={FEATURES.DEBUGGER_CONTROLS ? stepOver : undefined}
+          onStepInto={FEATURES.DEBUGGER_CONTROLS ? stepInto : undefined}
+          onStepOut={FEATURES.DEBUGGER_CONTROLS ? stepOut : undefined}
+          onNextCall={FEATURES.DEBUGGER_CONTROLS ? nextCall : undefined}
+          onContinue={FEATURES.DEBUGGER_CONTROLS ? continueToBreakpoint : undefined}
+          onRestart={FEATURES.DEBUGGER_CONTROLS ? restart : undefined}
+          breakpointStepIndices={breakpointStepIndices}
+          onToggleEventLog={() => setIsEventLogOpen(true)}
+          onOpenShortcuts={() => setIsShortcutsOpen(true)}
         />
       </div>
+
+      {/* Event Log Drawer */}
+      <EventLogDrawer
+        isOpen={isEventLogOpen}
+        onClose={() => setIsEventLogOpen(false)}
+        steps={steps}
+        currentStep={currentStep}
+        onSelectStep={(idx) => {
+          setCurrentStep(idx)
+          setIsEventLogOpen(false)
+        }}
+      />
+
+      {/* Keyboard Shortcuts Modal */}
+      <KeyboardShortcutsModal
+        isOpen={isShortcutsOpen}
+        onClose={() => setIsShortcutsOpen(false)}
+      />
     </div>
   )
 }
