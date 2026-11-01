@@ -61,7 +61,7 @@ export const KeyboardShortcutsModal: React.FC<KeyboardShortcutsModalProps> = ({
 }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Keyboard Shortcuts" size="md">
-      <div className="flex flex-col gap-4 font-sans text-xs">
+      <div className="flex flex-col gap-4 font-sans text-xs" data-testid="shortcuts-modal">
         <p className="text-text-2 leading-relaxed">
           CodeTrace provides debugger-style keyboard navigation designed for rapid algorithm stepping.
         </p>
@@ -92,7 +92,7 @@ export const KeyboardShortcutsModal: React.FC<KeyboardShortcutsModalProps> = ({
         </div>
 
         <div className="flex justify-end pt-2">
-          <GlassButton variant="secondary" size="sm" onClick={onClose}>
+          <GlassButton variant="secondary" size="sm" onClick={onClose} data-testid="btn-close-shortcuts">
             Got it
           </GlassButton>
         </div>
@@ -100,3 +100,4 @@ export const KeyboardShortcutsModal: React.FC<KeyboardShortcutsModalProps> = ({
     </Modal>
   )
 }
+
