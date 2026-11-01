@@ -27,6 +27,9 @@ interface TraceState {
   selectedAnswer: number | null
   answerFeedback: 'idle' | 'correct' | 'incorrect'
 
+  // Breakpoints (line numbers)
+  breakpoints: number[]
+
   // Actions
   setCode: (code: string) => void
   selectCustom: () => void
@@ -42,6 +45,16 @@ interface TraceState {
   loadPreset: (presetId: string) => void
   resetExecution: () => void
   runCurrentCode: () => Promise<void>
+
+  // Debugger Actions
+  toggleBreakpoint: (line: number) => void
+  clearBreakpoints: () => void
+  stepInto: () => void
+  stepOver: () => void
+  stepOut: () => void
+  nextCall: () => void
+  continueToBreakpoint: () => void
+  restart: () => void
 
   // Predict mode actions
   submitPredictAnswer: (optionIndex: number) => boolean
@@ -63,6 +76,7 @@ export const useTraceStore = create<TraceState>((set, get) => ({
   currentPreset: DEFAULT_PRESET,
   isTruncated: false,
   executionError: null,
+  breakpoints: [],
 
   streak: 0,
   correctCount: 0,
@@ -79,6 +93,7 @@ export const useTraceStore = create<TraceState>((set, get) => ({
     if (steps.length > 0) {
       updates.isTraceOutdated = true
     }
+    updates.breakpoints = []
     set(updates)
   },
 
@@ -260,6 +275,96 @@ export const useTraceStore = create<TraceState>((set, get) => ({
   },
 
   clearPredictAnswer: () => set({ selectedAnswer: null, answerFeedback: 'idle' }),
+
+  toggleBreakpoint: (line) => {
+    const { breakpoints } = get()
+    const next = breakpoints.includes(line)
+      ? breakpoints.filter((l) => l !== line)
+      : [...breakpoints, line].sort((a, b) => a - b)
+    set({ breakpoints: next })
+  },
+
+  clearBreakpoints: () => set({ breakpoints: [] }),
+
+  stepInto: () => {
+    get().pause()
+    get().nextStep()
+  },
+
+  stepOver: () => {
+    const { currentStep, steps, pause } = get()
+    pause()
+    if (steps.length === 0 || currentStep >= steps.length - 1) return
+
+    const currentDepth = steps[currentStep]?.stack?.length || 1
+    // Find next step whose stack depth <= currentDepth
+    for (let j = currentStep + 1; j < steps.length; j++) {
+      const depth = steps[j]?.stack?.length || 1
+      if (depth <= currentDepth) {
+        set({ currentStep: j, selectedAnswer: null, answerFeedback: 'idle' })
+        return
+      }
+    }
+    set({ currentStep: steps.length - 1, selectedAnswer: null, answerFeedback: 'idle' })
+  },
+
+  stepOut: () => {
+    const { currentStep, steps, pause } = get()
+    pause()
+    if (steps.length === 0 || currentStep >= steps.length - 1) return
+
+    const currentDepth = steps[currentStep]?.stack?.length || 1
+    if (currentDepth <= 1) {
+      set({ currentStep: steps.length - 1, selectedAnswer: null, answerFeedback: 'idle' })
+      return
+    }
+
+    // Find next step whose stack depth < currentDepth
+    for (let j = currentStep + 1; j < steps.length; j++) {
+      const depth = steps[j]?.stack?.length || 1
+      if (depth < currentDepth) {
+        set({ currentStep: j, selectedAnswer: null, answerFeedback: 'idle' })
+        return
+      }
+    }
+    set({ currentStep: steps.length - 1, selectedAnswer: null, answerFeedback: 'idle' })
+  },
+
+  nextCall: () => {
+    const { currentStep, steps, pause } = get()
+    pause()
+    if (steps.length === 0 || currentStep >= steps.length - 1) return
+
+    for (let j = currentStep + 1; j < steps.length; j++) {
+      if (steps[j]?.event === 'call') {
+        set({ currentStep: j, selectedAnswer: null, answerFeedback: 'idle' })
+        return
+      }
+    }
+    set({ currentStep: steps.length - 1, selectedAnswer: null, answerFeedback: 'idle' })
+  },
+
+  continueToBreakpoint: () => {
+    const { currentStep, steps, breakpoints, pause } = get()
+    pause()
+    if (steps.length === 0 || currentStep >= steps.length - 1) return
+
+    const bpSet = new Set(breakpoints)
+    // Find next step whose line is in breakpoints
+    for (let j = currentStep + 1; j < steps.length; j++) {
+      if (bpSet.has(steps[j].line)) {
+        set({ currentStep: j, selectedAnswer: null, answerFeedback: 'idle' })
+        return
+      }
+    }
+    // No breakpoint found, advance to end
+    set({ currentStep: steps.length - 1, selectedAnswer: null, answerFeedback: 'idle' })
+  },
+
+  restart: () => {
+    get().pause()
+    set({ currentStep: 0, selectedAnswer: null, answerFeedback: 'idle' })
+  },
 }))
 
 // Expose store globally for automated E2E testing
