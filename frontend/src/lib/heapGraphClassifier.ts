@@ -76,7 +76,7 @@ export function classifyHeapGraph(
   }
 
   // 2. Check for Adjacency Structure (dict of lists or list of lists used as graph)
-  const adjacencyGraph = detectAdjacencyGraph(heapObjects, referrersByAddr)
+  const adjacencyGraph = detectAdjacencyGraph(heapObjects, addrToObj, referrersByAddr)
   if (adjacencyGraph) {
     return adjacencyGraph
   }
@@ -472,9 +472,10 @@ function layoutTree(
 // ─── HELPER: Adjacency Structure Detection ───
 function detectAdjacencyGraph(
   heapObjects: HeapObject[],
-  referrersByAddr: Map<string, string[]>
+  addrToObj: Map<string, HeapObject>,
+  _referrersByAddr: Map<string, string[]>
 ): ClassifiedGraph | null {
-  // Look for dict of lists (e.g. { 'A': ['B', 'C'] }) or list of lists
+  // Look for dict of lists (e.g. { 'A': ['B', 'C'] }) or dict pointing to list addresses
   const dictObj = heapObjects.find(
     (obj) =>
       obj.type === 'dict' &&
@@ -489,9 +490,21 @@ function detectAdjacencyGraph(
   const entries = Object.entries(dictVal)
   if (entries.length < 2) return null
 
-  // Check if majority of values are arrays
-  const isAdjList = entries.every(([_, v]) => Array.isArray(v))
-  if (!isAdjList) return null
+  // Resolve neighbors for each entry (either direct array or address to a list HeapObject)
+  const resolvedNeighbors = new Map<string, any[]>()
+  for (const [key, v] of entries) {
+    if (Array.isArray(v)) {
+      resolvedNeighbors.set(key, v)
+    } else if (typeof v === 'string' && addrToObj.has(v.toLowerCase())) {
+      const childObj = addrToObj.get(v.toLowerCase())
+      if (childObj && Array.isArray(childObj.value)) {
+        resolvedNeighbors.set(key, childObj.value)
+      }
+    }
+  }
+
+  // Must have resolved neighbors for all entries in the dict
+  if (resolvedNeighbors.size !== entries.length) return null
 
   const nodes: GraphNode[] = []
   const edges: GraphEdge[] = []
@@ -500,11 +513,12 @@ function detectAdjacencyGraph(
   const centerY = 160
   const radius = Math.min(180, Math.max(100, count * 26))
 
-  entries.forEach(([key, neighbors], idx) => {
+  entries.forEach(([key], idx) => {
     const angle = (idx / count) * 2 * Math.PI - Math.PI / 2
     const x = centerX + radius * Math.cos(angle)
     const y = centerY + radius * Math.sin(angle)
     const nodeId = `graph-${key}`
+    const neighbors = resolvedNeighbors.get(key) || []
 
     nodes.push({
       id: nodeId,
@@ -516,15 +530,13 @@ function detectAdjacencyGraph(
       y,
     })
 
-    if (Array.isArray(neighbors)) {
-      for (const n of neighbors) {
-        edges.push({
-          id: `edge-${key}-${n}`,
-          from: nodeId,
-          to: `graph-${n}`,
-          kind: 'forward',
-        })
-      }
+    for (const n of neighbors) {
+      edges.push({
+        id: `edge-${key}-${n}`,
+        from: nodeId,
+        to: `graph-${n}`,
+        kind: 'forward',
+      })
     }
   })
 
