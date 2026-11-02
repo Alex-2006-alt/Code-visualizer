@@ -33,6 +33,8 @@ DEFAULT_MAX_STEPS = 2000
 DEFAULT_MAX_OUTPUT_BYTES = 65536
 MAX_COLLECTION_LEN = 50
 MAX_DEPTH = 2
+MAX_HEAP_OBJECTS = 100
+MAX_LINKED_DEPTH = 30
 USER_FILENAME = "<user>"
 
 
@@ -152,10 +154,15 @@ def _get_heap_type(val: Any) -> str:
 def _build_heap_and_locals(
     raw_locals: dict[str, Any],
 ) -> tuple[dict[str, Any], list[dict[str, Any]], dict[str, Any]]:
-    """Extract locals snapshot, structured heapObjects, and address heap mapping."""
+    """Extract locals snapshot, structured heapObjects with deep instance traversal,
+    cycle detection, stable addresses, and collection capping."""
     clean_locals: dict[str, Any] = {}
     heap_objects_map: dict[str, dict[str, Any]] = {}
     heap_mapping: dict[str, Any] = {}
+
+    # Queue for BFS discovery: (object, depth, optional_label)
+    queue: list[tuple[Any, int, str | None]] = []
+    visited_ids: set[int] = set()
 
     for name, val in raw_locals.items():
         if name.startswith("__") and name.endswith("__"):
@@ -163,26 +170,137 @@ def _build_heap_and_locals(
 
         if _is_reference_type(val):
             addr = hex(id(val))
-            heap_type = _get_heap_type(val)
-            snap_val = _safe_serialize(val, depth=1)
-
-            # Store pointer address in locals
             clean_locals[name] = addr
-
-            if addr not in heap_objects_map:
-                heap_obj_dict: dict[str, Any] = {
-                    "id": f"heap-{addr}",
-                    "type": heap_type,
-                    "address": addr,
-                    "value": snap_val,
-                    "label": name,
-                }
-                if heap_type == "instance" and hasattr(val, "__class__"):
-                    heap_obj_dict["className"] = val.__class__.__name__
-                heap_objects_map[addr] = heap_obj_dict
-            heap_mapping[addr] = snap_val
+            queue.append((val, 0, name))
         else:
             clean_locals[name] = _safe_serialize(val, depth=1)
+
+    while queue and len(heap_objects_map) < MAX_HEAP_OBJECTS:
+        val, depth, label = queue.pop(0)
+        obj_id = id(val)
+        addr = hex(obj_id)
+
+        if obj_id in visited_ids:
+            continue
+        visited_ids.add(obj_id)
+
+        heap_type = _get_heap_type(val)
+
+        if heap_type == "instance":
+            raw_fields = getattr(val, "__dict__", {})
+            fields: dict[str, Any] = {}
+            for k, v in raw_fields.items():
+                if k.startswith("__"):
+                    continue
+                if _is_reference_type(v):
+                    child_addr = hex(id(v))
+                    fields[str(k)] = child_addr
+                    if (
+                        depth + 1 < MAX_LINKED_DEPTH
+                        and id(v) not in visited_ids
+                        and (len(heap_objects_map) + len(queue)) < MAX_HEAP_OBJECTS
+                    ):
+                        queue.append((v, depth + 1, None))
+                else:
+                    fields[str(k)] = _safe_serialize(v, depth=1)
+
+            class_name = val.__class__.__name__ if hasattr(val, "__class__") else "instance"
+            snap_val = {
+                "__class__": class_name,
+                "fields": fields,
+            }
+            heap_obj_dict: dict[str, Any] = {
+                "id": f"heap-{addr}",
+                "type": "instance",
+                "address": addr,
+                "value": snap_val,
+                "label": label or class_name,
+                "className": class_name,
+            }
+            heap_objects_map[addr] = heap_obj_dict
+            heap_mapping[addr] = snap_val
+
+        elif heap_type == "list":
+            items: list[Any] = []
+            for item in val[:MAX_COLLECTION_LEN]:
+                if _is_reference_type(item):
+                    child_addr = hex(id(item))
+                    items.append(child_addr)
+                    if (
+                        depth + 1 < MAX_LINKED_DEPTH
+                        and id(item) not in visited_ids
+                        and (len(heap_objects_map) + len(queue)) < MAX_HEAP_OBJECTS
+                    ):
+                        queue.append((item, depth + 1, None))
+                else:
+                    items.append(_safe_serialize(item, depth=1))
+            if len(val) > MAX_COLLECTION_LEN:
+                items.append(f"... ({len(val) - MAX_COLLECTION_LEN} more items)")
+
+            heap_obj_dict = {
+                "id": f"heap-{addr}",
+                "type": "list",
+                "address": addr,
+                "value": items,
+                "label": label or "list",
+            }
+            heap_objects_map[addr] = heap_obj_dict
+            heap_mapping[addr] = items
+
+        elif heap_type == "dict":
+            dict_items: dict[str, Any] = {}
+            for i, (k, v) in enumerate(val.items()):
+                if i >= MAX_COLLECTION_LEN:
+                    dict_items["..."] = f"({len(val) - MAX_COLLECTION_LEN} more keys)"
+                    break
+                if _is_reference_type(v):
+                    child_addr = hex(id(v))
+                    dict_items[str(k)] = child_addr
+                    if (
+                        depth + 1 < MAX_LINKED_DEPTH
+                        and id(v) not in visited_ids
+                        and (len(heap_objects_map) + len(queue)) < MAX_HEAP_OBJECTS
+                    ):
+                        queue.append((v, depth + 1, None))
+                else:
+                    dict_items[str(k)] = _safe_serialize(v, depth=1)
+
+            heap_obj_dict = {
+                "id": f"heap-{addr}",
+                "type": "dict",
+                "address": addr,
+                "value": dict_items,
+                "label": label or "dict",
+            }
+            heap_objects_map[addr] = heap_obj_dict
+            heap_mapping[addr] = dict_items
+
+        elif heap_type == "set":
+            set_items: list[Any] = []
+            for item in list(val)[:MAX_COLLECTION_LEN]:
+                if _is_reference_type(item):
+                    child_addr = hex(id(item))
+                    set_items.append(child_addr)
+                    if (
+                        depth + 1 < MAX_LINKED_DEPTH
+                        and id(item) not in visited_ids
+                        and (len(heap_objects_map) + len(queue)) < MAX_HEAP_OBJECTS
+                    ):
+                        queue.append((item, depth + 1, None))
+                else:
+                    set_items.append(_safe_serialize(item, depth=1))
+            if len(val) > MAX_COLLECTION_LEN:
+                set_items.append(f"... ({len(val) - MAX_COLLECTION_LEN} more items)")
+
+            heap_obj_dict = {
+                "id": f"heap-{addr}",
+                "type": "set",
+                "address": addr,
+                "value": set_items,
+                "label": label or "set",
+            }
+            heap_objects_map[addr] = heap_obj_dict
+            heap_mapping[addr] = set_items
 
     return clean_locals, list(heap_objects_map.values()), heap_mapping
 
