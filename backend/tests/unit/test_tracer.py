@@ -132,3 +132,73 @@ os.listdir()
     result = trace_code(code)
     assert result["error"] is not None
     assert "forbidden" in result["error"].lower()
+
+
+def test_tracer_linked_structure_deep_traversal() -> None:
+    """Test deep instance traversal beyond depth 2 up to depth 30 cap."""
+    code = """class Node:
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = next
+
+head = Node(0)
+curr = head
+for i in range(1, 40):
+    curr.next = Node(i)
+    curr = curr.next
+"""
+    result = trace_code(code)
+    assert result["error"] is None
+    last_step = result["steps"][-1]
+    heap_objs = last_step["heapObjects"]
+    assert len(heap_objs) == 31
+    head_addr = last_step["stack"][-1]["locals"]["head"]
+    head_obj = next(o for o in heap_objs if o["address"] == head_addr)
+    assert head_obj["value"]["__class__"] == "Node"
+    assert head_obj["value"]["fields"]["val"] == 0
+    next_addr = head_obj["value"]["fields"]["next"]
+    assert next_addr.startswith("0x")
+
+
+def test_tracer_cyclic_references() -> None:
+    """Test cycle detection in interconnected graph objects."""
+    code = """class Node:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+a = Node(1)
+b = Node(2)
+a.next = b
+b.next = a
+"""
+    result = trace_code(code)
+    assert result["error"] is None
+    last_step = result["steps"][-1]
+    heap_objs = last_step["heapObjects"]
+    assert len(heap_objs) == 2
+    a_obj = next(o for o in heap_objs if o["label"] == "a" or o["value"]["fields"]["val"] == 1)
+    b_obj = next(o for o in heap_objs if o["label"] == "b" or o["value"]["fields"]["val"] == 2)
+    assert a_obj["value"]["fields"]["next"] == b_obj["address"]
+    assert b_obj["value"]["fields"]["next"] == a_obj["address"]
+
+
+def test_tracer_binary_tree_structure() -> None:
+    """Test binary tree node left and right pointer capturing."""
+    code = """class TreeNode:
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+root = TreeNode(10, TreeNode(5), TreeNode(15))
+"""
+    result = trace_code(code)
+    assert result["error"] is None
+    last_step = result["steps"][-1]
+    heap_objs = last_step["heapObjects"]
+    assert len(heap_objs) == 3
+    root_addr = last_step["stack"][-1]["locals"]["root"]
+    root_obj = next(o for o in heap_objs if o["address"] == root_addr)
+    assert root_obj["value"]["fields"]["left"].startswith("0x")
+    assert root_obj["value"]["fields"]["right"].startswith("0x")
