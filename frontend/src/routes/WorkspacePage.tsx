@@ -580,6 +580,7 @@ export const WorkspacePage: React.FC = () => {
               objects={step?.heapObjects || []}
               locals={activeFrame?.locals || {}}
               addressLabels={addressLabels}
+              mutatedVariable={step?.mutatedVariable}
             />
           </div>
 
