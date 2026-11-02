@@ -37,8 +37,6 @@ export interface ClassifiedGraph {
   hasCycle: boolean
 }
 
-const HEX_ADDR_REGEX = /^0x[0-9a-fA-F]+$/
-
 /**
  * Pure function to classify a heap object graph into a semantic data structure
  * (linked list, doubly linked list, binary tree, or adjacency graph).
@@ -130,7 +128,7 @@ function detectSinglyLinkedList(
 
   for (const inst of instances) {
     const fields = getInstanceFields(inst)
-    for (const [k, v] of Object.entries(fields)) {
+    for (const k of Object.keys(fields)) {
       if (k.toLowerCase().includes('next') || k === 'nxt') {
         pointerFieldName = k
         break
@@ -338,7 +336,7 @@ function detectDoublyLinkedList(
 // ─── HELPER: Binary Tree Detection ───
 function detectBinaryTree(
   instances: HeapObject[],
-  addrToObj: Map<string, HeapObject>,
+  _addrToObj: Map<string, HeapObject>,
   referrersByAddr: Map<string, string[]>
 ): ClassifiedGraph | null {
   let hasLeftOrRight = false
