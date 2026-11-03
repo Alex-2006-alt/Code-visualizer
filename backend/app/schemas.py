@@ -57,7 +57,7 @@ class TraceStepSchema(BaseModel):
 class RunRequest(BaseModel):
     """POST /run request body."""
     code: str
-    stdin: str | None = None
+    stdin: str | None = Field(default=None, max_length=10240)
 
 
 class RunResponse(BaseModel):
@@ -77,7 +77,7 @@ class RunResponse(BaseModel):
 class CompareRequest(BaseModel):
     code_a: str
     code_b: str
-    stdin: str | None = None
+    stdin: str | None = Field(default=None, max_length=10240)
 
 
 class CompareRunResult(BaseModel):
