@@ -28,3 +28,32 @@ export const isFeatureEnabled = (key: FeatureKey): boolean => {
   return FEATURES[key] ?? false
 }
 
+/**
+ * Standard library modules permitted inside the secure execution sandbox.
+ * Synchronized with backend `app.config.ALLOWED_MODULES`.
+ */
+export const ALLOWED_MODULES = [
+  'math',
+  'random',
+  'collections',
+  'itertools',
+  'heapq',
+  'bisect',
+  'functools',
+  'string',
+  're',
+  'typing',
+  'dataclasses',
+  'copy',
+  'json',
+  'datetime',
+  'time',
+  'enum',
+  'queue',
+  'array',
+  'cmath',
+  'fractions',
+  'statistics',
+] as const
+
+export type AllowedModule = typeof ALLOWED_MODULES[number]
