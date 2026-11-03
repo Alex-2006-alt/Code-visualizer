@@ -1,5 +1,5 @@
 import React from 'react'
-import { GlassPanel, GlassButton } from '@/components/ui'
+import { GlassPanel } from '@/components/ui'
 import { useTraceStore } from '@/store/useTraceStore'
 
 interface StdinDrawerProps {
