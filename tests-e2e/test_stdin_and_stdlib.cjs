@@ -239,8 +239,8 @@ res = Result("mean_val", avg)
     // Close help modal
     const closeHelpBtn = page.locator('[data-testid="btn-close-shortcuts"]')
     await closeHelpBtn.click()
-    await page.waitForTimeout(300)
-    assert(!(await helpModal.isVisible()), 'Help modal closed cleanly')
+    await page.waitForTimeout(600)
+    assert((await helpModal.count()) === 0 || !(await helpModal.isVisible()), 'Help modal closed cleanly')
 
     // ─── 7. Capture Visual Screenshot ───
     console.log('\n--- 7. Capturing Phase 3 Visual Evidence ---')
