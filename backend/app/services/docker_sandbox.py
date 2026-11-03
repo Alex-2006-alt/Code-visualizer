@@ -88,6 +88,10 @@ class DockerSandboxRunner:
             "memswap_limit": f"{self.memory_limit_mb}m",
             "nano_cpus": int(self.cpu_quota * 1e9),
             "pids_limit": self.pids_limit,
+            "ulimits": [
+                docker.types.Ulimit(name="cpu", soft=self.timeout_seconds, hard=self.timeout_seconds + 2),
+                docker.types.Ulimit(name="as", soft=self.memory_limit_mb * 1024 * 1024, hard=self.memory_limit_mb * 1024 * 1024),
+            ],
         }
 
         try:
