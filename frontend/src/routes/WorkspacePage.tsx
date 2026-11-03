@@ -10,6 +10,7 @@ import {
   TimelineBar,
   PredictQuizCard,
   ComplexityMeter,
+  StdinDrawer,
 } from '@/components/workspace'
 import { EventLogDrawer } from '@/components/workspace/EventLogDrawer'
 import { KeyboardShortcutsModal } from '@/components/workspace/KeyboardShortcutsModal'
@@ -40,6 +41,8 @@ export const WorkspacePage: React.FC = () => {
   const [compareResult, setCompareResult] = useState<CompareResult | null>(null)
   const [isEventLogOpen, setIsEventLogOpen] = useState(false)
   const [isShortcutsOpen, setIsShortcutsOpen] = useState(false)
+  const [isStdinOpen, setIsStdinOpen] = useState(false)
+  const [helpModalTab, setHelpModalTab] = useState<'shortcuts' | 'modules'>('shortcuts')
 
   const {
     code,
@@ -55,6 +58,7 @@ export const WorkspacePage: React.FC = () => {
     selectedAnswer,
     answerFeedback,
     breakpoints,
+    stdin,
     setCode,
     selectCustom,
     setSteps,
@@ -204,7 +208,7 @@ export const WorkspacePage: React.FC = () => {
   const handleCompare = async () => {
     try {
       setIsComparing(true)
-      const result = await compareCode(code, codeB)
+      const result = await compareCode(code, codeB, { stdin })
       setCompareResult(result)
       toast.success(
         'Comparison Complete',
@@ -279,6 +283,20 @@ export const WorkspacePage: React.FC = () => {
                 🔥 {streak} Streak
               </span>
             </div>
+          )}
+
+          {FEATURES.STDIN_PANEL && (
+            <GlassButton
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsStdinOpen(!isStdinOpen)}
+              data-testid="btn-toggle-stdin"
+              leftIcon={<span className="material-symbols-outlined text-[16px]">input</span>}
+              aria-label="Toggle standard input drawer"
+              className={stdin.length > 0 ? 'text-accent border-accent/40 bg-accent/10' : ''}
+            >
+              Input{stdin.length > 0 && <span className="ml-1 w-1.5 h-1.5 rounded-full bg-accent animate-pulse inline-block" />}
+            </GlassButton>
           )}
 
           <GlassButton
@@ -370,12 +388,22 @@ export const WorkspacePage: React.FC = () => {
                 Solution A (Primary)
               </span>
             )}
+            {FEATURES.STDIN_PANEL && (
+              <StdinDrawer
+                isOpen={isStdinOpen}
+                onToggle={() => setIsStdinOpen(!isStdinOpen)}
+              />
+            )}
             <CodeEditor
               code={code}
               currentLine={step?.line || 1}
               onChange={(newCode) => setCode(newCode || '')}
               breakpoints={breakpoints}
               onToggleBreakpoint={toggleBreakpoint}
+              onOpenModulesHelp={() => {
+                setHelpModalTab('modules')
+                setIsShortcutsOpen(true)
+              }}
               height={mode === 'compare' ? '240px' : '440px'}
             />
           </div>
@@ -614,7 +642,7 @@ export const WorkspacePage: React.FC = () => {
           onRestart={FEATURES.DEBUGGER_CONTROLS ? restart : undefined}
           breakpointStepIndices={breakpointStepIndices}
           onToggleEventLog={() => setIsEventLogOpen(true)}
-          onOpenShortcuts={() => setIsShortcutsOpen(true)}
+          onOpenShortcuts={() => { setHelpModalTab('shortcuts'); setIsShortcutsOpen(true); }}
         />
       </div>
 
@@ -630,10 +658,11 @@ export const WorkspacePage: React.FC = () => {
         }}
       />
 
-      {/* Keyboard Shortcuts Modal */}
+      {/* Keyboard Shortcuts & Help Modal */}
       <KeyboardShortcutsModal
         isOpen={isShortcutsOpen}
         onClose={() => setIsShortcutsOpen(false)}
+        initialTab={helpModalTab}
       />
     </div>
   )

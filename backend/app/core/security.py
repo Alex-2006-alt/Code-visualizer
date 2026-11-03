@@ -4,21 +4,11 @@ from __future__ import annotations
 
 import ast
 
+from app.config import ALLOWED_MODULES
 from app.core.errors import CodeTooLargeError, ForbiddenImportError
 
-# Modules allowed in user code
-IMPORT_ALLOWLIST: frozenset[str] = frozenset({
-    "math",
-    "random",
-    "collections",
-    "itertools",
-    "heapq",
-    "bisect",
-    "functools",
-    "string",
-    "re",
-    "typing",
-})
+# Single source of truth for permitted modules in user code
+IMPORT_ALLOWLIST: frozenset[str] = frozenset(ALLOWED_MODULES)
 
 
 def validate_code_size(code: str, max_bytes: int) -> None:

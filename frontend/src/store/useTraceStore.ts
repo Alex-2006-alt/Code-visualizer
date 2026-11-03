@@ -8,6 +8,7 @@ export type ExecutionMode = 'visualize' | 'predict' | 'compare'
 interface TraceState {
   // Core Code & Execution
   code: string
+  stdin: string
   steps: TraceStep[]
   currentStep: number
   isPlaying: boolean
@@ -32,6 +33,8 @@ interface TraceState {
 
   // Actions
   setCode: (code: string) => void
+  setStdin: (stdin: string) => void
+  clearStdin: () => void
   selectCustom: () => void
   setSteps: (steps: TraceStep[], isTruncated?: boolean, executionError?: string | null) => void
   setCurrentStep: (step: number) => void
@@ -65,6 +68,7 @@ let playTimer: ReturnType<typeof setInterval> | null = null
 
 export const useTraceStore = create<TraceState>((set, get) => ({
   code: DEFAULT_PRESET.code,
+  stdin: '',
   steps: [],
   currentStep: 0,
   isPlaying: false,
@@ -98,6 +102,16 @@ export const useTraceStore = create<TraceState>((set, get) => ({
   },
 
   selectCustom: () => set({ currentPreset: null }),
+
+  setStdin: (stdin: string) => {
+    const { steps } = get()
+    set({ stdin, isTraceOutdated: steps.length > 0 })
+  },
+
+  clearStdin: () => {
+    const { steps } = get()
+    set({ stdin: '', isTraceOutdated: steps.length > 0 })
+  },
 
   setSteps: (steps, isTruncated = false, executionError = null) =>
     set({
@@ -201,7 +215,7 @@ export const useTraceStore = create<TraceState>((set, get) => ({
   },
 
   runCurrentCode: async () => {
-    const { code, pause } = get()
+    const { code, stdin, pause } = get()
     pause()
     const requestId =
       typeof crypto !== 'undefined' && crypto.randomUUID
@@ -210,7 +224,7 @@ export const useTraceStore = create<TraceState>((set, get) => ({
 
     set({ isLoading: true, activeRequestId: requestId, executionError: null })
     try {
-      const result = await executeCode(code, { requestId })
+      const result = await executeCode(code, { requestId, stdin })
 
       // Ignore stale response if another execution was started
       if (get().activeRequestId !== requestId) {

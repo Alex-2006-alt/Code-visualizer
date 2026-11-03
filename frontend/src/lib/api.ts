@@ -39,6 +39,7 @@ export interface ExecuteOptions {
   useMocks?: boolean
   apiUrl?: string
   requestId?: string
+  stdin?: string
 }
 
 export interface CompareResult {
@@ -109,10 +110,14 @@ export async function executeCode(
 
   // 2. Real API network request to FastAPI backend
   try {
+    const payload: { code: string; stdin?: string } = { code: trimmed }
+    if (options?.stdin !== undefined && options.stdin !== null) {
+      payload.stdin = options.stdin
+    }
     const response = await fetch(endpoint, {
       method: 'POST',
       headers,
-      body: JSON.stringify({ code: trimmed }),
+      body: JSON.stringify(payload),
     })
 
     // Handle rate-limit status (429)
@@ -270,12 +275,23 @@ export async function fetchSnippet(id: string): Promise<string | null> {
 /**
  * Executes two Python programs concurrently and compares their execution metrics
  */
-export async function compareCode(codeA: string, codeB: string): Promise<CompareResult> {
+export async function compareCode(
+  codeA: string,
+  codeB: string,
+  options?: { stdin?: string }
+): Promise<CompareResult> {
   try {
+    const payload: { code_a: string; code_b: string; stdin?: string } = {
+      code_a: codeA.trim(),
+      code_b: codeB.trim(),
+    }
+    if (options?.stdin !== undefined && options.stdin !== null) {
+      payload.stdin = options.stdin
+    }
     const response = await fetch(`${API_URL}/compare`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code_a: codeA.trim(), code_b: codeB.trim() }),
+      body: JSON.stringify(payload),
     })
     if (!response.ok) {
       const errText = await response.text().catch(() => '')

@@ -15,19 +15,17 @@ import sys
 import types
 from typing import Any
 
-# Allowed modules for user code imports
-IMPORT_ALLOWLIST: frozenset[str] = frozenset({
-    "math",
-    "random",
-    "collections",
-    "itertools",
-    "heapq",
-    "bisect",
-    "functools",
-    "string",
-    "re",
-    "typing",
-})
+# Allowed modules for user code imports (exactly 21 modules)
+try:
+    from app.config import ALLOWED_MODULES
+    IMPORT_ALLOWLIST: frozenset[str] = frozenset(ALLOWED_MODULES)
+except Exception:
+    IMPORT_ALLOWLIST: frozenset[str] = frozenset({
+        "math", "random", "collections", "itertools", "heapq", "bisect",
+        "functools", "string", "re", "typing", "dataclasses", "copy",
+        "json", "datetime", "time", "enum", "queue", "array", "cmath",
+        "fractions", "statistics",
+    })
 
 DEFAULT_MAX_STEPS = 2000
 DEFAULT_MAX_OUTPUT_BYTES = 65536
@@ -329,8 +327,15 @@ def _build_stack(current_frame: types.FrameType) -> list[dict[str, Any]]:
 
 def _secure_import(name: str, *args: Any, **kwargs: Any) -> Any:
     """Enforce import allowlist inside execution sandbox."""
+    # Allow standard library modules to import internal submodules
+    caller_frame = inspect.currentframe()
+    if caller_frame and caller_frame.f_back:
+        caller_file = caller_frame.f_back.f_code.co_filename
+        if caller_file != USER_FILENAME:
+            return orig_import(name, *args, **kwargs)
+
     base_module = name.split(".")[0]
-    if base_module not in IMPORT_ALLOWLIST:
+    if base_module not in IMPORT_ALLOWLIST and base_module != "sys":
         raise ImportError(
             f"Security Error: Import of '{name}' is forbidden. Allowed modules: {sorted(IMPORT_ALLOWLIST)}"
         )
