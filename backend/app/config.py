@@ -72,6 +72,32 @@ class Settings(BaseSettings):
         return self.app_env == "production"
 
 
+# Allowed Standard Library Modules (Exactly 21)
+ALLOWED_MODULES: tuple[str, ...] = (
+    "math",
+    "random",
+    "collections",
+    "itertools",
+    "heapq",
+    "bisect",
+    "functools",
+    "string",
+    "re",
+    "typing",
+    "dataclasses",
+    "copy",
+    "json",
+    "datetime",
+    "time",
+    "enum",
+    "queue",
+    "array",
+    "cmath",
+    "fractions",
+    "statistics",
+)
+
+
 def get_settings() -> Settings:
     """Return a cached Settings instance."""
     return Settings()
