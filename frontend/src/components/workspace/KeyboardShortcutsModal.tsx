@@ -201,6 +201,12 @@ export const KeyboardShortcutsModal: React.FC<KeyboardShortcutsModalProps> = ({
   const [activeTab, setActiveTab] = useState<'shortcuts' | 'modules'>(initialTab)
   const [moduleSearch, setModuleSearch] = useState('')
 
+  React.useEffect(() => {
+    if (isOpen && initialTab) {
+      setActiveTab(initialTab)
+    }
+  }, [isOpen, initialTab])
+
   const filteredModules = ALLOWED_MODULES.filter((mod) => {
     const info = MODULE_DETAILS[mod]
     if (!info) return mod.includes(moduleSearch.toLowerCase())
