@@ -1,7 +1,8 @@
-import React, { useRef, useEffect, useCallback } from 'react'
+import React, { useRef, useEffect, useCallback, useMemo } from 'react'
 import Editor, { OnMount, Monaco } from '@monaco-editor/react'
 import type * as monacoType from 'monaco-editor'
 import { GlassPanel } from '@/components/ui'
+import { ALLOWED_MODULES } from '@/config/features'
 
 export interface CodeEditorProps {
   code: string
@@ -10,7 +11,31 @@ export interface CodeEditorProps {
   readOnly?: boolean
   breakpoints?: number[]
   onToggleBreakpoint?: (line: number) => void
+  onOpenModulesHelp?: () => void
   height?: string
+}
+
+function findDisallowedImports(codeText: string): string[] {
+  const disallowed: string[] = []
+  const importRegex = /(?:^\s*import\s+([a-zA-Z0-9_,\s]+)|^\s*from\s+([a-zA-Z0-9_]+)\s+import)/gm
+  let match: RegExpExecArray | null
+  while ((match = importRegex.exec(codeText)) !== null) {
+    if (match[1]) {
+      const parts = match[1].split(',')
+      for (const part of parts) {
+        const mod = part.trim().split(/\s+/)[0]
+        if (mod && !(ALLOWED_MODULES as readonly string[]).includes(mod)) {
+          if (!disallowed.includes(mod)) disallowed.push(mod)
+        }
+      }
+    } else if (match[2]) {
+      const mod = match[2].trim()
+      if (mod && !(ALLOWED_MODULES as readonly string[]).includes(mod)) {
+        if (!disallowed.includes(mod)) disallowed.push(mod)
+      }
+    }
+  }
+  return disallowed
 }
 
 export const CodeEditor: React.FC<CodeEditorProps> = ({
@@ -20,11 +45,14 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
   readOnly = false,
   breakpoints = [],
   onToggleBreakpoint,
+  onOpenModulesHelp,
   height = '420px',
 }) => {
   const editorRef = useRef<monacoType.editor.IStandaloneCodeEditor | null>(null)
   const monacoRef = useRef<Monaco | null>(null)
   const decorationsCollectionRef = useRef<monacoType.editor.IEditorDecorationsCollection | null>(null)
+
+  const disallowedImports = useMemo(() => findDisallowedImports(code), [code])
 
   const updateDecorations = useCallback(() => {
     if (!editorRef.current || !monacoRef.current) return
@@ -164,6 +192,30 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
           <span className="text-[11px] text-text-3">Python 3.12</span>
         </div>
       </div>
+
+      {/* Disallowed import warning banner */}
+      {disallowedImports.length > 0 && (
+        <div
+          data-testid="disallowed-import-warning"
+          className="px-3 py-1.5 bg-amber-500/10 border-b border-amber-500/30 flex items-center justify-between text-xs text-amber-300 font-mono"
+        >
+          <div className="flex items-center gap-1.5">
+            <span className="material-symbols-outlined text-[15px] text-amber-400">warning</span>
+            <span>
+              Module <strong>&apos;{disallowedImports.join(', ')}&apos;</strong> is restricted in sandbox.
+            </span>
+          </div>
+          {onOpenModulesHelp && (
+            <button
+              onClick={onOpenModulesHelp}
+              data-testid="btn-view-allowed-modules"
+              className="underline hover:text-amber-200 text-[11px] cursor-pointer"
+            >
+              View 21 allowed modules
+            </button>
+          )}
+        </div>
+      )}
 
       {/* Monaco Container */}
       <div style={{ height }}>
