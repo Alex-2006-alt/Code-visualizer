@@ -345,13 +345,15 @@ export async function fetchComplexityAnalysis(
 
 
 /**
+/**
+/**
  * Retrieves catalog of algorithmic practice problems
  */
 export async function fetchProblemsList(): Promise<ProblemSummary[]> {
   try {
-    const response = await fetch(${API_URL}/api/problems)
+    const response = await fetch(`${API_URL}/api/problems`)
     if (!response.ok) {
-      throw new Error(Failed to fetch problems: )
+      throw new Error(`Failed to fetch problems: ${response.status}`)
     }
     return (await response.json()) as ProblemSummary[]
   } catch (error) {
@@ -365,16 +367,16 @@ export async function fetchProblemsList(): Promise<ProblemSummary[]> {
  */
 export async function fetchProblemDetail(id: string): Promise<ProblemDetail | null> {
   try {
-    const response = await fetch(${API_URL}/api/problems/)
+    const response = await fetch(`${API_URL}/api/problems/${id}`)
     if (!response.ok) {
       if (response.status === 404) {
-        toast.error('Problem Not Found', Problem '' does not exist.)
+        toast.error('Problem Not Found', `Problem '${id}' does not exist.`)
       }
       return null
     }
     return (await response.json()) as ProblemDetail
   } catch (error) {
-    toast.error('Network Error', Could not fetch problem ''.)
+    toast.error('Network Error', `Could not fetch problem '${id}'.`)
     return null
   }
 }
@@ -386,7 +388,7 @@ export async function submitProblemSolution(
   id: string,
   code: string
 ): Promise<ProblemSubmitResponse> {
-  const endpoint = ${API_URL}/api/problems//submit
+  const endpoint = `${API_URL}/api/problems/${id}/submit`
   try {
     const response = await fetch(endpoint, {
       method: 'POST',
@@ -407,7 +409,7 @@ export async function submitProblemSolution(
     }
 
     if (!response.ok) {
-      throw new Error(Submission failed with status: )
+      throw new Error(`Submission failed with status: ${response.status}`)
     }
 
     return (await response.json()) as ProblemSubmitResponse
