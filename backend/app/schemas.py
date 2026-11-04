@@ -176,3 +176,57 @@ class ExampleSchema(BaseModel):
 
 class HealthResponse(BaseModel):
     status: str = "ok"
+
+
+# ──────────────────────────────────────────────────────────────
+# /problems (Practice Mode)
+# ──────────────────────────────────────────────────────────────
+
+class ProblemSummarySchema(BaseModel):
+    id: str
+    title: str
+    difficulty: str
+    category: str
+    test_count: int
+
+
+class VisibleTestCaseSchema(BaseModel):
+    id: int
+    input: dict[str, Any]
+    expected: Any
+    visible: bool = True
+
+
+class ProblemDetailSchema(BaseModel):
+    id: str
+    title: str
+    difficulty: str
+    category: str
+    statement: str
+    constraints: list[str]
+    function_name: str
+    starter_code: str
+    example_tests: list[VisibleTestCaseSchema]
+
+
+class ProblemSubmitRequest(BaseModel):
+    code: str
+
+
+class TestCaseResultSchema(BaseModel):
+    test_id: int
+    visible: bool
+    status: str  # "passed" | "failed" | "error" | "timeout"
+    input: dict[str, Any] | None = None
+    expected: Any | None = None
+    actual: Any | None = None
+    error: str | None = None
+    execution_time_ms: float | None = None
+
+
+class ProblemSubmitResponse(BaseModel):
+    problem_id: str
+    all_passed: bool
+    passed_count: int
+    total_count: int
+    results: list[TestCaseResultSchema]

@@ -29,6 +29,7 @@ from app.routes.examples import router as examples_router
 from app.routes.health import router as health_router
 from app.routes.run import router as run_router
 from app.routes.snippets import router as snippets_router
+from app.routes.problems import router as problems_router
 from app.services.rate_limit import rate_limiter
 
 settings = get_settings()
@@ -104,6 +105,7 @@ def create_app() -> FastAPI:
     app.include_router(complexity_router)
     app.include_router(examples_router)
     app.include_router(snippets_router)
+    app.include_router(problems_router)
 
     return app
 

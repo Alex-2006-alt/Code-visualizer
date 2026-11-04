@@ -1,0 +1,180 @@
+{
+  "id": "product-except-self",
+  "title": "Product of Array Excluding Self",
+  "difficulty": "Medium",
+  "category": "Prefix Products & Arrays",
+  "statement": "Given an integer array `nums`, return an array `answer` such that `answer[i]` is equal to the product of all the elements of `nums` except `nums[i]`.\n\nThe product of any prefix or suffix of `nums` is guaranteed to fit in a 32-bit integer. You must write an algorithm that runs in O(n) time without using the division operation.",
+  "constraints": [
+    "2 <= len(nums) <= 10^5",
+    "-30 <= nums[i] <= 30"
+  ],
+  "function_name": "product_except_self",
+  "starter_code": "def product_except_self(nums: list[int]) -> list[int]:\n    # Implement your solution below\n    pass\n",
+  "reference_solution": "def product_except_self(nums: list[int]) -> list[int]:\n    n = len(nums)\n    res = [1] * n\n    prefix = 1\n    for i in range(n):\n        res[i] = prefix\n        prefix *= nums[i]\n    suffix = 1\n    for i in range(n - 1, -1, -1):\n        res[i] *= suffix\n        suffix *= nums[i]\n    return res\n",
+  "tests": [
+    {
+      "id": 1,
+      "input": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": [
+        24,
+        12,
+        8,
+        6
+      ],
+      "visible": true
+    },
+    {
+      "id": 2,
+      "input": {
+        "nums": [
+          -1,
+          1,
+          0,
+          -3,
+          3
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      "visible": true
+    },
+    {
+      "id": 3,
+      "input": {
+        "nums": [
+          2,
+          3
+        ]
+      },
+      "expected": [
+        3,
+        2
+      ],
+      "visible": true
+    },
+    {
+      "id": 4,
+      "input": {
+        "nums": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "visible": false
+    },
+    {
+      "id": 5,
+      "input": {
+        "nums": [
+          0,
+          0
+        ]
+      },
+      "expected": [
+        0,
+        0
+      ],
+      "visible": false
+    },
+    {
+      "id": 6,
+      "input": {
+        "nums": [
+          5,
+          0,
+          2
+        ]
+      },
+      "expected": [
+        0,
+        10,
+        0
+      ],
+      "visible": false
+    },
+    {
+      "id": 7,
+      "input": {
+        "nums": [
+          -2,
+          -3,
+          -4
+        ]
+      },
+      "expected": [
+        12,
+        8,
+        6
+      ],
+      "visible": false
+    },
+    {
+      "id": 8,
+      "input": {
+        "nums": [
+          1,
+          -1
+        ]
+      },
+      "expected": [
+        -1,
+        1
+      ],
+      "visible": false
+    },
+    {
+      "id": 9,
+      "input": {
+        "nums": [
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "expected": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "visible": false
+    },
+    {
+      "id": 10,
+      "input": {
+        "nums": [
+          10,
+          2,
+          3
+        ]
+      },
+      "expected": [
+        6,
+        30,
+        20
+      ],
+      "visible": false
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "id": "find-missing-number",
+  "title": "Missing Range Value",
+  "difficulty": "Easy",
+  "category": "Math & Arrays",
+  "statement": "Given an array `nums` containing `n` distinct numbers in the range `[0, n]`, return the only number in the range that is missing from the array.",
+  "constraints": [
+    "n == len(nums)",
+    "1 <= n <= 10^4",
+    "0 <= nums[i] <= n",
+    "All the numbers of nums are unique."
+  ],
+  "function_name": "missing_number",
+  "starter_code": "def missing_number(nums: list[int]) -> int:\n    # Implement your solution below\n    pass\n",
+  "reference_solution": "def missing_number(nums: list[int]) -> int:\n    n = len(nums)\n    expected_sum = n * (n + 1) // 2\n    return expected_sum - sum(nums)\n",
+  "tests": [
+    {
+      "id": 1,
+      "input": {
+        "nums": [
+          3,
+          0,
+          1
+        ]
+      },
+      "expected": 2,
+      "visible": true
+    },
+    {
+      "id": 2,
+      "input": {
+        "nums": [
+          0,
+          1
+        ]
+      },
+      "expected": 2,
+      "visible": true
+    },
+    {
+      "id": 3,
+      "input": {
+        "nums": [
+          9,
+          6,
+          4,
+          2,
+          3,
+          5,
+          7,
+          0,
+          1
+        ]
+      },
+      "expected": 8,
+      "visible": true
+    },
+    {
+      "id": 4,
+      "input": {
+        "nums": [
+          0
+        ]
+      },
+      "expected": 1,
+      "visible": false
+    },
+    {
+      "id": 5,
+      "input": {
+        "nums": [
+          1
+        ]
+      },
+      "expected": 0,
+      "visible": false
+    },
+    {
+      "id": 6,
+      "input": {
+        "nums": [
+          1,
+          2
+        ]
+      },
+      "expected": 0,
+      "visible": false
+    },
+    {
+      "id": 7,
+      "input": {
+        "nums": [
+          0,
+          2
+        ]
+      },
+      "expected": 1,
+      "visible": false
+    },
+    {
+      "id": 8,
+      "input": {
+        "nums": [
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "expected": 0,
+      "visible": false
+    },
+    {
+      "id": 9,
+      "input": {
+        "nums": [
+          0,
+          1,
+          2,
+          3,
+          5
+        ]
+      },
+      "expected": 4,
+      "visible": false
+    },
+    {
+      "id": 10,
+      "input": {
+        "nums": [
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      "expected": 6,
+      "visible": false
+    }
+  ]
+}

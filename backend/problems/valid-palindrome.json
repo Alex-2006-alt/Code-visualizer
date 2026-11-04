@@ -1,0 +1,96 @@
+{
+  "id": "valid-palindrome",
+  "title": "Alphanumeric Palindrome Check",
+  "difficulty": "Easy",
+  "category": "Two Pointers & Strings",
+  "statement": "A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward.\n\nGiven a string `s`, return `True` if it is a palindrome, or `False` otherwise.",
+  "constraints": [
+    "1 <= len(s) <= 2 * 10^5",
+    "s consists only of printable ASCII characters."
+  ],
+  "function_name": "is_palindrome",
+  "starter_code": "def is_palindrome(s: str) -> bool:\n    # Implement your solution below\n    pass\n",
+  "reference_solution": "def is_palindrome(s: str) -> bool:\n    cleaned = [c.lower() for c in s if c.isalnum()]\n    return cleaned == cleaned[::-1]\n",
+  "tests": [
+    {
+      "id": 1,
+      "input": {
+        "s": "A man, a plan, a canal: Panama"
+      },
+      "expected": true,
+      "visible": true
+    },
+    {
+      "id": 2,
+      "input": {
+        "s": "race a car"
+      },
+      "expected": false,
+      "visible": true
+    },
+    {
+      "id": 3,
+      "input": {
+        "s": " "
+      },
+      "expected": true,
+      "visible": true
+    },
+    {
+      "id": 4,
+      "input": {
+        "s": "a."
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 5,
+      "input": {
+        "s": "0P"
+      },
+      "expected": false,
+      "visible": false
+    },
+    {
+      "id": 6,
+      "input": {
+        "s": "ab_a"
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 7,
+      "input": {
+        "s": "Madam, I'm Adam"
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 8,
+      "input": {
+        "s": "12321"
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 9,
+      "input": {
+        "s": "123421"
+      },
+      "expected": false,
+      "visible": false
+    },
+    {
+      "id": 10,
+      "input": {
+        "s": "No 'x' in Nixon"
+      },
+      "expected": true,
+      "visible": false
+    }
+  ]
+}

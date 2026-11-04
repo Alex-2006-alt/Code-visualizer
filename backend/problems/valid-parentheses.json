@@ -1,0 +1,96 @@
+{
+  "id": "valid-parentheses",
+  "title": "Valid Delimiter Enclosures",
+  "difficulty": "Easy",
+  "category": "Stacks & Strings",
+  "statement": "Given a string `s` containing only the characters '(', ')', '{', '}', '[' and ']', determine if the input string is structurally valid.\n\nAn enclosure is valid if:\n1. Open brackets must be closed by the same type of closing brackets.\n2. Open brackets must be closed in the correct chronological order.\n3. Every closing bracket has a corresponding prior open bracket.",
+  "constraints": [
+    "0 <= len(s) <= 10^4",
+    "s consists of delimiters '()[]{}' only."
+  ],
+  "function_name": "is_valid",
+  "starter_code": "def is_valid(s: str) -> bool:\n    # Implement your solution below\n    pass\n",
+  "reference_solution": "def is_valid(s: str) -> bool:\n    mapping = {')': '(', '}': '{', ']': '['}\n    stack = []\n    for char in s:\n        if char in mapping:\n            top_element = stack.pop() if stack else '#'\n            if mapping[char] != top_element:\n                return False\n        else:\n            stack.append(char)\n    return not stack\n",
+  "tests": [
+    {
+      "id": 1,
+      "input": {
+        "s": "()"
+      },
+      "expected": true,
+      "visible": true
+    },
+    {
+      "id": 2,
+      "input": {
+        "s": "()[]{}"
+      },
+      "expected": true,
+      "visible": true
+    },
+    {
+      "id": 3,
+      "input": {
+        "s": "(]"
+      },
+      "expected": false,
+      "visible": true
+    },
+    {
+      "id": 4,
+      "input": {
+        "s": "([)]"
+      },
+      "expected": false,
+      "visible": false
+    },
+    {
+      "id": 5,
+      "input": {
+        "s": "{[]}"
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 6,
+      "input": {
+        "s": ""
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 7,
+      "input": {
+        "s": "["
+      },
+      "expected": false,
+      "visible": false
+    },
+    {
+      "id": 8,
+      "input": {
+        "s": "]"
+      },
+      "expected": false,
+      "visible": false
+    },
+    {
+      "id": 9,
+      "input": {
+        "s": "(((((())))))"
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 10,
+      "input": {
+        "s": "(((((()))))"
+      },
+      "expected": false,
+      "visible": false
+    }
+  ]
+}

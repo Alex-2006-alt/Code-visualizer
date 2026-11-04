@@ -1,0 +1,96 @@
+{
+  "id": "reverse-words",
+  "title": "Reverse Words in Phrase",
+  "difficulty": "Medium",
+  "category": "Strings",
+  "statement": "Given an input string `s`, reverse the order of the words.\n\nA word is defined as a sequence of non-space characters. The words in `s` will be separated by at least one space.\n\nReturn a string of the words in reverse order concatenated by a single space. Notice that `s` may contain leading or trailing spaces or multiple spaces between two words. The returned string should only have a single space separating the words.",
+  "constraints": [
+    "1 <= len(s) <= 10^4",
+    "s contains English letters, digits, and spaces."
+  ],
+  "function_name": "reverse_words",
+  "starter_code": "def reverse_words(s: str) -> str:\n    # Implement your solution below\n    pass\n",
+  "reference_solution": "def reverse_words(s: str) -> str:\n    return ' '.join(s.strip().split()[::-1])\n",
+  "tests": [
+    {
+      "id": 1,
+      "input": {
+        "s": "the sky is blue"
+      },
+      "expected": "blue is sky the",
+      "visible": true
+    },
+    {
+      "id": 2,
+      "input": {
+        "s": "  hello world  "
+      },
+      "expected": "world hello",
+      "visible": true
+    },
+    {
+      "id": 3,
+      "input": {
+        "s": "a good   example"
+      },
+      "expected": "example good a",
+      "visible": true
+    },
+    {
+      "id": 4,
+      "input": {
+        "s": "word"
+      },
+      "expected": "word",
+      "visible": false
+    },
+    {
+      "id": 5,
+      "input": {
+        "s": "  single  "
+      },
+      "expected": "single",
+      "visible": false
+    },
+    {
+      "id": 6,
+      "input": {
+        "s": "1 2 3 4 5"
+      },
+      "expected": "5 4 3 2 1",
+      "visible": false
+    },
+    {
+      "id": 7,
+      "input": {
+        "s": "EPIC    ALGORITHM    CHALLENGE"
+      },
+      "expected": "CHALLENGE ALGORITHM EPIC",
+      "visible": false
+    },
+    {
+      "id": 8,
+      "input": {
+        "s": "   "
+      },
+      "expected": "",
+      "visible": false
+    },
+    {
+      "id": 9,
+      "input": {
+        "s": "Bob Loves Alice"
+      },
+      "expected": "Alice Loves Bob",
+      "visible": false
+    },
+    {
+      "id": 10,
+      "input": {
+        "s": "left   right"
+      },
+      "expected": "right left",
+      "visible": false
+    }
+  ]
+}
