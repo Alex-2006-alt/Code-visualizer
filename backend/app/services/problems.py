@@ -7,8 +7,9 @@ import re
 from pathlib import Path
 from typing import Any
 
+from fastapi import HTTPException, status
+
 from app.config import get_settings
-from app.core.errors import NotFoundError, ValidationError
 from app.core.security import validate_code
 from app.schemas import (
     ProblemDetailSchema,
@@ -52,7 +53,10 @@ def get_problem_detail(problem_id: str) -> ProblemDetailSchema:
     """Retrieve full details of a specific problem with only visible tests exposed."""
     file_path = PROBLEMS_DIR / f"{problem_id}.json"
     if not file_path.exists():
-        raise NotFoundError(message=f"Problem '{problem_id}' not found.")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Problem '{problem_id}' not found.",
+        )
 
     with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -90,7 +94,10 @@ async def evaluate_submission(
     """Execute user submission against all problem tests inside the secure sandbox."""
     file_path = PROBLEMS_DIR / f"{problem_id}.json"
     if not file_path.exists():
-        raise NotFoundError(message=f"Problem '{problem_id}' not found.")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Problem '{problem_id}' not found.",
+        )
 
     with open(file_path, "r", encoding="utf-8") as f:
         problem_data = json.load(f)
@@ -108,7 +115,7 @@ import time
 
 {user_code}
 
-__tests__ = {serialized_tests}
+__tests__ = json.loads({json.dumps(serialized_tests)})
 __results__ = []
 
 for __t__ in __tests__:
