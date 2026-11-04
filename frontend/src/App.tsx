@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { RootLayout } from '@/components/layout'
-import { LandingPage, WorkspacePage, ExamplesPage, NotFoundPage } from '@/routes'
+import { LandingPage, WorkspacePage, ExamplesPage, PracticePage, NotFoundPage } from '@/routes'
 
 export const App: React.FC = () => {
   return (
@@ -11,6 +11,8 @@ export const App: React.FC = () => {
           <Route index element={<LandingPage />} />
           <Route path="workspace" element={<WorkspacePage />} />
           <Route path="examples" element={<ExamplesPage />} />
+          <Route path="practice" element={<PracticePage />} />
+          <Route path="practice/:problemId" element={<PracticePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
