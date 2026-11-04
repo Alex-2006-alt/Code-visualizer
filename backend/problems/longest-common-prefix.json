@@ -1,0 +1,131 @@
+{
+  "id": "longest-common-prefix",
+  "title": "Longest Shared Prefix",
+  "difficulty": "Easy",
+  "category": "Strings",
+  "statement": "Write a function to find the longest common prefix string amongst an array of strings `strs`.\n\nIf there is no common prefix, return an empty string `\"\"`.",
+  "constraints": [
+    "1 <= len(strs) <= 200",
+    "0 <= len(strs[i]) <= 200",
+    "strs[i] consists of only lowercase English letters."
+  ],
+  "function_name": "longest_common_prefix",
+  "starter_code": "def longest_common_prefix(strs: list[str]) -> str:\n    # Implement your solution below\n    pass\n",
+  "reference_solution": "def longest_common_prefix(strs: list[str]) -> str:\n    if not strs:\n        return ''\n    prefix = strs[0]\n    for s in strs[1:]:\n        while not s.startswith(prefix):\n            prefix = prefix[:-1]\n            if not prefix:\n                return ''\n    return prefix\n",
+  "tests": [
+    {
+      "id": 1,
+      "input": {
+        "strs": [
+          "flower",
+          "flow",
+          "flight"
+        ]
+      },
+      "expected": "fl",
+      "visible": true
+    },
+    {
+      "id": 2,
+      "input": {
+        "strs": [
+          "dog",
+          "racecar",
+          "car"
+        ]
+      },
+      "expected": "",
+      "visible": true
+    },
+    {
+      "id": 3,
+      "input": {
+        "strs": [
+          "interspecies",
+          "interstellar",
+          "interstate"
+        ]
+      },
+      "expected": "inters",
+      "visible": true
+    },
+    {
+      "id": 4,
+      "input": {
+        "strs": [
+          "a"
+        ]
+      },
+      "expected": "a",
+      "visible": false
+    },
+    {
+      "id": 5,
+      "input": {
+        "strs": [
+          "",
+          "b"
+        ]
+      },
+      "expected": "",
+      "visible": false
+    },
+    {
+      "id": 6,
+      "input": {
+        "strs": [
+          "throne",
+          "throne"
+        ]
+      },
+      "expected": "throne",
+      "visible": false
+    },
+    {
+      "id": 7,
+      "input": {
+        "strs": [
+          "ab",
+          "a"
+        ]
+      },
+      "expected": "a",
+      "visible": false
+    },
+    {
+      "id": 8,
+      "input": {
+        "strs": [
+          "cir",
+          "car"
+        ]
+      },
+      "expected": "c",
+      "visible": false
+    },
+    {
+      "id": 9,
+      "input": {
+        "strs": [
+          "apple",
+          "app",
+          "application"
+        ]
+      },
+      "expected": "app",
+      "visible": false
+    },
+    {
+      "id": 10,
+      "input": {
+        "strs": [
+          "prefix",
+          "prefecture",
+          "prevent"
+        ]
+      },
+      "expected": "pre",
+      "visible": false
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "id": "binary-search",
+  "title": "Ordered Array Binary Search",
+  "difficulty": "Easy",
+  "category": "Searching & Divide and Conquer",
+  "statement": "Given a sorted array of distinct integers `nums` in ascending order and an integer `target`, write a function to search for `target` in `nums`.\n\nIf `target` exists, return its 0-based index. Otherwise, return -1. You must write an algorithm with O(log n) runtime complexity.",
+  "constraints": [
+    "1 <= len(nums) <= 10^4",
+    "-10^4 <= nums[i], target <= 10^4",
+    "All elements in nums are unique and strictly sorted."
+  ],
+  "function_name": "search",
+  "starter_code": "def search(nums: list[int], target: int) -> int:\n    # Implement your solution below\n    pass\n",
+  "reference_solution": "def search(nums: list[int], target: int) -> int:\n    left, right = 0, len(nums) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if nums[mid] == target:\n            return mid\n        elif nums[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1\n",
+  "tests": [
+    {
+      "id": 1,
+      "input": {
+        "nums": [
+          -1,
+          0,
+          3,
+          5,
+          9,
+          12
+        ],
+        "target": 9
+      },
+      "expected": 4,
+      "visible": true
+    },
+    {
+      "id": 2,
+      "input": {
+        "nums": [
+          -1,
+          0,
+          3,
+          5,
+          9,
+          12
+        ],
+        "target": 2
+      },
+      "expected": -1,
+      "visible": true
+    },
+    {
+      "id": 3,
+      "input": {
+        "nums": [
+          5
+        ],
+        "target": 5
+      },
+      "expected": 0,
+      "visible": true
+    },
+    {
+      "id": 4,
+      "input": {
+        "nums": [
+          5
+        ],
+        "target": -5
+      },
+      "expected": -1,
+      "visible": false
+    },
+    {
+      "id": 5,
+      "input": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "target": 1
+      },
+      "expected": 0,
+      "visible": false
+    },
+    {
+      "id": 6,
+      "input": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "target": 10
+      },
+      "expected": 9,
+      "visible": false
+    },
+    {
+      "id": 7,
+      "input": {
+        "nums": [
+          2,
+          4,
+          6,
+          8,
+          10
+        ],
+        "target": 7
+      },
+      "expected": -1,
+      "visible": false
+    },
+    {
+      "id": 8,
+      "input": {
+        "nums": [
+          -50,
+          -20,
+          -10,
+          0,
+          10,
+          20,
+          50
+        ],
+        "target": 0
+      },
+      "expected": 3,
+      "visible": false
+    },
+    {
+      "id": 9,
+      "input": {
+        "nums": [
+          100,
+          200,
+          300
+        ],
+        "target": 250
+      },
+      "expected": -1,
+      "visible": false
+    },
+    {
+      "id": 10,
+      "input": {
+        "nums": [
+          -100,
+          0,
+          100
+        ],
+        "target": -100
+      },
+      "expected": 0,
+      "visible": false
+    }
+  ]
+}

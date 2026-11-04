@@ -1,0 +1,143 @@
+{
+  "id": "single-number",
+  "title": "Unique Lone Element",
+  "difficulty": "Easy",
+  "category": "Bit Manipulation",
+  "statement": "Given a non-empty array of integers `nums`, every element appears twice except for one. Find that single, non-repeating element.\n\nYou must implement a solution with a linear runtime complexity and use only constant extra space.",
+  "constraints": [
+    "1 <= len(nums) <= 3 * 10^4",
+    "-3 * 10^4 <= nums[i] <= 3 * 10^4",
+    "Each element in the array appears twice except for one element which appears once."
+  ],
+  "function_name": "single_number",
+  "starter_code": "def single_number(nums: list[int]) -> int:\n    # Implement your solution below\n    pass\n",
+  "reference_solution": "def single_number(nums: list[int]) -> int:\n    res = 0\n    for n in nums:\n        res ^= n\n    return res\n",
+  "tests": [
+    {
+      "id": 1,
+      "input": {
+        "nums": [
+          2,
+          2,
+          1
+        ]
+      },
+      "expected": 1,
+      "visible": true
+    },
+    {
+      "id": 2,
+      "input": {
+        "nums": [
+          4,
+          1,
+          2,
+          1,
+          2
+        ]
+      },
+      "expected": 4,
+      "visible": true
+    },
+    {
+      "id": 3,
+      "input": {
+        "nums": [
+          1
+        ]
+      },
+      "expected": 1,
+      "visible": true
+    },
+    {
+      "id": 4,
+      "input": {
+        "nums": [
+          -1,
+          -1,
+          -2
+        ]
+      },
+      "expected": -2,
+      "visible": false
+    },
+    {
+      "id": 5,
+      "input": {
+        "nums": [
+          0,
+          1,
+          0
+        ]
+      },
+      "expected": 1,
+      "visible": false
+    },
+    {
+      "id": 6,
+      "input": {
+        "nums": [
+          99,
+          10,
+          99
+        ]
+      },
+      "expected": 10,
+      "visible": false
+    },
+    {
+      "id": 7,
+      "input": {
+        "nums": [
+          7,
+          3,
+          5,
+          3,
+          7
+        ]
+      },
+      "expected": 5,
+      "visible": false
+    },
+    {
+      "id": 8,
+      "input": {
+        "nums": [
+          1000,
+          2000,
+          1000
+        ]
+      },
+      "expected": 2000,
+      "visible": false
+    },
+    {
+      "id": 9,
+      "input": {
+        "nums": [
+          -10,
+          5,
+          -10,
+          8,
+          8
+        ]
+      },
+      "expected": 5,
+      "visible": false
+    },
+    {
+      "id": 10,
+      "input": {
+        "nums": [
+          12,
+          14,
+          14,
+          15,
+          12
+        ]
+      },
+      "expected": 15,
+      "visible": false
+    }
+  ]
+}

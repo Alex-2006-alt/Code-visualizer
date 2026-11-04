@@ -1,0 +1,95 @@
+{
+  "id": "palindrome-number",
+  "title": "Numeric Palindrome",
+  "difficulty": "Easy",
+  "category": "Math",
+  "statement": "Given an integer `x`, return `True` if `x` is a palindrome, and `False` otherwise.\n\nAn integer is a palindrome when it reads the same forward and backward. Negative numbers are not palindromes because the minus sign does not match from right to left.",
+  "constraints": [
+    "-2^31 <= x <= 2^31 - 1"
+  ],
+  "function_name": "is_palindrome_number",
+  "starter_code": "def is_palindrome_number(x: int) -> bool:\n    # Implement your solution below\n    pass\n",
+  "reference_solution": "def is_palindrome_number(x: int) -> bool:\n    if x < 0:\n        return False\n    s = str(x)\n    return s == s[::-1]\n",
+  "tests": [
+    {
+      "id": 1,
+      "input": {
+        "x": 121
+      },
+      "expected": true,
+      "visible": true
+    },
+    {
+      "id": 2,
+      "input": {
+        "x": -121
+      },
+      "expected": false,
+      "visible": true
+    },
+    {
+      "id": 3,
+      "input": {
+        "x": 10
+      },
+      "expected": false,
+      "visible": true
+    },
+    {
+      "id": 4,
+      "input": {
+        "x": 0
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 5,
+      "input": {
+        "x": 7
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 6,
+      "input": {
+        "x": 1221
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 7,
+      "input": {
+        "x": 1234321
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 8,
+      "input": {
+        "x": 123456
+      },
+      "expected": false,
+      "visible": false
+    },
+    {
+      "id": 9,
+      "input": {
+        "x": 999999
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 10,
+      "input": {
+        "x": -101
+      },
+      "expected": false,
+      "visible": false
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "valid-anagram",
+  "title": "Anagram Verification",
+  "difficulty": "Easy",
+  "category": "Strings & Counting",
+  "statement": "Given two strings `s` and `t`, return `True` if `t` is an anagram of `s`, and `False` otherwise.\n\nAn Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.",
+  "constraints": [
+    "1 <= len(s), len(t) <= 5 * 10^4",
+    "s and t consist of lowercase English letters."
+  ],
+  "function_name": "is_anagram",
+  "starter_code": "def is_anagram(s: str, t: str) -> bool:\n    # Implement your solution below\n    pass\n",
+  "reference_solution": "def is_anagram(s: str, t: str) -> bool:\n    if len(s) != len(t):\n        return False\n    counts = {}\n    for c in s:\n        counts[c] = counts.get(c, 0) + 1\n    for c in t:\n        if c not in counts or counts[c] == 0:\n            return False\n        counts[c] -= 1\n    return True\n",
+  "tests": [
+    {
+      "id": 1,
+      "input": {
+        "s": "anagram",
+        "t": "nagaram"
+      },
+      "expected": true,
+      "visible": true
+    },
+    {
+      "id": 2,
+      "input": {
+        "s": "rat",
+        "t": "car"
+      },
+      "expected": false,
+      "visible": true
+    },
+    {
+      "id": 3,
+      "input": {
+        "s": "a",
+        "t": "a"
+      },
+      "expected": true,
+      "visible": true
+    },
+    {
+      "id": 4,
+      "input": {
+        "s": "a",
+        "t": "b"
+      },
+      "expected": false,
+      "visible": false
+    },
+    {
+      "id": 5,
+      "input": {
+        "s": "listen",
+        "t": "silent"
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 6,
+      "input": {
+        "s": "ab",
+        "t": "a"
+      },
+      "expected": false,
+      "visible": false
+    },
+    {
+      "id": 7,
+      "input": {
+        "s": "aabbcc",
+        "t": "abcabc"
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 8,
+      "input": {
+        "s": "aabbcc",
+        "t": "aabbc"
+      },
+      "expected": false,
+      "visible": false
+    },
+    {
+      "id": 9,
+      "input": {
+        "s": "dormitory",
+        "t": "dirtyroom"
+      },
+      "expected": true,
+      "visible": false
+    },
+    {
+      "id": 10,
+      "input": {
+        "s": "hello",
+        "t": "world"
+      },
+      "expected": false,
+      "visible": false
+    }
+  ]
+}

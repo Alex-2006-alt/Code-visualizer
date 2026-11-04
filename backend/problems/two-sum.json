@@ -1,0 +1,187 @@
+{
+  "id": "two-sum",
+  "title": "Two Sum Target",
+  "difficulty": "Easy",
+  "category": "Arrays & Hash Tables",
+  "statement": "Given an array of integers `nums` and an integer `target`, return the 0-based indices of the two distinct numbers such that they add up to `target`.\n\nYou may assume that each test case has exactly one valid solution, and you cannot reuse the same index twice. Return the indices sorted in ascending order.",
+  "constraints": [
+    "2 <= len(nums) <= 10^4",
+    "-10^9 <= nums[i] <= 10^9",
+    "-10^9 <= target <= 10^9",
+    "Exactly one valid pair exists."
+  ],
+  "function_name": "two_sum",
+  "starter_code": "def two_sum(nums: list[int], target: int) -> list[int]:\n    # Implement your solution below\n    pass\n",
+  "reference_solution": "def two_sum(nums: list[int], target: int) -> list[int]:\n    seen = {}\n    for i, n in enumerate(nums):\n        complement = target - n\n        if complement in seen:\n            return sorted([seen[complement], i])\n        seen[n] = i\n    return []\n",
+  "tests": [
+    {
+      "id": 1,
+      "input": {
+        "nums": [
+          2,
+          7,
+          11,
+          15
+        ],
+        "target": 9
+      },
+      "expected": [
+        0,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "id": 2,
+      "input": {
+        "nums": [
+          3,
+          2,
+          4
+        ],
+        "target": 6
+      },
+      "expected": [
+        1,
+        2
+      ],
+      "visible": true
+    },
+    {
+      "id": 3,
+      "input": {
+        "nums": [
+          3,
+          3
+        ],
+        "target": 6
+      },
+      "expected": [
+        0,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "id": 4,
+      "input": {
+        "nums": [
+          -1,
+          -2,
+          -3,
+          -4,
+          -5
+        ],
+        "target": -8
+      },
+      "expected": [
+        2,
+        4
+      ],
+      "visible": false
+    },
+    {
+      "id": 5,
+      "input": {
+        "nums": [
+          0,
+          4,
+          3,
+          0
+        ],
+        "target": 0
+      },
+      "expected": [
+        0,
+        3
+      ],
+      "visible": false
+    },
+    {
+      "id": 6,
+      "input": {
+        "nums": [
+          -3,
+          4,
+          3,
+          90
+        ],
+        "target": 0
+      },
+      "expected": [
+        0,
+        2
+      ],
+      "visible": false
+    },
+    {
+      "id": 7,
+      "input": {
+        "nums": [
+          1,
+          5,
+          8,
+          12,
+          15,
+          20
+        ],
+        "target": 23
+      },
+      "expected": [
+        2,
+        4
+      ],
+      "visible": false
+    },
+    {
+      "id": 8,
+      "input": {
+        "nums": [
+          100,
+          200,
+          300,
+          400
+        ],
+        "target": 700
+      },
+      "expected": [
+        2,
+        3
+      ],
+      "visible": false
+    },
+    {
+      "id": 9,
+      "input": {
+        "nums": [
+          5,
+          75,
+          25
+        ],
+        "target": 100
+      },
+      "expected": [
+        1,
+        2
+      ],
+      "visible": false
+    },
+    {
+      "id": 10,
+      "input": {
+        "nums": [
+          10,
+          -10,
+          5,
+          -5
+        ],
+        "target": 0
+      },
+      "expected": [
+        0,
+        1
+      ],
+      "visible": false
+    }
+  ]
+}

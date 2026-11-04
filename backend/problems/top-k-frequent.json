@@ -1,0 +1,201 @@
+{
+  "id": "top-k-frequent",
+  "title": "Top K Frequent Elements",
+  "difficulty": "Medium",
+  "category": "Hash Maps & Counting",
+  "statement": "Given an integer array `nums` and an integer `k`, return the `k` most frequent elements.\n\nYou may return the answer in ascending order. It is guaranteed that the answer is unique.",
+  "constraints": [
+    "1 <= len(nums) <= 10^5",
+    "-10^4 <= nums[i] <= 10^4",
+    "k is in the range [1, the number of unique elements in the array]."
+  ],
+  "function_name": "top_k_frequent",
+  "starter_code": "def top_k_frequent(nums: list[int], k: int) -> list[int]:\n    # Implement your solution below\n    pass\n",
+  "reference_solution": "def top_k_frequent(nums: list[int], k: int) -> list[int]:\n    counts = {}\n    for n in nums:\n        counts[n] = counts.get(n, 0) + 1\n    sorted_items = sorted(counts.items(), key=lambda x: x[1], reverse=True)\n    top_elements = [item[0] for item in sorted_items[:k]]\n    return sorted(top_elements)\n",
+  "tests": [
+    {
+      "id": 1,
+      "input": {
+        "nums": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          3
+        ],
+        "k": 2
+      },
+      "expected": [
+        1,
+        2
+      ],
+      "visible": true
+    },
+    {
+      "id": 2,
+      "input": {
+        "nums": [
+          1
+        ],
+        "k": 1
+      },
+      "expected": [
+        1
+      ],
+      "visible": true
+    },
+    {
+      "id": 3,
+      "input": {
+        "nums": [
+          4,
+          1,
+          -1,
+          2,
+          -1,
+          2,
+          3
+        ],
+        "k": 2
+      },
+      "expected": [
+        -1,
+        2
+      ],
+      "visible": true
+    },
+    {
+      "id": 4,
+      "input": {
+        "nums": [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "k": 1
+      },
+      "expected": [
+        5
+      ],
+      "visible": false
+    },
+    {
+      "id": 5,
+      "input": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          1
+        ],
+        "k": 1
+      },
+      "expected": [
+        1
+      ],
+      "visible": false
+    },
+    {
+      "id": 6,
+      "input": {
+        "nums": [
+          3,
+          0,
+          1,
+          0
+        ],
+        "k": 1
+      },
+      "expected": [
+        0
+      ],
+      "visible": false
+    },
+    {
+      "id": 7,
+      "input": {
+        "nums": [
+          -1,
+          -1,
+          2,
+          2,
+          3,
+          3,
+          3
+        ],
+        "k": 1
+      },
+      "expected": [
+        3
+      ],
+      "visible": false
+    },
+    {
+      "id": 8,
+      "input": {
+        "nums": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4
+        ],
+        "k": 3
+      },
+      "expected": [
+        2,
+        3,
+        4
+      ],
+      "visible": false
+    },
+    {
+      "id": 9,
+      "input": {
+        "nums": [
+          10,
+          20,
+          10,
+          30,
+          20,
+          10
+        ],
+        "k": 2
+      },
+      "expected": [
+        10,
+        20
+      ],
+      "visible": false
+    },
+    {
+      "id": 10,
+      "input": {
+        "nums": [
+          -5,
+          -5,
+          -3,
+          -3,
+          -3
+        ],
+        "k": 2
+      },
+      "expected": [
+        -5,
+        -3
+      ],
+      "visible": false
+    }
+  ]
+}

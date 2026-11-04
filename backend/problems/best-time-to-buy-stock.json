@@ -1,0 +1,143 @@
+{
+  "id": "best-time-to-buy-stock",
+  "title": "Optimal Asset Trading Profit",
+  "difficulty": "Easy",
+  "category": "Greedy & Arrays",
+  "statement": "You are given an array `prices` where `prices[i]` is the price of a given asset on the `i`-th day.\n\nYou want to maximize your profit by choosing a single day to buy one unit of the asset and choosing a different day in the future to sell it.\n\nReturn the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.",
+  "constraints": [
+    "1 <= len(prices) <= 10^5",
+    "0 <= prices[i] <= 10^4"
+  ],
+  "function_name": "max_profit",
+  "starter_code": "def max_profit(prices: list[int]) -> int:\n    # Implement your solution below\n    pass\n",
+  "reference_solution": "def max_profit(prices: list[int]) -> int:\n    if not prices:\n        return 0\n    min_price = prices[0]\n    max_prof = 0\n    for p in prices[1:]:\n        if p < min_price:\n            min_price = p\n        else:\n            max_prof = max(max_prof, p - min_price)\n    return max_prof\n",
+  "tests": [
+    {
+      "id": 1,
+      "input": {
+        "prices": [
+          7,
+          1,
+          5,
+          3,
+          6,
+          4
+        ]
+      },
+      "expected": 5,
+      "visible": true
+    },
+    {
+      "id": 2,
+      "input": {
+        "prices": [
+          7,
+          6,
+          4,
+          3,
+          1
+        ]
+      },
+      "expected": 0,
+      "visible": true
+    },
+    {
+      "id": 3,
+      "input": {
+        "prices": [
+          1,
+          2
+        ]
+      },
+      "expected": 1,
+      "visible": true
+    },
+    {
+      "id": 4,
+      "input": {
+        "prices": [
+          2,
+          1
+        ]
+      },
+      "expected": 0,
+      "visible": false
+    },
+    {
+      "id": 5,
+      "input": {
+        "prices": [
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "expected": 0,
+      "visible": false
+    },
+    {
+      "id": 6,
+      "input": {
+        "prices": [
+          2,
+          4,
+          1
+        ]
+      },
+      "expected": 2,
+      "visible": false
+    },
+    {
+      "id": 7,
+      "input": {
+        "prices": [
+          10,
+          2,
+          9,
+          1,
+          5
+        ]
+      },
+      "expected": 7,
+      "visible": false
+    },
+    {
+      "id": 8,
+      "input": {
+        "prices": [
+          5
+        ]
+      },
+      "expected": 0,
+      "visible": false
+    },
+    {
+      "id": 9,
+      "input": {
+        "prices": [
+          1,
+          100
+        ]
+      },
+      "expected": 99,
+      "visible": false
+    },
+    {
+      "id": 10,
+      "input": {
+        "prices": [
+          8,
+          3,
+          6,
+          2,
+          8,
+          1,
+          4
+        ]
+      },
+      "expected": 6,
+      "visible": false
+    }
+  ]
+}
