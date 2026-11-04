@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { GlassButton } from '@/components/ui'
 import { cn } from '@/lib/utils'
+import { FEATURES } from '@/config/features'
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -11,6 +12,7 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { to: '/workspace', label: 'Workspace' },
     { to: '/examples', label: 'Examples' },
+    ...(FEATURES.PRACTICE_MODE ? [{ to: '/practice', label: 'Practice' }] : []),
   ]
 
   const isLinkActive = (to: string) => {
