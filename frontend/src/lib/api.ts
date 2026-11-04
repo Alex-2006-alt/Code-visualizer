@@ -1,3 +1,4 @@
+import { ProblemSummary, ProblemDetail, ProblemSubmitResponse } from '@/types/practice'
 import { TraceStep, ComplexityParams, ComplexityResult } from '@/types/trace'
 import { toast } from '@/components/ui/toastStore'
 import { PRESETS } from '@/mocks'
@@ -338,6 +339,83 @@ export async function fetchComplexityAnalysis(
     if (error instanceof TypeError && error.message.includes('fetch')) {
       toast.error('Network Error', 'Could not connect to FastAPI complexity service.')
     }
+    throw error
+  }
+}
+
+
+/**
+ * Retrieves catalog of algorithmic practice problems
+ */
+export async function fetchProblemsList(): Promise<ProblemSummary[]> {
+  try {
+    const response = await fetch(${API_URL}/api/problems)
+    if (!response.ok) {
+      throw new Error(Failed to fetch problems: )
+    }
+    return (await response.json()) as ProblemSummary[]
+  } catch (error) {
+    toast.error('Failed to load problems', 'Could not retrieve practice problems catalog.')
+    return []
+  }
+}
+
+/**
+ * Retrieves details for a specific problem with example tests
+ */
+export async function fetchProblemDetail(id: string): Promise<ProblemDetail | null> {
+  try {
+    const response = await fetch(${API_URL}/api/problems/)
+    if (!response.ok) {
+      if (response.status === 404) {
+        toast.error('Problem Not Found', Problem '' does not exist.)
+      }
+      return null
+    }
+    return (await response.json()) as ProblemDetail
+  } catch (error) {
+    toast.error('Network Error', Could not fetch problem ''.)
+    return null
+  }
+}
+
+/**
+ * Submits user code to be evaluated against all problem test cases inside sandbox
+ */
+export async function submitProblemSolution(
+  id: string,
+  code: string
+): Promise<ProblemSubmitResponse> {
+  const endpoint = ${API_URL}/api/problems//submit
+  try {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code: code.trim() }),
+    })
+
+    if (response.status === 429) {
+      toast.error('Rate Limit Exceeded', 'Please wait a moment before submitting again.')
+      throw new Error('Rate limit exceeded')
+    }
+
+    if (response.status === 400) {
+      const errData = await response.json().catch(() => ({}))
+      const msg = errData.detail || 'Code failed validation or contains unallowed imports.'
+      toast.error('Submission Rejected', msg)
+      throw new Error(msg)
+    }
+
+    if (!response.ok) {
+      throw new Error(Submission failed with status: )
+    }
+
+    return (await response.json()) as ProblemSubmitResponse
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('Rate limit')) {
+      throw error
+    }
+    toast.error('Execution Failed', 'Failed to run solution in the sandbox.')
     throw error
   }
 }
