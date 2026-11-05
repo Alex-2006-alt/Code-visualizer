@@ -328,6 +328,7 @@ export const WorkspacePage: React.FC = () => {
             onClick={handleShare}
             disabled={isSharing}
             leftIcon={<span className="material-symbols-outlined text-[16px]">share</span>}
+            data-testid="btn-share"
             aria-label="Share code snippet"
           >
             {isSharing ? 'Sharing...' : 'Share'}
