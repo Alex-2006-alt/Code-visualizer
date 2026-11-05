@@ -90,7 +90,8 @@ export const WorkspacePage: React.FC = () => {
 
   // Load preset or shared snippet from URL query parameters (?preset=id or ?snippet=id, plus ?step=n)
   useEffect(() => {
-    const presetId = searchParams.get('preset')
+    const rawPreset = searchParams.get('preset')
+    const presetId = rawPreset === 'factorial' ? 'factorial-recursion' : rawPreset
     const snippetId = searchParams.get('snippet')
     const stepParam = searchParams.get('step')
     const targetStep = stepParam !== null ? parseInt(stepParam, 10) : null
@@ -120,6 +121,14 @@ export const WorkspacePage: React.FC = () => {
               }
             }
           })
+        }
+      })
+    } else if (targetStep !== null && !isNaN(targetStep)) {
+      runCurrentCode().then(() => {
+        const s = useTraceStore.getState()
+        if (s.steps && s.steps.length > 0) {
+          const clamped = Math.max(0, Math.min(targetStep, s.steps.length - 1))
+          setCurrentStep(clamped)
         }
       })
     }
