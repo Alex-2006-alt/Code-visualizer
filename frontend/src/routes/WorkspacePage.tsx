@@ -11,6 +11,7 @@ import {
   PredictQuizCard,
   ComplexityMeter,
   StdinDrawer,
+  ExportModal,
 } from '@/components/workspace'
 import { EventLogDrawer } from '@/components/workspace/EventLogDrawer'
 import { KeyboardShortcutsModal } from '@/components/workspace/KeyboardShortcutsModal'
@@ -42,6 +43,7 @@ export const WorkspacePage: React.FC = () => {
   const [isEventLogOpen, setIsEventLogOpen] = useState(false)
   const [isShortcutsOpen, setIsShortcutsOpen] = useState(false)
   const [isStdinOpen, setIsStdinOpen] = useState(false)
+  const [isExportOpen, setIsExportOpen] = useState(false)
   const [helpModalTab, setHelpModalTab] = useState<'shortcuts' | 'modules'>('shortcuts')
 
   const {
@@ -86,23 +88,51 @@ export const WorkspacePage: React.FC = () => {
     setMode(mode)
   }, [mode, setMode])
 
-  // Load preset or shared snippet from URL query parameters (?preset=id or ?snippet=id)
+  // Load preset or shared snippet from URL query parameters (?preset=id or ?snippet=id, plus ?step=n)
   useEffect(() => {
-    const presetId = searchParams.get('preset')
+    const rawPreset = searchParams.get('preset')
+    const presetId = rawPreset === 'factorial' ? 'factorial-recursion' : rawPreset
+    const snippetId = searchParams.get('snippet')
+    const stepParam = searchParams.get('step')
+    const targetStep = stepParam !== null ? parseInt(stepParam, 10) : null
+
     if (presetId && PRESETS[presetId]) {
       loadPreset(presetId)
-    }
-
-    const snippetId = searchParams.get('snippet')
-    if (snippetId) {
+      if (targetStep !== null && !isNaN(targetStep)) {
+        runCurrentCode().then(() => {
+          const s = useTraceStore.getState()
+          if (s.steps && s.steps.length > 0) {
+            const clamped = Math.max(0, Math.min(targetStep, s.steps.length - 1))
+            setCurrentStep(clamped)
+          }
+        })
+      }
+    } else if (snippetId) {
       fetchSnippet(snippetId).then((fetchedCode) => {
         if (fetchedCode) {
           setCode(fetchedCode)
           toast.info('Snippet Loaded', `Loaded shared snippet '${snippetId}'`)
+          runCurrentCode().then(() => {
+            if (targetStep !== null && !isNaN(targetStep)) {
+              const s = useTraceStore.getState()
+              if (s.steps && s.steps.length > 0) {
+                const clamped = Math.max(0, Math.min(targetStep, s.steps.length - 1))
+                setCurrentStep(clamped)
+              }
+            }
+          })
+        }
+      })
+    } else if (targetStep !== null && !isNaN(targetStep)) {
+      runCurrentCode().then(() => {
+        const s = useTraceStore.getState()
+        if (s.steps && s.steps.length > 0) {
+          const clamped = Math.max(0, Math.min(targetStep, s.steps.length - 1))
+          setCurrentStep(clamped)
         }
       })
     }
-  }, [searchParams, setCode, loadPreset])
+  }, [searchParams, setCode, loadPreset, runCurrentCode, setCurrentStep])
 
   // Breakpoint step indices on the current trace
   const breakpointStepIndices = useMemo(() => {
@@ -193,9 +223,11 @@ export const WorkspacePage: React.FC = () => {
       setIsSharing(true)
       const snippetId = await createSnippet(code)
       if (snippetId) {
-        const shareUrl = `${window.location.origin}/workspace?snippet=${snippetId}`
+        const hasStep = steps.length > 0 && currentStep >= 0
+        const stepQuery = hasStep ? `&step=${currentStep}` : ''
+        const shareUrl = `${window.location.origin}/workspace?snippet=${snippetId}${stepQuery}`
         await navigator.clipboard.writeText(shareUrl).catch(() => {})
-        setSearchParams({ snippet: snippetId })
+        setSearchParams(hasStep ? { snippet: snippetId, step: String(currentStep) } : { snippet: snippetId })
         toast.success('Share Link Created', `Link copied: ${shareUrl}`)
       }
     } catch {
@@ -305,10 +337,24 @@ export const WorkspacePage: React.FC = () => {
             onClick={handleShare}
             disabled={isSharing}
             leftIcon={<span className="material-symbols-outlined text-[16px]">share</span>}
+            data-testid="btn-share"
             aria-label="Share code snippet"
           >
             {isSharing ? 'Sharing...' : 'Share'}
           </GlassButton>
+
+          {FEATURES.SHARE_AND_EXPORT && (
+            <GlassButton
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsExportOpen(true)}
+              data-testid="btn-open-export"
+              leftIcon={<span className="material-symbols-outlined text-[16px]">file_download</span>}
+              aria-label="Export trace and view"
+            >
+              Export
+            </GlassButton>
+          )}
 
           <GlassButton
             variant="ghost"
@@ -352,7 +398,7 @@ export const WorkspacePage: React.FC = () => {
       </div>
 
       {/* Main Multi-Pane Visualizer Grid */}
-      <div className="flex-1 w-full px-4 sm:px-6 py-4 grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
+      <div id="workspace-grid" className="flex-1 w-full px-4 sm:px-6 py-4 grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
         {/* Left Column: Monaco Code Editor(s) & Quiz (12 cols mobile, 5 cols desktop) */}
         <div
           className={`flex flex-col gap-4 lg:col-span-5 ${
@@ -664,6 +710,17 @@ export const WorkspacePage: React.FC = () => {
         onClose={() => setIsShortcutsOpen(false)}
         initialTab={helpModalTab}
       />
+
+      {/* Export Modal */}
+      {FEATURES.SHARE_AND_EXPORT && (
+        <ExportModal
+          isOpen={isExportOpen}
+          onClose={() => setIsExportOpen(false)}
+          code={code}
+          steps={steps}
+          currentStep={currentStep}
+        />
+      )}
     </div>
   )
 }
