@@ -37,7 +37,11 @@ export const FeatureDeepDives: React.FC = () => {
             </li>
             <li className="flex items-center gap-2.5">
               <span className="material-symbols-outlined text-accent text-base">check_circle</span>
-              <span>Keyboard shortcuts: Space to play/pause, arrows to step.</span>
+              <span>Debugger controls: Breakpoints, Step Over (F10), Step Into (F11), Step Out (Shift+F11).</span>
+            </li>
+            <li className="flex items-center gap-2.5">
+              <span className="material-symbols-outlined text-accent text-base">check_circle</span>
+              <span>Searchable Event Log drawer and keyboard shortcut modal (?).</span>
             </li>
           </ul>
 
@@ -687,7 +691,11 @@ export const FeatureDeepDives: React.FC = () => {
             </li>
             <li className="flex items-center gap-2.5">
               <span className="material-symbols-outlined text-sage text-base">check_circle</span>
-              <span>Recipients see the identical code ready to run.</span>
+              <span>Step-aware permalinks preserve exact recorded execution step (&amp;step=N).</span>
+            </li>
+            <li className="flex items-center gap-2.5">
+              <span className="material-symbols-outlined text-sage text-base">check_circle</span>
+              <span>Multi-format export: OpenAPI JSON trace, GitHub Markdown table, and PNG view.</span>
             </li>
           </ul>
 
@@ -726,6 +734,80 @@ export const FeatureDeepDives: React.FC = () => {
 
               <div className="text-[11px] text-text-3 leading-relaxed">
                 Anyone with this link receives the full code snapshot and can replay the exact step-by-step trace in their own browser.
+              </div>
+            </div>
+          </GlassPanel>
+        </div>
+      </div>
+          {/* ─────────────────────────────────────────────────────────────
+          8. PRACTICE MODE & LEETCODE-STYLE ARENA
+      ───────────────────────────────────────────────────────────── */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        {/* Copy */}
+        <div className="lg:col-span-6 flex flex-col gap-5 text-left order-1">
+          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-glass-sunken border border-border text-accent text-xs font-mono w-fit">
+            <span>FEATURE 08</span>
+            <span>•</span>
+            <span>PRACTICE ARENA</span>
+          </div>
+
+          <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-text tracking-tight leading-tight">
+            Master algorithms with 20 curated challenges.
+          </h3>
+
+          <p className="font-sans text-sm sm:text-base text-text-2 leading-relaxed">
+            Test your skills on classic problems across Strings, Arrays, Trees, Math, and Dynamic Programming.
+            Run test cases, inspect diffs on failure, and load any test directly into the visual trace studio.
+          </p>
+
+          <ul className="space-y-2 text-sm text-text-2 font-sans">
+            <li className="flex items-center gap-2.5">
+              <span className="material-symbols-outlined text-accent text-base">check_circle</span>
+              <span>20 original LeetCode-style problems across Easy, Medium, and Hard.</span>
+            </li>
+            <li className="flex items-center gap-2.5">
+              <span className="material-symbols-outlined text-accent text-base">check_circle</span>
+              <span>Instant test runner with detailed assertion diffs and status badges.</span>
+            </li>
+            <li className="flex items-center gap-2.5">
+              <span className="material-symbols-outlined text-accent text-base">check_circle</span>
+              <span>One-click &apos;Visualize this test&apos; jumps right into the interactive trace studio.</span>
+            </li>
+          </ul>
+
+          <div className="pt-2">
+            <Link
+              to="/practice"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:text-accent-hover transition-colors"
+            >
+              <span>Explore Practice Challenges</span>
+              <span className="material-symbols-outlined text-base">arrow_forward</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Visual Preview */}
+        <div className="lg:col-span-6 order-2">
+          <GlassPanel level={1} className="p-4 sm:p-5 rounded-panel border border-border shadow-panel flex flex-col gap-3">
+            <div className="flex items-center justify-between pb-3 border-b border-border text-xs font-mono text-text-3">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-border-strong" />
+                <span className="text-text">Practice Arena • Two Sum</span>
+              </div>
+              <span className="text-sage">ALL TESTS PASSED (5/5)</span>
+            </div>
+
+            <div className="p-4 rounded-inner bg-panel-body border border-border flex flex-col gap-3 font-mono text-xs">
+              <div className="flex items-center justify-between">
+                <span className="text-text-3">Difficulty:</span>
+                <span className="px-2 py-0.5 rounded bg-sage/20 text-sage text-[10px] font-bold">EASY</span>
+              </div>
+              <div className="p-2.5 rounded-control bg-glass-sunken border border-border text-text-2 text-[11px] leading-relaxed">
+                Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+              </div>
+              <div className="flex items-center justify-between pt-1">
+                <span className="text-text-3">Test Status:</span>
+                <span className="text-sage font-medium">100% Correct • Solved</span>
               </div>
             </div>
           </GlassPanel>
