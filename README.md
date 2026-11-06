@@ -12,7 +12,9 @@
 [![TypeScript 5](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite 6](https://img.shields.io/badge/Vite-6.x-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
-[![Tests Passing](https://img.shields.io/badge/Tests-158%20Passed-10b981?style=flat-square&logo=pytest&logoColor=white)](#testing--verification)
+[![Tests Passing](https://img.shields.io/badge/Tests-200+%20Passed-10b981?style=flat-square&logo=pytest&logoColor=white)](#testing--verification)
+[![Security: Multi--Layer Sandbox](https://img.shields.io/badge/Security-21--Module%20Allowlist-blue?style=flat-square)](docs/SECURITY.md)
+[![Benchmarks: Latency & Concurrency](https://img.shields.io/badge/Benchmarks-p50%20%3C%20200ms-purple?style=flat-square)](docs/BENCHMARKS.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-amber?style=flat-square)](LICENSE)
 
 [Features](#key-features) • [Architecture](#architecture) • [Quick Start](#quick-start) • [API Reference](#api-specification) • [Testing](#testing--verification) • [Security](#security--sandbox-model)
@@ -36,22 +38,48 @@ Whether you're debugging intricate recursive backtracking, demystifying pointer 
 
 ## Key Features
 
-### 🔍 Deterministic Step-by-Step Tracing
+### 🔍 Deterministic Step-by-Step Tracing & Debugger Controls
 - Powered by a custom Python trace engine (`sys.settrace`) that captures line transitions, local variable assignments, function calls, returns, and standard output streams.
-- Up to **2,000 steps** per execution with automated truncation safeguards.
-- Interactive timeline scrubber with forward/backward step controls, auto-play, and playback speed adjustments (`0.5x` to `4x`).
+- **Debugger-Grade Step Controls**:
+  - **Toggle Breakpoints**: Click line number gutters or press `F9` to toggle execution breakpoints.
+  - **Step Over (`F10`)**: Advances execution to the next line in the current function without descending into called functions.
+  - **Step Into (`F11`)**: Steps directly into invoked function frames.
+  - **Step Out (`Shift + F11`)**: Executes through the current frame and returns immediately to the caller frame.
+  - **Continue (`F8`)**: Runs execution until hitting the next active breakpoint or termination.
+  - **Next Call**: Jumps straight to the next function call event.
+  - **Event Log Drawer**: Collapsible event stream with live keyword search filtering.
+  - **Keyboard Shortcuts Modal (`?`)**: Full shortcut reference and module support catalog.
 
-### 🧠 Smart Variables & Virtual Heap
-- **Readable Value Previews**: Primitives render cleanly (Python `None`, `True`, `False`), while lists, dicts, sets, and tuples display concise previews (`[2, 8, 11, ...]`, `{'a': 1, 'b': 2}`).
-- **Stable Reference Tags**: Replaces raw memory addresses (`0x7f9...`) with human-friendly, deterministic heap references (`@1`, `@2`, `@3`) that remain stable across the entire replay.
-- **Dedicated Virtual Heap Inspector**: Dedicated inspection cards for mutable objects, featuring indexed list cells, dictionary key-value rows, and instance attribute mappings.
+### 🧠 Smart Variables, Virtual Heap & Data Structure Graphs
+- **Readable Value Previews**: Primitives render cleanly (`None`, `True`, `False`), while lists, dicts, sets, and tuples display concise previews.
+- **Stable Reference Tags**: Deterministic heap references (`@1`, `@2`, `@3`) that remain stable across the entire replay.
+- **Dual Virtual Heap Views**:
+  - **Memory Boxes**: Detailed inspection cards for mutable objects, featuring indexed list cells, dictionary key-value rows, and instance attribute mappings.
+  - **Interactive Data Structure Graph (SVG Canvas)**: Automatic topology visualization for Singly/Doubly Linked Lists (`next`, `prev`), Binary Trees (`left`, `right`), and general Directed/Undirected Graphs with cycle detection badges (`[Cycle: @1]`), `[None]` terminal badges, and interactive Zoom (`+`/`-`), Reset, and Pan controls.
+
+### ⌨️ Standard Input (Stdin) & Expanded Standard Library
+- **Collapsible Stdin Drawer**: Virtualized standard input supporting `input()` and `sys.stdin` with live byte counters and line tally badges.
+- **One-Click Input Presets**: Quick-load templates for User Profile (`name`, `age`, `city`), Integer Arrays (`5 \n 10 20 30 40 50`), and Multi-row CSV records.
+- **21-Module Standard Library Allowlist**: Pure-computational stdlib modules permitted:
+  `math`, `random`, `collections`, `itertools`, `heapq`, `bisect`, `functools`, `string`, `re`, `typing`, `dataclasses`, `copy`, `json`, `datetime`, `time`, `enum`, `queue`, `array`, `cmath`, `fractions`, `statistics`.
+
+### 🏆 Practice Arena (20 Curated Algorithmic Challenges)
+- **Problem Catalog**: 20 original algorithmic problems categorized across `Strings`, `Arrays`, `Trees`, `Math`, and `Dynamic Programming` with `Easy`, `Medium`, and `Hard` difficulty tiers.
+- **Test Runner & Diff Diagnostics**: Evaluates solutions across comprehensive public and edge test suites with instant status badges (`PASS`, `FAIL`, `TLE`, `ERROR`) and expected vs. actual output diffs.
+- **"Visualize This Test" Integration**: Loads any failing or passing test case directly into the interactive Workspace Studio for line-by-line debugging.
+- **Persistent Progress Tracking**: Tracks solved problems with local storage tally counters and catalog badges.
+
+### 🔗 Step-Aware Sharing & Multi-Format Export
+- **Step-Preserving Permalinks**: Generates snippet links that record the exact execution step position (e.g., `/workspace?snippet=dca7071b&step=4` or `/workspace?preset=factorial-recursion&step=3`). Recipient's browser automatically loads, executes, and steps to the exact point in time.
+- **Trace JSON Export**: Download full execution traces conforming to `TraceStepSchema` for offline analysis, automated grading, or archival.
+- **Markdown Summary Copy**: One-click copy of the active execution step formatted as a GitHub Flavored Markdown table with source line, active call stack, local variables, and terminal output.
+- **PNG Snapshot Export**: High-resolution view rasterization of the workspace canvas.
 
 ### 📈 Empirical Big-O Complexity Profiler
 - **Live Empirical Benchmarking**: Automatically executes functions across progressive input sizes ($N \in [5, 10, 20, 40, 80, \dots]$) using customizable input generators (`array`, `sorted_array`, `reverse_sorted`, `matrix`, `integer`, `string`) across `best`, `average`, and `worst` cases.
 - **Multi-Model Curve Fitting**: Combines normalized least-squares error and log-log slope regression across 7 standard Big-O classes:
   $$\mathcal{O}(1), \quad \mathcal{O}(\log n), \quad \mathcal{O}(n), \quad \mathcal{O}(n \log n), \quad \mathcal{O}(n^2), \quad \mathcal{O}(n^3), \quad \mathcal{O}(2^n)$$
 - **AST Heuristic Guidance**: Detects loop depths, recursive branching, and built-in optimized helpers (such as Timsort via `sorted()`).
-- Real-time interactive scatter plots and fitted regression curves rendered with Recharts. Results are clearly designated as **Estimated** with confidence metrics.
 
 ### 🔀 Dual Comparison Mode
 - Benchmark two distinct implementations side-by-side in real time (e.g., Quick Sort vs. Bubble Sort, or Memoized vs. Naive Fibonacci).
@@ -61,10 +89,7 @@ Whether you're debugging intricate recursive backtracking, demystifying pointer 
 - Interactive learning mode that halts before executing each line, prompting users to predict variable mutations and line jumps before revealing the next trace step.
 
 ### 🛡️ Multi-Layer Zero-Trust Sandboxing
-- Multi-tier defensive architecture enforcing AST import allowlisting, process timeouts, memory ceilings, and containerized kernel isolation.
-
-### 🔗 Snippet Persistence & Sharing
-- Persist code snippets to PostgreSQL and generate unique short URLs to share reproducible execution traces with teammates or students.
+- Multi-tier defensive architecture enforcing AST import allowlisting, process timeouts, memory ceilings, and containerized kernel isolation. See [docs/SECURITY.md](docs/SECURITY.md) and [docs/BENCHMARKS.md](docs/BENCHMARKS.md).
 
 ---
 
@@ -205,12 +230,17 @@ All endpoints are served with and without the `/api` prefix for flexible reverse
 | Method | Endpoint | Description | Request Body Excerpt | Response Highlights |
 | :--- | :--- | :--- | :--- | :--- |
 | `GET` | `/api/health` | Service health & uptime probe | None | `{"status": "ok"}` |
-| `POST` | `/api/run` | Execute Python code & generate trace | `{"code": "...", "stdin": ""}` | Full step-by-step trace frames, heap maps, stdout |
-| `POST` | `/api/complexity` | Empirical Big-O estimation & curve fitting | `{"code": "...", "function_name": "...", "input_kind": "array", "case": "average"}` | Data points, fitted Big-O label (`O(n)`), confidence score, AST notes |
+| `POST` | `/api/run` | Execute Python code & generate trace | `{"code": "...", "stdin": ""}` | Step-by-step trace frames, heap maps, stdout |
+| `POST` | `/api/complexity` | Empirical Big-O estimation & curve fitting | `{"code": "...", "function_name": "...", "input_kind": "array"}` | Empirical points, fitted Big-O label (`O(n)`), confidence score |
 | `POST` | `/api/compare` | Concurrently trace two code blocks | `{"code_a": "...", "code_b": "..."}` | Dual trace outputs, side-by-side step counts |
 | `POST` | `/api/snippets` | Save snippet & generate permalink ID | `{"code": "...", "title": "..."}` | `{"id": "a1b2c3d4"}` |
 | `GET` | `/api/snippets/{id}`| Retrieve shared snippet by ID | None | `{"id", "code", "title", "created_at"}` |
 | `GET` | `/api/examples` | Curated algorithm preset collection | None | Array of curated algorithm presets |
+| `GET` | `/api/problems` | Algorithmic practice challenges catalog | None | Array of 20 problem summaries with difficulty & tags |
+| `GET` | `/api/problems/{id}`| Single problem detail with test cases | None | Problem statement, constraints, starter code, test inputs |
+| `POST` | `/api/problems/{id}/submit`| Submit solution for automated evaluation | `{"code": "def solve(...): ..."}` | Pass/fail verdict, execution times, diff diagnostics |
+
+
 
 ---
 
@@ -221,7 +251,7 @@ CodeTrace treats all submitted user code as untrusted. Execution is guarded thro
 1. **AST Static Analysis & Module Allowlists**:
    - Before execution, code is parsed into an Abstract Syntax Tree (AST).
    - Only safe, pure-computational modules are permitted:
-     `math`, `random`, `collections`, `itertools`, `heapq`, `bisect`, `functools`, `string`, `re`, `typing`.
+     `math`, `random`, `collections`, `itertools`, `heapq`, `bisect`, `functools`, `string`, `re`, `typing`, `dataclasses`, `copy`, `json`, `datetime`, `time`, `enum`, `queue`, `array`, `cmath`, `fractions`, `statistics`.
    - Access to `os`, `sys`, `subprocess`, `socket`, `builtins.open`, `importlib`, and dunder attribute probing (`__subclasses__`) is immediately blocked.
 
 2. **Isolated Container Sandbox (Production)**:
@@ -310,22 +340,24 @@ npm run typecheck
 Code-visualizer/
 ├── backend/
 │   ├── app/
-│   │   ├── routes/             # FastAPI endpoint routers (run, complexity, compare, snippets)
-│   │   ├── services/           # Business logic (complexity curve fitting, runner dispatch)
+│   │   ├── routes/             # FastAPI endpoint routers (run, complexity, compare, snippets, problems)
+│   │   ├── services/           # Business logic (complexity curve fitting, runner dispatch, test runner)
 │   │   ├── models/             # SQLAlchemy database models
 │   │   ├── schemas.py          # Pydantic v2 request/response contracts
 │   │   └── config.py           # Environment configuration & settings
+│   ├── problems/               # 20 curated algorithmic problem definitions and test suites
 │   ├── sandbox/
 │   │   ├── tracer.py           # sys.settrace engine & heap address tracking
 │   │   ├── runner.py           # Subprocess & Docker sandbox executor
-│   │   ├── security.py         # AST inspection & import allowlist validation
+│   │   ├── security.py         # AST inspection & 21-module allowlist validation
 │   │   └── Dockerfile          # Hardened zero-trust sandbox image
-│   └── tests/                  # Pytest unit & integration test suite
+│   └── tests/                  # Pytest unit, integration & abuse test suites
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── workspace/      # Editor, VariablesTable, MemoryHeap, ComplexityMeter, TimelineBar
+│   │   │   ├── workspace/      # Editor, VariablesTable, MemoryHeap, DataStructureGraph, StdinDrawer, ExportModal
 │   │   │   ├── compare/        # Dual-code comparison workspace
+│   │   │   ├── practice/       # Practice mode problem statement, editor & test results runner
 │   │   │   └── predict/        # Active recall prediction quiz interface
 │   │   ├── lib/                # API client, value formatters, reference label generator
 │   │   ├── stores/             # Zustand global execution & replay stores
