@@ -41,7 +41,7 @@ async function runTests() {
 
   try {
     // 1. Visit Landing Page
-    await page.goto(BASE_URL, { waitUntil: 'networkidle' })
+    await page.goto(BASE_URL, { waitUntil: 'domcontentloaded' })
 
     // Check Headline
     const headline = await page.locator('h1').first().textContent()
@@ -110,7 +110,7 @@ async function runTests() {
 
     for (const vp of viewports) {
       await page.setViewportSize({ width: vp.width, height: vp.height })
-      await page.goto(BASE_URL, { waitUntil: 'networkidle' })
+      await page.goto(BASE_URL, { waitUntil: 'domcontentloaded' })
 
       const hasHorizontalScroll = await page.evaluate(() => {
         return document.documentElement.scrollWidth > document.documentElement.clientWidth
